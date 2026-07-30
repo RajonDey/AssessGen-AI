@@ -1,0 +1,59 @@
+---
+description: Next.js admin dashboard conventions
+globs: admin/**/*.ts,admin/**/*.tsx
+---
+
+# Admin Dashboard
+
+Next.js 16 (App Router) · React 19 · TypeScript 5.9 · Tailwind 4 · TanStack Query · shadcn/ui.
+
+## The review screen is the product
+
+Everything else is scaffolding around the one workflow that consumes scarce human attention. When
+trading off effort, the review experience wins.
+
+Requirements:
+
+- Passage and items **side by side**, both visible without scrolling where possible.
+- **Evidence spans highlighted in the passage** when an item is focused. A reviewer should see why an
+  answer is claimed correct, not read about it.
+- Quality findings anchored **inline** to the text they refer to, not listed in a separate panel.
+- **Keyboard-first**: approve, reject, request changes, next — no mouse required.
+- Rejection requires a `reason_code` from the server-provided vocabulary. Free text is optional.
+- Time-on-item tracked automatically and submitted with the decision.
+
+## API client
+
+- Types are **generated** from the backend OpenAPI schema into `lib/api/generated/`.
+- **Never hand-write or hand-edit API types.** They drift and then lie. Run `pnpm gen:client`.
+- Validate responses with Zod at the boundary where correctness matters (review, publishing).
+
+## Data fetching
+
+- TanStack Query for all server state. No `useEffect` fetching.
+- Optimistic updates for review actions — a reviewer should never wait on a round trip.
+- Server components for heavy read-only views (bank listing, reports). Client components only where
+  interactivity requires it.
+- SSE for live run progress; reconnect on drop.
+
+## Rendering items
+
+- Item components are resolved through a **type registry** keyed by `item_type`, never a
+  `switch` statement in a page. Adding a question type must mean adding one component and one
+  registry entry.
+- Every item type needs a display component and an edit component.
+
+## Conventions
+
+- `PascalCase.tsx` for components; colocate the component, its styles and its test.
+- shadcn/ui primitives; never reach for a heavyweight component library.
+- Tailwind utilities; no CSS-in-JS.
+- `react-hook-form` + Zod for forms.
+- Loading and error states on every async view. Skeletons, not spinners, for content.
+
+## Never
+
+- Never display or log an answer key in a context a student could reach.
+- Never present an unvalidated band label without the "estimated" qualifier.
+- Never offer an "approve anyway" action for a `blocked` item — the API will reject it, and offering
+  it teaches reviewers to expect an override that does not and must not exist.

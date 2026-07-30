@@ -1,0 +1,81 @@
+---
+description: Testing conventions and the software-vs-content quality distinction
+globs: backend/tests/**/*.py,admin/tests/**/*.ts,evals/**/*.py
+---
+
+# Testing
+
+## Two kinds of quality — do not confuse them
+
+| | Software quality | Content quality |
+|---|---|---|
+| Question | Does the code do what we intended? | Is the generated content good? |
+| Method | pytest / vitest | The quality gate + `evals/` harness |
+| Determinism | Deterministic | Stochastic |
+| Gate | Blocks merge | Blocks prompt activation |
+
+**Never assert on model output in a unit test.** `assert "photosynthesis" in passage` will fail
+randomly, be marked flaky, and take the useful tests around it down when someone deletes it. Model
+behaviour is measured by the eval harness with rates and thresholds, never asserted by pytest with
+equality.
+
+## Pyramid
+
+Bottom-heavy by design — `app/domain/` is pure specifically so it can be tested exhaustively and fast.
+
+```
+unit (500+, <10 s) > integration (~80, ~1 min) > contract (~30) > e2e (~10)
+```
+
+## Unit tests
+
+- The rule engine gets the most effort. Every rule: passing case, failing case, edge case, `detail`
+  assertion, and a property-based test asserting it never raises.
+- Use `hypothesis` for invariants that must hold over all inputs.
+- No I/O. No database. No model calls. If a unit test needs any of those, it is misplaced.
+
+## Integration tests
+
+- **Real Postgres 18 + pgvector via `testcontainers`. No mocked database.** The things most worth
+  testing — constraints, triggers, transactions, vector search — are exactly what a mock would fake.
+- Must-have cases: immutability trigger, approval-gate trigger, monotonic version numbers, tenant
+  scoping enforcement, idempotency conflict, and **publication snapshots unaffected by later edits**.
+
+That last one is the most valuable integration test in the suite: it verifies the core promise of the
+data model and is exactly the guarantee that silently breaks during an unrelated refactor.
+
+## E2E tests
+
+- Run against `llama3.2:1b` — far too weak for real content, ideal for exercising the pipeline fast.
+- **Test worker restart mid-run** and assert resumption from the last checkpoint. Durable execution
+  that has never survived an actual restart is durable by assumption.
+
+## Coverage
+
+| Area | Target |
+|------|--------|
+| `domain/quality/` | 95 % |
+| `domain/` | 90 % |
+| `services/` | 80 % |
+| `api/` | 75 % |
+| `agents/` | 60 % |
+
+`agents/` is deliberately low. Their real behaviour is model behaviour, measured properly by the eval
+harness. Chasing coverage there produces tests that assert prompt strings — which break on every
+prompt edit and verify nothing.
+
+## Evals
+
+- Statistical, not single-run: n ≥ 30 samples per task, compared with confidence intervals. One run
+  showing a prompt is "better" is noise.
+- Planted-defect tasks are the highest-value evaluation available — ground truth is exact because we
+  planted it, and it needs no examiner.
+- Prompt activation requires no regression beyond 5 points on the golden set.
+- New `must` rules require ≤ 5 % false positives against authentic material.
+
+## Never
+
+- Never disable a database trigger to make a test pass. Write a test that satisfies it — that is what
+  production will do.
+- Never mock the rule engine. It is pure and fast; use the real thing.
+- Never commit a test that depends on network access or a specific wall-clock time.

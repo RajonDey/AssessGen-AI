@@ -1,0 +1,54 @@
+---
+description: FastAPI endpoint and schema conventions
+globs: backend/app/api/**/*.py,backend/app/schemas/**/*.py
+---
+
+# API Conventions
+
+Full contract: `docs/core/05-api-design.md`.
+
+## Shape
+
+- Resource-shaped, not verb-shaped. `POST /generation/runs`, not `POST /generate-reading`.
+- `module` is a **field**, not a path segment — this is what lets a new exam format ship without
+  touching routing.
+- `snake_case` throughout. UUIDv7 IDs as strings. RFC 3339 UTC timestamps with an `_at` suffix.
+- Cursor pagination: `?limit=&cursor=` → `{data, next_cursor}`.
+- Two surfaces, versioned independently: `/api/v1/` (admin) and `/api/consumer/v1/` (external).
+
+## Async work
+
+- Anything over ~2 s returns `202 Accepted` + a resource `Location`, never a blocked request.
+- Generation POSTs **require** an `Idempotency-Key` header. Replay within 24 h returns the original
+  run — enforced by a unique constraint so a race loses at the database, not in application code.
+- Progress via **SSE** (`GET /runs/{id}/events`), not websockets.
+
+## Errors
+
+- RFC 9457 Problem Details.
+- Errors requiring human action carry machine-readable `violations` with `rule_code`, `severity` and
+  `message`, so the dashboard renders the specific problem.
+- `409` when an action conflicts with content state (e.g. approving a `blocked` item).
+
+## Layer discipline
+
+- Routers contain **no business logic**. Validate, call a service, shape the response.
+- Auth, pagination and tenant scoping are FastAPI dependencies in `api/deps.py`, never inline checks.
+- Request/response schemas in `app/schemas/` are **separate** from domain entities. Never expose an
+  ORM model or a domain entity directly.
+
+## Consumer API — security-critical
+
+- Read-only. No mutation endpoints, ever.
+- **Answer keys omitted unless the API key carries the `content:answers` scope.** There is a contract
+  test asserting this; treat it as a security test.
+- Published snapshots carry `ETag` and `Cache-Control: public, max-age=31536000, immutable` — safe
+  because snapshots genuinely never change.
+- Revoked publications return `410 Gone` with a pointer to the superseding publication.
+
+## Contract stability
+
+- The OpenAPI schema is the contract. The TypeScript client is **generated** from it
+  (`make gen-client`); never hand-write API types.
+- A breaking change without a version bump fails CI.
+- Additive changes are fine within a version. Removing or renaming a field is not.

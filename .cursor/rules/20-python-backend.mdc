@@ -1,0 +1,68 @@
+---
+description: Python backend conventions for FastAPI, services and infrastructure
+globs: backend/**/*.py
+---
+
+# Python Backend Conventions
+
+## Style
+
+- Python 3.12. `ruff` for lint and format. `mypy --strict` on `app/domain/` and `app/modules/`.
+- Full type annotations on every function signature. No bare `Any` without a comment explaining why.
+- `async def` for anything touching I/O. Never block the event loop — no `time.sleep`, no sync HTTP,
+  no sync DB calls in async paths.
+- Prefer explicit over clever. This codebase is read far more than it is written.
+
+## Layering — enforced by import-linter
+
+```
+app.api → app.services → app.workflows → app.agents → app.domain → app.infrastructure
+```
+
+| Layer | May import | Must never import |
+|-------|-----------|-------------------|
+| `api/` | services, schemas | agents, infrastructure directly |
+| `services/` | workflows, domain, infrastructure | api |
+| `workflows/` | agents, domain | api, services |
+| `agents/` | domain, infrastructure.llm | api, services, db repositories |
+| `domain/` | stdlib, pydantic only | **anything with I/O** |
+| `infrastructure/` | external libs | api, services, workflows, agents |
+
+`app/domain/` purity is load-bearing: it is what makes the rule engine fast, deterministic and
+exhaustively testable. Do not import SQLAlchemy, httpx, redis, celery, langchain or langgraph into it
+for any reason.
+
+## Configuration
+
+- All environment access goes through `app/config.py` using `pydantic-settings`.
+- **Never** call `os.getenv` anywhere else.
+- Never hardcode a model name, URL, threshold or credential. Config or constants module.
+
+## Database
+
+- SQLAlchemy 2.0 typed style: `Mapped[...]`, `mapped_column(...)`. No legacy `Query`.
+- Every content query goes through a repository in `infrastructure/db/repositories/`.
+- Repository methods for content **require `organization_id`**. The base class raises without it.
+- Schema changes are Alembic migrations. Never manual DDL, in any environment.
+- Never `UPDATE` a `*_versions` row.
+
+## Errors
+
+- Domain errors are typed exceptions in `domain/errors.py`.
+- API converts them to RFC 9457 Problem Details in `api/errors.py`.
+- Errors a human must act on carry machine-readable `violations`, so the dashboard can render the
+  specific problem rather than "validation failed".
+- Never swallow exceptions. Never bare `except:`.
+
+## Logging
+
+- `structlog` only. Never `print`, never the stdlib `logging` module directly.
+- Bind `run_id` and `request_id` at entry; they propagate automatically.
+- Never log answer keys, passwords, API keys or reference corpus text.
+
+## Async and concurrency
+
+- Celery tasks are thin: resolve dependencies, call a service, record the result.
+- Never call a model directly from a Celery task — go through the gateway so leasing and accounting
+  apply.
+- Long operations are jobs returning `202`, never blocking requests.

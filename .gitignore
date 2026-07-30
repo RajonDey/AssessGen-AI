@@ -1,0 +1,66 @@
+# ─────────────────────────────────────────────────────────────
+# LICENSED THIRD-PARTY MATERIAL — MUST NEVER BE COMMITTED
+# See docs/core/11-security-copyright-compliance.md
+# ─────────────────────────────────────────────────────────────
+evals/calibration/authentic/
+**/reference_corpus/
+*.ielts-source.*
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+.pnpm-store/
+
+# Generated artefacts
+admin/src/lib/api/generated/
+!admin/src/lib/api/generated/.gitkeep
+
+# Data & media (belongs in object storage, not git)
+storage/
+media/
+*.mp3
+*.wav
+*.sqlite
+*.db
+pgdata/
+
+# Eval outputs (results are regenerated; keep task definitions)
+evals/benchmarks/results/
+evals/calibration/results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+logs/

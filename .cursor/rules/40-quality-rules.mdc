@@ -1,0 +1,84 @@
+---
+description: How to write and change deterministic quality rules
+globs: backend/app/domain/quality/**/*.py,backend/app/modules/**/rules/**/*.py
+---
+
+# Writing Quality Rules
+
+The rule engine is the most valuable code in this project. It is what makes a mediocre local model
+produce usable content. Treat it accordingly.
+
+## Anatomy
+
+One rule per file, named for its stable code: `R-READ-001.py`, `R-COMP-003.py`.
+
+```python
+class RuleResult(BaseModel):
+    rule_code: str
+    passed: bool
+    severity: Severity      # must | should | info
+    message: str
+    detail: dict            # machine-readable evidence
+```
+
+## Hard requirements
+
+1. **Pure functions.** No I/O, no database, no model calls, no network. Rules live in the pure domain
+   layer and must run in microseconds.
+2. **Never raise.** Rules run against untrusted model output containing unicode, emoji, control
+   characters and unbalanced quotes. A rule that raises takes down the run instead of rejecting the
+   item. Return `passed=False` with detail.
+3. **Populate `detail` with offsets and evidence.** The dashboard highlights the offending span so a
+   reviewer *sees* the problem instead of reading a description of it. `detail` is behaviour, not
+   debug output.
+4. **Deterministic.** Same input, same result, always. No randomness, no clock, no environment.
+5. **Stable codes.** A rule code is referenced from database rows, error messages and documentation.
+   Never renumber. Retire a rule by deactivating it, never by reusing its code.
+
+## Severity
+
+| Severity | Meaning | Effect |
+|----------|---------|--------|
+| `must` | Objectively invalid — violates the exam format or is internally inconsistent | **Blocks. No override exists.** |
+| `should` | Probably a quality problem; legitimate exceptions exist | Surfaced to reviewer, does not block |
+| `info` | Observation for analytics | Recorded only |
+
+Choose `must` only when a violation is **objectively** wrong, provable from the content alone. If a
+reasonable expert could disagree, it is `should`.
+
+There is deliberately no override for `must`. If a MUST rule is wrong, fix the rule and ship a test
+proving it — do not add an escape hatch.
+
+## Mandatory tests
+
+Every rule needs a test file with at least:
+
+- A passing case.
+- A failing case.
+- An edge case (empty, unicode, very long, malformed).
+- A test asserting `detail` contains what the UI needs.
+- Property-based test asserting it never raises on arbitrary input.
+
+## Calibration — required before a rule may block
+
+**Before setting `severity="must"`, run the rule against authentic IELTS papers** via
+`make calibrate`.
+
+A real Cambridge paper is by definition valid IELTS content. If your rule flags it, **your rule is
+wrong** — not the paper. Target false-positive rate: ≤ 5 %.
+
+This is the cheapest real validation available to us and it needs no examiner. Skipping it produces a
+confident source of false rejections that wastes the scarcest resource in the system, reviewer
+attention.
+
+## Thresholds
+
+- Never hardcode a magic number. Put it in the module's config with a comment on its origin.
+- Numbers derived from authentic-material distributions are preferred over guesses. Mark guesses as
+  `# ESTIMATE — tune against real data (see docs/execution/open-questions.md Q6)`.
+
+## Adding rules
+
+The best source of new rules is **reviewer rejection reason codes**. If a human catches the same
+problem twice, ask whether a rule can catch it. Check the reason-code Pareto before inventing rules
+from imagination.

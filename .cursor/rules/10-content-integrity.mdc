@@ -1,0 +1,62 @@
+---
+description: Copyright firewall and content integrity rules — highest severity, always applies
+alwaysApply: true
+---
+
+# Content Integrity & The Copyright Firewall
+
+Violations here are not bugs; they are business-ending liabilities. Treat these as hard constraints,
+not guidance.
+
+## The quarantine
+
+`reference_documents` holds **authentic third-party IELTS material** (Cambridge papers etc.). It
+exists for exactly one purpose: proving our generated content does **not** overlap with it.
+
+### Absolutely forbidden
+
+- Reading `reference_documents` from any agent, prompt, workflow or generation code path.
+- Placing authentic passage text into a prompt as a few-shot example, style reference or template.
+- Fine-tuning or training on third-party material.
+- Committing authentic material to git. `evals/calibration/authentic/` is gitignored.
+- Sending reference corpus text to any external API.
+
+### Permitted
+
+- The originality checker reading it to compute n-gram overlap against **our** output.
+- Offline statistical extraction producing **only aggregate numbers** (word-count ranges, readability
+  distributions, question-type mixes, answer-position spreads). Numbers are facts, not expression.
+
+If a task seems to require feeding authentic content to a model, **stop and ask.** There is always
+another way, and this is the single highest-consequence mistake available in this codebase.
+
+## Why this matters
+
+LLMs reproduce their inputs. If authentic passages enter prompts, some fraction of "original" output
+will contain protected expression — and it will be published under an originality claim. The failure
+is silent until someone else notices.
+
+The firewall inverts this: holding the corpus, quarantined and used only negatively, is what lets us
+*prove* originality rather than hope for it.
+
+## Originality checking
+
+- Every generated passage must pass an 8-gram overlap check against `reference_documents` before it
+  can reach `approved`.
+- An overlap match is a **hard block with an operator alert**. Never a warning, never overridable.
+- It is the only alert in the system that pages immediately.
+
+## Generated content claims
+
+- Never write copy implying IELTS, Cambridge, IDP or British Council affiliation or endorsement.
+  "IELTS" is used descriptively (practice material *for* IELTS).
+- Band labels on Writing and Speaking sample answers must be presented as **"estimated band"** until
+  examiner validation exists. A learner trusting a mislabelled Band 7 answer is actively harmed.
+- Speaking sample answers must state that pronunciation is not assessed in text.
+
+## Answer key handling
+
+- Consumer API omits answer keys unless the API key carries the `content:answers` scope.
+- Answer keys must never reach client-side code. Grading is server-side.
+- Never log answer keys.
+- The contract test asserting key absence without scope is a security test — do not weaken or skip it.

@@ -1,0 +1,93 @@
+---
+description: Rules for LangGraph workflows, agents and the LLM gateway
+globs: backend/app/agents/**/*.py,backend/app/workflows/**/*.py,backend/app/infrastructure/llm/**/*.py
+---
+
+# Agents, Workflows & the LLM Gateway
+
+## Before you write orchestration code
+
+**LangGraph is on v1 LTS.** Your priors are probably 0.x and will be wrong. Read the installed
+official skills first:
+
+- `.agents/skills/langgraph-fundamentals/`
+- `.agents/skills/langgraph-persistence/`
+- `.agents/skills/langgraph-human-in-the-loop/`
+- `.agents/skills/langchain-fundamentals/`
+
+Specifically: human-in-the-loop uses the **runtime `interrupt()`** function inside a node, not the
+compile-time `interrupt_before=` hook.
+
+## Agent contract
+
+Every agent is:
+
+```python
+class Agent(Protocol[TIn, TOut]):
+    async def run(self, input: TIn) -> AgentResult[TOut]: ...
+```
+
+- **Stateless.** No instance state between calls.
+- **No database access.** Agents receive what they need and return structured data. An agent that
+  needs persistence is a design error — move it to a service or workflow node.
+- **Typed in and out** with Pydantic models. Never return raw strings or dicts.
+- **Never import a provider SDK.** Always go through the gateway.
+
+## The gateway
+
+```python
+result = await gateway.complete(
+    role="generator",        # NEVER a model name
+    prompt=rendered,
+    schema=PassageOutput,    # Pydantic — this IS the L0 quality gate
+    params=params,
+)
+```
+
+Rules:
+
+- Request a **role** (`generator`, `critic`, `metadata`, `embedding`), never a model.
+- Every generation call is **schema-constrained**. Never parse free-form text with a regex.
+- The gateway owns retries and repair. Do not add your own retry loop around it.
+- Never bypass the gateway, even for a quick experiment — leasing, accounting and provenance all live
+  there, and a bypassed call silently corrupts the cost data the hardware decision depends on.
+
+## Memory discipline — 16 GB machine
+
+- **Never** load two large models concurrently.
+- **Never** fan out parallel model calls when the provider is local. Graphs may express parallelism;
+  the gateway serialises it locally via configuration.
+- Long contexts cost KV cache memory. Do not raise `num_ctx` casually.
+
+## Workflow rules
+
+- One `StateGraph` per module, in `workflows/graphs/`.
+- Shared nodes (quality gate, human review, revision loop) live in `workflows/nodes/` and are reused.
+- Compile with `PostgresSaver`. `thread_id` is the `generation_run.id` and is the recovery key.
+- Durability mode `"sync"` for generation graphs — these runs are expensive; losing one to a crash
+  costs more than the checkpoint write.
+- **Every loop has a hard cap** (max 2 revisions, max 2 regenerations). Hitting the cap fails the run
+  loudly with findings attached. Never write an unbounded "revise until quality threshold" loop —
+  with a weak model it may never converge.
+- Content failure is a **result, not an exception**. Do not raise for a rule violation; return it as
+  state so Celery does not retry a run that failed for content reasons.
+
+## The critic
+
+- Must use a different model from the generator where memory allows; at minimum a different prompt
+  and temperature.
+- Must **never** see the generation rationale, plan, or prior critic findings. It sees only the
+  finished artefact, exactly as a human reviewer would.
+- Emits `list[CriticFinding]`. **There is no score field and adding one is a design regression.**
+  See `docs/decisions/ADR-0002-quality-gate-ordering.md`.
+- Never ask the critic to check something a deterministic rule already checks.
+
+## Prompts
+
+- Prompts live as files in `app/modules/<exam>/<module>/prompts/<purpose>/<version>/`.
+- Never inline a prompt string in agent code.
+- Every rendered prompt is hashed and recorded in `agent_invocations.prompt_hash`.
+- A prompt change is a behaviour change: it needs review and must pass the golden set before
+  activation.
+- Include the relevant quality rules in the prompt as generation constraints. Preventing a violation
+  is far cheaper than detecting and revising it.

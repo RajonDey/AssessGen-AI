@@ -1,0 +1,88 @@
+# Application services — start with: docker compose --profile backend up -d
+
+x-app-profiles: &app-profiles
+  profiles:
+    - backend
+    - generate
+
+services:
+  api:
+    <<: *app-profiles
+    build:
+      context: ../../backend
+      dockerfile: ../infra/docker/backend.Dockerfile
+    container_name: assessgen-api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-assessgen}:${POSTGRES_PASSWORD:-assessgen}@postgres:5432/${POSTGRES_DB:-assessgen}
+      REDIS_URL: redis://redis:6379/0
+      S3_ENDPOINT_URL: http://minio:9000
+      S3_ACCESS_KEY: ${MINIO_ROOT_USER:-assessgen}
+      S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-assessgen-dev}
+      S3_BUCKET: ${S3_BUCKET:-assessgen}
+      OLLAMA_BASE_URL: http://ollama:11434
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    volumes:
+      - ../../backend/app:/app/app:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  worker:
+    <<: *app-profiles
+    build:
+      context: ../../backend
+      dockerfile: ../infra/docker/worker.Dockerfile
+    container_name: assessgen-worker
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-assessgen}:${POSTGRES_PASSWORD:-assessgen}@postgres:5432/${POSTGRES_DB:-assessgen}
+      REDIS_URL: redis://redis:6379/0
+      S3_ENDPOINT_URL: http://minio:9000
+      S3_ACCESS_KEY: ${MINIO_ROOT_USER:-assessgen}
+      S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-assessgen-dev}
+      S3_BUCKET: ${S3_BUCKET:-assessgen}
+      OLLAMA_BASE_URL: http://ollama:11434
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ../../backend/app:/app/app:ro
+    command:
+      - uv
+      - run
+      - celery
+      - -A
+      - app.infrastructure.queue.celery_app
+      - worker
+      - --loglevel=info
+      - -Q
+      - q.generate,q.io,q.audio
+      - --concurrency=1
+
+  ollama:
+    profiles:
+      - generate
+    image: ollama/ollama:latest
+    container_name: assessgen-ollama
+    restart: unless-stopped
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  ollama_data:

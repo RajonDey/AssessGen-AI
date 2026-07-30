@@ -1,0 +1,81 @@
+---
+description: Core project context, architecture invariants and version warnings for AssessGen AI
+alwaysApply: true
+---
+
+# AssessGen AI — Core Context
+
+An **AI Assessment Content Engine** that generates, validates, versions and exports assessment
+content. IELTS first; the engine is deliberately not IELTS-only. IELTS Ready is a *client* of this
+engine, not part of it.
+
+**We do not train models. We build an engineered system around commodity LLMs.**
+
+Full documentation is in `docs/`. Read `docs/README.md` before substantial work.
+
+## Version warnings — these will trip you up
+
+- **LangChain and LangGraph are on v1 LTS** (`langgraph` 1.2.x, `langchain` 1.3.x). Most tutorials,
+  Stack Overflow answers and model priors describe **0.x** and are wrong here. Consult the official
+  skills in `.agents/skills/` (`langgraph-fundamentals`, `langgraph-persistence`,
+  `langgraph-human-in-the-loop`, `langchain-fundamentals`) before writing orchestration code.
+- Human-in-the-loop uses the **runtime `interrupt()`** function, not compile-time `interrupt_before=`.
+- **Python 3.12** for this project, despite 3.14 being installed system-wide.
+- **PostgreSQL 18** via Docker (`pgvector/pgvector:pg18`). Do **not** use the local Homebrew
+  Postgres 14.
+- SQLAlchemy **2.0 typed style** only. No legacy `Query` API.
+- `psycopg` v3, not psycopg2. `pyjwt`, not python-jose. `argon2-cffi`, not passlib.
+
+## Hardware constraint — this is load-bearing
+
+Development runs on an **Apple M4 with 16 GB unified memory**. Only one large model may be resident.
+Never write code that loads two models concurrently or fans out parallel model calls against a local
+provider. Model concurrency is governed by the gateway's lease semaphore.
+
+## Architecture invariants
+
+Dependencies point **downward only**. Enforced by `import-linter` in CI.
+
+```
+L6 api → L5 services → L4 workflows → L3 agents → L2 domain → L1 infrastructure
+```
+
+1. **`app/domain/` is pure.** No I/O, no SQLAlchemy, no HTTP, no LangChain. It holds the rule engine
+   and must stay instantly testable and deterministic.
+2. **Only `app/infrastructure/llm/` may import a provider SDK.** Agents request a *role*
+   (`generator`, `critic`, `metadata`, `embedding`), never a model name. This is what keeps the
+   production-model decision genuinely deferred.
+3. **Agents are stateless** and never touch the database. They take typed input and return typed
+   output.
+4. **Content is immutable.** Never `UPDATE` a `*_versions` row. Editing appends a version and moves
+   `current_version_id`. A database trigger enforces this.
+5. **IELTS-specific logic lives in `app/modules/ielts/`.** It must not leak into `domain/`,
+   `workflows/`, `infrastructure/` or `api/`. Adding a new exam format should create one directory
+   and change nothing else.
+
+## Quality model — do not redesign this
+
+Five layers, cheapest and most certain first:
+
+```
+L0 Pydantic schema → L1 deterministic rules → L2 originality/dedup → L3 LLM critic → L4 human review
+```
+
+- Deterministic rules produce **verdicts**. `must` failures are absolute blocks with **no override**.
+- The LLM critic produces **structured findings only**. `CriticOutput` has **no score field** — adding
+  one is a design regression. See `docs/decisions/ADR-0002-quality-gate-ordering.md`.
+- Where a rule and the critic disagree, the rule wins.
+- Every loop is hard-capped (max 2). No unbounded "revise until good".
+
+## Non-negotiables
+
+- Nothing reaches `published` without passing the gate. There is no manual back door.
+- Every content version records its run, prompt version, prompt hash, model digest and seed.
+- The engine knows nothing about IELTS Ready. Coupling flows one way, through the public API.
+- Answer keys are never returned by the consumer API without the `content:answers` scope.
+- `reference_documents` (authentic third-party material) is **never** read by a generation agent.
+
+## When you are unsure
+
+Prefer asking over assuming. Wrong assumptions in this system produce content that looks fine and is
+subtly wrong — the most expensive failure mode we have.
