@@ -33,7 +33,7 @@ pre-commit run --all-files
 
 ## Database
 
-Requires Docker data profile (`docker compose --profile data up -d`). Postgres on host port **5433**.
+Requires Docker data profile (`docker compose --profile data up -d`). Postgres on host port **5434**.
 
 ```bash
 uv run alembic upgrade head

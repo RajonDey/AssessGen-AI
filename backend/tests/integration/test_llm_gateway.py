@@ -45,6 +45,10 @@ class MockProvider:
             model_digest=f"digest:{self.calls}",
         )
 
+    async def embed(self, *, model: str, text: str) -> list[float]:
+        del model, text
+        return [0.0] * 768
+
 
 @pytest.mark.asyncio
 async def test_gateway_persists_successful_invocation(db_session: AsyncSession) -> None:

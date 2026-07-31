@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Generator
 
 import pytest
 from app.config import Settings
@@ -18,7 +19,7 @@ from structlog.contextvars import clear_contextvars
 
 
 @pytest.fixture(autouse=True)
-def _reset_logging() -> None:
+def _reset_logging() -> Generator[None, None, None]:
     reset_logging_config()
     clear_contextvars()
     yield

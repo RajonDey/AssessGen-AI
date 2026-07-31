@@ -17,7 +17,7 @@ celery_app = Celery(
     include=[
         "app.infrastructure.queue.tasks.io",
         "app.infrastructure.queue.tasks.audio",
-        "app.workflows.generation_tasks",
+        "app.services.generation_worker",
     ],
 )
 

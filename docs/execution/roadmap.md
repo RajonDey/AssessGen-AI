@@ -1,8 +1,7 @@
 # Execution Roadmap
 
-> **Status:** Phase *shape* below. **Phase 1A has a detailed execution plan:**
-> [phase-1a-foundation.md](phase-1a-foundation.md). Later phases get their own plans after the
-> previous phase completes, so each plan can absorb what we actually learned.
+> **Status:** Phase *shape* below. **Phase 1A** is complete ([plan](phase-1a-foundation.md)).
+> **Phase 1B** has a detailed execution plan: [phase-1b-reading.md](phase-1b-reading.md).
 
 ## Sequencing principles
 
@@ -81,7 +80,7 @@ per approved item. The first real evidence for the deferred model decision.
 
 - [ ] All four modules produce reviewable content
 - [ ] Reading proven end-to-end through publication
-- [ ] Rule engine calibrated, false positives ≤ 5 %
+- [x] Rule engine calibrated, false positives ≤ 5 %
 - [ ] ≥ 100 items human-reviewed; approval rate measured
 - [ ] Benchmark harness producing comparable model results
 - [ ] Import-linter contract green; unit coverage ≥ 90 % on `domain/`

@@ -3,8 +3,8 @@
 An **AI Assessment Content Engine**: a system that generates, validates, improves, versions and
 exports assessment content. IELTS is the first target; the engine is deliberately not IELTS-only.
 
-> **Status:** Planning complete, implementation not started.
-> No application code exists yet. These documents are the contract we build against.
+> **Status:** Phase 1A complete; **Phase 1B (Reading) in progress.**
+> Application code lives in `backend/`. These documents are the contract we build against.
 
 ---
 
@@ -70,7 +70,8 @@ Listening / Writing / Speaking (thin verticals) on the same rails.
 
 - [Architecture Decision Records](decisions/) — why we chose what we chose, and what would reverse it
 - [Execution Roadmap](execution/roadmap.md) — phased delivery plan
-- [Phase 1A — Foundation](execution/phase-1a-foundation.md) — detailed task list (current work)
+- [Phase 1A — Foundation](execution/phase-1a-foundation.md) — backend spine (complete)
+- [Phase 1B — Reading](execution/phase-1b-reading.md) — detailed task list (current work)
 - [Open Questions](execution/open-questions.md) — what is still undecided and who must decide it
 
 ---

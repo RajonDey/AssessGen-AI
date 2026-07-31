@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from collections.abc import Awaitable, Callable
 from typing import Annotated
 from uuid import UUID
 
@@ -45,7 +45,7 @@ async def get_current_user(
     return user
 
 
-def require_roles(*roles: UserRole) -> Callable[..., AuthenticatedUser]:
+def require_roles(*roles: UserRole) -> Callable[..., Awaitable[AuthenticatedUser]]:
     allowed = set(roles)
 
     async def _require_roles(

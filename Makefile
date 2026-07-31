@@ -1,5 +1,5 @@
 # AssessGen AI — common tasks (run from repo root)
-.PHONY: setup dev generate test test-unit lint migrate seed verify-1a
+.PHONY: setup dev generate test test-unit lint migrate seed verify-1a verify-1b calibrate admin-dev admin-build
 
 BACKEND := backend
 COMPOSE := docker compose
@@ -33,3 +33,15 @@ seed:
 
 verify-1a:
 	./scripts/verify-1a.sh
+
+verify-1b:
+	./scripts/verify-1b.sh
+
+calibrate:
+	./scripts/calibrate-reading.sh
+
+admin-dev:
+	cd admin && npm run dev
+
+admin-build:
+	cd admin && npm run build

@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     api_port: int = 8000
 
     database_url: PostgresDsn = PostgresDsn(
-        "postgresql+psycopg://assessgen:assessgen@localhost:5433/assessgen"
+        "postgresql+psycopg://assessgen:assessgen@localhost:5434/assessgen"
     )
     redis_url: RedisDsn = RedisDsn("redis://localhost:6379/0")
 
@@ -41,6 +41,9 @@ class Settings(BaseSettings):
     llm_profile: Literal["fast", "local", "local-hq", "cloud"] = "fast"
     llm_memory_budget_gb: float = 11.0
     llm_lease_ttl_seconds: int = 900
+
+    dedup_reject_similarity: float = 0.95
+    dedup_review_similarity: float = 0.88
 
     log_level: str = "INFO"
     log_json: bool = True

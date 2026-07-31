@@ -5,7 +5,7 @@ from celery import Task
 from app.infrastructure.queue.errors import ContentTaskError, InfrastructureTaskError
 
 
-class AssessGenTask(Task):
+class AssessGenTask(Task):  # type: ignore[misc]
     """Retry only infrastructure failures — never content failures."""
 
     autoretry_for = (InfrastructureTaskError,)

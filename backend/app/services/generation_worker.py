@@ -1,4 +1,4 @@
-"""Celery task for smoke graph execution."""
+"""Dispatch generation runs to the appropriate module graph."""
 
 from __future__ import annotations
 
@@ -10,6 +10,7 @@ from app.infrastructure.queue.base import AssessGenTask
 from app.infrastructure.queue.celery_app import celery_app
 from app.infrastructure.queue.constants import GENERATE_QUEUE
 from app.infrastructure.queue.errors import ContentTaskError, InfrastructureTaskError
+from app.services.reading_run_service import execute_reading_run
 from app.workflows.smoke_runner import RunExecutionError, execute_smoke_run
 
 
@@ -29,7 +30,7 @@ def run_generation(self: AssessGenTask, run_id: str) -> dict[str, str]:
         raise ContentTaskError(f"Invalid run_id: {run_id}") from exc
 
     try:
-        asyncio.run(execute_smoke_run(parsed_run_id))
+        asyncio.run(_execute_run(parsed_run_id))
     except RunExecutionError as exc:
         raise ContentTaskError(str(exc)) from exc
     except Exception as exc:
@@ -42,3 +43,26 @@ def run_generation(self: AssessGenTask, run_id: str) -> dict[str, str]:
         "status": "completed",
         "task_id": self.request.id or "",
     }
+
+
+async def _execute_run(run_id: uuid.UUID) -> None:
+    from app.infrastructure.db.repositories.generation_run_repository import GenerationRunRepository
+    from app.infrastructure.db.session import async_session_factory
+
+    async with async_session_factory() as session:
+        repo = GenerationRunRepository(session)
+        run = await repo.get_by_id(run_id)
+        if run is None:
+            msg = f"Generation run {run_id} not found"
+            raise RunExecutionError(msg)
+        module = run.module
+
+    if module == "smoke":
+        await execute_smoke_run(run_id)
+        return
+    if module == "reading":
+        await execute_reading_run(run_id)
+        return
+
+    msg = f"Unsupported generation module: {module}"
+    raise RunExecutionError(msg)

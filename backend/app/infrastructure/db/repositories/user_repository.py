@@ -1,5 +1,7 @@
 """User persistence queries."""
 
+from typing import cast
+
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -12,4 +14,4 @@ class UserRepository:
 
     async def get_by_email(self, email: str) -> User | None:
         stmt = select(User).where(User.email == email)
-        return await self.session.scalar(stmt)
+        return cast(User | None, await self.session.scalar(stmt))

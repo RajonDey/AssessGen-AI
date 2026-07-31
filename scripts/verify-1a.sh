@@ -54,7 +54,7 @@ wait_for_run() {
 }
 
 echo "==> Phase 1A verification"
-make setup
+SKIP_OLLAMA_PULL=1 make setup
 make test
 
 echo "==> Start generate profile (API + worker + Ollama)"

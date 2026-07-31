@@ -17,7 +17,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-assessgen}
       POSTGRES_DB: ${POSTGRES_DB:-assessgen}
     ports:
-      - "${POSTGRES_PORT:-5433}:5432"
+      - "${POSTGRES_PORT:-5434}:5432"
     volumes:
       # PG 18+ expects the mount at /var/lib/postgresql (not .../data).
       - pgdata:/var/lib/postgresql

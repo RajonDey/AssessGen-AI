@@ -41,6 +41,10 @@ class MockProvider:
             latency_ms=50,
         )
 
+    async def embed(self, *, model: str, text: str) -> list[float]:
+        del model, text
+        return [0.0] * 768
+
 
 @pytest.mark.asyncio
 async def test_smoke_graph_completes_with_checkpoint(db_session: AsyncSession) -> None:

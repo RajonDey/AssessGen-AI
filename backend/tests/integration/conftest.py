@@ -4,8 +4,9 @@ from __future__ import annotations
 
 import os
 import subprocess
-from collections.abc import AsyncIterator
+from collections.abc import AsyncIterator, Iterator
 from pathlib import Path
+from typing import Any
 
 import pytest
 import pytest_asyncio
@@ -17,7 +18,7 @@ BACKEND_ROOT = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="session")
-def postgres_container():
+def postgres_container() -> Iterator[Any]:
     pytest.importorskip("testcontainers")
     try:
         from testcontainers.community.postgres import PostgresContainer
@@ -29,7 +30,7 @@ def postgres_container():
 
 
 @pytest.fixture(scope="session")
-def database_url(postgres_container) -> str:
+def database_url(postgres_container: Any) -> str:
     async_url = to_async_psycopg_url(postgres_container.get_connection_url())
     env = os.environ.copy()
     env["DATABASE_URL"] = async_url

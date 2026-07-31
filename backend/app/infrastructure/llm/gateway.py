@@ -163,3 +163,35 @@ class LLMGateway:
                 attempt=final_attempt.attempt,
             )
             return structured.value  # type: ignore[return-value]
+
+    async def embed(
+        self,
+        *,
+        run_id: uuid.UUID,
+        text: str,
+        role: LLMRole | str = LLMRole.EMBEDDING,
+    ) -> list[float]:
+        request_role = LLMRole(role)
+        model = resolve_model(self.settings.llm_profile, request_role)
+        bind_run_context(str(run_id))
+        log = get_logger("app.llm.gateway")
+
+        async with self.lease.hold(model.model_name, model.memory_gb):
+            log.info(
+                "agent.embedding.started",
+                role=str(request_role),
+                model=model.model_name,
+            )
+            try:
+                vector = await self.provider.embed(model=model.model_name, text=text)
+            except Exception as exc:
+                log.warning("agent.embedding.failed", reason=str(exc))
+                raise ProviderError(str(exc)) from exc
+
+            log.info(
+                "agent.embedding.completed",
+                role=str(request_role),
+                model=model.model_name,
+                dimensions=len(vector),
+            )
+            return vector

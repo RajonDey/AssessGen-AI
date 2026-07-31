@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import uuid
 from datetime import UTC, datetime
+from typing import Any, cast
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -24,7 +25,7 @@ class GenerationRunRepository:
         stmt = select(GenerationRun).where(GenerationRun.id == run_id)
         if organization_id is not None:
             stmt = stmt.where(GenerationRun.organization_id == organization_id)
-        return await self.session.scalar(stmt)
+        return cast(GenerationRun | None, await self.session.scalar(stmt))
 
     async def get_by_idempotency_key(
         self,
@@ -35,14 +36,14 @@ class GenerationRunRepository:
             GenerationRun.organization_id == organization_id,
             GenerationRun.idempotency_key == idempotency_key,
         )
-        return await self.session.scalar(stmt)
+        return cast(GenerationRun | None, await self.session.scalar(stmt))
 
     async def create(
         self,
         *,
         organization_id: uuid.UUID,
         module: str,
-        request: dict,
+        request: dict[str, Any],
         requested_by: uuid.UUID | None,
         idempotency_key: str,
         status: str = "queued",
@@ -64,12 +65,35 @@ class GenerationRunRepository:
         run.status = "running"
         run.started_at = datetime.now(UTC)
 
+    async def mark_awaiting_review(self, run: GenerationRun) -> None:
+        run.status = "awaiting_review"
+        run.failure_reason = None
+
     async def mark_completed(self, run: GenerationRun) -> None:
         run.status = "completed"
         run.finished_at = datetime.now(UTC)
         run.failure_reason = None
 
+    async def list_awaiting_review(
+        self,
+        organization_id: uuid.UUID,
+        *,
+        limit: int = 20,
+    ) -> tuple[GenerationRun, ...]:
+        stmt = (
+            select(GenerationRun)
+            .where(
+                GenerationRun.organization_id == organization_id,
+                GenerationRun.status == "awaiting_review",
+            )
+            .order_by(GenerationRun.created_at)
+            .limit(limit)
+        )
+        rows = (await self.session.scalars(stmt)).all()
+        return tuple(rows)
+
     async def mark_failed(self, run: GenerationRun, reason: str) -> None:
         run.status = "failed"
         run.failure_reason = reason
         run.finished_at = datetime.now(UTC)
+

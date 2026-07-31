@@ -13,7 +13,7 @@ from app.infrastructure.queue.tasks.io import ping_io
 def redis_available() -> str:
     settings = get_settings()
     url = str(settings.redis_url)
-    client = redis.from_url(url)
+    client = redis.from_url(url)  # type: ignore[no-untyped-call]
     try:
         client.ping()
     except redis.RedisError as exc:

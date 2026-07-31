@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Generator
+
 import pytest
 from app.infrastructure.queue.base import AssessGenTask
 from app.infrastructure.queue.celery_app import celery_app
@@ -11,7 +13,7 @@ from celery import Task
 
 
 @pytest.fixture
-def celery_eager() -> None:
+def celery_eager() -> Generator[None, None, None]:
     celery_app.conf.task_always_eager = True
     celery_app.conf.task_eager_propagates = True
     yield
@@ -32,12 +34,12 @@ def test_ping_io_completes_in_eager_mode(celery_eager: None) -> None:
     assert result["queue"] == "q.io"
 
 
-@celery_app.task(bind=True, base=AssessGenTask, name="tests.celery.content_fail_probe")
+@celery_app.task(bind=True, base=AssessGenTask, name="tests.celery.content_fail_probe")  # type: ignore[untyped-decorator]
 def _content_fail_probe(_self: Task) -> None:
     raise ContentTaskError("content rejected")
 
 
-@celery_app.task(bind=True, base=AssessGenTask, name="tests.celery.infra_fail_probe")
+@celery_app.task(bind=True, base=AssessGenTask, name="tests.celery.infra_fail_probe")  # type: ignore[untyped-decorator]
 def _infra_fail_probe(self: Task) -> str:
     if self.request.retries < 2:
         raise InfrastructureTaskError("provider down")

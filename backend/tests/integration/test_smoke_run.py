@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 
 import pytest
 from app.config import Settings
@@ -13,7 +13,7 @@ from app.infrastructure.llm.lease import InMemoryModelLease
 from app.infrastructure.llm.types import ChatMessage, CompletionParams, ProviderResponse
 from app.workflows.checkpointer import reset_checkpoint_schema_flag
 from app.workflows.smoke_runner import execute_smoke_run
-from pydantic import BaseModel
+from pydantic import BaseModel, PostgresDsn
 from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -42,6 +42,10 @@ class MockProvider:
             latency_ms=120,
         )
 
+    async def embed(self, *, model: str, text: str) -> list[float]:
+        del model, text
+        return [0.0] * 768
+
 
 class _TestSessionFactory:
     def __init__(self, session: AsyncSession) -> None:
@@ -67,7 +71,10 @@ async def test_execute_smoke_run_persists_invocation_and_checkpoint(
 
     monkeypatch.setattr(
         "app.workflows.smoke_runner.get_settings",
-        lambda: Settings(database_url=database_url, llm_profile="fast"),
+        lambda: Settings(
+            database_url=cast(PostgresDsn, database_url),
+            llm_profile="fast",
+        ),
     )
     monkeypatch.setattr(
         "app.workflows.smoke_runner.async_session_factory",

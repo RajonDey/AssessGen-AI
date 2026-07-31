@@ -12,7 +12,4 @@ COPY app ./app
 
 RUN uv sync --frozen --no-dev
 
-CMD [
-    "uv", "run", "celery", "-A", "app.infrastructure.queue.celery_app",
-    "worker", "--loglevel=info", "-Q", "q.generate,q.io,q.audio", "--concurrency=1"
-]
+CMD ["uv", "run", "celery", "-A", "app.infrastructure.queue.celery_app", "worker", "--loglevel=info", "-Q", "q.generate,q.io,q.audio", "--concurrency=1"]

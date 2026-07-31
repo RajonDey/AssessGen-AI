@@ -31,6 +31,7 @@ async def test_repair_loop_retries_until_schema_valid() -> None:
         invoke=invoke,
     )
 
+    assert isinstance(result.value, GreetingSchema)
     assert result.value.greeting == "hello"
     assert len(result.attempts) == 2
     assert calls == 2

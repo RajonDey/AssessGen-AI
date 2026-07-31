@@ -13,8 +13,10 @@ from app.api.errors import ProblemDetail
 from app.domain.entities.user import AuthenticatedUser
 from app.infrastructure.observability.logging import bind_run_context, get_logger
 from app.schemas.generation import CreateGenerationRunRequest, GenerationRunResponse
+from app.schemas.review import ResumeGenerationRunRequest
 from app.services.database import get_session
 from app.services.generation_service import DuplicateIdempotencyKeyError, GenerationService
+from app.services.review_service import ReviewResumeError, ReviewService
 
 router = APIRouter(prefix="/generation", tags=["generation"])
 
@@ -23,6 +25,12 @@ async def get_generation_service(
     session: Annotated[AsyncSession, Depends(get_session)],
 ) -> GenerationService:
     return GenerationService(session)
+
+
+async def get_review_service(
+    session: Annotated[AsyncSession, Depends(get_session)],
+) -> ReviewService:
+    return ReviewService(session)
 
 
 @router.post(
@@ -74,6 +82,41 @@ async def get_generation_run(
     organization_id: Annotated[UUID, Depends(get_organization_id)],
     service: Annotated[GenerationService, Depends(get_generation_service)],
 ) -> GenerationRunResponse:
+    run = await service.runs.get_by_id(run_id, organization_id=organization_id)
+    if run is None:
+        raise ProblemDetail(
+            status=404,
+            title="Run not found",
+            detail=f"No generation run exists with id {run_id}.",
+            type_suffix="run-not-found",
+        )
+    return GenerationService.to_response(run)
+
+
+@router.post("/runs/{run_id}/resume", response_model=GenerationRunResponse)
+async def resume_generation_run(
+    run_id: UUID,
+    body: ResumeGenerationRunRequest,
+    user: Annotated[AuthenticatedUser, Depends(get_current_user)],
+    organization_id: Annotated[UUID, Depends(get_organization_id)],
+    service: Annotated[GenerationService, Depends(get_generation_service)],
+    review_service: Annotated[ReviewService, Depends(get_review_service)],
+) -> GenerationRunResponse:
+    try:
+        await review_service.resume_run(
+            run_id=run_id,
+            organization_id=organization_id,
+            reviewer_id=user.id,
+            body=body.model_dump(mode="json"),
+        )
+    except ReviewResumeError as exc:
+        raise ProblemDetail(
+            status=409,
+            title="Resume failed",
+            detail=str(exc),
+            type_suffix="resume-failed",
+        ) from exc
+
     run = await service.runs.get_by_id(run_id, organization_id=organization_id)
     if run is None:
         raise ProblemDetail(

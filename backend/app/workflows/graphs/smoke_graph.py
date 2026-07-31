@@ -48,8 +48,8 @@ async def persist_invocation(
     return {"status": "completed", "invocation_recorded": True}
 
 
-def build_smoke_graph(checkpointer: BaseCheckpointSaver) -> Any:
-    builder = StateGraph(SmokeGraphState)
+def build_smoke_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
+    builder = StateGraph(SmokeGraphState, context_schema=SmokeGraphContext)
     builder.add_node("call_metadata_agent", call_metadata_agent)
     builder.add_node("persist_invocation", persist_invocation)
     builder.add_edge(START, "call_metadata_agent")

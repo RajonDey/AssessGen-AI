@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import time
-from typing import Any
+from typing import Any, cast
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_ollama import ChatOllama
@@ -53,7 +53,7 @@ class OllamaProvider:
         response = await llm.ainvoke(_to_langchain_messages(messages))
         latency_ms = int((time.perf_counter() - started) * 1000)
 
-        usage = response.usage_metadata or {}
+        usage = cast(dict[str, Any], response.usage_metadata or {})
         input_tokens = int(usage.get("input_tokens", 0))
         output_tokens = int(usage.get("output_tokens", 0))
         metadata = response.response_metadata or {}
@@ -70,3 +70,12 @@ class OllamaProvider:
             latency_ms=latency_ms,
             model_digest=str(model_digest) if model_digest else None,
         )
+
+    async def embed(self, *, model: str, text: str) -> list[float]:
+        from langchain_ollama import OllamaEmbeddings
+
+        started = time.perf_counter()
+        embeddings = OllamaEmbeddings(model=model, base_url=self.base_url)
+        vector = await embeddings.aembed_query(text)
+        _ = int((time.perf_counter() - started) * 1000)
+        return [float(value) for value in vector]

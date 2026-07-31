@@ -3,7 +3,7 @@
 An **AI Assessment Content Engine** — a system that generates, validates, improves, versions and
 exports assessment content. IELTS is the first target; the engine is deliberately not IELTS-only.
 
-> **Status: Phase 1A complete** — backend spine, smoke generation, observability. Next: Phase 1B (Reading).
+> **Status: Phase 1B in progress** — Reading module; rule engine and IELTS pack underway.
 
 ---
 
@@ -114,7 +114,7 @@ docker compose --profile data up -d
 | `backend` | `data` + API + Celery worker | Day-to-day backend dev |
 | `generate` | `backend` + Ollama | Content generation runs |
 
-Postgres runs on host port **5433** by default (avoids conflict with Homebrew Postgres on 5432). MinIO console:
+Postgres runs on host port **5434** by default (avoids Homebrew Postgres on 5432 and other local projects on 5433). MinIO console:
 http://localhost:9001
 
 ## A note on content integrity

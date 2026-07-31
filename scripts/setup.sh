@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-POSTGRES_PORT="${POSTGRES_PORT:-5433}"
+POSTGRES_PORT="${POSTGRES_PORT:-5434}"
 OLLAMA_MODEL="${OLLAMA_MODEL:-qwen3.5:4b}"
 
 echo "==> Environment files"
@@ -17,6 +17,23 @@ if [[ ! -f backend/.env ]]; then
   cp backend/.env.example backend/.env
   echo "Created backend/.env from backend/.env.example"
 fi
+
+# Keep host-side DATABASE_URL aligned with Compose Postgres settings.
+set -a
+# shellcheck disable=SC1091
+source "$ROOT/.env"
+set +a
+DATABASE_URL="postgresql+psycopg://${POSTGRES_USER:-assessgen}:${POSTGRES_PASSWORD:-assessgen}@localhost:${POSTGRES_PORT:-5433}/${POSTGRES_DB:-assessgen}"
+if grep -q '^DATABASE_URL=' "$ROOT/backend/.env"; then
+  if [[ "$(uname)" == "Darwin" ]]; then
+    sed -i '' "s|^DATABASE_URL=.*|DATABASE_URL=${DATABASE_URL}|" "$ROOT/backend/.env"
+  else
+    sed -i "s|^DATABASE_URL=.*|DATABASE_URL=${DATABASE_URL}|" "$ROOT/backend/.env"
+  fi
+else
+  echo "DATABASE_URL=${DATABASE_URL}" >>"$ROOT/backend/.env"
+fi
+echo "Synced backend/.env DATABASE_URL -> localhost:${POSTGRES_PORT:-5433}"
 
 echo "==> Python dependencies (uv sync)"
 cd "$ROOT/backend"
@@ -46,8 +63,15 @@ echo "==> Seed data"
 uv run python -m app.scripts.seed
 
 echo "==> Ollama model (host CLI, if available)"
-if command -v ollama >/dev/null 2>&1; then
-  ollama pull "$OLLAMA_MODEL"
+if [[ "${SKIP_OLLAMA_PULL:-0}" == "1" ]]; then
+  echo "Skipping host Ollama pull (SKIP_OLLAMA_PULL=1)"
+elif command -v ollama >/dev/null 2>&1; then
+  if ollama show "$OLLAMA_MODEL" >/dev/null 2>&1; then
+    echo "Model ${OLLAMA_MODEL} already present"
+  else
+    echo "Pulling ${OLLAMA_MODEL} (this may take several minutes on first run)..."
+    ollama pull "$OLLAMA_MODEL"
+  fi
 else
   echo "Ollama CLI not found — skip host pull (use 'make generate' and pull inside container)"
 fi

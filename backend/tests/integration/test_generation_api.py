@@ -49,8 +49,10 @@ async def _login(client: AsyncClient, db_session: AsyncSession) -> str:
         "/api/v1/auth/login",
         json={"email": user.email, "password": password},
     )
+    body = response.json()
     assert response.status_code == 200
-    return response.json()["access_token"]
+    token = str(body["access_token"])
+    return token
 
 
 @pytest.mark.asyncio

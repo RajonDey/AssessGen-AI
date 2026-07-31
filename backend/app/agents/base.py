@@ -2,8 +2,8 @@
 
 from typing import Protocol, TypeVar
 
-TIn = TypeVar("TIn")
-TOut = TypeVar("TOut")
+TIn = TypeVar("TIn", contravariant=True)
+TOut = TypeVar("TOut", covariant=True)
 
 
 class Agent(Protocol[TIn, TOut]):

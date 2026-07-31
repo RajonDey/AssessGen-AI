@@ -27,7 +27,7 @@ class RunExecutionError(Exception):
 
 async def execute_smoke_run(run_id: uuid.UUID) -> None:
     settings = get_settings()
-    redis = aioredis.from_url(str(settings.redis_url))
+    redis = aioredis.from_url(str(settings.redis_url))  # type: ignore[no-untyped-call]
     bind_run_context(str(run_id))
     log = get_logger("app.generation.runner")
     log.info("run.started")
