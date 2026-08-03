@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 
 from app.domain.enums import ItemType
+from app.modules.ielts.reading.schemas import ReadingItem, ReadingPassage
 
 
 def question_batch_json_example(
@@ -68,4 +69,33 @@ def answer_batch_json_example(
             "explanation": "Paragraph A names humidity explicitly.",
         }
     payload = {"items": [sample for _ in range(max(1, count))]}
+    return json.dumps(payload, indent=2)
+
+
+def passage_json_example(*, paragraph_count: int = 4) -> str:
+    """Shape-only example — paragraph text must be long expository prose in production."""
+    paragraphs = [
+        {
+            "label": chr(ord("A") + index),
+            "text": (
+                f"[Paragraph {chr(ord('A') + index)}: write at least 150 words of factual "
+                "expository prose with names, dates, or figures — not a one-sentence summary.]"
+            ),
+        }
+        for index in range(max(2, paragraph_count))
+    ]
+    payload = {"title": "Descriptive title matching the topic angle", "paragraphs": paragraphs}
+    return json.dumps(payload, indent=2)
+
+
+def reviser_output_json_example(
+    *,
+    passage: ReadingPassage,
+    items: tuple[ReadingItem, ...],
+) -> str:
+    """Mirror the current passage/items so the model returns the same JSON shape."""
+    payload = {
+        "passage": passage.model_dump(mode="json"),
+        "items": [item.model_dump(mode="json") for item in items],
+    }
     return json.dumps(payload, indent=2)

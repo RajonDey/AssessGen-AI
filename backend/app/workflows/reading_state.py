@@ -28,6 +28,7 @@ class ReadingGraphState(TypedDict, total=False):
     items: list[dict[str, Any]]
     passage_attempt: int
     revision_attempt: int
+    post_revision_passage_check: bool
 
     passage_quality: dict[str, Any]
     originality_report: dict[str, Any]

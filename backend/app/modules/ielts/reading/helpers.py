@@ -6,7 +6,13 @@ import re
 from re import Pattern
 
 from app.domain.enums import ItemType
-from app.modules.ielts.reading.schemas import AnswerKeyExact, AnswerKeyMapping, ReadingItem
+from app.modules.ielts.reading.schemas import (
+    AnswerKeyExact,
+    AnswerKeyMapping,
+    EvidenceSpan,
+    ReadingItem,
+    ReadingPassage,
+)
 
 COMPLETION_TYPES: frozenset[ItemType] = frozenset(
     {
@@ -98,6 +104,68 @@ def find_verbatim_match(
     if index < 0:
         return None
     return {"start": index, "end": index + len(answer), "quote": body[index : index + len(answer)]}
+
+
+def paragraph_text_ranges(passage: ReadingPassage) -> list[tuple[str, int, int]]:
+    """Return each paragraph label with start/end offsets into passage.body text."""
+    offset = 0
+    ranges: list[tuple[str, int, int]] = []
+    for index, paragraph in enumerate(passage.paragraphs):
+        prefix = f"{paragraph.label}\n"
+        start = offset + len(prefix)
+        end = start + len(paragraph.text)
+        ranges.append((paragraph.label, start, end))
+        offset = end + (2 if index < len(passage.paragraphs) - 1 else 0)
+    return ranges
+
+
+def paragraph_label_at_offset(passage: ReadingPassage, offset: int) -> str:
+    ranges = paragraph_text_ranges(passage)
+    for label, start, end in ranges:
+        if start <= offset < end:
+            return label
+    if ranges:
+        return ranges[-1][0]
+    msg = "Passage has no paragraphs"
+    raise ValueError(msg)
+
+
+def resolve_evidence_span(
+    passage: ReadingPassage,
+    answer: str,
+    *,
+    case_sensitive: bool = False,
+) -> EvidenceSpan | None:
+    """Locate a verbatim answer in passage.body and return a consistent evidence span."""
+    match = find_verbatim_match(passage.body, answer, case_sensitive=case_sensitive)
+    if match is None:
+        return None
+    start = int(match["start"])
+    end = int(match["end"])
+    quote = str(match["quote"])
+    return EvidenceSpan(
+        paragraph=paragraph_label_at_offset(passage, start),
+        start=start,
+        end=end,
+        quote=quote,
+    )
+
+
+def normalize_item_evidence(passage: ReadingPassage, item: ReadingItem) -> ReadingItem:
+    """Replace LLM offsets with deterministic evidence derived from the answer key."""
+    if not is_completion_type(item.item_type):
+        return item
+    key = exact_key(item)
+    if key is None or not key.values:
+        return item
+    resolved = resolve_evidence_span(
+        passage,
+        key.values[0],
+        case_sensitive=key.case_sensitive,
+    )
+    if resolved is None:
+        return item
+    return item.model_copy(update={"evidence": resolved})
 
 
 def stem_contains_answer(stem: str, answer: str) -> bool:

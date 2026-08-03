@@ -3,7 +3,8 @@
 An **AI Assessment Content Engine** — a system that generates, validates, improves, versions and
 exports assessment content. IELTS is the first target; the engine is deliberately not IELTS-only.
 
-> **Status: Phase 1B in progress** — Reading module; rule engine and IELTS pack underway.
+> **Status:** Phase 1A complete · Phase 1B complete (Reading) · **Phase 1C in progress** (Listening, Writing, Speaking).
+> Track progress: [docs/execution/phase-1-checklist.md](docs/execution/phase-1-checklist.md).
 
 ---
 

@@ -1,6 +1,6 @@
 # Phase 1A — Foundation (Execution Plan)
 
-> **Status:** Ready to execute.
+> **Status:** Complete.
 > **Parent:** [Execution Roadmap](roadmap.md) § 1A.
 > **Exit criterion:** `make setup` works from a clean clone; a trivial LangGraph runs against Ollama,
 > persists an `agent_invocations` row, and survives a Celery worker restart.

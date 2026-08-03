@@ -10,7 +10,10 @@ from app.infrastructure.queue.base import AssessGenTask
 from app.infrastructure.queue.celery_app import celery_app
 from app.infrastructure.queue.constants import GENERATE_QUEUE
 from app.infrastructure.queue.errors import ContentTaskError, InfrastructureTaskError
+from app.services.listening_run_service import execute_listening_run
 from app.services.reading_run_service import execute_reading_run
+from app.services.speaking_run_service import execute_speaking_run
+from app.services.writing_run_service import execute_writing_run
 from app.workflows.smoke_runner import RunExecutionError, execute_smoke_run
 
 
@@ -62,6 +65,15 @@ async def _execute_run(run_id: uuid.UUID) -> None:
         return
     if module == "reading":
         await execute_reading_run(run_id)
+        return
+    if module == "listening":
+        await execute_listening_run(run_id)
+        return
+    if module == "writing":
+        await execute_writing_run(run_id)
+        return
+    if module == "speaking":
+        await execute_speaking_run(run_id)
         return
 
     msg = f"Unsupported generation module: {module}"

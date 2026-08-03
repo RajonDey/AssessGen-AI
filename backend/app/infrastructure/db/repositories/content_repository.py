@@ -92,6 +92,167 @@ class ContentRepository:
         await self.session.flush()
         return passage_row.id, passage_version.id, tuple(item_version_ids)
 
+    async def persist_listening_set(
+        self,
+        *,
+        organization_id: uuid.UUID,
+        run_id: uuid.UUID,
+        title: str,
+        body: str,
+        paragraphs: list[dict[str, object]],
+        word_count: int,
+        items: list[dict[str, object]],
+        target_band: float,
+        script: dict[str, object],
+        section: int,
+        status: str = "awaiting_review",
+    ) -> tuple[uuid.UUID, uuid.UUID, tuple[uuid.UUID, ...]]:
+        passage_row = Passage(
+            id=uuid.uuid4(),
+            organization_id=organization_id,
+            module="listening",
+            status=status,
+        )
+        self.session.add(passage_row)
+        await self.session.flush()
+
+        passage_version = PassageVersion(
+            id=uuid.uuid4(),
+            passage_id=passage_row.id,
+            version_no=0,
+            content_hash=content_hash(body),
+            title=title,
+            body=body,
+            paragraphs=paragraphs,
+            word_count=word_count,
+            target_band=Decimal(str(target_band)),
+            readability={"kind": "listening_script", "section": section, "script": script},
+            organization_id=organization_id,
+            created_by_run_id=run_id,
+        )
+        self.session.add(passage_version)
+        await self.session.flush()
+        passage_row.current_version_id = passage_version.id
+
+        item_version_ids: list[uuid.UUID] = []
+        for sequence_no, item in enumerate(items, start=1):
+            item_row = Item(
+                id=uuid.uuid4(),
+                organization_id=organization_id,
+                module="listening",
+                item_type=str(item["item_type"]),
+                passage_id=passage_row.id,
+                status=status,
+            )
+            self.session.add(item_row)
+            await self.session.flush()
+
+            item_version = ItemVersion(
+                id=uuid.uuid4(),
+                item_id=item_row.id,
+                version_no=0,
+                content_hash=content_hash(str(item["stem"])),
+                stem=str(item["stem"]),
+                instructions=item.get("instructions"),
+                options=item.get("options") or None,
+                answer_key=item["answer_key"],
+                evidence=item.get("evidence"),
+                sequence_no=sequence_no,
+                target_band=Decimal(str(target_band)),
+                created_by_run_id=run_id,
+            )
+            self.session.add(item_version)
+            await self.session.flush()
+            item_row.current_version_id = item_version.id
+            item_version_ids.append(item_version.id)
+
+        await self.session.flush()
+        return passage_row.id, passage_version.id, tuple(item_version_ids)
+
+    async def persist_writing_prompt(
+        self,
+        *,
+        organization_id: uuid.UUID,
+        run_id: uuid.UUID,
+        title: str,
+        body: str,
+        paragraphs: list[dict[str, object]],
+        word_count: int,
+        target_band: float,
+        metadata: dict[str, object],
+        status: str = "awaiting_review",
+    ) -> tuple[uuid.UUID, uuid.UUID]:
+        passage_row = Passage(
+            id=uuid.uuid4(),
+            organization_id=organization_id,
+            module="writing",
+            status=status,
+        )
+        self.session.add(passage_row)
+        await self.session.flush()
+
+        passage_version = PassageVersion(
+            id=uuid.uuid4(),
+            passage_id=passage_row.id,
+            version_no=0,
+            content_hash=content_hash(body),
+            title=title,
+            body=body,
+            paragraphs=paragraphs,
+            word_count=word_count,
+            target_band=Decimal(str(target_band)),
+            readability={"kind": "writing_task2", "metadata": metadata},
+            organization_id=organization_id,
+            created_by_run_id=run_id,
+        )
+        self.session.add(passage_version)
+        await self.session.flush()
+        passage_row.current_version_id = passage_version.id
+        await self.session.flush()
+        return passage_row.id, passage_version.id
+
+    async def persist_speaking_content(
+        self,
+        *,
+        organization_id: uuid.UUID,
+        run_id: uuid.UUID,
+        title: str,
+        body: str,
+        paragraphs: list[dict[str, object]],
+        word_count: int,
+        target_band: float,
+        metadata: dict[str, object],
+        status: str = "awaiting_review",
+    ) -> tuple[uuid.UUID, uuid.UUID]:
+        passage_row = Passage(
+            id=uuid.uuid4(),
+            organization_id=organization_id,
+            module="speaking",
+            status=status,
+        )
+        self.session.add(passage_row)
+        await self.session.flush()
+
+        passage_version = PassageVersion(
+            id=uuid.uuid4(),
+            passage_id=passage_row.id,
+            version_no=0,
+            content_hash=content_hash(body),
+            title=title,
+            body=body,
+            paragraphs=paragraphs,
+            word_count=word_count,
+            target_band=Decimal(str(target_band)),
+            readability={"kind": "speaking_part1_part2", "metadata": metadata},
+            organization_id=organization_id,
+            created_by_run_id=run_id,
+        )
+        self.session.add(passage_version)
+        await self.session.flush()
+        passage_row.current_version_id = passage_version.id
+        await self.session.flush()
+        return passage_row.id, passage_version.id
+
     async def list_passages(
         self,
         organization_id: uuid.UUID,

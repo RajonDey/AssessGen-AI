@@ -7,6 +7,7 @@ from typing import Any
 from pydantic import BaseModel, Field, ValidationError, model_validator
 
 from app.domain.enums import PassageSourceMode
+from app.modules.ielts.reading.spec import AcademicReadingSpec
 
 MIN_SOURCE_TEXT_CHARS = 100
 
@@ -28,6 +29,15 @@ class ReadingGenerationSpec(BaseModel):
         text = (self.source_text or "").strip()
         if len(text) < MIN_SOURCE_TEXT_CHARS:
             msg = f"source_text must be at least {MIN_SOURCE_TEXT_CHARS} characters for {self.source_mode.value} mode"
+            raise ValueError(msg)
+        bounds = AcademicReadingSpec()
+        word_count = len(text.split())
+        if word_count < bounds.passage_word_count_min or word_count > bounds.passage_word_count_max:
+            msg = (
+                f"source_text must be {bounds.passage_word_count_min}–"
+                f"{bounds.passage_word_count_max} words for {self.source_mode.value} mode "
+                f"(got {word_count})"
+            )
             raise ValueError(msg)
         if self.source_mode == PassageSourceMode.ADAPTED and not (self.license_label or "").strip():
             msg = "license_label is required for adapted mode"

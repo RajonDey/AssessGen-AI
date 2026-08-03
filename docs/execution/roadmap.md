@@ -1,7 +1,9 @@
 # Execution Roadmap
 
 > **Status:** Phase *shape* below. **Phase 1A** is complete ([plan](phase-1a-foundation.md)).
-> **Phase 1B** has a detailed execution plan: [phase-1b-reading.md](phase-1b-reading.md).
+> **Phase 1B** is complete in code ([plan](phase-1b-reading.md)).
+> **Phase 1C** is in progress ([plan](phase-1c-thin-verticals.md)).
+> Track all gates: [Phase 1 checklist](phase-1-checklist.md).
 
 ## Sequencing principles
 

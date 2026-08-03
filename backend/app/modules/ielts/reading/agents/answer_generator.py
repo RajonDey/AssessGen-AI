@@ -5,12 +5,17 @@ from __future__ import annotations
 from app.domain.enums import ItemType
 from app.infrastructure.llm.gateway import LLMGateway
 from app.infrastructure.llm.types import LLMRole
-from app.modules.ielts.reading.agent_schemas import AnswerBatchOutput, AnswerGeneratorInput
+from app.modules.ielts.reading.agent_schemas import (
+    AnswerBatchOutput,
+    AnswerGeneratorInput,
+    to_reading_item,
+)
 from app.modules.ielts.reading.agents._helpers import (
     build_user_message,
     drafts_to_json,
     prompt_hash_for,
 )
+from app.modules.ielts.reading.helpers import normalize_item_evidence
 from app.modules.ielts.reading.prompt_examples import answer_batch_json_example
 from app.modules.ielts.reading.prompts import answer_prompt
 
@@ -63,4 +68,15 @@ class ReadingAnswerGeneratorAgent:
                     msg = "Completion items require evidence spans"
                     raise ValueError(msg)
 
-        return result
+        normalized = [
+            answered.model_copy(
+                update={
+                    "evidence": normalize_item_evidence(
+                        input.passage,
+                        to_reading_item(answered),
+                    ).evidence,
+                }
+            )
+            for answered in result.items
+        ]
+        return AnswerBatchOutput(items=normalized)

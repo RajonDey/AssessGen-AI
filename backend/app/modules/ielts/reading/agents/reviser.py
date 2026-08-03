@@ -12,7 +12,10 @@ from app.modules.ielts.reading.agents._helpers import (
     models_to_json,
     prompt_hash_for,
 )
+from app.modules.ielts.reading.helpers import normalize_item_evidence
+from app.modules.ielts.reading.prompt_examples import reviser_output_json_example
 from app.modules.ielts.reading.prompts import reviser_prompt
+from app.modules.ielts.reading.spec import AcademicReadingSpec
 
 
 class ReadingReviserAgent:
@@ -27,6 +30,11 @@ class ReadingReviserAgent:
             "passage_title": input.passage.title,
             "passage_body": input.passage.body,
             "items_json": models_to_json(input.items),
+            "word_count_min": AcademicReadingSpec().passage_word_count_min,
+            "json_example": reviser_output_json_example(
+                passage=input.passage,
+                items=input.items,
+            ),
         }
         messages = (build_user_message(template, **values),)
         result = await gateway.complete(
@@ -40,4 +48,7 @@ class ReadingReviserAgent:
         if len(result.items) != len(input.items):
             msg = f"Reviser must return {len(input.items)} items, got {len(result.items)}"
             raise ValueError(msg)
-        return result
+        normalized_items = [
+            normalize_item_evidence(result.passage, item) for item in result.items
+        ]
+        return ReviserOutput(passage=result.passage, items=normalized_items)

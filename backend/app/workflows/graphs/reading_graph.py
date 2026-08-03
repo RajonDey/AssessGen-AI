@@ -261,10 +261,15 @@ def route_after_passage_quality(
     "adapt_passage",
     "ingest_passage",
     "originality_passage",
+    "quality_items",
     "fail_run",
 ]:
     if state.get("status") == "passage_quality_passed":
+        if state.get("post_revision_passage_check"):
+            return "quality_items"
         return "originality_passage"
+    if state.get("post_revision_passage_check"):
+        return "fail_run"
     mode = state.get("source_mode", PassageSourceMode.GENERATED.value)
     if mode in {PassageSourceMode.INGESTED.value, PassageSourceMode.ADAPTED.value}:
         return "fail_run"
@@ -485,6 +490,7 @@ async def run_reviser(
         "passage": revised.passage.model_dump(mode="json"),
         "items": [item.model_dump(mode="json") for item in revised.items],
         "revision_attempt": attempt,
+        "post_revision_passage_check": True,
         "status": "revised",
         "error": None,
     }
@@ -566,6 +572,7 @@ def build_reading_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
             "adapt_passage": "adapt_passage",
             "ingest_passage": "ingest_passage",
             "originality_passage": "originality_passage",
+            "quality_items": "quality_items",
             "fail_run": "fail_run",
         },
     )
@@ -601,7 +608,7 @@ def build_reading_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
             "fail_run": "fail_run",
         },
     )
-    builder.add_edge("run_reviser", "quality_items")
+    builder.add_edge("run_reviser", "quality_passage")
     builder.add_conditional_edges(
         "run_critic",
         route_after_critic,

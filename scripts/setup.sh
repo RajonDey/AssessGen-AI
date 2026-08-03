@@ -7,6 +7,7 @@ cd "$ROOT"
 
 POSTGRES_PORT="${POSTGRES_PORT:-5434}"
 OLLAMA_MODEL="${OLLAMA_MODEL:-qwen3.5:4b}"
+OLLAMA_EMBED_MODEL="${OLLAMA_EMBED_MODEL:-nomic-embed-text}"
 
 echo "==> Environment files"
 if [[ ! -f .env ]]; then
@@ -62,18 +63,41 @@ uv run alembic upgrade head
 echo "==> Seed data"
 uv run python -m app.scripts.seed
 
-echo "==> Ollama model (host CLI, if available)"
-if [[ "${SKIP_OLLAMA_PULL:-0}" == "1" ]]; then
-  echo "Skipping host Ollama pull (SKIP_OLLAMA_PULL=1)"
-elif command -v ollama >/dev/null 2>&1; then
-  if ollama show "$OLLAMA_MODEL" >/dev/null 2>&1; then
-    echo "Model ${OLLAMA_MODEL} already present"
+echo "==> Ollama models"
+pull_ollama_model_host() {
+  local model="$1"
+  if ollama show "$model" >/dev/null 2>&1; then
+    echo "Model ${model} already present (host)"
   else
-    echo "Pulling ${OLLAMA_MODEL} (this may take several minutes on first run)..."
-    ollama pull "$OLLAMA_MODEL"
+    echo "Pulling ${model} on host..."
+    ollama pull "$model"
   fi
+}
+
+pull_ollama_model_container() {
+  local model="$1"
+  if docker exec assessgen-ollama ollama show "$model" >/dev/null 2>&1; then
+    echo "Model ${model} already present (container)"
+  else
+    echo "Pulling ${model} in assessgen-ollama..."
+    docker exec assessgen-ollama ollama pull "$model"
+  fi
+}
+
+if [[ "${SKIP_OLLAMA_PULL:-0}" == "1" ]]; then
+  echo "Skipping Ollama pulls (SKIP_OLLAMA_PULL=1)"
 else
-  echo "Ollama CLI not found — skip host pull (use 'make generate' and pull inside container)"
+  if command -v ollama >/dev/null 2>&1; then
+    pull_ollama_model_host "$OLLAMA_MODEL"
+    pull_ollama_model_host "$OLLAMA_EMBED_MODEL"
+  else
+    echo "Ollama CLI not found on host — skip host pull"
+  fi
+
+  if docker ps --format '{{.Names}}' | grep -qx assessgen-ollama; then
+    pull_ollama_model_container "$OLLAMA_MODEL"
+    pull_ollama_model_container "$OLLAMA_EMBED_MODEL"
+  fi
 fi
 
 echo "Setup complete."
