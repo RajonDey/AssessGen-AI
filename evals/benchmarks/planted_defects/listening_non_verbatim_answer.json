@@ -1,0 +1,39 @@
+{
+  "passage": {
+    "title": "Campus library hours",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "The library opens at nine am on weekdays and closes at eight pm."
+      }
+    ]
+  },
+  "items": [
+    {
+      "item_type": "sentence_completion",
+      "stem": "The library opens at _____ on weekdays.",
+      "instructions": "NO MORE THAN TWO WORDS AND/OR A NUMBER",
+      "options": [],
+      "answer_key": {
+        "type": "exact",
+        "values": ["9 o'clock"],
+        "accept": [],
+        "case_sensitive": false
+      },
+      "evidence": {
+        "paragraph": "A",
+        "start": 20,
+        "end": 27,
+        "quote": "nine am"
+      }
+    }
+  ],
+  "rules_under_test": ["R-LIST-001"],
+  "expected_rule_failures": ["R-LIST-001"],
+  "planted_defects": [
+    {
+      "rule": "R-LIST-001",
+      "description": "Answer paraphrased — not spoken verbatim in transcript ('9 o'clock' vs 'nine am')"
+    }
+  ]
+}

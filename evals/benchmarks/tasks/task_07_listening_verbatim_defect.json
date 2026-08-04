@@ -1,0 +1,8 @@
+{
+  "id": "task_07_listening_verbatim_defect",
+  "name": "Listening verbatim defect",
+  "module": "listening",
+  "description": "Detect R-LIST-001 when an answer is not spoken verbatim in the transcript.",
+  "kind": "planted_defect",
+  "fixture_path": "evals/benchmarks/planted_defects/listening_non_verbatim_answer.json"
+}

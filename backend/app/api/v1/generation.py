@@ -15,6 +15,7 @@ from app.infrastructure.observability.logging import bind_run_context, get_logge
 from app.schemas.generation import CreateGenerationRunRequest, GenerationRunResponse
 from app.schemas.review import ResumeGenerationRunRequest
 from app.services.database import get_session
+from app.services.generation_errors import RunCancelError
 from app.services.generation_service import DuplicateIdempotencyKeyError, GenerationService
 from app.services.review_service import ReviewResumeError, ReviewService
 
@@ -73,7 +74,7 @@ async def create_generation_run(
     get_logger("app.generation").info("run.created", module=run.module, status=run.status)
 
     response.headers["Location"] = f"/api/v1/generation/runs/{run.id}"
-    return GenerationService.to_response(run)
+    return await service.to_response(run, organization_id=organization_id)
 
 
 @router.get("/runs/{run_id}", response_model=GenerationRunResponse)
@@ -82,7 +83,7 @@ async def get_generation_run(
     organization_id: Annotated[UUID, Depends(get_organization_id)],
     service: Annotated[GenerationService, Depends(get_generation_service)],
 ) -> GenerationRunResponse:
-    run = await service.runs.get_by_id(run_id, organization_id=organization_id)
+    run = await service.get_run(run_id, organization_id=organization_id)
     if run is None:
         raise ProblemDetail(
             status=404,
@@ -90,7 +91,25 @@ async def get_generation_run(
             detail=f"No generation run exists with id {run_id}.",
             type_suffix="run-not-found",
         )
-    return GenerationService.to_response(run)
+    return await service.to_response(run, organization_id=organization_id)
+
+
+@router.post("/runs/{run_id}/cancel", response_model=GenerationRunResponse)
+async def cancel_generation_run(
+    run_id: UUID,
+    organization_id: Annotated[UUID, Depends(get_organization_id)],
+    service: Annotated[GenerationService, Depends(get_generation_service)],
+) -> GenerationRunResponse:
+    try:
+        run = await service.cancel_run(run_id, organization_id=organization_id)
+    except RunCancelError as exc:
+        raise ProblemDetail(
+            status=409,
+            title="Cancel failed",
+            detail=str(exc),
+            type_suffix="cancel-failed",
+        ) from exc
+    return await service.to_response(run, organization_id=organization_id)
 
 
 @router.post("/runs/{run_id}/resume", response_model=GenerationRunResponse)
@@ -117,7 +136,7 @@ async def resume_generation_run(
             type_suffix="resume-failed",
         ) from exc
 
-    run = await service.runs.get_by_id(run_id, organization_id=organization_id)
+    run = await service.get_run(run_id, organization_id=organization_id)
     if run is None:
         raise ProblemDetail(
             status=404,
@@ -125,4 +144,4 @@ async def resume_generation_run(
             detail=f"No generation run exists with id {run_id}.",
             type_suffix="run-not-found",
         )
-    return GenerationService.to_response(run)
+    return await service.to_response(run, organization_id=organization_id)

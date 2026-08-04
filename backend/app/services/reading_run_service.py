@@ -20,6 +20,7 @@ from app.infrastructure.llm.structured import SchemaValidationError
 from app.infrastructure.observability.logging import bind_run_context, get_logger
 from app.modules.ielts.reading.request import ReadingGenerationSpec, parse_reading_spec
 from app.services.reading_quality import build_reading_graph_context
+from app.workflows.run_lifecycle import prepare_run_for_execution
 from app.workflows.checkpointer import postgres_checkpointer
 from app.workflows.graphs.reading_graph import build_reading_graph
 from app.workflows.reading_state import ReadingGraphState
@@ -119,7 +120,10 @@ async def execute_reading_run(run_id: uuid.UUID) -> None:
                 log.warning("run.failed", reason=str(exc))
                 return
 
-            await repo.mark_running(run)
+            if not await prepare_run_for_execution(repo, run):
+                await session.commit()
+                log.info("run.skipped")
+                return
             await session.commit()
 
             try:

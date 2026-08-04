@@ -6,7 +6,7 @@ import uuid
 from datetime import UTC, datetime
 from typing import Any, cast
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.infrastructure.db.models import GenerationRun
@@ -96,4 +96,32 @@ class GenerationRunRepository:
         run.status = "failed"
         run.failure_reason = reason
         run.finished_at = datetime.now(UTC)
+
+    async def count_queue_ahead(
+        self,
+        run: GenerationRun,
+        *,
+        organization_id: uuid.UUID,
+    ) -> int:
+        """Runs ahead of this one: one slot if a worker is busy, plus earlier queued runs."""
+        running_stmt = (
+            select(func.count())
+            .select_from(GenerationRun)
+            .where(
+                GenerationRun.organization_id == organization_id,
+                GenerationRun.status == "running",
+            )
+        )
+        running_count = int(await self.session.scalar(running_stmt) or 0)
+        queued_stmt = (
+            select(func.count())
+            .select_from(GenerationRun)
+            .where(
+                GenerationRun.organization_id == organization_id,
+                GenerationRun.status == "queued",
+                GenerationRun.created_at < run.created_at,
+            )
+        )
+        queued_ahead = int(await self.session.scalar(queued_stmt) or 0)
+        return running_count + queued_ahead
 

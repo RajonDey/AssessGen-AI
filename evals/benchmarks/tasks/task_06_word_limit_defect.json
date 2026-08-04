@@ -1,0 +1,8 @@
+{
+  "id": "task_06_word_limit_defect",
+  "name": "Planted word-limit defect",
+  "module": "reading",
+  "description": "Detect R-COMP-002 when an answer exceeds the stated word limit.",
+  "kind": "planted_defect",
+  "fixture_path": "evals/benchmarks/planted_defects/reading_word_limit_exceeded.json"
+}

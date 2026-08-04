@@ -1,0 +1,15 @@
+{
+  "id": "task_02_sentence_completion",
+  "name": "Sentence completion items",
+  "module": "reading",
+  "description": "Generate sentence-completion items from a fixed ingested passage.",
+  "kind": "generation",
+  "fixture_path": "evals/benchmarks/fixtures/reading_benchmark_passage.txt",
+  "generation_spec": {
+    "dev_mode": true,
+    "question_count": 1,
+    "topic": "Urban vertical farming",
+    "target_band": 7.0,
+    "source_mode": "ingested"
+  }
+}

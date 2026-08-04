@@ -72,6 +72,7 @@ class ContentService:
         target_band = float(version.target_band) if version and version.target_band else None
         return PassageSummary(
             id=passage.id,
+            module=passage.module,
             status=passage.status,
             title=version.title if version else None,
             word_count=version.word_count if version else None,
@@ -84,6 +85,7 @@ class ContentService:
         item, version = row
         return ItemSummary(
             id=item.id,
+            module=item.module,
             status=item.status,
             item_type=item.item_type,
             stem=version.stem if version else None,

@@ -81,6 +81,40 @@ async def test_create_generation_run_returns_202(
 
 
 @pytest.mark.asyncio
+async def test_cancel_generation_run_marks_failed(
+    api_client: AsyncClient,
+    db_session: AsyncSession,
+) -> None:
+    from app.infrastructure.db.models import GenerationRun, User
+    from sqlalchemy import select
+
+    token = await _login(api_client, db_session)
+    user = await db_session.scalar(select(User).limit(1))
+    assert user is not None
+
+    run = GenerationRun(
+        id=uuid.uuid4(),
+        organization_id=user.organization_id,
+        module="listening",
+        request={"module": "listening", "spec": {"dev_mode": True}},
+        status="queued",
+        idempotency_key=f"cancel-test-{uuid.uuid4().hex[:8]}",
+        requested_by=user.id,
+    )
+    db_session.add(run)
+    await db_session.commit()
+
+    response = await api_client.post(
+        f"/api/v1/generation/runs/{run.id}/cancel",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    assert response.status_code == 200
+    body = response.json()
+    assert body["status"] == "failed"
+    assert body["failure_reason"] == "Cancelled by operator"
+
+
+@pytest.mark.asyncio
 async def test_create_generation_run_requires_idempotency_key(
     api_client: AsyncClient,
     db_session: AsyncSession,

@@ -59,6 +59,7 @@ from app.workflows.nodes.revision_loop import (
     quality_report_from_state,
     rule_failures_to_findings,
 )
+from app.workflows.dev_mode import dev_mode_enabled
 from app.workflows.reading_state import ReadingGraphState
 
 MAX_PLANNER_ATTEMPTS = 2
@@ -261,12 +262,15 @@ def route_after_passage_quality(
     "adapt_passage",
     "ingest_passage",
     "originality_passage",
+    "generate_items",
     "quality_items",
     "fail_run",
 ]:
     if state.get("status") == "passage_quality_passed":
         if state.get("post_revision_passage_check"):
             return "quality_items"
+        if dev_mode_enabled(state):
+            return "generate_items"
         return "originality_passage"
     if state.get("post_revision_passage_check"):
         return "fail_run"
@@ -414,8 +418,10 @@ async def quality_items(state: ReadingGraphState) -> dict[str, Any]:
 
 def route_after_item_quality(
     state: ReadingGraphState,
-) -> Literal["run_critic", "run_reviser", "fail_run"]:
+) -> Literal["run_critic", "run_reviser", "persist_content", "fail_run"]:
     if state.get("status") == "items_quality_passed":
+        if dev_mode_enabled(state):
+            return "persist_content"
         return "run_critic"
     if state.get("revision_attempt", 0) >= MAX_REVISION_ATTEMPTS:
         return "fail_run"
@@ -572,6 +578,7 @@ def build_reading_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
             "adapt_passage": "adapt_passage",
             "ingest_passage": "ingest_passage",
             "originality_passage": "originality_passage",
+            "generate_items": "generate_items",
             "quality_items": "quality_items",
             "fail_run": "fail_run",
         },
@@ -605,6 +612,7 @@ def build_reading_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
         {
             "run_critic": "run_critic",
             "run_reviser": "run_reviser",
+            "persist_content": "persist_content",
             "fail_run": "fail_run",
         },
     )

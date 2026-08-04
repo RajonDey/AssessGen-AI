@@ -1,0 +1,15 @@
+{
+  "id": "task_04_true_false_not_given",
+  "name": "True / False / Not Given items",
+  "module": "reading",
+  "description": "Generate T/F/NG items from a fixed ingested passage.",
+  "kind": "generation",
+  "fixture_path": "evals/benchmarks/fixtures/reading_benchmark_passage.txt",
+  "generation_spec": {
+    "dev_mode": true,
+    "question_count": 1,
+    "topic": "Urban vertical farming",
+    "target_band": 7.0,
+    "source_mode": "ingested"
+  }
+}

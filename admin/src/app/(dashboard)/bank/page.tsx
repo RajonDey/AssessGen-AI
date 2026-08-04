@@ -1,14 +1,28 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { ApiError, fetchItems, fetchPassage, fetchPassages } from "@/lib/api";
-import type { ItemSummary, PassageSummary } from "@/lib/types";
+import type { GenerationModule, ItemSummary, PassageSummary } from "@/lib/types";
 
 type Tab = "passages" | "items";
 
+const MODULE_FILTER_OPTIONS: { value: "all" | GenerationModule; label: string }[] = [
+  { value: "all", label: "All modules" },
+  { value: "reading", label: "Reading" },
+  { value: "listening", label: "Listening" },
+  { value: "writing", label: "Writing" },
+  { value: "speaking", label: "Speaking" },
+];
+
+function moduleLabel(module: string): string {
+  const match = MODULE_FILTER_OPTIONS.find((entry) => entry.value === module);
+  return match?.label ?? module;
+}
+
 export default function BankPage() {
   const [tab, setTab] = useState<Tab>("passages");
+  const [moduleFilter, setModuleFilter] = useState<"all" | GenerationModule>("all");
   const [passages, setPassages] = useState<PassageSummary[]>([]);
   const [items, setItems] = useState<ItemSummary[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
@@ -36,6 +50,20 @@ export default function BankPage() {
   useEffect(() => {
     void load();
   }, [load]);
+
+  const filteredPassages = useMemo(
+    () =>
+      moduleFilter === "all"
+        ? passages
+        : passages.filter((passage) => passage.module === moduleFilter),
+    [moduleFilter, passages],
+  );
+
+  const filteredItems = useMemo(
+    () =>
+      moduleFilter === "all" ? items : items.filter((item) => item.module === moduleFilter),
+    [moduleFilter, items],
+  );
 
   async function inspectPassage(id: string) {
     setSelectedPassageId(id);
@@ -65,21 +93,39 @@ export default function BankPage() {
         </button>
       </div>
 
-      <div className="flex gap-2">
-        {(["passages", "items"] as const).map((value) => (
-          <button
-            key={value}
-            type="button"
-            onClick={() => setTab(value)}
-            className={`rounded-md px-4 py-2 text-sm ${
-              tab === value
-                ? "bg-zinc-900 text-white"
-                : "border border-zinc-300 bg-white text-zinc-700"
-            }`}
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="flex gap-2">
+          {(["passages", "items"] as const).map((value) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => setTab(value)}
+              className={`rounded-md px-4 py-2 text-sm ${
+                tab === value
+                  ? "bg-zinc-900 text-white"
+                  : "border border-zinc-300 bg-white text-zinc-700"
+              }`}
+            >
+              {value === "passages" ? "Passages" : "Items"}
+            </button>
+          ))}
+        </div>
+        <label className="flex items-center gap-2 text-sm text-zinc-700">
+          <span>Module</span>
+          <select
+            value={moduleFilter}
+            onChange={(event) =>
+              setModuleFilter(event.target.value as "all" | GenerationModule)
+            }
+            className="rounded-md border border-zinc-300 px-3 py-2"
           >
-            {value === "passages" ? "Passages" : "Items"}
-          </button>
-        ))}
+            {MODULE_FILTER_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
 
       {error ? <p className="text-sm text-red-600">{error}</p> : null}
@@ -90,25 +136,27 @@ export default function BankPage() {
             <table className="min-w-full text-sm">
               <thead className="bg-zinc-50 text-left text-zinc-600">
                 <tr>
+                  <th className="px-4 py-3">Module</th>
                   <th className="px-4 py-3">Title</th>
                   <th className="px-4 py-3">Status</th>
                   <th className="px-4 py-3">Words</th>
                 </tr>
               </thead>
               <tbody>
-                {passages.length === 0 ? (
+                {filteredPassages.length === 0 ? (
                   <tr>
-                    <td colSpan={3} className="px-4 py-8 text-center text-zinc-500">
+                    <td colSpan={4} className="px-4 py-8 text-center text-zinc-500">
                       No passages yet. Complete a generation run and approve it on Review.
                     </td>
                   </tr>
                 ) : (
-                  passages.map((passage) => (
+                  filteredPassages.map((passage) => (
                     <tr
                       key={passage.id}
                       className="cursor-pointer border-t border-zinc-100 hover:bg-zinc-50"
                       onClick={() => void inspectPassage(passage.id)}
                     >
+                      <td className="px-4 py-3 capitalize">{moduleLabel(passage.module)}</td>
                       <td className="px-4 py-3">{passage.title ?? "Untitled"}</td>
                       <td className="px-4 py-3 capitalize">
                         {passage.status.replaceAll("_", " ")}
@@ -136,21 +184,23 @@ export default function BankPage() {
           <table className="min-w-full text-sm">
             <thead className="bg-zinc-50 text-left text-zinc-600">
               <tr>
+                <th className="px-4 py-3">Module</th>
                 <th className="px-4 py-3">Type</th>
                 <th className="px-4 py-3">Stem</th>
                 <th className="px-4 py-3">Status</th>
               </tr>
             </thead>
             <tbody>
-              {items.length === 0 ? (
+              {filteredItems.length === 0 ? (
                 <tr>
-                  <td colSpan={3} className="px-4 py-8 text-center text-zinc-500">
+                  <td colSpan={4} className="px-4 py-8 text-center text-zinc-500">
                     No items yet.
                   </td>
                 </tr>
               ) : (
-                items.map((item) => (
+                filteredItems.map((item) => (
                   <tr key={item.id} className="border-t border-zinc-100">
+                    <td className="px-4 py-3 capitalize">{moduleLabel(item.module)}</td>
                     <td className="px-4 py-3">{item.item_type}</td>
                     <td className="px-4 py-3">{item.stem ?? "—"}</td>
                     <td className="px-4 py-3 capitalize">{item.status.replaceAll("_", " ")}</td>

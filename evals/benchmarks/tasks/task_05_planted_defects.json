@@ -1,0 +1,8 @@
+{
+  "id": "task_05_planted_defects",
+  "name": "Planted defect detection",
+  "module": "reading",
+  "description": "Detect deliberately planted MUST-rule violations with known ground truth.",
+  "kind": "planted_defect",
+  "fixture_path": "evals/benchmarks/planted_defects/reading_non_verbatim_answer.json"
+}

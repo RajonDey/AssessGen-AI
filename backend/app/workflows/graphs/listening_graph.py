@@ -28,6 +28,7 @@ from app.modules.ielts.reading.agents import (
 )
 from app.modules.ielts.reading.schemas import ReadingItem, ReadingPassage
 from app.workflows.context import ReadingGraphContext
+from app.workflows.dev_mode import dev_mode_enabled
 from app.workflows.listening_state import ListeningGraphState
 from app.workflows.nodes.human_review import human_review
 from app.workflows.nodes.l2_gate import (
@@ -113,8 +114,10 @@ async def quality_script(state: ListeningGraphState) -> dict[str, Any]:
 
 def route_after_script_quality(
     state: ListeningGraphState,
-) -> Literal["generate_script", "originality_script", "fail_run"]:
+) -> Literal["generate_script", "originality_script", "generate_items", "fail_run"]:
     if state.get("status") == "script_quality_passed":
+        if dev_mode_enabled(state):
+            return "generate_items"
         return "originality_script"
     if state.get("script_attempt", 0) >= MAX_SCRIPT_ATTEMPTS:
         return "fail_run"
@@ -311,6 +314,7 @@ def build_listening_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
         {
             "generate_script": "generate_script",
             "originality_script": "originality_script",
+            "generate_items": "generate_items",
             "fail_run": "fail_run",
         },
     )

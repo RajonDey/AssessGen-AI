@@ -11,8 +11,8 @@ Update this file when a sub-phase completes — do not mark the roadmap exit cri
 |-------|------|--------|------------------|
 | **1A** Foundation | [phase-1a-foundation.md](phase-1a-foundation.md) | Complete | `make verify-1a` |
 | **1B** Reading | [phase-1b-reading.md](phase-1b-reading.md) | Complete (code); live validation ongoing | `make verify-1b` |
-| **1C** Thin verticals | [phase-1c-thin-verticals.md](phase-1c-thin-verticals.md) | **In progress** | `make verify-1c` (TBD) |
-| **1D** Benchmark | [phase-1d-benchmark.md](phase-1d-benchmark.md) | Not started | `make benchmark` (TBD) |
+| **1C** Thin verticals | [phase-1c-thin-verticals.md](phase-1c-thin-verticals.md) | **In progress** (admin UI done; E2E pending) | `make verify-1c` |
+| **1D** Benchmark | [phase-1d-benchmark.md](phase-1d-benchmark.md) | In progress | `make benchmark` (mock) |
 
 ---
 
@@ -41,50 +41,52 @@ Update this file when a sub-phase completes — do not mark the roadmap exit cri
 
 ### Shared (T0)
 
-- [x] Module dispatch in worker + API (stubs for L/W/S until graphs land)
-- [ ] Thin graph pattern (L1 + originality + persist + review)
+- [x] Module dispatch in worker + API
+- [x] Thin graph pattern (L1 + originality + persist + review)
 - [x] Persistence convention documented (`backend/app/modules/ielts/PERSISTENCE.md`)
 
 ### Listening
 
 - [x] Schemas, spec, request parser (Sections 1–2)
-- [ ] `prompts/` — planner, script generator
-- [ ] `R-LIST-001..008` + unit tests
-- [ ] Script + item agents + graph + run service
+- [x] `prompts/` — planner, script generator
+- [x] `R-LIST-001..008` + unit tests
+- [x] Script + item agents + graph + run service
 - [ ] End-to-end: generate → review → approve → bank
 
 ### Writing
 
-- [ ] Task 2 schemas + five question types
-- [ ] `R-WRIT-001..006` + unit tests (006 N/A for Task 2)
-- [ ] Task 2 agent + graph + run service
+- [x] Task 2 schemas + five question types
+- [x] `R-WRIT-001..006` + unit tests (006 N/A for Task 2)
+- [x] Task 2 agent + graph + run service
 - [ ] End-to-end per question type (or combined run)
 
 ### Speaking
 
-- [ ] Part 1 + Part 2 schemas
-- [ ] `R-SPK-001..005` + unit tests (004 N/A without Part 3)
-- [ ] Agents + graph + run service
+- [x] Part 1 + Part 2 schemas
+- [x] `R-SPK-001..005` + unit tests (004 N/A without Part 3)
+- [x] Agents + graph + run service
 - [ ] End-to-end: generate → review → approve → bank
 
 ### Admin
 
-- [ ] Module picker on Generate
-- [ ] Review display per module
+- [x] Module picker on Generate
+- [x] Review display per module
 
 ### Verification
 
-- [ ] `make verify-1c` + `scripts/verify-1c.sh`
+- [x] `make verify-1c` + `scripts/verify-1c.sh`
+- [ ] Live E2E per module with Ollama (operational proof)
 
 ---
 
 ## 1D — Benchmark harness
 
-- [ ] Harness scaffold + result schema
-- [ ] Planted-defect suite
-- [ ] Runs for `qwen3.5:4b`, `qwen3.5:9b`, `gemma4:12b`
-- [ ] Cost/throughput report artefact
-- [ ] `make benchmark`
+- [x] Harness scaffold + result schema (`evals/harness/`, `make benchmark`)
+- [x] Planted-defect suite (R-COMP-001, R-COMP-002 fixtures)
+- [x] Live Reading generation tasks 1–4 wired (`dev_mode`, auto-approve)
+- [ ] Full model matrix run recorded (`qwen3.5:4b`, `9b`, `gemma4:12b` via profiles)
+- [x] Cost/throughput report artefact (`evals/benchmarks/results/`, gitignored)
+- [x] `make benchmark` (mock mode — no Ollama)
 
 ---
 

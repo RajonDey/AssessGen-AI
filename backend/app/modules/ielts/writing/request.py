@@ -13,6 +13,7 @@ class WritingGenerationSpec(BaseModel):
     topic: str = Field(default="Urbanisation", min_length=1)
     question_type: WritingTask2Type = Field(default="opinion")
     target_band: float = Field(default=7.0, ge=5.0, le=9.0)
+    dev_mode: bool = False
 
 
 def parse_writing_spec(request: dict[str, Any]) -> WritingGenerationSpec:

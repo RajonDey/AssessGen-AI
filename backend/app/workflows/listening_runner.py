@@ -24,5 +24,6 @@ def build_initial_listening_state(
         "target_band": parsed.target_band,
         "question_count": parsed.question_count,
         "accent": parsed.accent,
+        "dev_mode": parsed.dev_mode,
         "script_attempt": 0,
     }

@@ -17,6 +17,7 @@ from app.modules.ielts.writing.agents import WritingTask2GeneratorAgent
 from app.modules.ielts.writing.helpers import prompt_to_passage
 from app.modules.ielts.writing.schemas import WritingTask2Prompt
 from app.workflows.context import ReadingGraphContext
+from app.workflows.dev_mode import dev_mode_enabled
 from app.workflows.nodes.human_review import human_review
 from app.workflows.nodes.l2_gate import (
     check_passage_dedup,
@@ -82,8 +83,10 @@ async def quality_prompt(state: WritingGraphState) -> dict[str, Any]:
 
 def route_after_prompt_quality(
     state: WritingGraphState,
-) -> Literal["generate_prompt", "originality_prompt", "fail_run"]:
+) -> Literal["generate_prompt", "originality_prompt", "persist_writing_content", "fail_run"]:
     if state.get("status") == "prompt_quality_passed":
+        if dev_mode_enabled(state):
+            return "persist_writing_content"
         return "originality_prompt"
     if state.get("prompt_attempt", 0) >= MAX_PROMPT_ATTEMPTS:
         return "fail_run"
@@ -212,6 +215,7 @@ def build_writing_graph(checkpointer: BaseCheckpointSaver[Any]) -> Any:
         {
             "generate_prompt": "generate_prompt",
             "originality_prompt": "originality_prompt",
+            "persist_writing_content": "persist_writing_content",
             "fail_run": "fail_run",
         },
     )

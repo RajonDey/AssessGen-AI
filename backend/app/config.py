@@ -42,6 +42,9 @@ class Settings(BaseSettings):
     llm_memory_budget_gb: float = 11.0
     llm_lease_ttl_seconds: int = 900
 
+    generation_soft_timeout_seconds: int = 1800
+    generation_hard_timeout_seconds: int = 2100
+
     dedup_reject_similarity: float = 0.95
     dedup_review_similarity: float = 0.88
 

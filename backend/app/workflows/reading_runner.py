@@ -27,6 +27,7 @@ def build_initial_reading_state(
         "source_text": parsed.source_text,
         "license_label": parsed.license_label,
         "adaptation_level": parsed.adaptation_level,
+        "dev_mode": parsed.dev_mode,
         "planner_attempt": 0,
         "passage_attempt": 0,
         "revision_attempt": 0,

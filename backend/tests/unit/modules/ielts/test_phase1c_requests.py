@@ -13,6 +13,20 @@ def test_parse_listening_spec_defaults() -> None:
     assert spec.question_count == 10
 
 
+def test_parse_listening_spec_dev_mode_caps_questions() -> None:
+    spec = parse_listening_spec({"spec": {"dev_mode": True, "question_count": 10}})
+    assert spec.dev_mode is True
+    assert spec.question_count == 1
+
+
+def test_parse_reading_spec_dev_mode_caps_questions() -> None:
+    from app.modules.ielts.reading.request import parse_reading_spec
+
+    spec = parse_reading_spec({"spec": {"dev_mode": True, "question_count": 13, "source_mode": "generated"}})
+    assert spec.dev_mode is True
+    assert spec.question_count == 1
+
+
 def test_parse_listening_spec_rejects_section_3_in_1c() -> None:
     with pytest.raises(ValueError, match="Invalid listening"):
         parse_listening_spec({"spec": {"section": 3, "topic": "Test"}})

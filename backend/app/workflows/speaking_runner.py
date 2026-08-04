@@ -21,6 +21,7 @@ def build_initial_speaking_state(
         "status": "queued",
         "topic_domain": parsed.topic_domain,
         "target_band": parsed.target_band,
+        "dev_mode": parsed.dev_mode,
         "content_attempt": 0,
         "item_version_ids": [],
     }

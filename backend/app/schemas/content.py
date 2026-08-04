@@ -10,6 +10,7 @@ from pydantic import BaseModel
 
 class PassageSummary(BaseModel):
     id: UUID
+    module: str
     status: str
     title: str | None = None
     word_count: int | None = None
@@ -28,6 +29,7 @@ class PassageListResponse(BaseModel):
 
 class ItemSummary(BaseModel):
     id: UUID
+    module: str
     status: str
     item_type: str
     stem: str | None = None

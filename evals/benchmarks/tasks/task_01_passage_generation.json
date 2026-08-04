@@ -1,0 +1,15 @@
+{
+  "id": "task_01_passage_generation",
+  "name": "Academic passage generation",
+  "module": "reading",
+  "description": "Generate an 850-950 word Academic passage at target band 7.",
+  "kind": "generation",
+  "fixture_path": null,
+  "generation_spec": {
+    "dev_mode": true,
+    "question_count": 1,
+    "topic": "Urban vertical farming",
+    "target_band": 7.0,
+    "source_mode": "generated"
+  }
+}

@@ -20,3 +20,5 @@ class GenerationRunResponse(BaseModel):
     module: str
     created_at: datetime
     failure_reason: str | None = None
+    queue_ahead: int | None = None
+    started_at: datetime | None = None

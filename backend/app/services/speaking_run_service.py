@@ -20,6 +20,7 @@ from app.infrastructure.llm.structured import SchemaValidationError
 from app.infrastructure.observability.logging import bind_run_context, get_logger
 from app.modules.ielts.speaking.request import SpeakingGenerationSpec, parse_speaking_spec
 from app.services.reading_quality import build_reading_graph_context
+from app.workflows.run_lifecycle import prepare_run_for_execution
 from app.workflows.checkpointer import postgres_checkpointer
 from app.workflows.graphs.speaking_graph import build_speaking_graph
 from app.workflows.smoke_runner import RunExecutionError
@@ -108,7 +109,10 @@ async def execute_speaking_run(run_id: uuid.UUID) -> None:
                 log.warning("run.failed", reason=str(exc))
                 return
 
-            await repo.mark_running(run)
+            if not await prepare_run_for_execution(repo, run):
+                await session.commit()
+                log.info("run.skipped")
+                return
             await session.commit()
 
             try:

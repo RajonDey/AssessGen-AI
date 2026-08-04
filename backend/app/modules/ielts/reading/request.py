@@ -21,6 +21,7 @@ class ReadingGenerationSpec(BaseModel):
     source_text: str | None = None
     license_label: str | None = None
     adaptation_level: str = Field(default="light", pattern="^(none|light|deep)$")
+    dev_mode: bool = False
 
     @model_validator(mode="after")
     def validate_source_fields(self) -> ReadingGenerationSpec:
@@ -42,6 +43,12 @@ class ReadingGenerationSpec(BaseModel):
         if self.source_mode == PassageSourceMode.ADAPTED and not (self.license_label or "").strip():
             msg = "license_label is required for adapted mode"
             raise ValueError(msg)
+        return self
+
+    @model_validator(mode="after")
+    def apply_dev_mode(self) -> ReadingGenerationSpec:
+        if self.dev_mode:
+            self.question_count = min(self.question_count, 1)
         return self
 
 

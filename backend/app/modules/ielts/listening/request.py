@@ -13,12 +13,15 @@ class ListeningGenerationSpec(BaseModel):
     target_band: float = Field(default=7.0, ge=5.0, le=9.0)
     question_count: int = Field(default=10, ge=1, le=10)
     accent: str = Field(default="british", min_length=1)
+    dev_mode: bool = False
 
     @model_validator(mode="after")
     def validate_phase_1c_section(self) -> ListeningGenerationSpec:
         if self.section not in (1, 2):
             msg = "Phase 1C supports Listening sections 1 and 2 only"
             raise ValueError(msg)
+        if self.dev_mode:
+            self.question_count = 1
         return self
 
 

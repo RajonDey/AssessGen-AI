@@ -1,5 +1,6 @@
 import { clearToken, getToken } from "./auth";
 import type {
+  GenerationModule,
   GenerationRun,
   ItemSummary,
   PassageSourceMode,
@@ -7,6 +8,7 @@ import type {
   ReviewQueueItem,
   TokenResponse,
   UserMe,
+  WritingQuestionType,
 } from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "";
@@ -61,6 +63,26 @@ export function fetchMe() {
   return request<UserMe>("/api/v1/auth/me");
 }
 
+function createGenerationRun(
+  module: GenerationModule,
+  spec: Record<string, unknown>,
+  idempotencyKey: string,
+  devMode: boolean,
+) {
+  return request<GenerationRun>("/api/v1/generation/runs", {
+    method: "POST",
+    headers: {
+      "Idempotency-Key": idempotencyKey,
+    },
+    body: JSON.stringify({
+      module,
+      exam: "ielts",
+      variant: "academic",
+      spec: { ...spec, dev_mode: devMode },
+    }),
+  });
+}
+
 export function createReadingRun(input: {
   topic: string;
   questionCount: number;
@@ -69,6 +91,7 @@ export function createReadingRun(input: {
   sourceText?: string;
   licenseLabel?: string;
   adaptationLevel?: "none" | "light" | "deep";
+  devMode?: boolean;
   idempotencyKey: string;
 }) {
   const spec: Record<string, unknown> = {
@@ -87,22 +110,76 @@ export function createReadingRun(input: {
   if (input.adaptationLevel) {
     spec.adaptation_level = input.adaptationLevel;
   }
-  return request<GenerationRun>("/api/v1/generation/runs", {
-    method: "POST",
-    headers: {
-      "Idempotency-Key": input.idempotencyKey,
+  return createGenerationRun("reading", spec, input.idempotencyKey, input.devMode ?? false);
+}
+
+export function createListeningRun(input: {
+  topic: string;
+  section: 1 | 2;
+  questionCount: number;
+  targetBand: number;
+  accent?: string;
+  devMode?: boolean;
+  idempotencyKey: string;
+}) {
+  return createGenerationRun(
+    "listening",
+    {
+      topic: input.topic,
+      section: input.section,
+      question_count: input.questionCount,
+      target_band: input.targetBand,
+      accent: input.accent ?? "british",
     },
-    body: JSON.stringify({
-      module: "reading",
-      exam: "ielts",
-      variant: "academic",
-      spec,
-    }),
-  });
+    input.idempotencyKey,
+    input.devMode ?? false,
+  );
+}
+
+export function createWritingRun(input: {
+  topic: string;
+  questionType: WritingQuestionType;
+  targetBand: number;
+  devMode?: boolean;
+  idempotencyKey: string;
+}) {
+  return createGenerationRun(
+    "writing",
+    {
+      topic: input.topic,
+      question_type: input.questionType,
+      target_band: input.targetBand,
+    },
+    input.idempotencyKey,
+    input.devMode ?? false,
+  );
+}
+
+export function createSpeakingRun(input: {
+  topicDomain: string;
+  targetBand: number;
+  devMode?: boolean;
+  idempotencyKey: string;
+}) {
+  return createGenerationRun(
+    "speaking",
+    {
+      topic_domain: input.topicDomain,
+      target_band: input.targetBand,
+    },
+    input.idempotencyKey,
+    input.devMode ?? false,
+  );
 }
 
 export function fetchRun(runId: string) {
   return request<GenerationRun>(`/api/v1/generation/runs/${runId}`);
+}
+
+export function cancelRun(runId: string) {
+  return request<GenerationRun>(`/api/v1/generation/runs/${runId}/cancel`, {
+    method: "POST",
+  });
 }
 
 export function fetchReviewQueue() {

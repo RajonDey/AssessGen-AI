@@ -1,8 +1,8 @@
 # Phase 1D — Benchmark harness (Execution Plan)
 
-> **Status:** Not started — **blocked on Phase 1C exit.**
+> **Status:** In progress — mock + live Reading harness wired; full model matrix run pending.
 > **Parent:** [Execution Roadmap](roadmap.md) § 1D.
-> **Prerequisite:** [Phase 1C](phase-1c-thin-verticals.md) exit criteria passed.
+> **Prerequisite:** [Phase 1C](phase-1c-thin-verticals.md) exit criteria (E2E proof still open).
 > **Master tracker:** [Phase 1 checklist](phase-1-checklist.md).
 
 ---
@@ -28,10 +28,10 @@ machine-hours per approved item — for the deferred production-model decision (
 
 ## Exit criteria
 
-- [ ] Harness runs end-to-end from `make benchmark` (or documented script)
-- [ ] Results table: pass rate, defect detection rate, wall time per module/task
-- [ ] Planted-defect suite documented — ground truth known by construction
-- [ ] Report committed or generated artefact path documented in README
+- [x] Harness runs end-to-end from `make benchmark` (or documented script)
+- [ ] Results table: pass rate, defect detection rate, wall time per module/task (needs live Ollama run)
+- [x] Planted-defect suite documented — ground truth known by construction
+- [x] Report committed or generated artefact path documented in README
 - [ ] [Phase 1 checklist](phase-1-checklist.md) — 1D items checked
 - [ ] Phase 1 exit criteria in [roadmap](roadmap.md) ready for sign-off
 

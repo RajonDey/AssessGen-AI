@@ -1,0 +1,39 @@
+{
+  "passage": {
+    "title": "Urban vertical farming",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "Vertical farms in Singapore use hydroponic systems to grow leafy greens year round without soil."
+      }
+    ]
+  },
+  "items": [
+    {
+      "item_type": "sentence_completion",
+      "stem": "Singapore vertical farms use _____ systems.",
+      "instructions": "NO MORE THAN TWO WORDS",
+      "options": [],
+      "answer_key": {
+        "type": "exact",
+        "values": ["hydroponics"],
+        "accept": [],
+        "case_sensitive": false
+      },
+      "evidence": {
+        "paragraph": "A",
+        "start": 42,
+        "end": 52,
+        "quote": "hydroponic"
+      }
+    }
+  ],
+  "rules_under_test": ["R-COMP-001"],
+  "expected_rule_failures": ["R-COMP-001"],
+  "planted_defects": [
+    {
+      "rule": "R-COMP-001",
+      "description": "Answer key paraphrased — not verbatim in passage ('hydroponics' vs 'hydroponic')"
+    }
+  ]
+}

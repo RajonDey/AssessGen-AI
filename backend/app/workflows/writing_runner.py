@@ -22,6 +22,7 @@ def build_initial_writing_state(
         "topic": parsed.topic,
         "question_type": parsed.question_type,
         "target_band": parsed.target_band,
+        "dev_mode": parsed.dev_mode,
         "prompt_attempt": 0,
         "item_version_ids": [],
     }

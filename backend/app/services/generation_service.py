@@ -11,8 +11,10 @@ from app.infrastructure.db.repositories.generation_run_repository import Generat
 from app.infrastructure.queue.celery_app import celery_app
 from app.infrastructure.queue.constants import GENERATE_QUEUE
 from app.schemas.generation import CreateGenerationRunRequest, GenerationRunResponse
+from app.services.generation_errors import RunCancelError
 
 RUN_GENERATION_TASK = "app.workflows.generation_tasks.run_generation"
+CANCELLED_REASON = "Cancelled by operator"
 
 
 class DuplicateIdempotencyKeyError(Exception):
@@ -55,12 +57,57 @@ class GenerationService:
         )
         return run
 
-    @staticmethod
-    def to_response(run: GenerationRun) -> GenerationRunResponse:
+    async def get_run(
+        self,
+        run_id: uuid.UUID,
+        *,
+        organization_id: uuid.UUID,
+    ) -> GenerationRun | None:
+        return await self.runs.get_by_id(run_id, organization_id=organization_id)
+
+    async def cancel_run(
+        self,
+        run_id: uuid.UUID,
+        *,
+        organization_id: uuid.UUID,
+    ) -> GenerationRun:
+        run = await self.runs.get_by_id(run_id, organization_id=organization_id)
+        if run is None:
+            msg = f"Generation run {run_id} not found"
+            raise RunCancelError(msg)
+        if run.status not in {"queued", "running"}:
+            msg = f"Run cannot be cancelled while status is {run.status}"
+            raise RunCancelError(msg)
+        await self.runs.mark_failed(run, CANCELLED_REASON)
+        await self.session.commit()
+        return run
+
+    async def to_response(
+        self,
+        run: GenerationRun,
+        *,
+        organization_id: uuid.UUID | None = None,
+    ) -> GenerationRunResponse:
+        queue_ahead: int | None = None
+        if run.status == "queued" and organization_id is not None:
+            queue_ahead = await self.runs.count_queue_ahead(run, organization_id=organization_id)
         return GenerationRunResponse(
             run_id=run.id,
             status=run.status,
             module=run.module,
             created_at=run.created_at,
             failure_reason=run.failure_reason,
+            queue_ahead=queue_ahead,
+            started_at=run.started_at,
+        )
+
+    @staticmethod
+    def to_response_sync(run: GenerationRun) -> GenerationRunResponse:
+        return GenerationRunResponse(
+            run_id=run.id,
+            status=run.status,
+            module=run.module,
+            created_at=run.created_at,
+            failure_reason=run.failure_reason,
+            started_at=run.started_at,
         )

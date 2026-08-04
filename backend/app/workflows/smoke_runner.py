@@ -15,6 +15,7 @@ from app.infrastructure.db.session import async_session_factory
 from app.infrastructure.llm.gateway import ProviderError
 from app.infrastructure.llm.structured import SchemaValidationError
 from app.infrastructure.observability.logging import bind_run_context, get_logger
+from app.workflows.run_lifecycle import prepare_run_for_execution
 from app.workflows.checkpointer import postgres_checkpointer
 from app.workflows.context import SmokeGraphContext
 from app.workflows.graphs.smoke_graph import build_smoke_graph
@@ -39,7 +40,10 @@ async def execute_smoke_run(run_id: uuid.UUID) -> None:
                 msg = f"Generation run {run_id} not found"
                 raise RunExecutionError(msg)
 
-            await repo.mark_running(run)
+            if not await prepare_run_for_execution(repo, run):
+                await session.commit()
+                log.info("run.skipped")
+                return
             await session.commit()
 
             final_state: SmokeGraphState
