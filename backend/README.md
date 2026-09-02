@@ -1,5 +1,25 @@
 # AssessGen Backend — lightweight generation API
 
+Full install guide: [docs/installation.md](../docs/installation.md)
+
+## Requirements
+
+| File | Install with |
+| ---- | ------------ |
+| `requirements.txt` | `uv sync` or `pip install -r requirements.txt` |
+| `requirements-dev.txt` | `uv sync --extra dev` or `pip install -r requirements-dev.txt` |
+| `requirements-tts.txt` | `uv sync --extra tts` or pip + CPU Torch index (see install doc) |
+
+Regenerate from the lockfile after changing `pyproject.toml`:
+
+```bash
+uv export --no-dev --no-hashes -o requirements.txt
+uv export --extra dev --no-hashes -o requirements-dev.txt
+uv export --extra tts --no-hashes -o requirements-tts.txt
+```
+
+Python **3.12** only. Source of truth: `pyproject.toml` + `uv.lock`.
+
 ## Run without Docker
 
 ```bash
