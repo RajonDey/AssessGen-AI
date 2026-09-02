@@ -1,76 +1,49 @@
-# AssessGen Backend
+# AssessGen Backend — lightweight generation API
 
-FastAPI application, LangGraph workflows, Celery workers, and domain logic.
-
-See [docs/core/06-folder-structure.md](../docs/core/06-folder-structure.md) for layout and
-[docs/execution/phase-1a-foundation.md](../docs/execution/phase-1a-foundation.md) for the current
-build plan.
-
-## Quick start
-
-```bash
-uv sync --extra dev
-uv run python -c "import app"
-uv run pytest tests/unit -q
-```
-
-## Lint (T2)
-
-```bash
-uv run ruff check app tests
-uv run ruff format --check app tests
-uv run mypy app tests
-uv run lint-imports
-```
-
-Pre-commit (from repo root):
-
-```bash
-cd backend && uv sync --extra dev
-cd .. && uv run --directory backend pre-commit install
-pre-commit run --all-files
-```
-
-## Database
-
-Requires Docker data profile (`docker compose --profile data up -d`). Postgres on host port **5434**.
-
-```bash
-uv run alembic upgrade head
-uv run python -m app.scripts.seed
-```
-
-Default seed admin: `admin@assessgen.local` / `admin` (override with `SEED_ADMIN_EMAIL`, `SEED_ADMIN_PASSWORD`).
-
-## Celery worker
-
-Requires Redis (`docker compose --profile data up -d`). **Run from `backend/`** — the uv project lives here, not at the repo root.
+## Run without Docker
 
 ```bash
 cd backend
-uv sync --extra dev
-uv run celery -A app.infrastructure.queue.celery_app worker \
-  --loglevel=info -Q q.generate,q.io,q.audio --concurrency=1
+cp .env.example .env   # if needed
+uv sync --extra tts    # includes Kokoro; plain `uv sync` removes it
+uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8080
 ```
 
-## Smoke generation run (T9)
+Docs: http://localhost:8080/api/docs
 
-With API, worker, Redis, Postgres, and Ollama running:
+## Listening audio (Kokoro demo)
+
+Optional TTS for uploaded Listening scripts (`speakers` + `script.turns`):
 
 ```bash
-# Login
-TOKEN=$(curl -s -X POST http://localhost:8000/api/v1/auth/login \
-  -H 'Content-Type: application/json' \
-  -d '{"email":"admin@assessgen.local","password":"admin"}' | jq -r .access_token)
-
-# Queue smoke run
-curl -s -X POST http://localhost:8000/api/v1/generation/runs \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Idempotency-Key: $(uuidgen)" \
-  -H 'Content-Type: application/json' \
-  -d '{"module":"smoke","spec":{"kind":"smoke"}}'
-
-# Poll status
-curl -s http://localhost:8000/api/v1/generation/runs/<run_id> \
-  -H "Authorization: Bearer $TOKEN"
+sudo apt-get install -y espeak-ng
+cd backend
+# Uses CPU Torch (see [tool.uv.sources] in pyproject.toml) — avoid CUDA on Intel demos
+uv sync --extra tts
+# unload Ollama models first if RAM is tight: ollama stop <model>
+uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8080
 ```
+
+- Status: `GET /api/v1/listening/tts-status`
+- Synthesize: `POST /api/v1/listening/synthesize` (multipart file)
+- Admin UI: http://localhost:3001/listening-audio
+
+## Provider switch
+
+In `.env`:
+
+```bash
+LLM_PROVIDER=ollama   # or openai
+OLLAMA_GENERATOR_MODEL=gemma4:e2b
+OLLAMA_REVIEWER_MODEL=gemma4:e2b
+# Optional larger model: ollama pull gemma4:12b
+
+# LLM_PROVIDER=openai
+# OPENAI_API_KEY=sk-...
+```
+
+## Agents
+
+1. **Generator** — creates reading / writing / listening (script) JSON  
+2. **Reviewer** — validates; on failure generator revises (max 2 loops)
+3. **TTS (optional)** — Kokoro turns Listening scripts into WAV (demo)

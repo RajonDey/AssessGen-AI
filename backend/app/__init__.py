@@ -1,3 +1,1 @@
-"""AssessGen AI backend application."""
-
-__version__ = "0.1.0"
+"""AssessGen lightweight generation API."""
