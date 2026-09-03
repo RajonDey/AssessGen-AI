@@ -1,0 +1,38 @@
+{
+  "module": "listening",
+  "expect_must_fail": true,
+  "content": {
+    "title": "Broken Listening",
+    "parts": [
+      {
+        "partNumber": 1,
+        "title": "Part 1",
+        "instructions": "Listen",
+        "questionGroups": [
+          {
+            "groupRange": "1-5",
+            "subInstructions": "ONE WORD",
+            "questions": [
+              {
+                "id": "q1",
+                "type": "sentence-completion",
+                "questionNumber": "1",
+                "question": "Cost: _______ per month"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "script": {
+      "partNumber": 1,
+      "turns": [
+        { "speaker": "A", "text": "Welcome to Smartbank." },
+        { "speaker": "B", "text": "Thanks." }
+      ]
+    },
+    "answer_key": {
+      "1": "unicornfee"
+    }
+  }
+}

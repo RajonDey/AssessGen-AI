@@ -1,35 +1,25 @@
-# Application services — start with: docker compose --profile backend up -d
-
-x-app-profiles: &app-profiles
-  profiles:
-    - backend
-    - generate
+# Lightweight AssessGen — API only (optional Ollama container)
 
 services:
   api:
-    <<: *app-profiles
     build:
       context: ../../backend
       dockerfile: ../infra/docker/backend.Dockerfile
     container_name: assessgen-api
     restart: unless-stopped
-    environment:
-      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-assessgen}:${POSTGRES_PASSWORD:-assessgen}@postgres:5432/${POSTGRES_DB:-assessgen}
-      REDIS_URL: redis://redis:6379/0
-      S3_ENDPOINT_URL: http://minio:9000
-      S3_ACCESS_KEY: ${MINIO_ROOT_USER:-assessgen}
-      S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-assessgen-dev}
-      S3_BUCKET: ${S3_BUCKET:-assessgen}
-      OLLAMA_BASE_URL: http://ollama:11434
     ports:
-      - "${API_PORT:-8000}:8000"
-    depends_on:
-      postgres:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      minio:
-        condition: service_started
+      - "${API_PORT:-8080}:8080"
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_GENERATOR_MODEL: ${OLLAMA_GENERATOR_MODEL:-gemma4:e2b}
+      OLLAMA_REVIEWER_MODEL: ${OLLAMA_REVIEWER_MODEL:-gemma4:12b}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_GENERATOR_MODEL: ${OPENAI_GENERATOR_MODEL:-gpt-4.1-mini}
+      OPENAI_REVIEWER_MODEL: ${OPENAI_REVIEWER_MODEL:-gpt-4.1-mini}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ../../backend/app:/app/app:ro
     command:
@@ -40,52 +30,17 @@ services:
       - --host
       - 0.0.0.0
       - --port
-      - "8000"
+      - "8080"
       - --reload
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/v1/health"]
       interval: 10s
       timeout: 5s
       retries: 5
-      start_period: 20s
-
-  worker:
-    <<: *app-profiles
-    build:
-      context: ../../backend
-      dockerfile: ../infra/docker/worker.Dockerfile
-    container_name: assessgen-worker
-    restart: unless-stopped
-    environment:
-      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-assessgen}:${POSTGRES_PASSWORD:-assessgen}@postgres:5432/${POSTGRES_DB:-assessgen}
-      REDIS_URL: redis://redis:6379/0
-      S3_ENDPOINT_URL: http://minio:9000
-      S3_ACCESS_KEY: ${MINIO_ROOT_USER:-assessgen}
-      S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-assessgen-dev}
-      S3_BUCKET: ${S3_BUCKET:-assessgen}
-      OLLAMA_BASE_URL: http://ollama:11434
-    depends_on:
-      postgres:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-    volumes:
-      - ../../backend/app:/app/app:ro
-    command:
-      - uv
-      - run
-      - celery
-      - -A
-      - app.infrastructure.queue.celery_app
-      - worker
-      - --loglevel=info
-      - -Q
-      - q.generate,q.io,q.audio
-      - --concurrency=1
+      start_period: 15s
 
   ollama:
-    profiles:
-      - generate
+    profiles: ["ollama"]
     image: ollama/ollama:latest
     container_name: assessgen-ollama
     restart: unless-stopped

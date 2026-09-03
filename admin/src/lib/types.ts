@@ -1,75 +1,66 @@
-export type TokenResponse = {
-  access_token: string;
-  token_type: string;
-  expires_in: number;
-};
+export type ModuleName = "reading" | "writing" | "listening";
 
-export type UserMe = {
-  id: string;
-  email: string;
-  role: string;
-  organization_id: string;
-};
-
-export type GenerationModule = "reading" | "listening" | "writing" | "speaking";
-
-export type PassageSourceMode = "generated" | "ingested" | "adapted";
-
-export type WritingQuestionType =
+export type WritingType =
   | "opinion"
   | "discussion"
   | "problem_solution"
   | "advantages_disadvantages"
   | "two_part";
 
-export type GenerationRun = {
-  run_id: string;
-  status: string;
-  module: string;
-  created_at: string;
-  failure_reason: string | null;
-  queue_ahead?: number | null;
-  started_at?: string | null;
+export type ReviewFinding = {
+  severity: "must" | "should" | "info";
+  message: string;
+  code?: string | null;
 };
 
-export type ReviewPreviewItem = {
-  id: string;
-  item_type: string;
-  stem: string | null;
-  sequence_no: number | null;
+export type GenerateResponse = {
+  module: ModuleName;
+  topic: string;
+  target_band: number;
+  part_count: number;
+  content: Record<string, unknown>;
+  review: {
+    passed: boolean;
+    findings: ReviewFinding[];
+    summary: string;
+    source?: string;
+  };
+  revision_attempts: number;
+  provider: string;
+  generator_model: string;
+  reviewer_model: string;
+  reasoning: string;
+  plan_steps: string[];
+  session_id?: string | null;
+  parts_linked?: number;
 };
 
-export type ReviewQueueItem = {
-  run_id: string;
-  module: string;
-  topic: string | null;
-  created_at: string;
-  interrupt_payload?: {
-    passage_id?: string;
-    passage_title?: string;
-    passage_body?: string;
-    item_count?: number;
-    items?: ReviewPreviewItem[];
-  } | null;
+export type GenerateRequest = {
+  module: ModuleName;
+  topic: string;
+  target_band: number;
+  question_count: number;
+  part_count: number;
+  writing_type?: WritingType;
+  full_paper?: boolean;
+  session_id?: string | null;
+  current_part?: number;
+  total_parts?: number;
+  previous_content?: Record<string, unknown> | null;
 };
 
-export type PassageSummary = {
-  id: string;
-  module: string;
-  status: string;
-  title: string | null;
-  word_count: number | null;
-  target_band: number | null;
-  created_at: string;
-};
-
-export type ItemSummary = {
-  id: string;
-  module: string;
-  status: string;
-  item_type: string;
-  stem: string | null;
-  passage_id: string | null;
-  sequence_no: number | null;
-  created_at: string;
+export type ProgressEvent = {
+  stage:
+    | "planning"
+    | "reasoning"
+    | "generating"
+    | "rules"
+    | "reviewing"
+    | "revising"
+    | "done"
+    | "error";
+  message: string;
+  reasoning?: string | null;
+  step?: string | null;
+  result?: GenerateResponse | null;
 };

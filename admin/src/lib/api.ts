@@ -1,17 +1,7 @@
-import { clearToken, getToken } from "./auth";
-import type {
-  GenerationModule,
-  GenerationRun,
-  ItemSummary,
-  PassageSourceMode,
-  PassageSummary,
-  ReviewQueueItem,
-  TokenResponse,
-  UserMe,
-  WritingQuestionType,
-} from "./types";
+import type { GenerateRequest, GenerateResponse, ProgressEvent } from "./types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL?.trim() || "http://127.0.0.1:8080";
 
 export class ApiError extends Error {
   status: number;
@@ -22,188 +12,188 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const headers = new Headers(init.headers);
-  if (!headers.has("Content-Type") && init.body) {
-    headers.set("Content-Type", "application/json");
+function formatDetail(detail: unknown, fallback: string): string {
+  if (typeof detail === "string") return detail;
+  if (Array.isArray(detail)) {
+    return detail
+      .map((item) => {
+        if (typeof item === "string") return item;
+        if (item && typeof item === "object" && "msg" in item) {
+          return String((item as { msg: unknown }).msg);
+        }
+        return JSON.stringify(item);
+      })
+      .join("; ");
   }
-  const token = getToken();
-  if (token) {
-    headers.set("Authorization", `Bearer ${token}`);
+  if (detail && typeof detail === "object") {
+    return JSON.stringify(detail);
+  }
+  return fallback;
+}
+
+export async function generateContentStream(
+  body: GenerateRequest,
+  onEvent: (event: ProgressEvent) => void,
+): Promise<GenerateResponse> {
+  let response: Response;
+  try {
+    response = await fetch(`${API_URL}/api/v1/generate/stream`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Network request failed";
+    throw new ApiError(
+      `Cannot reach API at ${API_URL} (${message}). Is uvicorn running on :8080?`,
+      0,
+    );
   }
 
-  const response = await fetch(`${API_URL}${path}`, { ...init, headers });
-  if (response.status === 401) {
-    clearToken();
-  }
-  if (!response.ok) {
-    let detail = response.statusText;
+  if (!response.ok || !response.body) {
+    let detail = response.statusText || "Request failed";
     try {
-      const problem = (await response.json()) as { detail?: string; title?: string };
-      detail = problem.detail ?? problem.title ?? detail;
+      const problem = (await response.json()) as { detail?: unknown };
+      detail = formatDetail(problem.detail, detail);
     } catch {
-      // ignore parse errors
+      // ignore
     }
     throw new ApiError(detail, response.status);
   }
-  if (response.status === 204) {
-    return undefined as T;
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let finalResult: GenerateResponse | null = null;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() ?? "";
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      const event = JSON.parse(trimmed) as ProgressEvent;
+      onEvent(event);
+      if (event.stage === "error") {
+        throw new ApiError(event.message, 502);
+      }
+      if (event.stage === "done" && event.result) {
+        finalResult = event.result;
+      }
+    }
   }
-  return (await response.json()) as T;
+
+  if (!finalResult) {
+    throw new ApiError("Stream ended without a result", 502);
+  }
+  return finalResult;
 }
 
-export function login(email: string, password: string) {
-  return request<TokenResponse>("/api/v1/auth/login", {
-    method: "POST",
-    body: JSON.stringify({ email, password }),
-  });
+function triggerDownload(filename: string, blob: Blob) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
-export function fetchMe() {
-  return request<UserMe>("/api/v1/auth/me");
-}
-
-function createGenerationRun(
-  module: GenerationModule,
-  spec: Record<string, unknown>,
-  idempotencyKey: string,
-  devMode: boolean,
-) {
-  return request<GenerationRun>("/api/v1/generation/runs", {
-    method: "POST",
-    headers: {
-      "Idempotency-Key": idempotencyKey,
-    },
-    body: JSON.stringify({
-      module,
-      exam: "ielts",
-      variant: "academic",
-      spec: { ...spec, dev_mode: devMode },
+export function downloadJson(filename: string, data: unknown) {
+  triggerDownload(
+    filename,
+    new Blob([JSON.stringify(data, null, 2)], {
+      type: "application/json",
     }),
-  });
+  );
 }
 
-export function createReadingRun(input: {
-  topic: string;
-  questionCount: number;
-  targetBand: number;
-  sourceMode?: PassageSourceMode;
-  sourceText?: string;
-  licenseLabel?: string;
-  adaptationLevel?: "none" | "light" | "deep";
-  devMode?: boolean;
-  idempotencyKey: string;
-}) {
-  const spec: Record<string, unknown> = {
-    topic: input.topic,
-    question_count: input.questionCount,
-    target_band: input.targetBand,
-    passage_count: 1,
-    source_mode: input.sourceMode ?? "generated",
+export function downloadText(filename: string, text: string) {
+  const isMd = filename.endsWith(".md");
+  triggerDownload(
+    filename,
+    new Blob([text], {
+      type: isMd ? "text/markdown;charset=utf-8" : "text/plain;charset=utf-8",
+    }),
+  );
+}
+
+/** Prefer document field; otherwise pretty JSON. */
+export function contentAsDownloadText(content: Record<string, unknown>): {
+  text: string;
+  ext: "md" | "txt" | "json";
+} {
+  const doc = content.document;
+  if (typeof doc === "string" && doc.trim()) {
+    const format = String(content.format || "markdown");
+    return {
+      text: doc,
+      ext: format === "text" ? "txt" : "md",
+    };
+  }
+  return {
+    text: JSON.stringify(content, null, 2),
+    ext: "json",
   };
-  if (input.sourceText) {
-    spec.source_text = input.sourceText;
+}
+
+export async function getTtsStatus(): Promise<{
+  available: boolean;
+  engine?: string;
+  hint?: string;
+  sample_rate?: number;
+}> {
+  const response = await fetch(`${API_URL}/api/v1/listening/tts-status`);
+  if (!response.ok) {
+    throw new ApiError("Failed to check TTS status", response.status);
   }
-  if (input.licenseLabel) {
-    spec.license_label = input.licenseLabel;
+  return (await response.json()) as {
+    available: boolean;
+    engine?: string;
+    hint?: string;
+    sample_rate?: number;
+  };
+}
+
+export async function synthesizeListeningAudio(file: File): Promise<{
+  blob: Blob;
+  durationSeconds?: string;
+  turns?: string;
+}> {
+  const form = new FormData();
+  form.append("file", file);
+
+  let response: Response;
+  try {
+    response = await fetch(`${API_URL}/api/v1/listening/synthesize`, {
+      method: "POST",
+      body: form,
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Network request failed";
+    throw new ApiError(
+      `Cannot reach API at ${API_URL} (${message}). Is uvicorn running on :8080?`,
+      0,
+    );
   }
-  if (input.adaptationLevel) {
-    spec.adaptation_level = input.adaptationLevel;
+
+  if (!response.ok) {
+    let detail = response.statusText || "Synthesis failed";
+    try {
+      const problem = (await response.json()) as { detail?: unknown };
+      detail = formatDetail(problem.detail, detail);
+    } catch {
+      // ignore
+    }
+    throw new ApiError(detail, response.status);
   }
-  return createGenerationRun("reading", spec, input.idempotencyKey, input.devMode ?? false);
-}
 
-export function createListeningRun(input: {
-  topic: string;
-  section: 1 | 2;
-  questionCount: number;
-  targetBand: number;
-  accent?: string;
-  devMode?: boolean;
-  idempotencyKey: string;
-}) {
-  return createGenerationRun(
-    "listening",
-    {
-      topic: input.topic,
-      section: input.section,
-      question_count: input.questionCount,
-      target_band: input.targetBand,
-      accent: input.accent ?? "british",
-    },
-    input.idempotencyKey,
-    input.devMode ?? false,
-  );
-}
-
-export function createWritingRun(input: {
-  topic: string;
-  questionType: WritingQuestionType;
-  targetBand: number;
-  devMode?: boolean;
-  idempotencyKey: string;
-}) {
-  return createGenerationRun(
-    "writing",
-    {
-      topic: input.topic,
-      question_type: input.questionType,
-      target_band: input.targetBand,
-    },
-    input.idempotencyKey,
-    input.devMode ?? false,
-  );
-}
-
-export function createSpeakingRun(input: {
-  topicDomain: string;
-  targetBand: number;
-  devMode?: boolean;
-  idempotencyKey: string;
-}) {
-  return createGenerationRun(
-    "speaking",
-    {
-      topic_domain: input.topicDomain,
-      target_band: input.targetBand,
-    },
-    input.idempotencyKey,
-    input.devMode ?? false,
-  );
-}
-
-export function fetchRun(runId: string) {
-  return request<GenerationRun>(`/api/v1/generation/runs/${runId}`);
-}
-
-export function cancelRun(runId: string) {
-  return request<GenerationRun>(`/api/v1/generation/runs/${runId}/cancel`, {
-    method: "POST",
-  });
-}
-
-export function fetchReviewQueue() {
-  return request<{ items: ReviewQueueItem[] }>("/api/v1/review/queue");
-}
-
-export function resumeRun(
-  runId: string,
-  body: { decision: "approve" | "reject"; notes?: string },
-) {
-  return request<GenerationRun>(`/api/v1/generation/runs/${runId}/resume`, {
-    method: "POST",
-    body: JSON.stringify(body),
-  });
-}
-
-export function fetchPassages() {
-  return request<{ items: PassageSummary[] }>("/api/v1/passages");
-}
-
-export function fetchItems() {
-  return request<{ items: ItemSummary[] }>("/api/v1/items");
-}
-
-export function fetchPassage(id: string) {
-  return request<PassageSummary & { body?: string | null }>(`/api/v1/passages/${id}`);
+  const blob = await response.blob();
+  return {
+    blob,
+    durationSeconds: response.headers.get("X-Audio-Duration-Seconds") || undefined,
+    turns: response.headers.get("X-Audio-Turns") || undefined,
+  };
 }

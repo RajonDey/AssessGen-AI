@@ -1,0 +1,19 @@
+{
+  "module": "reading",
+  "expect_must_fail": true,
+  "content": {
+    "id": "bad-reading",
+    "type": "reading",
+    "title": "Broken Reading",
+    "duration": 60,
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "Empty",
+        "instructions": "Read",
+        "passage": [],
+        "questionGroups": []
+      }
+    ]
+  }
+}
