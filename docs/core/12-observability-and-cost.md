@@ -235,6 +235,12 @@ shipped) gets more expensive by the hour.
 
 ---
 
+## In-process call ledger (current)
+
+`backend/app/content/cost_ledger.py` counts planner, generator, and critic calls per module for a single worker. It does not store tokens or dollars. Read it at `GET /api/v1/generate/cost-stats`; clear it with `POST /api/v1/generate/cost-stats/reset`. The durable `agent_invocations` ledger described above is still the target for production accounting.
+
+---
+
 ## Phasing
 
 Observability is built incrementally, but the parts that must exist from the first generation run are

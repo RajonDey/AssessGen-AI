@@ -1,0 +1,513 @@
+{
+  "title": "IELTS Listening Test 1",
+  "audioUrl": "listening-01.mp3",
+  "duration": 28,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-5",
+          "subInstructions": "Write <b>ONE WORD AND/OR A NUMBER</b> in each gap.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "sentence-completion",
+              "questionNumber": "1",
+              "question": "Cost of having an account with Smartbank: €_______per month (after the first two months)."
+            },
+            {
+              "id": "q2",
+              "type": "sentence-completion",
+              "questionNumber": "2",
+              "question": "Smartbank customers can choose to receive free cinema tickets or a _______"
+            },
+            {
+              "id": "q3",
+              "type": "sentence-completion",
+              "questionNumber": "3",
+              "question": "Customers' phone calls are answered promptly; otherwise the bank will phone back within _______"
+            },
+            {
+              "id": "q4",
+              "type": "sentence-completion",
+              "questionNumber": "4",
+              "question": "Smartbank offers its customers discounts on _______"
+            },
+            {
+              "id": "q5",
+              "type": "sentence-completion",
+              "questionNumber": "5",
+              "question": "Smartbank describes itself as being a very _______bank."
+            }
+          ]
+        },
+        {
+          "groupRange": "6-10",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> in each gap.",
+          "questions": [
+            {
+              "id": "q6-10",
+              "type": "form-completion",
+              "label": "6-10",
+              "title": "Questions 6 – 10",
+              "formTitle": "SMARTBANK – NEW CUSTOMER INFORMATION FORM",
+              "sections": [
+                {
+                  "rows": [
+                    {
+                      "rowLabel": "CUSTOMER NAME:",
+                      "cells": [
+                        "Lisa",
+                        { "text": "", "isAnswer": true, "questionNumber": "6" }
+                      ]
+                    },
+                    {
+                      "rowLabel": "ADDRESS:",
+                      "cells": ["20 Priceley Lane, Longstone"]
+                    },
+                    {
+                      "rowLabel": "POSTCODE:",
+                      "cells": [
+                        { "text": "", "isAnswer": true, "questionNumber": "7" }
+                      ]
+                    },
+                    {
+                      "rowLabel": "PHONE NUMBER:",
+                      "cells": [
+                        { "text": "", "isAnswer": true, "questionNumber": "8" }
+                      ]
+                    },
+                    {
+                      "rowLabel": "TYPE OF ACCOUNT WANTED:",
+                      "cells": [
+                        "A",
+                        { "text": "", "isAnswer": true, "questionNumber": "9" },
+                        "account"
+                      ]
+                    },
+                    {
+                      "rowLabel": "PURPOSE OF ACCOUNT:",
+                      "cells": [
+                        "Paying in the money that the customer will get as",
+                        { "text": "", "isAnswer": true, "questionNumber": "10" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-15",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q11",
+              "type": "multiple-choice",
+              "questionNumber": "11",
+              "question": "The speaker says it is surprising that before designing Porto Nuevo station, the architect had never",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "visited Porto Nuevo city."
+                },
+                {
+                  "key": "B",
+                  "text": "worked on a large project."
+                },
+                {
+                  "key": "C",
+                  "text": "designed a railway station."
+                }
+              ]
+            },
+            {
+              "id": "q12",
+              "type": "multiple-choice",
+              "questionNumber": "12",
+              "question": "The speaker says that the construction of the station",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "cost more than it should have done."
+                },
+                {
+                  "key": "B",
+                  "text": "was finished quicker than expected."
+                },
+                {
+                  "key": "C",
+                  "text": "was controversial at the time."
+                }
+              ]
+            },
+            {
+              "id": "q13",
+              "type": "multiple-choice",
+              "questionNumber": "13",
+              "question": "What aspect of the building does the speaker say is impressive?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "the size of the roof"
+                },
+                {
+                  "key": "B",
+                  "text": "its use of electricity"
+                },
+                {
+                  "key": "C",
+                  "text": "how the building is lit"
+                }
+              ]
+            },
+            {
+              "id": "q14",
+              "type": "multiple-choice",
+              "questionNumber": "14",
+              "question": "After the station was built, it was criticised for being",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "too big."
+                },
+                {
+                  "key": "B",
+                  "text": "in the wrong place."
+                },
+                {
+                  "key": "C",
+                  "text": "designed in an unfashionable style."
+                }
+              ]
+            },
+            {
+              "id": "q15",
+              "type": "multiple-choice",
+              "questionNumber": "15",
+              "question": "What are the visitors advised to do in the station before catching their train?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "take some photographs"
+                },
+                {
+                  "key": "B",
+                  "text": "hire an audio-guide"
+                },
+                {
+                  "key": "C",
+                  "text": "walk around the whole building"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "16-20",
+          "subInstructions": "Label the plan. Write the appropriate letter, A – G.",
+          "questions": [
+            {
+              "id": "q16-20",
+              "type": "map-label",
+              "label": "16-20",
+              "title": "Questions 16 – 20",
+              "imageUrl": "images/listening-02.png",
+              "locations": [
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "name": "Tourist information desk"
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "name": "Lost property office"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "name": "Toilets"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "name": "Food stalls"
+                },
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "name": "Gift shop"
+                }
+              ],
+              "options": ["A", "B", "C", "D", "E", "F", "G"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-26",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options.",
+          "questions": [
+            {
+              "id": "q21-22",
+              "type": "multiple-choice-multiple",
+              "label": "<b>21 – 22</b>",
+              "text": "For which TWO reasons do Lorna and Max think a smartwatch is a suitable product for their project?",
+              "options": [
+                "The topic relates well to their course",
+                "They are both interested in smartwatches",
+                "Smartwatches combine fashion and technology",
+                "They know that the smartwatch sector is highly profitable",
+                "It is different from the products chosen by the other groups of students"
+              ]
+            },
+            {
+              "id": "q23-24",
+              "type": "multiple-choice-multiple",
+              "label": "<b>23 – 24</b>",
+              "text": "Which TWO groups do Lorna and Max agree they should design their smartwatch for?",
+              "options": [
+                "school children",
+                "luxury customers",
+                "first-time customers",
+                "extreme sports enthusiasts",
+                "customers who like the latest gadgets"
+              ]
+            },
+            {
+              "id": "q25-26",
+              "type": "multiple-choice-multiple",
+              "label": "<b>25 – 26</b>",
+              "text": "Which TWO things do Lorna and Max think will be challenging?",
+              "options": [
+                "meeting the project deadline",
+                "producing work that is original",
+                "choosing a name for their smartwatch",
+                "understanding how the project is marked",
+                "ensuring everyone in the group contributes equally"
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "27-30",
+          "subInstructions": "What task will each of the following students do during the project?",
+          "questions": [
+            {
+              "id": "q27-30",
+              "type": "drag-drop-completion",
+              "label": "<b>27-30</b>",
+              "title": "Questions 27 – 30",
+              "sections": [
+                {
+                  "title": "Students",
+                  "items": [
+                    {
+                      "questionNumber": "27",
+                      "fieldId": "q27",
+                      "prefix": "Lorna",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "28",
+                      "fieldId": "q28",
+                      "prefix": "Max",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "29",
+                      "fieldId": "q29",
+                      "prefix": "Jasmine",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "30",
+                      "fieldId": "q30",
+                      "prefix": "Dave",
+                      "suffix": ""
+                    }
+                  ]
+                }
+              ],
+              "optionsTitle": "Tasks",
+              "options": [
+                {
+                  "key": "A",
+                  "value": "writing publicity materials"
+                },
+                {
+                  "key": "B",
+                  "value": "researching other available smartwatches"
+                },
+                {
+                  "key": "C",
+                  "value": "deciding what to spend money on"
+                },
+                {
+                  "key": "D",
+                  "value": "improving the design of the smartwatch"
+                },
+                {
+                  "key": "E",
+                  "value": "identifying which smartwatch features would be attractive to customers"
+                },
+                {
+                  "key": "F",
+                  "value": "ensuring that all group members are making progress"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "Street furniture",
+              "sections": [
+                {
+                  "heading": "Definition",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Street furniture = outdoor items such as park benches, traffic lights & EV-charging points",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "meet practical needs",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "reflect the character of a place, e.g. street lights in Dorset in the shape of (31)",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Street furniture and water",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "In the past, water supply varied by (32), especially in cities",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Liverpool had the earliest drinking fountains",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "A drinking fountain built in 1859 in London has a (33) on",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Charities often paid for the supply of drinking water for (34) .",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Many stone troughs now contain (35) instead of water",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Street furniture and waste",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "It's widely believed that people are more likely to use bins that are(36) .",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Making bins visible leads to more (37) .",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Changes to street furniture over time",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Older street furniture can easily be adapted for new uses:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "many redundant phone boxes have now been turned into (38) .",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "bus stops in Preston were once for people who travelled by (39) .",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "in Leicester, many bus stops are now covered in (40), reflecting people's changing values",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

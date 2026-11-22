@@ -1,0 +1,597 @@
+{
+  "title": "IELTS Listening Test 5",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/listening.mp4",
+  "audioUrl": "listening-05.mp3",
+  "duration": 28,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 5<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-5",
+          "subInstructions": "Complete the notes. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q1-5",
+              "type": "bullet-notes-completion",
+              "label": "1-5",
+              "title": "Getting a visa to travel to Thailand",
+              "sections": [
+                {
+                  "heading": "Main types of visa:",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "business visa (for working in Thailand)",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "lasts for (1) days",
+                      "hasInput": true,
+                      "inputId": "q1",
+                      "questionNumber": "1"
+                    },
+                    {
+                      "type": "text",
+                      "content": "for people going to Thailand on holiday or visiting for (2) reasons",
+                      "hasInput": true,
+                      "inputId": "q2",
+                      "questionNumber": "2"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "lasts for 60 days",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Getting a tourist visa",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "may need to provide a (3) certificate or a driving licence",
+                      "hasInput": true,
+                      "inputId": "q3",
+                      "questionNumber": "3"
+                    },
+                    {
+                      "type": "text",
+                      "content": "will need a passport that is still valid for a minimum of (4) ",
+                      "hasInput": true,
+                      "inputId": "q4",
+                      "questionNumber": "4"
+                    },
+                    {
+                      "type": "text",
+                      "content": "need to:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "fill in a form to apply for a tourist visa",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "provide two passport photos — must be (5) and the same size",
+                      "hasInput": true,
+                      "inputId": "q5",
+                      "questionNumber": "5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "6-10",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q6-10",
+              "type": "form-completion",
+              "label": "6-10",
+              "title": "Questions 6 – 10",
+              "formTitle": "Tourist visa application form",
+              "sections": [
+                {
+                  "heading": "PERSONAL DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Nationality",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "6"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Surname",
+                      "cells": [
+                        "Johnston"
+                      ]
+                    },
+                    {
+                      "rowLabel": "First name",
+                      "cells": [
+                        "Alan"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Middle name",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "7"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Mobile number",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "8"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "heading": "TRAVEL DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Years of previous trips to Thailand",
+                      "cells": [
+                        "1992 and ",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "9"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Start date of visa for travel to Thailand",
+                      "cells": [
+                        "September 1"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Probable destination country after departure from Thailand",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-16",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options.",
+          "questions": [
+            {
+              "id": "q11-12",
+              "type": "multiple-choice-multiple",
+              "label": "<b>11 – 12</b>",
+              "text": "Which TWO things has the building been in the past?",
+              "options": [
+                "a factory",
+                "a warehouse",
+                "an artists' studio",
+                "a railway station",
+                "a shopping centre"
+              ]
+            },
+            {
+              "id": "q13-14",
+              "type": "multiple-choice-multiple",
+              "label": "<b>13 – 14</b>",
+              "text": "Which TWO facilities will residents of the building be able to use for free?",
+              "options": [
+                "the pool",
+                "the gym",
+                "the laundry",
+                "a parking space",
+                "the common room"
+              ]
+            },
+            {
+              "id": "q15-16",
+              "type": "multiple-choice-multiple",
+              "label": "<b>15 – 16</b>",
+              "text": "In which TWO ways is the building sustainable?",
+              "options": [
+                "There is a space for wildlife on top of the building.",
+                "It has small windows to conserve heat.",
+                "All the apartments have heat pumps.",
+                "No gas is used in the building.",
+                "Natural materials were used."
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "17-20",
+          "subInstructions": "What feature does the speaker recommend about each of the following apartments? Write the correct letter, A, B or C, next to questions <b>17 – 20</b>.",
+          "questions": [
+            {
+              "id": "q17-20",
+              "type": "map-label-box",
+              "label": "<b>17-20</b>",
+              "title": "Questions 17 – 20",
+              "subtitle": "Apartments",
+              "optionsTitle": "Features",
+              "items": [
+                {
+                  "id": "q17",
+                  "questionNumber": "17",
+                  "text": "Keyboard Apartment"
+                },
+                {
+                  "id": "q18",
+                  "questionNumber": "18",
+                  "text": "The Brubeck"
+                },
+                {
+                  "id": "q19",
+                  "questionNumber": "19",
+                  "text": "Sonata Rooms"
+                },
+                {
+                  "id": "q20",
+                  "questionNumber": "20",
+                  "text": "The Nyman Flat"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "what is already provided in the rooms"
+                },
+                {
+                  "key": "B",
+                  "text": "the views from the apartment"
+                },
+                {
+                  "key": "C",
+                  "text": "the apartment's outdoor area"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-24",
+          "subInstructions": "Choose the correct letter, <b>A</b>, <b>B</b> or <b>C</b>.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "questionNumber": "21",
+              "question": "Why did James choose his work placement with the manufacturing company?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "He thought its products were interesting."
+                },
+                {
+                  "key": "B",
+                  "text": "He failed to get one with the software firm."
+                },
+                {
+                  "key": "C",
+                  "text": "He wanted to work for a large global business."
+                }
+              ]
+            },
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "questionNumber": "22",
+              "question": "What did James like best about his work placement?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "broadening his business experience"
+                },
+                {
+                  "key": "B",
+                  "text": "getting to know people in different departments"
+                },
+                {
+                  "key": "C",
+                  "text": "learning how market analysis is linked to product design"
+                }
+              ]
+            },
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "questionNumber": "23",
+              "question": "James says that if his placement had been with a smaller company, he'd have been able to",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "earn more money."
+                },
+                {
+                  "key": "B",
+                  "text": "prevent others from taking risks."
+                },
+                {
+                  "key": "C",
+                  "text": "have a greater effect on the business."
+                }
+              ]
+            },
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "questionNumber": "24",
+              "question": "In what way does James feel the placement was well-organised?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "He never had any problems while he was with the company."
+                },
+                {
+                  "key": "B",
+                  "text": "There was one person he could always contact if necessary."
+                },
+                {
+                  "key": "C",
+                  "text": "Various managers showed him how their departments work."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "25-30",
+          "subInstructions": "Complete the notes. Write the appropriate letter, <b>A – G</b>, in the space for each answer.",
+          "questions": [
+            {
+              "id": "q25-30",
+              "type": "drag-drop-completion",
+              "title": "Questions 25 – 30",
+              "sections": [
+                {
+                  "title": "How to proceed with the reflective portfolio",
+                  "items": [
+                    {
+                      "questionNumber": "25",
+                      "fieldId": "q25",
+                      "prefix": "Use the module handbook to",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "26",
+                      "fieldId": "q26",
+                      "prefix": "Use old assignments in the library to",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "27",
+                      "fieldId": "q27",
+                      "prefix": "Consult the Learning Objectives in order to",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "28",
+                      "fieldId": "q28",
+                      "prefix": "",
+                      "suffix": "and get feedback"
+                    },
+                    {
+                      "questionNumber": "29",
+                      "fieldId": "q29",
+                      "prefix": "Use the online forum to",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "30",
+                      "fieldId": "q30",
+                      "prefix": "Ask another person to",
+                      "suffix": ""
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "value": "A. check it for any mistakes"
+                },
+                {
+                  "key": "B",
+                  "value": "B. arrange another appointment"
+                },
+                {
+                  "key": "C",
+                  "value": "C. identify suitable titles for different sections"
+                },
+                {
+                  "key": "D",
+                  "value": "D. submit a small sample of work to the tutor"
+                },
+                {
+                  "key": "E",
+                  "value": "E. think of possible ways to organise the portfolio"
+                },
+                {
+                  "key": "F",
+                  "value": "F. see what other people think about your ideas"
+                },
+                {
+                  "key": "G",
+                  "value": "G. find out what you are assessed on"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "The Chimp Paradox by Professor Steve Peters",
+              "sections": [
+                {
+                  "heading": "The basic idea of The Chimp Paradox",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Sometimes, humans behave a bit like chimpanzees!",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "According to Peters, the brain contains two parts: 'human' and 'chimp'",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "The 'human' is the part of the brain that:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "is usually (31)",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "likes to have (32)",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "text",
+                      "content": "The 'chimp'",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "is more (33) than the human",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "can be a friend or an enemy",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "Having these two very different parts of the brain often leads to a (34); this is the 'chimp paradox'",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Examples of the chimp paradox",
+                  "items": [
+                    {
+                      "type": "bullet",
+                      "content": "entering a room full of (35) and being unsure how to react",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "deciding whether to complete a dull task or to (36)",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Applications of The Chimp Paradox in sport",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "The Chimp Paradox famously helped convince a well-known (37) to continue",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    },
+                    {
+                      "type": "text",
+                      "content": "She says the 'chimp' approach helped her become a (38)",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Snooker player Ronnie O'Sullivan said that Peters' ideas enabled him to deal with (39)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Peters encouraged O'Sullivan to find time for (40) which he enjoyed.",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

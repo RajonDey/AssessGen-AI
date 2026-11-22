@@ -1,0 +1,521 @@
+{
+  "id": "reading-01",
+  "title": "Reading Practice Test 1",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "The Cause of the Next Ice Age",
+      "instructions": "Read the text below and answer questions <b> 1 – 13 </b>",
+      "passage": [
+        "If you look at a globe, you will see that the latitude of much of Europe and Scandinavia is the same as that of Alaska and permafrost-locked parts of northern Canada and central Siberia. Yet Europe has a climate more similar to that of the United States than northern Canada or Siberia. It turns out that this warmth is the result of ocean currents that bring warm surface water up from the equator into northern regions that would otherwise be so cold that even in summer they would be covered with ice. The current of greatest concern is often referred to as the Great Conveyor Belt, which includes what we call \"the Gulf Stream\". This is mostly driven by the force created by differences in water temperatures and salinity. The North Atlantic Ocean is saltier and colder than the Pacific.",
+        "As a result, the warm water of the Great Conveyor Belt evaporates out of the North Atlantic, leaving behind saltier waters which are cooled by the cold continental winds off the northern parts of North America. Salty, cool waters settle to the bottom of the sea, most at a point a few hundred kilometres south of the southern tip of Greenland, producing a whirlpool of falling water that is 5 - 10 miles across. This falling column of cold, salt-laden water pours itself to the bottom of the Atlantic, where it forms a great undersea river 40 times larger than all the rivers on land combined, flowing south down to and around the southern tip of Africa where it finally reaches the Pacific. Amazingly, the water is so deep and dense that it may not surface in the Pacific for up to 1,000 years after it first sank in the North Atlantic off the coast of Greenland.",
+        "The outflowing undersea river of cold, salty water makes the level of the Atlantic fractionally lower than that of the Pacific, drawing in a strong surface current of warm, fresher water from the Pacific to replace the outflow of the undersea river. This warmer, fresher water slides up through the South Atlantic, loops around North America, where it is known as \"the Gulf Stream\", and ends up off the coast of Europe. By the time it arrives near Greenland, it has cooled off and evaporated enough water to become cold and salty and sink to the ocean floor, providing a continuous feed for that deep-sea river flowing to the Pacific. These two flows - warm, fresher water in from the Pacific, which then grows salty and cools and sinks to form an exiting deep sea river - are known as \"the Great Conveyor Belt\".",
+        "Prior to the last decades it was thought that the periods between glaciations and warmer times in North America, Europe, and North Asia were gradual. We know from the fossil record that the Great Ice Age began several million years ago, and during that period there were times when for hundreds or thousands of years North America, Europe, and Siberia were covered with thick sheets of ice year round. In between these icy times, there were periods when the glaciers thawed, bare land was exposed, forests grew and land animals (including early humans) moved into these northern regions. Most scientists figured the transition time from icy to warm was extremely gradual, and nobody was sure exactly what had caused it. Recently however, scientists have been shocked to discover that the transitions from ice age-like weather to contemporary-type weather usually took only 2 or 3 years. Something was flipping the weather of the planet back and forth with a rapidity that was startling.",
+        "What brought on this sudden effect was that the warm-water currents of the Great Conveyor Belt had shut down. Once the Gulf Stream was no longer flowing, it only took up to 3 years for the last of the residual heat held in the North Atlantic Ocean to dissipate into the air over Europe, and then there was no more warmth to moderate the northern latitudes. When the summer stopped in the north, the rains stopped around the equator. At the same time that Europe was plunged into an ice age, the Middle East and Africa were ravaged by drought and wind-driven firestorms. If the Great Conveyor Belt, which includes the Gulf Stream, were to stop flowing today, the result would be sudden and dramatic. Winter would set in for the eastern half of North America and all of Europe and Siberia and never go away. Within 3 years, those regions would become uninhabitable and nearly two billion humans would starve, freeze to death or have to relocate. Civilisation as we know it probably could not withstand the impact of such a crushing blow.",
+        "Most scientists involved in research on this topic agree that the culprit will be global warming, which melts the icebergs on Greenland and the Arctic icepack and thus flushes cold, fresh water down into the Greenland Sea from the north, diluting its salinity. When a critical threshold is reached, the climate will suddenly switch to an ice age that could last between 700 and 100,000 years. No one knows when it will happen, but what is almost certain is that if nothing is done about global warming, it will happen sooner rather than later."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-5",
+          "instruction": "Choose <b>TRUE</b> if the statement agrees with the information given in the text, choose <b>FALSE</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q1",
+              "label": "1",
+              "text": "Another name for the Great Conveyer Belt is the better-known name - the Gulf Stream.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q2",
+              "label": "2",
+              "text": "The surface of the Atlantic Ocean is higher than the surface of the Pacific Ocean.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q3",
+              "label": "3",
+              "text": "The last time the Great Conveyer Belt shut down it caused the deaths of thousands.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q4",
+              "label": "4",
+              "text": "A pause in the flow of the Great Conveyor Belt could have significant consequences for human society.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q5",
+              "label": "5",
+              "text": "Global warming will cause the North Atlantic Ocean to become less salty.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 6-10",
+          "instruction": "Complete the sentences below. Use <b>NO MORE THAN THREE WORDS</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q6",
+              "label": "6",
+              "text": "Europe is not _______ like other countries of the same latitude due to warmth carried on ocean currents.",
+              "type": "text"
+            },
+            {
+              "id": "q7",
+              "label": "7",
+              "text": "The north-south flow of the Great Conveyor Belt creates an enormous _______ on the ocean bed.",
+              "type": "text"
+            },
+            {
+              "id": "q8",
+              "label": "8",
+              "text": "Scientists can date the last great Ice Age thanks to _______.",
+              "type": "text"
+            },
+            {
+              "id": "q9",
+              "label": "9",
+              "text": "Scientists have discovered that the change from today's temperate-style weather to ice-age weather was very rapid and not _______, as previously thought.",
+              "type": "text"
+            },
+            {
+              "id": "q10",
+              "label": "10",
+              "text": "The author identifies the _______ for the possible shutting down of the Great Conveyer Belt as being global warming.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "group-3",
+          "heading": "Questions 11-13",
+          "instruction": "Answer the questions. Use <b>NO MORE THAN THREE WORDS AND / OR A NUMBER</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "What do the sinking waters create on the surface of the North Atlantic Ocean?",
+              "type": "text"
+            },
+            {
+              "id": "q12",
+              "label": "12",
+              "text": "How long can it take for water leaving the surface near Greenland to travel through the Great Conveyer Belt to the surface of the Pacific Ocean?",
+              "type": "text"
+            },
+            {
+              "id": "q13",
+              "label": "13",
+              "text": "If the Great Conveyer Belt stopped, what would be the maximum amount of time for it to stop heating northern Europe?",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "The gender gap in New Zealand's high school examination results",
+      "instructions": "Read the text below and answer questions  <b> 14 – 26 </b>",
+      "passage": [
+        "Paragraph A:  Results from New Zealand's new national examinations for secondary schools are giving that country some cause for concern. The issue is the difference in pass rates between the sexes: at each level of the examination and across all school types, the difference is about 10 percentage points. Girls are doing better in every subject, and those in girls-only schools are taking top honours. The results are not a surprise: high school girls have been outperforming boys academically for more than a decade. It is an international phenomenon, and within Australia, it was the subject of much debate and controversy. Within New Zealand back in the 1980s, there was a concerted campaign, called '\"Girls Can Do Anything,\" which was aimed at lifting girls participation rates, achievement levels, and aspirations. This was so successful that the pendulum has now swung to the other extreme. Views differ on how worried people should be. After all, for much of history, girls were excluded from any form of education, and this new phenomenon could be seen as a temporary over-correction before the balance is righted.",
+        "Paragraph B: However, the New Zealand State Ministry of Education says it is taking the issue seriously. It is working with a reference group on boys' education, which has been set up, and it has commissioned an Australian academic to report on interventions that have been found to work for boys, drawing particularly on Australia's experience. But some, such as former prison manager Celia Lashlie, the author of a book for parents of teenage boys, believe there is still resistance within the Education Ministry towards doing anything about the problem.",
+        "Paragraph C: Education Ministry learning policy manager Steve Benson says that the National Certificate in Educational Achievement, or NCEA, as New Zealand's high school exams are called, is useful to employers and to universities because it provides a fine-grained picture of pupils' performance in every aspect of a subject, rather than just a pass or fail in an overall area. In most parts of the curriculum, for example in maths, there isn't really a gender gap. But literacy is a different matter. Even boys who are good at writing tend not to write so much. There's actually a quantity issue.",
+        "Paragraph D: The discrepancy in reading and writing skills between males and females shows up as early as preschool, and the most significant difference is clear by the time these children enter high school. Not being good at literacy was not such a problem in the old days when many students left school for manual jobs after Year 11. But nowadays, many more stay on to higher education, and almost all jobs require literacy skills. Roger Moses, the headmaster of Wellington College, says that the written content of NCEA papers is more demanding than the previous system of secondary school qualifications in New Zealand, even in subjects such as statistics and accounting.",
+        "Paragraph E: New Zealand 15-year-olds do better in international reading tests, but beneath this average lies a wide variance, with New Zealand European girls most represented at the top and New Zealand Pacific Island boys at the bottom. Yet some European girls drop out, and some Pacific Island boys excel. In other words, the range in performance within each gender group is much greater than the gender differences. Ethnic differences, and differences in socio-economic status, may be more significant than the simple boy/girl explanation.",
+        "Paragraph F: This makes the Education Ministry nervous about pushing solutions that emphasize stereotyped gender differences, rather than looking at underachievement as a whole. Rob Burroughs, principal of Linwood High School in Christchurch, agrees. For three years, his school ran separate boys' classes to try to address the disparity in performance, before abandoning them. The research showed that the boys did better in their own class than in the co-educational environment. But when he looked at which teachers they had, and how well those teachers' other classes did, it became clear that the difference was, instead, to do with the quality of instruction.",
+        "Paragraph G: At Onslow College, Dr. Stuart Martin would do away with the NCEA Level 1 exam if he could. He says that in Year 11, aged 15, boys are simply not mature enough to cope. They tend to think that just passing is enough, and that it's not necessary to work hard for a Merit or an Excellence grade. Often, they are busy with other activities and part-time jobs. Boys' competitive instinct tends to come out later in their schooling years, especially if there is money attached or other tangible rewards. By 17, boys are catching up academically with the girls, and by the end of Year 13, boys are again winning the top prizes.",
+        "Paragraph H: Boys in single-sex schools do better in NCEA across all levels, something economist Brian Easton reported after analysing data from the first year of NCEA’s implementation. He said the results were valid, even when socio-economic status was taken into account. Dr Paul Baker, head of Waitaki Boys’ High School in Oamaru, agrees. He thinks that although it is possible for all schools to do more to boost boys’ performance, it is easier in a boys’ school, where activities cannot be ‘captured by girls’."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-4",
+          "heading": "Questions 14-16",
+          "instruction": "Complete the summary below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q-summary",
+              "type": "summary-completion",
+              "wordLimit": 2,
+              "summary": "High school assessment in New Zealand\n\nNew Zealanders are worried at the outcomes of their high school assessment system, because the __14__ of girls are higher than those of boys by 10%. A gender gap has been apparent for over a __15__. This situation is not unique to New Zealand, and has been noticed in __16__ also.",
+              "maxWords": 2
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 17-20",
+          "instruction": "Reading Part 2 has eight paragraphs, <b>(A-H)</b>. Which paragraph contains the following information?",
+          "questions": [
+            {
+              "id": "q17-20-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "text": "An advantage of New Zealand's secondary school tests"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "text": "A mention of current government initiatives to boost male achievement"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "text": "When gender difference in literacy skills first becomes evident"
+                },
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "text": "Findings that relate academic achievement to race"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Paragraph A"
+                },
+                {
+                  "key": "B",
+                  "name": "Paragraph B"
+                },
+                {
+                  "key": "C",
+                  "name": "Paragraph C"
+                },
+                {
+                  "key": "D",
+                  "name": "Paragraph D"
+                },
+                {
+                  "key": "E",
+                  "name": "Paragraph E"
+                },
+                {
+                  "key": "F",
+                  "name": "Paragraph F"
+                },
+                {
+                  "key": "G",
+                  "name": "Paragraph G"
+                },
+                {
+                  "key": "H",
+                  "name": "Paragraph H"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-6",
+          "heading": "Questions 21-26",
+          "instruction": "Match each statement with the correct description <b>(A — H)</b>",
+          "questions": [
+            {
+              "id": "q21-26-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q21",
+                  "label": "21",
+                  "text": "Celia Lashlie"
+                },
+                {
+                  "id": "q22",
+                  "label": "22",
+                  "text": "Steve Benson"
+                },
+                {
+                  "id": "q23",
+                  "label": "23",
+                  "text": "Roger Moses"
+                },
+                {
+                  "id": "q24",
+                  "label": "24",
+                  "text": "Rob Burroughs"
+                },
+                {
+                  "id": "q25",
+                  "label": "25",
+                  "text": "Stuart Martin"
+                },
+                {
+                  "id": "q26",
+                  "label": "26",
+                  "text": "Paul Baker"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Boys gain lower marks on NCEA if they attend an all-boys' school."
+                },
+                {
+                  "key": "B",
+                  "name": "Boys are disadvantaged by girls tending to take over at school."
+                },
+                {
+                  "key": "C",
+                  "name": "Good teaching is more important than whether classrooms are single-sex or mixed."
+                },
+                {
+                  "key": "D",
+                  "name": "Mathematical skills were not so important in the past."
+                },
+                {
+                  "key": "E",
+                  "name": "The difference in achievement between school boys and girls is only evident in some subjects."
+                },
+                {
+                  "key": "F",
+                  "name": "Older boys are more motivated to study than younger boys."
+                },
+                {
+                  "key": "G",
+                  "name": "The NCEA exams have higher literacy standards than past exams did."
+                },
+                {
+                  "key": "H",
+                  "name": "The New Zealand government is reluctant to take action on behalf of boys."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "Psychology of new product adoption",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b> ",
+      "passage": [
+        "Paragraph A:  In today’s hypercompetitive marketplace, companies that successfully introduce new products are more likely to flourish than those that don’t. businesses spend billions of dollars making better “mousetraps” only to find consumers roundly rejecting them. Studies show that new products fail at the stunning rate of between 40% and 90%, depending on the category, and the odds haven’t changed much in the past 25 years. In the U.S. packaged goods industry, for instance, companies introduce 30,000 products every year, but 70% to 90% of them don’t stay on store shelves for more than 12 months. Most innovative products – those that create new product categories or revolutionize old ones – are also unsuccessful. According to one study, 47% of first movers have failed, meaning that approximately half the companies that pioneered new product categories later pulled out of those businesses.",
+        "Paragraph B: After the fact, experts and novices alike tend to dismiss unsuccessful innovations as bad ideas that were destined to fail. Why do consumers fail to buy innovative products even when they offer distinct improvements over existing ones? Why do companies invariably have more faith in new products than is warranted? Few would question the objective advantages of many innovations over existing alternatives, but that’s often not enough for them to succeed. To understand why new products fail to live up to companies’ expectations, we must delve into the psychology of behavior change.",
+        "Paragraph C: New products often require consumers to change their behavior. As companies know, those behavior changes entail costs. Consumers costs, such as the activation fees they have to pay when they switch from one cellular service provider to another. They also bear learning costs, such as when they shift from manual to automatic automobile transmissions. People sustain obsolescence costs, too. For example, when they switch from VCRs to DVD players, their videotape collections become useless. All of these are economic switching costs that most companies routinely anticipate.",
+        "Paragraph D: What businesses don’t take into account, however, are the psychological costs associated with behavior change. Many products fail because of a universal, but largely ignored, psychological bias: People irrationally overvalue benefits they currently possess relative to those they don’t. The bias leads consumers to value the advantages of products they own more than the benefits of new ones. It also leads executives to value the benefits of innovations they’ve developed over the advantages of incumbent products.",
+        "Paragraph E: Companies have long assumed that people will adopt new products that deliver more value or utility than existing ones. Thus, businesses need only to develop innovations that are objectively superior to incumbent products, and consumers will have sufficient incentive to purchase them. In the 1960s, communications scholar Everett Rogers called the concept “relative advantage” and identified it as the most critical driver of new-product adoption. This argument assumes that companies make unbiased assessments of innovations and of consumers, likelihood of adopting them. Although compelling, the theory has one major flaw: It fails to capture the psychological biases that affect decision making.",
+        "Paragraph G: First, people evaluate the attractiveness of an alternative based not on its objective, or actual, value but on its subjective, or perceived value. Second, consumers evaluate new products or investments relative to a reference point, usually the products they already own or consume. Third, people view any improvements relative to this reference point as gains and treat all shortcomings as losses. Fourth, and most important, losses have a far greater impact on people than similarly sized gains, a phenomenon that Kahneman and Tversky called “loss aversion.” For instance, studies show that most people will not accept a bet in which there is a 50% chance of winning $100 and a 50% chance of losing $100. The gains from the wager must outweigh the losses by a factor of between two and three before most people find such a bet attractive. Similarly, a survey of 1,500 customers of Pacific Gas and Electric revealed that consumers demand three to four times more compensation to endure a power outage – and suffer a loss – than they are willing to pay to avoid the problem, a potential gain. As Kahneman and Tversky wrote, “losses loom larger than gains.”",
+        "Paragraph F: In 2002, psychologist Daniel Kahneman won the Nobel Prize in economics for a body of work that explores why and when individuals deviate from rational economic behavior. One of the cornerstones of that research, developed with psychologist Amos Tversky, is how individuals value prospects, or choices, in the marketplace. Kahneman and Tversky showed, and others have confirmed, that human beings’ responses to the alternatives before they have four distinct characteristics.",
+        "Paragraph H: Loss aversion leads people to value products that they already possess – those that are part of their endowment – more than those they don’t have. According to behavioral economist Richard Thaler, consumers value what they own, but many have to give up, much more than they value what they don’t own but could obtain. Thaler called that bias the “endowment effect.”",
+        "Paragraph I: In a 1990 paper, Thaler and his colleagues describe a series of experiments they conducted to measure the magnitude of the endowment effect. In one such experiment, they gave coffee mugs to a group of people, the Sellers, and asked at what price point – from 25 cents to $9.25 – the Sellers would be willing to part with those mugs. They asked another group – the Choosers – to whom they didn’t give coffee mugs, to indicate whether they would choose the mug or the money at each price point. In objective terms, all the Sellers and Choosers were in the same situation: They were choosing between a mug and a sum of money. In one trial of this experiment, the Sellers priced the mug at $7.12, on average, but the Choosers were willing to pay only $3.12. In another trial, the Sellers and the Choosers valued the mug at $7.00 and $3.50, respectively. Overall, the Sellers always demanded at least twice as much to give up the mugs as the Choosers would pay to obtain them.",
+        "Paragraph J: Kahneman and Tversky’s research also explains why people tend to stick with what they have even if a better alternative exists. In a 1989 paper, economist Jack Knetsch provided a compelling demonstration of what economists William Samuelson and Richard Zeckhauser called the “status quo bias.” Knetsch asked one group of students to choose between an attractive coffee mug and a large bar of Swiss chocolate. He gave a second group of students the coffee mugs but a short time later allowed each student to exchange his or her mug for a chocolate bar. Finally, Knetsch gave chocolate bars to a third group of students but much later allowed each student to exchange his or her bar for a mug. Of the students given a choice at the outset, 56% chose the mug, and 44% chose the chocolate bar, indicating a near even split in preferences between the two products. Logically, therefore, about half of the students to whom Knetsch gave the coffee mug should have traded for the chocolate bar and vice versa. That didn’t happen. Only 11% of the students who had been given the mugs and 10% of those who had been given the chocolate bars wanted to exchange their products. To approximately 90% of the students, giving up what they already had seemed like a painful loss and shrank their desire to trade.",
+        "Paragraph K: Interestingly, most people seem oblivious to the existence of the behaviors implicit in the endowment effect and the status quo bias. In study after study, when researchers presented people with evidence that they had irrationally overvalued the status quo, they were shocked, skeptical, and more than a bit defensive. These behavioral tendencies are universal, but awareness of them is not."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-7",
+          "heading": "Questions 27-30",
+          "instruction": "Use the information in the passage to match the people with opinions or deeds below. Choose the appropriate letters <b>A-C</b>.",
+          "questions": [
+            {
+              "id": "q27-30-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q27",
+                  "label": "27",
+                  "text": "stated a theory which bears potential fault in the application"
+                },
+                {
+                  "id": "q28",
+                  "label": "28",
+                  "text": "decided the consumers' several behavior features when they face other options"
+                },
+                {
+                  "id": "q29",
+                  "label": "29",
+                  "text": "generalised that customers value more of their possession they are going to abandon for a purpose than alternative they are going to swap in"
+                },
+                {
+                  "id": "q30",
+                  "label": "30",
+                  "text": "answered the reason why people don't replace existing products"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Richard Thaler"
+                },
+                {
+                  "key": "B",
+                  "name": "Everett Rogers"
+                },
+                {
+                  "key": "C",
+                  "name": "Kahneman and Tversky"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 31-36",
+          "instruction": "Do the following statements agree with the information given in Reading Passage? Choose <b>TRUE</b> if the statement agrees with the information given in the text, choose <b>FALSE</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q31",
+              "label": "31",
+              "text": "The products of innovations which beat existing alternatives can guarantee a successful market share.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q32",
+              "label": "32",
+              "text": "The fact that most companies recognised the benefits of switching to new products guarantees a successful innovation.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q33",
+              "label": "33",
+              "text": "Gender affects the loss and gain outcome in the real market place.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q34",
+              "label": "34",
+              "text": "Endowment-effect experiment showed there was a huge gap between the seller's anticipation and the chooser's offer.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q35",
+              "label": "35",
+              "text": "Customers accept the fact peacefully when they are revealed the status quo bias.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q36",
+              "label": "36",
+              "text": "Knetsch conducted a similar experiment with professional economists to compare their choices with those of students.",
+              "type": "true-false-not-given",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-9",
+          "heading": "Questions 37-40",
+          "instruction": "Choose the correct letter, <b>A, B, C or D</b>.",
+          "questions": [
+            {
+              "id": "q37",
+              "label": "37",
+              "number": "37",
+              "question": "What does paragraph A illustrated in the business creative venture?",
+              "type": "mcq",
+              "options": [
+                "above 70% of products stored in the warehouse",
+                "only US packaged goods industry affected",
+                "roughly half of new product business failed­",
+                "new products have a long life span."
+              ]
+            },
+            {
+              "id": "q38",
+              "label": "38",
+              "number": "38",
+              "question": "What do specialists and freshers tend to think how a product sold well:",
+              "type": "mcq",
+              "options": [
+                "as more products stored on a shelf",
+                "being creative and innovative enough",
+                "having more chain stores",
+                "learning from a famous company like Webvan"
+              ]
+            },
+            {
+              "id": "q39",
+              "label": "39",
+              "number": "39",
+              "question": "According to this passage, a number of products fail because of the following reason:",
+              "type": "mcq",
+              "options": [
+                "they ignore the fact that people tend to overvalue the product they own.",
+                "they are not confident with their products",
+                "they are familiar with people's psychology state",
+                "they forget to mention the advantages of products"
+              ]
+            },
+            {
+              "id": "q40",
+              "label": "40",
+              "number": "40",
+              "question": "What does the experiment of \"status quo bias\" suggest which conducted by Nobel prize winner Kahneman and Tversky:",
+              "type": "mcq",
+              "options": [
+                "about half of them are willing to change",
+                "student is always to welcome new items",
+                "90% of both owners in a neutral position",
+                "only 10% of chocolate bar owner is willing to swap"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

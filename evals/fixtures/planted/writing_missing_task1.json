@@ -1,0 +1,25 @@
+{
+  "module": "writing",
+  "expect_must_fail": true,
+  "content": {
+    "id": "bad-writing",
+    "type": "writing",
+    "title": "Broken Writing",
+    "duration": 60,
+    "sections": [
+      {
+        "title": "Part 2",
+        "instructions": "Write at least 250 words.",
+        "questions": [
+          {
+            "id": "q2",
+            "type": "writing",
+            "title": "Some people think X.",
+            "question": "Discuss.",
+            "minWords": 250
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,55 +1,41 @@
-"""Application configuration — the only module that reads environment variables."""
+"""Application settings — local Ollama or paid OpenAI-compatible API."""
 
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import PostgresDsn, RedisDsn
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        case_sensitive=False,
-        extra="ignore",
-    )
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     app_name: str = "AssessGen AI"
-    environment: Literal["development", "test", "production"] = "development"
-    debug: bool = False
+    environment: str = "development"
 
-    api_host: str = "0.0.0.0"
-    api_port: int = 8000
+    # ollama | openai (OpenAI-compatible: OpenAI, Groq, etc.)
+    llm_provider: Literal["ollama", "openai"] = "ollama"
 
-    database_url: PostgresDsn = PostgresDsn(
-        "postgresql+psycopg://assessgen:assessgen@localhost:5434/assessgen"
-    )
-    redis_url: RedisDsn = RedisDsn("redis://localhost:6379/0")
-
-    s3_endpoint_url: str = "http://localhost:9000"
-    s3_access_key: str = "assessgen"
-    s3_secret_key: str = "assessgen-dev"
-    s3_bucket: str = "assessgen"
-    s3_region: str = "us-east-1"
-
-    jwt_secret_key: str = "change-me-in-production"
-    jwt_algorithm: str = "HS256"
-    jwt_expire_minutes: int = 60 * 24
-
+    # Ollama
     ollama_base_url: str = "http://localhost:11434"
-    llm_profile: Literal["fast", "local", "local-hq", "cloud"] = "fast"
-    llm_memory_budget_gb: float = 11.0
-    llm_lease_ttl_seconds: int = 900
+    ollama_generator_model: str = "gemma4:e2b"
+    ollama_reviewer_model: str = "gemma4:e2b"
 
-    generation_soft_timeout_seconds: int = 1800
-    generation_hard_timeout_seconds: int = 2100
+    # OpenAI-compatible
+    openai_api_key: str = ""
+    openai_base_url: str = "https://api.openai.com/v1"
+    openai_generator_model: str = "gpt-4.1-mini"
+    # Prefer a different (often cheaper) critic than the generator — ADR-0002/0004.
+    openai_reviewer_model: str = "gpt-4.1-mini"
 
-    dedup_reject_similarity: float = 0.95
-    dedup_review_similarity: float = 0.88
-
-    log_level: str = "INFO"
-    log_json: bool = True
+    max_revision_loops: int = 2
+    # Listening length failures often need more expansion attempts than Reading.
+    listening_max_revision_loops: int = 4
+    # 0 = no read timeout (wait as long as Ollama needs). Positive = seconds.
+    llm_timeout_seconds: float = 0.0
+    # Optional quarantine corpus for 8-gram originality (publish mode). Never used in prompts.
+    reference_documents_path: str = ""
+    # Apply Listening N1/pause skeleton when exam-clock structure is missing.
+    listening_apply_skeleton: bool = True
 
 
 @lru_cache

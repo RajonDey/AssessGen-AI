@@ -1,16 +1,6 @@
 import type { NextConfig } from "next";
 
-const apiProxyTarget = process.env.API_PROXY_TARGET ?? "http://localhost:8000";
-
-const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: `${apiProxyTarget}/api/:path*`,
-      },
-    ];
-  },
-};
+// Keep config minimal — turbopack.root previously broke the client manifest.
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

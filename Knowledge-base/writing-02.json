@@ -1,0 +1,42 @@
+{
+  "id": "writing-02",
+  "title": "Writing Practice 2",
+  "type": "writing",
+  "duration": 60,
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/writing.mp4",
+  "sections": [
+    {
+      "title": "Part 1",
+      "instructions": "You should spend about 20 minutes on this task. Write at least 150 words.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "writing",
+          "title": "The charts below show the total energy consumption in Bangladesh and electricity generation in Sylhet for last year.",
+          "question": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+          "images": [
+            "images/gbm-2507-writing.png",
+            "images/gbm2-2507-writing.jpg"
+          ],
+          "minWords": 150
+        }
+      ]
+    },
+    {
+      "title": "Part 2",
+      "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
+      "questions": [
+        {
+          "id": "q2",
+          "type": "writing",
+          "title": "Advances in technology have contributed to the rise of mental health issues among teenagers, with some resulting in tragic outcomes like suicide.",
+          "question": [
+            "What are the primary factors contributing to this problem?",
+            "How do these factors affect teenagers' mental health?"
+          ],
+          "minWords": 250
+        }
+      ]
+    }
+  ]
+}

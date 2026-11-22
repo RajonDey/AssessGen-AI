@@ -1,0 +1,664 @@
+{
+  "title": "IELTS Listening Test 6",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/listening.mp4",
+  "audioUrl": "listening-mock-06.mp3",
+  "duration": 28,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-4",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q1-4",
+              "type": "form-completion",
+              "label": "1-4",
+              "title": "Questions 1 – 4",
+              "formTitle": "Global Internet - New customer form",
+              "sections": [
+                {
+                  "rows": [
+                    {
+                      "rowLabel": "Name:",
+                      "cells": [
+                        "James ",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Address:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "2"
+                        },
+                        " Melrose Drive Exeter"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Postcode:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "3"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Number of users in the home:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "5-8",
+          "subInstructions": "Complete the table. Write <b>NO MORE THAN TWO WORDS OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q5-8",
+              "type": "notes-table",
+              "label": "5-8",
+              "title": "Internet package overview",
+              "headers": [
+                "Package",
+                "Monthly cost",
+                "Download speed (megabytes/)",
+                "Download limit per month (gigabytes)",
+                "Extras"
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    {
+                      "text": "Basic",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "£(5)",
+                      "hasInput": true,
+                      "inputId": "q5",
+                      "questionNumber": "5"
+                    },
+                    {
+                      "text": "17",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "10",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "-",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "cells": [
+                    {
+                      "text": "(6) kage",
+                      "hasInput": true,
+                      "inputId": "q6",
+                      "questionNumber": "6"
+                    },
+                    {
+                      "text": "£30",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "17",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "unlimited",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "-",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "cells": [
+                    {
+                      "text": "Premium",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "£35",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "(7)",
+                      "hasInput": true,
+                      "inputId": "q7",
+                      "questionNumber": "7"
+                    },
+                    {
+                      "text": "50",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "A (8) is provided at no",
+                      "hasInput": true,
+                      "inputId": "q8",
+                      "questionNumber": "8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "9-10",
+          "subInstructions": "Complete the table. Write <b>NO MORE THAN TWO WORDS OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q9-10",
+              "type": "sentence-completion-notes",
+              "label": "9-10",
+              "title": "Installation arrangements",
+              "sections": [
+                {
+                  "heading": "",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Day of installation: _______",
+                      "hasInput": true,
+                      "inputId": "q9",
+                      "questionNumber": "9"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Start time: 9.00",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "Engineer's name: Jonathan _______",
+                      "hasInput": true,
+                      "inputId": "q10",
+                      "questionNumber": "10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-16",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options. Write them in any order in answer boxes 11-16.",
+          "questions": [
+            {
+              "id": "q11-12",
+              "type": "multiple-choice-multiple",
+              "label": "<b>11 – 12</b>",
+              "text": "Which TWO things was Jodie surprised by when she started working at festivals?",
+              "options": [
+                "how hard she had to work",
+                "how much fun the work was",
+                "how old the other staff were",
+                "how much she was able to earn",
+                "how easy it was to make friends"
+              ]
+            },
+            {
+              "id": "q13-14",
+              "type": "multiple-choice-multiple",
+              "label": "<b>13 – 14</b>",
+              "text": "Which TWO groups does Jodie particularly want to hear from?",
+              "options": [
+                "those with a love of music",
+                "people who are willing to work late",
+                "anyone who has medical training",
+                "anyone who wants to go to a festival for free",
+                "people who have worked at festivals before"
+              ]
+            },
+            {
+              "id": "q15-16",
+              "type": "multiple-choice-multiple",
+              "label": "<b>15 – 16</b>",
+              "text": "Which TWO pieces of advice does Jodie give to people who are interested in working at festivals?",
+              "options": [
+                "Only apply if you really want the work.",
+                "Find a friend that you will enjoy working with.",
+                "Start off by applying to work at a large festival.",
+                "Apply for a job at a festival you have already attended.",
+                "Make sure that you know what the work involves."
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "17-20",
+          "subInstructions": "What work is available at each of the following festivals? Write the appropriate letter <b>A - F</b> next to each question.",
+          "questions": [
+            {
+              "id": "q17-20",
+              "type": "map-label-box",
+              "title": "Questions 17 – 20",
+              "subtitle": "Festivals",
+              "items": [
+                {
+                  "id": "q17",
+                  "questionNumber": "17",
+                  "text": "KlezmerFest"
+                },
+                {
+                  "id": "q18",
+                  "questionNumber": "18",
+                  "text": "Big Time"
+                },
+                {
+                  "id": "q19",
+                  "questionNumber": "19",
+                  "text": "Blestival"
+                },
+                {
+                  "id": "q20",
+                  "questionNumber": "20",
+                  "text": "Smash!"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "working in the food stalls"
+                },
+                {
+                  "key": "B",
+                  "text": "collecting money for charity"
+                },
+                {
+                  "key": "C",
+                  "text": "selling tickets to the festival"
+                },
+                {
+                  "key": "D",
+                  "text": "tidying up after the festival finishes"
+                },
+                {
+                  "key": "E",
+                  "text": "encouraging people to recycle their waste"
+                },
+                {
+                  "key": "F",
+                  "text": "helping people get to where they'll be staying"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-25",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "questionNumber": "21",
+              "question": "Jess and Simon agree that King John was disliked because he",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "was blamed for the loss of territory."
+                },
+                {
+                  "key": "B",
+                  "text": "was planning to start a war against France."
+                },
+                {
+                  "key": "C",
+                  "text": "lacked the communication skills that were expected of a monarch."
+                }
+              ]
+            },
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "questionNumber": "22",
+              "question": "According to Jess, the main purpose of Magna Carta was to",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "enable England to win a war."
+                },
+                {
+                  "key": "B",
+                  "text": "resolve a conflict involving the king."
+                },
+                {
+                  "key": "C",
+                  "text": "improve the lives of ordinary people."
+                }
+              ]
+            },
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "questionNumber": "23",
+              "question": "What does Simon say he learned from the lecture?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "who benefited most from Magna Carta"
+                },
+                {
+                  "key": "B",
+                  "text": "how significant Magna Carta has been in other countries"
+                },
+                {
+                  "key": "C",
+                  "text": "what made King John agree to the wording of Magna Carta"
+                }
+              ]
+            },
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "questionNumber": "24",
+              "question": "Jess feels that the fact that Magna Carta was regularly updated indicates that",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "it had been poorly written and needed to be made clearer."
+                },
+                {
+                  "key": "B",
+                  "text": "it enabled subsequent kings to be seen as great lawmakers."
+                },
+                {
+                  "key": "C",
+                  "text": "it was seen as an effective means of limiting the king's power."
+                }
+              ]
+            },
+            {
+              "id": "q25",
+              "type": "multiple-choice",
+              "questionNumber": "25",
+              "question": "Simon mentions other English kings in order to",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "list people who were critical of John's achievements."
+                },
+                {
+                  "key": "B",
+                  "text": "explain why these monarchs were more successful than John."
+                },
+                {
+                  "key": "C",
+                  "text": "argue that rebellions like the ones John faced were common in those times."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "26-30",
+          "subInstructions": "What comment do the students make about each of the following clauses from Magna Carta? Choose FIVE answers and write the correct letter, <b>A-G</b>, next to questions <b>26-30</b>.",
+          "questions": [
+            {
+              "id": "q26-30",
+              "type": "map-label-box",
+              "title": "Questions 26 – 30",
+              "subtitle": "Clauses",
+              "items": [
+                {
+                  "id": "q26",
+                  "questionNumber": "26",
+                  "text": "Clause 40"
+                },
+                {
+                  "id": "q27",
+                  "questionNumber": "27",
+                  "text": "Clause 8"
+                },
+                {
+                  "id": "q28",
+                  "questionNumber": "28",
+                  "text": "Clause 33"
+                },
+                {
+                  "id": "q29",
+                  "questionNumber": "29",
+                  "text": "Clause 2"
+                },
+                {
+                  "id": "q30",
+                  "questionNumber": "30",
+                  "text": "Clause 35"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Many people are familiar with it."
+                },
+                {
+                  "key": "B",
+                  "text": "It allows a person freedom of choice."
+                },
+                {
+                  "key": "C",
+                  "text": "It helped to solve a common problem."
+                },
+                {
+                  "key": "D",
+                  "text": "It is hard to understand the purpose of this clause."
+                },
+                {
+                  "key": "E",
+                  "text": "When it was introduced, it is likely to have been unpopular."
+                },
+                {
+                  "key": "F",
+                  "text": "It is one of a number of clauses that deal with a similar topic."
+                },
+                {
+                  "key": "G",
+                  "text": "To people nowadays, it seems to be stating the obvious."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "Invasive species",
+              "sections": [
+                {
+                  "heading": "Invasive species",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Definition: a plant or animal living outside its usual range which causes harm in the new location",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Introducing species as food",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "European rabbits",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "were taken from Britain to Australia as food",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "were released near Melbourne by a (31)",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "had migrated right across the continent within fifty years",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "were competing with (32) for food",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "prevented trees from growing",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "The construction of (33) did little to stop the spread of the rabbits",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Introducing species for business",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "In the 1860s, Etienne Trouvelot wanted to see if the gypsy moth could be farmed in America for its (34)",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    },
+                    {
+                      "type": "text",
+                      "content": "This experiment failed, but the moths escaped",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "Gypsy moths could have spread further if the females were able to (35)",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Gypsy moths still cause $3 billion of damage annually.",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Introducing species for 'acclimatisation'",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Acclimatisation: the idea that a new species can (36) the area where it is introduced",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    },
+                    {
+                      "type": "text",
+                      "content": "In 1890, Eugene Schieffelin tried to introduce to North America every kind of (37) mentioned in Shakespeare's plays.",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Some of these animals destroyed many (38) throughout North America.",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Gorse",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "is a bush with sharp leaves",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "was introduced to New Zealand to be used as (39)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "text",
+                      "content": "didn't respond as expected to treatment with (40)",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -55,6 +55,32 @@ them directly, so a reviewer sees exactly what is wrong rather than "validation 
 
 ---
 
+## Running API (current code)
+
+The lightweight server exposes generation on `POST /api/v1/generate` (and `POST /api/v1/generate/stream`). `module` is still a body field (`reading` | `writing` | `listening`). The request is `GenerateRequest` in `backend/app/schemas/generation.py`.
+
+| Field | Role |
+|-------|------|
+| `topic` | Primary / display topic (usually Part 1 or Task 1) |
+| `topics` | Independent topic per part. Listening: 4, Reading: 3. Writing may use `topics[2]` or `topic_t1` / `topic_t2` |
+| `type_plan` | Per-part item-type lists. Omitted plans are filled from `app.content.paper_spec` |
+| `task1_kind` / `task2_kind` | Writing only. `task2_kind` tracks `writing_type` |
+| `target_band` | Target difficulty |
+
+Invalid specs fail with `SPEC-*` codes. Defaults, interlocking rules, and admin PDF / MD / TTS JSON downloads are in [Paper spec](../modules/paper-spec.md).
+
+Also live today:
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| `GET` | `/api/v1/generate/cost-stats` | In-process LLM call counts (`app.content.cost_ledger`) |
+| `POST` | `/api/v1/generate/cost-stats/reset` | Clear that ledger |
+| `POST` | `/api/v1/listening/synthesize` | Kokoro WAV from a TTS-ready Listening script (optional extra) |
+
+The routes below are the target admin contract. They are not all implemented in this tree.
+
+---
+
 ## Admin API
 
 ### Generation

@@ -10,10 +10,11 @@ WORKDIR /app
 ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 
-COPY pyproject.toml uv.lock README.md ./
+COPY pyproject.toml README.md ./
 COPY app ./app
 
-RUN uv sync --frozen --no-dev
+# Lockfile may be regenerated after slim-down; prefer sync without frozen if missing lock.
+RUN if [ -f uv.lock ]; then uv sync --frozen --no-dev; else uv sync --no-dev; fi
 
 EXPOSE 8000
 

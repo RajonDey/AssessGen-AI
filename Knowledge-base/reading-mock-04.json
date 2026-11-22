@@ -1,0 +1,458 @@
+{
+  "id": "reading-mock-04",
+  "title": "Reading Mock Test 4",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/reading.mp4",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Today's Jellyfish Problem",
+      "instructions": "Read the text below and answer questions <b> 1 – 13 </b>",
+      "passage": [
+        "Jellyfish are marine animals with a gelatinous body (hence the name) and long trailing tentacles.Scientists have found that these animals are surprisingly resilient in the face of changing oceans, and this is producing a variation in marine ecology that is a potential disaster for other fish populations. In some cases, according to some recent research, these developments have been so significant that global jellyfish populations are literally inverting marine ecology from the Black Sea to Southeast Asia.",
+        "Jellyfish tend to congregate in large groups called 'swarms' or 'blooms'. Some gigantic swarms have recently been found in places a long way from their traditional habitats. Swarms of Mediterranean jellyfish, for example, have been sighted in the North Atlantic, where once they would have died because of the difference in environment. Now warming ocean currents are making this difference less significant. Because jellyfish are predators of small fish, the movement of large swarms potentially threatens the spawning populations of other fish which were not previously subject to this predation.",
+        "The increase in the number of jellyfish can be attributed to a variety of causes. Overfishing is the key one, creating more opportunity for jellyfish to feed and breed. The overfishing of salmon in particular removes one of the jellyfish’s few predators. Without a curb on their population, growing hordes of jellyfish start eating the eggs of smaller fish, as well as their food supply. They also wreak havoc on the food chain when they are introduced to new ecosystems, usually via ballast water that shipping tankers take on and release as a counterbalance to cargo.",
+        "Another contributor to the jellyfish boom is a process known as 'eutrophication'. This occurs when sewage, fertilisers and pesticides, and other substances rich in phosphorus and nitrogen, are washed into the ocean by rivers. These chemicals affect plankton, the tiny aquatic plants that constitute the food source for vast numbers of sea creatures. Normally, plankton live on nutrients from chemicals released by the sea bed, but their populations explode when feeding on the nitrogen and phosphorous the pollution brings. When these small organisms die, they absorb oxygen from the sea, creating 'dead zones'. Since most marine creatures can’t survive in areas with little oxygen, their numbers fall. Jellyfish, however, are an exception as they need very little oxygen to survive. So as the numbers of other animals dwindle, jellyfish colonies expand.",
+        "Other human activities help jellyfish to reproduce. The polyp sacks that produce baby jellyfish are key to their ability to bloom in such an incredibly rapid fashion. A few centuries ago, the hard surfaces available for polyp sacks to cling on to included mainly seabed rocks and oyster shells; those polyp sacks that could not find such surfaces were unable to reproduce. Thanks to the proliferation of human structures, the world today offers many more hard surfaces. Piers, drilling platforms, offshore wind turbines and boats are just a few of the new surfaces polyps can attach themselves to.",
+        "One of the key effects of the increase in jellyfish numbers in the Mediterranean is their influence on fish stocks there. This was demonstrated in the early 1980s when Mnemiopsis leidyi, a jellyfish species that normally resides in the Atlantic, was accidentally introduced into the Black Sea and had such an overwhelming impact on fish populations there that fisheries almost collapsed. This shows that, although normally only the impact of human fishing activities is taken into account when setting sustainable fishing limits, jellyfish numbers should be factored in as well.",
+        "The surge in the number of jellyfish threatens not only the biodiversity of one of the world’s most overfished seas, but also the health of tens of thousands of summer tourists. There are now Mediterranean beaches where swimming without the danger of being stung is feasible for only 1 week in the summer. Throughout the rest of the season, tourists have to find other methods of keeping cool. This will affect the numbers of tourists in following years, as they avoid resorts where swimming can result in very painful stings, and in turn will have a negative impact on the revenue earned from tourism.",
+        "The surge in jellyfish numbers can have other unexpected effects. Recently, the world’s largest boiling water nuclear reactor, Sweden’s Oskarshamn plant, was paralysed after a bloom of moon jellyfish clogged the plant’s cooling systems and forced it to shut down. Jellyfish have also been responsible for nuclear shut-downs due to cooling system problems in California, Florida, Israel, Scotland, India and Japan. In 1999, a jellyfish bloom clogged the cooling system of a major coal-fired plant in the Philippines, leaving 40 million people without power. And in 2006, jellyfish in Brisbane, Australia, afflicted a massive nuclear-powered US aircraft carrier with an acute case of fouling, clogging its cooling systems and forcing it to leave the harbour.",
+        "Scientists have not yet come up with a foolproof way to tackle the problem of burgeoning jellyfish populations. One possible solution that is being explored is to create robots that can seek out swarms of jellyfish using a camera and GPS. Once the jellyfish are located, the robots can set about shredding the jellies with an underwater propeller. In spite of the developers’ enthusiasm, it seems that this will not prove to be a realistic and effective long-term solution as the number of robots needed to cope with the jellyfish problem would not make the project viable."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-7",
+          "instruction": "Choose <b>TRUE</b> if the statement agrees with the information given in the text, choose <b>FALSE</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q1",
+              "label": "1",
+              "text": "Jellyfish are able to cope well with changes in their environment.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q2",
+              "label": "2",
+              "text": "Jellyfish feed on the same food as many smaller fish.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q3",
+              "label": "3",
+              "text": "Substances affecting plankton ultimately lead to the creation of 'dead zones'.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q4",
+              "label": "4",
+              "text": "A lack of oxygen in the sea is bad for jellyfish.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q5",
+              "label": "5",
+              "text": "The Mnemiopsis leidyi has been observed to have a detrimental effect on fish populations in the Atlantic.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q6",
+              "label": "6",
+              "text": "The Mediterranean is not yet affected by increases in jellyfish numbers.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q7",
+              "label": "7",
+              "text": "A record number of tourists reported jellyfish stings last year.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 8-11",
+          "instruction": "Complete the sentences below. Use <b>NO MORE THAN THREE WORDS</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q8",
+              "label": "8",
+              "text": "Nowadays the _______ that jellyfish reproduce in have more man-made hard surfaces to attach themselves to in order to reproduce.",
+              "type": "text"
+            },
+            {
+              "id": "q9",
+              "label": "9",
+              "text": "The _______ fishing industry was nearly destroyed by the accidental introduction of a new jellyfish species.",
+              "type": "text"
+            },
+            {
+              "id": "q10",
+              "label": "10",
+              "text": "As well as human fishing activity, the numbers of jellyfish in an ecosystem should be considered when calculating _______ .",
+              "type": "text"
+            },
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "Countries whose main _______ is from tourism are likely to suffer if the jellyfish problem persists from one year to the next.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "group-3",
+          "heading": "Questions 12-13",
+          "instruction": "Complete the notes. Use <b>NO MORE THAN TWO WORDS</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q12-13-notes",
+              "type": "notes-completion",
+              "heading": "Questions 12 – 13",
+              "instruction": "Complete the notes. Use <b>NO MORE THAN TWO WORDS</b> from the text for each answer.",
+              "wordLimit": 2,
+              "notesContent": [
+                {
+                  "title": "Notes on Today's Jellyfish Problem",
+                  "items": [
+                    {
+                      "type": "heading",
+                      "content": "Power problems"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Jelly fish blocking (12) have caused nuclear shut-downs in energy plants in Sweden, California, Florida, Israel, Scotland, India and Japan, a conventional power station in the Philippines, and a nuclear-powered US aircraft carrier."
+                    },
+                    {
+                      "type": "heading",
+                      "content": "A solution?"
+                    },
+                    {
+                      "type": "text",
+                      "content": "A South Korean team has been working on robots to travel the seas, locate jellyfish and destroy them with an (13), probably not a long-term answer."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Sleep Paralysis",
+      "instructions": "Read the text below and answer questions <b> 14 – 26 </b>",
+      "passage": [
+        "Most nights, people experience dreams, partly due to a phase of the sleep cycle known as REM (Rapid Eye Movement) sleep, during which the brain is highly active and dreams are particularly vivid and complex. Throughout this state, our bodies are still except for the muscles needed to move the eyes and to breathe, perhaps in order to stop dreamers from acting out and being put in harm’s way. This almost complete paralysis is called atonia and is caused by motor neurons, small nerve endings located in the spinal cord. Although this is entirely normal during sleep, atonia can occur while a person is awake. This phenomenon is called sleep paralysis.",
+        "An infrequent but perfectly safe condition, during sleep paralysis the mind is awake but, due to atonia, the body is paralysed for up to several minutes. This can result in an inability to move or speak, a feeling of pressure on the chest, difficulty breathing and an inexplicable fear or feeling of dread. In some, the inability to move their eyes can occur, whereas others find that these are the only part of the body they can move. Many also experience hallucinations during sleep paralysis, varying from believing a malevolent presence to be in the room, to more complex hallucinations including hearing, smelling or feeling things that are not there. In more extreme cases, people have reported forced or wilful out-of-body experiences. Understandably, these effects can be very frightening for the individual, even though there is no danger.",
+        "Documented interest in sleep paralysis goes back as far as Ancient Greece, but has not always been thought of as a medical issue. Paulus Aegenita, a Byzantine Greek physician, wrote about a disorder called ‘ephialtes’ in his medical encyclopaedia Medical Compendium in Seven Books. According to Paulus, the sufferer of ephialtes experiences the sensation of being suffocated and unable to move as a demon presses down on them. The being may speak while attempting to suffocate them, then flees when they strive to grab it. Aegenita believed such an affliction was a forerunner of another disease and that the demon behind it would return every night after its initial visit to torment the sleeper. This perception of sleep paralysis is mirrored across many cultures. British folklore talks of the Old Hag, an entity who sits on people’s chests while they sleep and causes them to have nightmares. When the sleeper awakes, the Old Hag disappears, leaving the person unable to speak or move temporarily. The Old Hag also appears in other European cultures, commonly known as ‘mara’ and causing similar effects on its victims.",
+        "Beyond these broad similarities, further details differ from culture to culture. In Japan, evil spirits - known as ‘kanashibari’ - tie up victims with iron ropes, whereas the Inuits attribute the phenomena to a shaman placing a curse upon the victim. Despite these differences, it is clear that most pre-Enlightenment cultures believed that rather than a natural occurrence in the human body, sleep paralysis was attributed to an exterior threat, someone or something that wished to harm them. 18th-Century artist Henry Fuseli is well known for oil painting ‘The Nightmare’, depicting a woman with a demonic creature sitting on her chest and a possessed horse skulking near the bed. This painting is commonly perceived as depicting sleep paralysis, as the incubus puts pressure on the chest, causing the shortness of breath typical of the condition. Furthermore, the woman is painted as lying on her back, a position which even in modern medicine is considered to lead to or exacerbate sleep paralysis. It is believed that Fuseli was inspired by Germanic tales of hags and mara in his creation of this artwork.",
+        "Given that people in the past attributed sleep paralysis to supernatural causes, it is unsurprising that they also believed it was a precursor to illness or could even lead to death. Even when a rational, medical explanation for the condition exists, some people still believe it is more than just an anomaly in sleeping patterns. Some theories attribute sleep paralysis to ‘shadow people’ - entities with a human form found in the shadows watching over victims while they sleep. Those who have ‘met’ these gloomy figures, often hallucinate about long shadows and strange shapes. The widely documented nature of these hallucinations mean many consider them proof of the shadow people’s existence. Alternatively, many conspiracy theorists believe sleep paralysis is due to alien activity, as the majority of those claiming to be victims of alien abduction describe the encounter as being similar to sleep paralysis: inexplicable anxiety, hearing buzzing or humming sounds and sensing a potentially harmful presence.",
+        "It appears some aspect of the human psyche has always been attracted to bizarre and supernatural explanations for an affliction that, although potentially alarming, is entirely benign. Although the mechanics are now understood by modern medicine, the root causes of sleep paralysis still remain vague and unconfirmed. It has been linked to narcolepsy, its likelihood increasing through irregular sleeping patterns or insomnia. Nonetheless, a definitive cause has yet to be determined and this strange phenomenon is likely to continue to attract supernatural speculation until we discover what exactly provokes it."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-4",
+          "heading": "Questions 14-19",
+          "instruction": "Choose THREE letters (from A - G) and write them in any order in the answer boxes.",
+          "questions": [
+            {
+              "id": "q14-16",
+              "type": "multiple-choice-multiple",
+              "label": "14-16",
+              "text": "According to the passage, what is true of normal REM sleep?",
+              "options": [
+                "Our eyes can be sometimes open.",
+                "We only dream if we are completely free from harm.",
+                "All but the most essential muscles do not function.",
+                "Our bodies attempt to act out our dreams.",
+                "Our dreams are more animated.",
+                "Motor neurons in the spinal cord cause a condition called atonia.",
+                "Atonia can cause sleepers to wake up."
+              ]
+            },
+            {
+              "id": "q17-19",
+              "type": "multiple-choice-multiple",
+              "label": "17-19",
+              "text": "What can happen to people during an attack of sleep paralysis?",
+              "options": [
+                "Their minds suddenly go to sleep.",
+                "They sense something pushing on their body.",
+                "They often feel afraid for no reason.",
+                "They experience physical pain.",
+                "They are able to move their eyes.",
+                "Their bodies develop a strange smell.",
+                "They sense things which are not present."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 20-25",
+          "instruction": "Choose the correct figure(s) for each statement.",
+          "questions": [
+            {
+              "id": "q20-25-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "text": "Can draw parallels between a personal experience and the symptoms of sleep paralysis."
+                },
+                {
+                  "id": "q21",
+                  "label": "21",
+                  "text": "Believed sleep paralysis to be a sign of underlying health problems."
+                },
+                {
+                  "id": "q22",
+                  "label": "22",
+                  "text": "Can be referred to by an alternative name depending on which country you are in."
+                },
+                {
+                  "id": "q23",
+                  "label": "23",
+                  "text": "Is/are believed by many to exist due to the extensive recording of visions."
+                },
+                {
+                  "id": "q24",
+                  "label": "24",
+                  "text": "Received inspiration from folklore."
+                },
+                {
+                  "id": "q25",
+                  "label": "25",
+                  "text": "Is/are thought to cause bad dreams."
+                }
+              ],
+              "options": [
+                {
+                  "key": "CT",
+                  "name": "Conspiracy theorists"
+                },
+                {
+                  "key": "HF",
+                  "name": "Henry Fuseli"
+                },
+                {
+                  "key": "OH",
+                  "name": "The Old Hag"
+                },
+                {
+                  "key": "PA",
+                  "name": "Paulus Aegenita"
+                },
+                {
+                  "key": "SP",
+                  "name": "Shadow People"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-6",
+          "heading": "Questions 26",
+          "instruction": "Choose the correct answer. Write the appropriate letter A - D for each question.",
+          "questions": [
+            {
+              "id": "q26",
+              "label": "26",
+              "question": "What is the most appropriate title for this text?",
+              "type": "multiple-choice",
+              "options": [
+                "The role of folklore in dreams.",
+                "The physical symptoms and effects of sleep paralysis.",
+                "Investigating the source of irregular sleep patterns.",
+                "Paranormal theories for an unexplained phenomenon."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "Lawrence Johnston and Hidcote Garden",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b>",
+      "passage": [
+        "Robin Lane Fox writes about the American genius behind a remarkable garden in the English Cotswolds",
+        "Today, the National Trust in the UK administers hundreds of public gardens, while sixty-odd years ago there was only one, Hidcote Manor near the English village of Chipping Campden. In 1949 Hidcote attracted a mere 600 visitors and took all of £30 during its first public season. Nowadays, Hidcote is famous worldwide as a masterpiece of design and planting, attracting 150,000 visitors and raising nearly £1 million from entrance tickets annually. Hidcote Garden was the creation of an American in Britain, the shy Major Lawrence Johnston, who came to live on the site in 1907 with his widowed mother, Gertrude Winthrop. In some respects Winthrop feared her son's talents for expensive landscape gardening and never allowed him full access to the family's funds. Nonetheless, with her inspiration and guidance Johnston started his design in 1908 and brought it to a peak in the early 1930s when he was in his 60s. He may rightly be ranked at this time beside Harold Nicolson and Vita Sackville-West, creators of Sissinghurst, his garden's only surviving equal.",
+        "Graham Thomas was tasked with reviving Hidcote, and he had to manage without these crucial documents. Thomas knew that for the gardens to be a commercial success he needed to extend those areas that were of most interest to the general public, so he introduced new plants and a Mediterranean Bank where Johnston had had nothing of the sort, while retaining the existing superb structure of avenues and evergreen rooms. As a result, since 1949, the visiting public has innocently been admiring Thomas's flower plantings, not Johnston's own. When the important designer Russell Page had visited Hidcote in 1934 he had hailed the half-hardy plants in the summer house as one of the highlights. But Thomas later got rid of them and pulled the house down, fearing such relatively colourless exhibits would not capture the public's imagination.",
+        "Then, in 2002, Johnston's old diaries and notebooks resurfaced. The present head gardener had started to give lectures about Hidcote's lost early designs, during which he appealed for memories from his audience. A few months later, a woman approached him with a box of papers she had found in her attic. They were the missing records, including Johnston’s original planting lists and detailed sketches. This discovery prompted a major reassessment of the garden's history. Curators could now distinguish between Johnston’s original vision and the later modifications. A debate began on whether to restore parts of the garden to its 1930s heyday, a complex project that would involve removing some of Thomas's popular additions. The diaries also revealed Johnston’s meticulous notes on plant sourcing from his expeditions to China and South Africa, highlighting his dedication and global influence. This find has allowed historians to fully appreciate the depth of Johnston’s genius, which had been partially obscured for over half a century."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-7",
+          "heading": "Questions 27-31",
+          "instruction": "Complete the summary below. Write <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q27",
+              "label": "27",
+              "text": "Hidcote Manor Garden is now operated by the National Trust. While it had very few visitors in its first year, it is now a ...................., generating close to a million pounds per year.",
+              "type": "text"
+            },
+            {
+              "id": "q28",
+              "label": "28",
+              "text": "The garden was designed by Lawrence Johnston, who moved there with his ....................",
+              "type": "text"
+            },
+            {
+              "id": "q29",
+              "label": "29",
+              "text": "Johnston's mother was supportive but also ....................of his costly gardening projects.",
+              "type": "text"
+            },
+            {
+              "id": "q30",
+              "label": "30",
+              "text": "Despite this, he managed to complete the garden's design with her ....................and inspiration.",
+              "type": "text"
+            },
+            {
+              "id": "q31",
+              "label": "31",
+              "text": "By the 1930s, his work was considered equal to that of the creators of the garden at ....................",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 32-36",
+          "instruction": "Choose <b>YES</b> if the statement agrees with the information, choose <b>NO</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q32",
+              "label": "32",
+              "text": "Graham Thomas had access to Johnston's original plans when he began his work.",
+              "type": "radio",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q33",
+              "label": "33",
+              "text": "Thomas kept the underlying layout of avenues and rooms unchanged.",
+              "type": "radio",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q34",
+              "label": "34",
+              "text": "Russell Page believed the summer house was one of the least interesting parts of Hidcote.",
+              "type": "radio",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q35",
+              "label": "35",
+              "text": "Thomas removed the summer house because he thought it was unsafe.",
+              "type": "radio",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q36",
+              "label": "36",
+              "text": "The public after 1949 primarily saw flower arrangements designed by Thomas.",
+              "type": "radio",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-9",
+          "heading": "Questions 37-40",
+          "instruction": "Answer the questions below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q37",
+              "label": "37",
+              "text": "What did the head gardener ask for from his audience during his lectures?",
+              "type": "text"
+            },
+            {
+              "id": "q38",
+              "label": "38",
+              "text": "Where were Johnston's missing papers discovered?",
+              "type": "text"
+            },
+            {
+              "id": "q39",
+              "label": "39",
+              "text": "What did the rediscovered papers include, besides planting lists?",
+              "type": "text"
+            },
+            {
+              "id": "q40",
+              "label": "40",
+              "text": "Which two continents did Johnston travel to for collecting plants?",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

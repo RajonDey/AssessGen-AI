@@ -1,0 +1,516 @@
+{
+  "id": "reading-mock-05",
+  "title": "Reading Mock Test 5",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/reading.mp4",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Dolls through the ages",
+      "instructions": "Read the text below and answer questions <b> 1 – 13 </b>",
+      "passage": [
+        "What is today a simple children's toy has a surprisingly rich history. Dolls have been a part of humankind for thousands of years. Often depicting religious figures, or used as playthings, early dolls were probably made from primitive materials such as clay, fur, or wood. Dolls through the ages",
+        "Dolls constructed of flat pieces of wood, painted with various designs, and with hair made of clay, have often been found in Egyptian graves dating back to 2000 BC. Egyptian tombs of wealthy families have included pottery dolls. Dolls being placed in these graves leads some to believe that they were cherished possessions.",
+        "Girls from ancient Greece and Rome offered their wooden dolls to goddesses after they were too 'grown-up' to play with dolls. Most ancient dolls that were found in tombs were very simple creations, often made from such materials as clay, rags, wood, or bone. Some of the more unique dolls were made with ivory or wax. The main goal was to make the doll as lifelike as possible. That ideal led to the creation of dolls with movable limbs and removable garments, dating back to 600 BC.",
+        "Following the era of the ancient dolls, Europe became a major hub for doll production. These dolls were primarily made of wood. Fewer than 30 examples of primitive wooden stump dolls from England survive today. The Grodnertal area of Germany produced many peg wooden dolls, a type of doll that has very simple peg joints and resembles a clothespin. An alternative to wood was developed in the 1800s.",
+        "'Composition' is a collective term for mixtures of pulped wood or paper that were used to make doll heads and bodies. These mixtures were moulded under pressure, creating a durable doll that could be mass produced. Manufacturers closely guarded the recipes for their mixtures, sometimes using strange ingredients like ash or eggshells. Papier-mâché, a type of composition, was one of the most popular mixtures.",
+        "In addition to wooden dolls, wax dolls grew in popularity in the 17th and 18th centuries. Much in Germany was a major manufacturing centre for wax dolls. Wax dollmakers would model a doll's head in wax or clay, and then cover it with plaster to create a mould. Then they would pour melted wax into the cast. The wax for the head would be very thin, no more than 3 mm. Some of the most distinctive wax dolls were created in England between 1850 and 1930. One of the first dolls that portrayed a baby was made in England from wax at the beginning of the 10th century.",
+        "Around the same time porcelain became popular. It is made by firing special clays in a kiln at more than 2372 degrees Fahrenheit (1300°C), and only a few clays can withstand firing at such high temperatures. Porcelain is used generically to refer to both China and bisque dolls; China is glazed, whereas bisque is unglazed. Germany, France, and Denmark started creating China heads for dolls in the 1840s. These China heads were replaced in the 1860s by ones made of bisque. Bisque, which is porcelain fired twice with colour added to it after the first firing, looked more like skin than China did.",
+        "In France, the bébé was popular in the 1880s, and it has become a highly sought after doll today. The bébé, first made in the 1850s, was different from its predecessors because it depicted a younger girl. Until then, most French dolls were representations of adults. Although the French dolls were unrivalled in their artistry, German bisque dolls became quite popular because they were not as expensive. Kammer & Reinhardt introduced a bisque character doll in the 1900s, starting a trend of creating realistic dolls.",
+        "For many centuries, rag dolls were made by mothers for their children. The term 'rag doll' refers generically to dolls made of any fabric. 'Cloth doll' refers to a subset of rag dolls made of linen or cotton. Commercially produced rag dolls were first introduced in the 1850s by English and American manufacturers. Although not as sophisticated as dolls made from other materials, rag dolls were well loved, often as a child's first toy.",
+        "Dollmaking did not become an industry in the United States until after the Civil War in the 1860s. Doll production was concentrated in the New England region of the United States, with dolls made from a variety of materials such as leather, rubber, papier-mâché, and cloth. Celluloid was developed in the state of New Jersey in the late 1860s and was used to manufacture dolls until the mid-1950s. German, French, American, and Japanese factories churned out cheaply produced celluloid dolls in mass quantities. However, celluloid fell out of favour because of its extreme flammability and propensity to fade in bright light.",
+        "After World War I, doll makers experimented with plastics. Hard plastic dolls were manufactured in the 1940s. They resembled composition dolls, but they were much more durable. Other materials used in doll manufacturing included rubber, foam rubber, and vinyl in the 1950s and 1960s. Vinyl changed doll making, allowing doll makers to root hair into the head, rather than using wigs or painting the hair. Although most dolls are now mass-manufactured using these modern materials, many modern doll makers are still using the craft."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-6",
+          "instruction": "Complete the notes below. Choose <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q1-6",
+              "type": "notes-completion",
+              "label": "1-6",
+              "wordLimit": 1,
+              "notesContent": [
+                {
+                  "title": "Dolls",
+                  "items": [
+                    {
+                      "type": "heading",
+                      "content": "Earliest known dolls"
+                    },
+                    {
+                      "type": "plain",
+                      "content": "• represented religious figures"
+                    },
+                    {
+                      "type": "plain",
+                      "content": "• used as toys"
+                    },
+                    {
+                      "type": "heading",
+                      "content": "Egypt 2000 BC"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• bodies were made of (1)"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• (2)was used for the hair"
+                    },
+                    {
+                      "type": "heading",
+                      "content": "Ancient Greece and Rome"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• dolls were given to (3) by older girls"
+                    },
+                    {
+                      "type": "plain",
+                      "content": "• 600 BC"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• realistic dolls had separate clothes and (4) that could be put in different positions"
+                    },
+                    {
+                      "type": "heading",
+                      "content": "17th and 18th centuries"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• dolls made of (5)"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• moulds made of (6)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 7-13",
+          "instruction": "Choose <b>TRUE</b> if the statement agrees with the information given in the text, choose <b>FALSE</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q7",
+              "label": "7",
+              "text": "Bisque dolls appear less realistic than dolls made of China.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q8",
+              "label": "8",
+              "text": "French dolls tended to cost more than German bisque dolls.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q9",
+              "label": "9",
+              "text": "The first rag dolls were made in the 1850s.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q10",
+              "label": "10",
+              "text": "Only dolls made of cotton or linen are classified as cloth dolls.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "Dolls made of celluloid tended to lose their colour.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q12",
+              "label": "12",
+              "text": "Composition dolls lasted longer than the plastic dolls that were made in the 1940s.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q13",
+              "label": "13",
+              "text": "Doll collectors prefer a doll to be dressed in its original clothing.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Solving the problem of waste disposal",
+      "instructions": "Read the text below and answer questions <b> 14 – 26 </b>",
+      "passage": [
+        " With the amount of rubbish being produced around the world increasing, Mark Rowe asks whether a new generation of incineration plants can help to solve the problem.",
+        "Paragraph A: For many years, burning rubbish has been portrayed as the lazy option when it comes to dealing with the problem of waste disposal, since it sends toxic fumes into the air and appears to support a consumerist, throwaway society. Norway, however, appears to be burning its way through a sizable chunk of Europe's municipal waste, using the heat created by this process to warm and power homes in many of its cities. Norway isn't alone: Germany, Sweden, Belgium and the Netherlands all burn significant quantities of rubbish, and across Europe there are 420 plants burning municipal waste. With Europe dumping 150 million tonnes of rubbish into landfill every year, there would seem to be a limitless supply.",
+        "Paragraph B: Those who support burning waste say that a new generation of incinerators has made it a more attractive option. Filters and scrubbing mechanisms now capture harmful substances such as mercury, hydrochloric acid and heavy metals. According to Ted Michaels, president of the US-based Energy Recovery Centre, there has been constant evolution in combustion engineering and emissions-control technology, and the output from these facilities is now minuscule. Above all, however, supporters say that incineration is the only way of preventing the long-term impacts of landfill. In ten years' time, says the World Bank, humans will be generating 2.2 billion tonnes of solid waste per year. Advocates see incineration as a practical way to deal swiftly with an immediate problem.",
+        "Paragraph C: Levels of waste generation vary hugely around the world. It's a problem for the developed nations, says Joergen Fenhann, a senior scientist working with the UN Environment Programme in Denmark. The more you develop, the more you produce, buy and throw away. But the growth of incineration hasn't been universally welcomed. Lars Haltbrekken, chairman of Friends of the Earth in Norway, is concerned that incineration plants appear to generate demand for their services. The problem in Norway, he explains, is that we have built too many waste-burning factories. So we've ended up importing waste from other countries. If you look at this in a very small perspective, it is, of course, better for the climate to burn rubbish from the UK rather than leave it in landfill there. But in a broader perspective, it's a lazy way of getting rid of waste; you don't stimulate the goals of reducing, reusing and recycling.",
+        "Paragraph D: Incineration is also at odds with EU policy, which promotes a recycling hierarchy: ideally, we simply produce less waste in the first place; failing that, we reuse objects more; the next step is recycling; only then should we consider incineration, while dumping in landfill is the last resort. Dealing with the problem of waste disposal involves tracing the whole process that took the material from its inception to landfill. We used to call this the cradle to grave life cycle; now, the talk is of cradle to cradle and an even more comprehensive concept known as zero waste. The philosophy of cradle to cradle is about designing products that are actually good for the environment at the end of their life, says Joan Marc Simon, European spokesman for the environmental movement GAIA. You design a bottle that contains no toxins, is fully recyclable and requires the minimum amount of energy to be produced. As Simon points out, however, without the right mechanisms in place nothing guarantees that this bottle will end up being properly collected and treated in the appropriate recycling facility.",
+        "Paragraph E: Tim Burns, policy manager at Keep Britain Tidy, says that in the UK alone, people waste £10 billion of food every year. You can argue about composting that, or not buying it in the first place — if you do that, then that's money the retailers don't get, so it's not always clear-cut. The implications of zero waste are that we're going to have to take a good long look at those well-stocked supermarket shelves, too. Supermarkets keep their shelves stocked even when demand isn't there, which means they have to pay to dispose of a lot of food, says Burns. But that cost is less to them than the cost in brand damage of having empty shelves.",
+        "Paragraph F: Recent history and changes in trends in recycling suggest that we should be prepared for unexpected developments. If someone back in the 1980s had suggested what waste would be like now, they would be completely wrong, says Richard Fisher, a PhD researcher at Cranfield University. Consumerism has developed at a pace we never expected. Nobody would have said there would be so much electronic waste. But recycling has grown, too — ten years ago nobody would have predicted today's levels of recycling. But he points out that the need to reduce waste is still a difficult message to sell to consumers. He suggests that what people are really concerned about is their loved ones and the future they face. Perhaps we can align the environmental message to these deep-seated values, he says. We need to look at whether it's business that drives consumers or the other way around. You need government to play a leadership role, whereas countries such as the UK seem to be stepping away from the environment in pursuit of short-term economic goals."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-3",
+          "heading": "Questions 14-19",
+          "instruction": "Reading Passage 2 has six paragraphs, A – F. Choose the correct heading for each paragraph from the list of headings below. Write the correct number, i - vii, in boxes 14-19 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q14-19-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "text": "Paragraph A"
+                },
+                {
+                  "id": "q15",
+                  "label": "15",
+                  "text": "Paragraph B"
+                },
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "text": "Paragraph C"
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "text": "Paragraph D"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "text": "Paragraph E"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "text": "Paragraph F"
+                }
+              ],
+              "options": [
+                {
+                  "key": "i",
+                  "name": "New terminology reflecting changing attitudes to waste disposal"
+                },
+                {
+                  "key": "ii",
+                  "name": "Fundamental changes in behaviour in the past and future"
+                },
+                {
+                  "key": "iii",
+                  "name": "Ways of rewarding the public for recycling"
+                },
+                {
+                  "key": "iv",
+                  "name": "A surprising approach to waste disposal by several countries"
+                },
+                {
+                  "key": "v",
+                  "name": "Difficult choices for individuals and businesses"
+                },
+                {
+                  "key": "vi",
+                  "name": "Arguments against incineration from a country that uses it"
+                },
+                {
+                  "key": "vii",
+                  "name": "A number of justifications for the use of incineration"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-4",
+          "heading": "Questions 20-23",
+          "instruction": "Look at the following people (Questions 20-23) and the list of opinions below. Match each person with the correct opinion, <b>A-G</b>.",
+          "questions": [
+            {
+              "id": "q20-23-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "statement-heading": "List of Researchers",
+                  "id": "q20",
+                  "label": "20",
+                  "text": "Ted Michaels"
+                },
+                {
+                  "id": "q21",
+                  "label": "21",
+                  "text": "Joergen Fenhann"
+                },
+                {
+                  "id": "q22",
+                  "label": "22",
+                  "text": "Joan Marc Simon"
+                },
+                {
+                  "id": "q23",
+                  "label": "23",
+                  "text": "Tim Burns"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Incineration does not encourage responsible attitudes to waste disposal."
+                },
+                {
+                  "key": "B",
+                  "name": "Recycling can sometimes create serious problems for the future."
+                },
+                {
+                  "key": "C",
+                  "name": "Greater consumerism leads to higher levels of waste."
+                },
+                {
+                  "key": "D",
+                  "name": "Proper systems are needed for the recycling of environmentally-friendly products."
+                },
+                {
+                  "key": "E",
+                  "name": "Landfill is better for the environment than incineration."
+                },
+                {
+                  "key": "F",
+                  "name": "Incineration of waste is now relatively harmless to the environment."
+                },
+                {
+                  "key": "G",
+                  "name": "Efforts to reduce waste may affect profits for some types of companies."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 24-26",
+          "instruction": "Complete the summary below. Choose <b> ONE WORD ONLY </b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q24-26",
+              "type": "summary-completion",
+              "wordLimit": 1,
+              "summary": "What recent history tells us about recycling\n\nRichard Fisher, a researcher from Cranfield University, points out that the pace of consumerism has increased more quickly than was predicted in the 1980s. There has, for example, been unexpected growth in waste from __24__ products. He suggests that the need to protect the environment should be linked to basic values, and adds that it might be better if consumers had more influence over __25__ and more direction was provided by __26__.",
+              "answers": [
+                {
+                  "id": "q24",
+                  "label": "24"
+                },
+                {
+                  "id": "q25",
+                  "label": "25"
+                },
+                {
+                  "id": "q26",
+                  "label": "26"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "The Antikythera Mechanism",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b>",
+      "passage": [
+        "One spring day in 1900, a party of Greek sponge divers took shelter from a storm near the island of Antikythera, which lies about 50 kilometres northwest of the western tip of Crete. After the storm, one of the group, Elias Stadiatis, decided to dive in search of giant clams to eat for their dinner. On a shelf about 43 metres below the surface of the water, he chanced upon the wreck of an ancient ship. Fragments of statues, looking like body parts, covered this ledge. The diver returned to the surface, bearing an arm made of bronze as proof of what he had discovered. He reported his find to the authorities and, in the autumn, he and his companions returned to dive on the Antikythera wreck on behalf of the Greek government. They spent the next ten months bringing up pieces of marble and bronze statues, amphorae, lamps and coins, all of which were sent to the National Museum in Athens for cleaning and restoration.",
+        "Among the artefacts retrieved from the shipwreck was a rather unprepossessing lump of bronze inside what seemed to be a wooden casing. This object was covered in barnacles and badly corroded by seawater, and didn’t attract much attention at first. It wasn’t until May 1902 that the leading Greek archaeologist Valerios Stais noticed that the wooden covering had dried out and split open, and the fused lump of metal inside it had separated into several pieces. The largest of these fragments was a dial about 14cm in diameter, with some inscriptions on it. Some other fragments also appeared to be parts of dials with perfectly formed triangular teeth, like gear wheels. The evidence seemed to point to this being part of a kind of mechanical clock, but the researchers ultimately rejected this possibility as the wreck had been dated to the first century BCE, and it was known that precise gears like these had not existed until fourteen centuries after that.",
+        "Little progress on identifying either the purpose or origins of the mechanism was made until the late 1950s, when the device attracted the attention of a British-born polymath, Derek de Solla Price, who was working at Princeton University in the United States. Price realised that the inscriptions on the large dial indicated days, months and zodiac signs and theorised that the device used gears to trace the paths of the sun, moon and other planets in relation to the earth and to indicate their position at any given moment by means of pointers that had since been lost. Although his interpretation was basically sound, further research was hampered by the fact that only a few of the gears appear on the surface of the fused metal fragments of the mechanism.",
+        "In 1971, the National Museum in Athens gave permission for Price, working with a Greek radiographer, to X-ray the fragments of the Antikythera mechanism. These two-dimensional images revealed many of the hidden gears and allowed Price to develop schematic drawings of how the mechanism must have worked. What he discovered confounded all previous theories of technology in the Hellenistic era and indicated that the ancient Greeks’ mechanical know-how and knowledge of astronomy came close to that of modern times. However, despite positive scholarly reviews of Price’s work, his idea that the Antikythera mechanism is an ancient analogue computer, published in his 1974 book “Gears from the Greeks”, fell on deaf ears where mainstream historians were concerned. This may have been due, at least in part, to the contemporaneous popularity of books by the Swiss writer Erich von Daniken, who postulated that ancient aliens had brought advanced technology to earth; Price’s work may have inadvertently become associated with fringe theories and UFO-hunters as a result.",
+        "Whatever the reason, little more official research was conducted on the mechanism until the 2005 launch of the Antikythera Mechanism Research Project, an international, multi-disciplinary study that operates under the supervision of the Hellenic Ministry of Culture. The project examined the fragments of the Antikythera mechanism using state-of-the-art imaging equipment. One machine, nicknamed BladeRunner, was originally designed to detect cracks in aircraft turbine blades by means of three-dimensional X-ray technology. This project is ongoing and new findings are being constantly made and revealed. Enough has already been discovered to vindicate Price.",
+        "This modern research places the construction of the mechanism towards the end of the second century BCE and confirms that its bronze dials and gears would have been housed in a wooden box roughly the size of a modern shoebox. Like the clocks our grandparents’ generation kept on the mantelpiece, the mechanism had a circular dial at the front with rotating hands. Rather than showing hours and minutes, however, these hands indicated the exact whereabouts of the sun and the moon in the sky at any given time, as well as of Mercury, Venus, Mars, Jupiter and Saturn, the five planets that are visible to the naked human eye. In addition, the mechanism also allowed for the fact that the orbit of some planets around the sun appears to go backwards, or “retrograde”, at certain times during the celestial cycle.",
+        "It has also been discovered that there were two dials on the back of the mechanism, one of which was a calendar and the other which showed when solar and lunar eclipses would take place. A number of breathtaking models of the mechanism have been produced, including one made out of Lego blocks. These reveal the outstanding mechanical skills and astronomical knowledge of whoever built the Antikythera mechanism two thousand years or more before we developed the technological skills to start unlocking its secrets."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-6",
+          "heading": "Questions 27-32",
+          "instruction": "Complete the summary. Write <b> NO MORE THAN THREE WORDS </b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q27-32",
+              "type": "summary-completion",
+              "wordLimit": 3,
+              "summary": "The Discovery of the Antikythera Mechanism\n\nThe Antikythera mechanism was discovered by a diver who was looking for __27__. Instead, he found the remains of an ancient ship, from which he took proof to show his fellow divers. Having been commissioned to recover the relics, the same divers spent __28__ retrieving items such as sculptures made of __29__ for the National Museum. Another item they found was a __30__ which contained a piece of metal. This was ignored until over a year later when a renowned archaeologist noticed that the inside was composed of several pieces, one of which had __31__ on it, and others appeared to be apparatus of some sort, leading the investigators to think at first that the artefact might have been a __32__, although the historical origin of it suggested this was impossible.",
+              "answers": [
+                {
+                  "id": "q27",
+                  "label": "27"
+                },
+                {
+                  "id": "q28",
+                  "label": "28"
+                },
+                {
+                  "id": "q29",
+                  "label": "29"
+                },
+                {
+                  "id": "q30",
+                  "label": "30"
+                },
+                {
+                  "id": "q31",
+                  "label": "31"
+                },
+                {
+                  "id": "q32",
+                  "label": "32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-7",
+          "heading": "Questions 33-37",
+          "instruction": "Complete each sentence with the correct ending <b>(A - H)</b>.",
+          "questions": [
+            {
+              "id": "q33-37",
+              "type": "drag-drop-ending-sentence-completion",
+              "label": "33-37",
+              "instruction": "Complete each sentence with the correct ending (A - H).",
+              "sentences": [
+                {
+                  "id": "q33",
+                  "questionNumber": "33",
+                  "text": "Elias Stadiatis had not intended"
+                },
+                {
+                  "id": "q34",
+                  "questionNumber": "34",
+                  "text": "The group of divers were asked"
+                },
+                {
+                  "id": "q35",
+                  "questionNumber": "35",
+                  "text": "Valerios Stais was the first"
+                },
+                {
+                  "id": "q36",
+                  "questionNumber": "36",
+                  "text": "Using an X-ray, Derek de Solla Price managed"
+                },
+                {
+                  "id": "q37",
+                  "questionNumber": "37",
+                  "text": "The Antikythera Mechanism Research Project used technology originally created"
+                }
+              ],
+              "options": [
+                "to calculate how the calendar operated.",
+                "to identify problems in aeronautical components.",
+                "to discover historical artefacts.",
+                "to link the ancient device to theories about extra terrestrials.",
+                "to use gears to calculate astronomical movements.",
+                "to study a wooden box and its contents more closely.",
+                "to produce a picture showing what the mechanism looked like inside.",
+                "to retrieve the outstanding relics."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 38-40",
+          "instruction": "Choose the correct letter, <b>A, B, C or D</b>.",
+          "questions": [
+            {
+              "id": "q38",
+              "label": "38",
+              "number": "38",
+              "question": "How is the mechanism similar to more contemporary clock designs?",
+              "type": "mcq",
+              "options": [
+                "It has a small, box shape.",
+                "The casing is made of wood.",
+                "It has hands which turn around in a circle.",
+                "It indicates how many minutes and hours have passed."
+              ]
+            },
+            {
+              "id": "q39",
+              "label": "39",
+              "number": "39",
+              "question": "What was the Antikythera Mechanism able to show?",
+              "type": "mcq",
+              "options": [
+                "The current time of day",
+                "The position of some of the planets",
+                "The direction the planets are spinning in",
+                "The distance between the sun and the moon"
+              ]
+            },
+            {
+              "id": "q40",
+              "label": "40",
+              "number": "40",
+              "question": "What do our current models of the mechanism show?",
+              "type": "mcq",
+              "options": [
+                "The mechanism is so advanced in design, we couldn’t understand it until modern times.",
+                "The creators of the Antikythera mechanism knew far more about astronomy than we do.",
+                "We have only recently possessed the technology that belonged to the ancient Greeks.",
+                "There are still things we don’t understand about the Antikythera mechanism."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
