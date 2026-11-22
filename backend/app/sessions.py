@@ -119,6 +119,12 @@ class SessionState:
     parts: list[dict[str, Any]] = field(default_factory=list)
     current_part: int = 1
     total_parts: int = 1
+    topics: list[str] = field(default_factory=list)
+    type_plan: list[list[str]] = field(default_factory=list)
+    topic_t1: str | None = None
+    topic_t2: str | None = None
+    task1_kind: str | None = None
+    task2_kind: str | None = None
 
     def add_part(self, content: dict[str, Any]) -> None:
         """Add generated content for a part."""
@@ -156,6 +162,8 @@ class SessionState:
             "question_types_used": list(dict.fromkeys(question_types)),
             "parts": part_summaries,
             "previous_part": part_summaries[-1],
+            "paper_topics": list(self.topics),
+            "paper_type_plan": [list(row) for row in self.type_plan],
         }
 
     def get_summary(self) -> str:
@@ -165,6 +173,19 @@ class SessionState:
             return ""
 
         lines: list[str] = []
+        if self.topics:
+            lines.append(
+                "Paper topics (independent per part): "
+                + "; ".join(f"Part {i}: {t}" for i, t in enumerate(self.topics, 1))
+            )
+        if self.type_plan:
+            lines.append(
+                "Paper type_plan: "
+                + "; ".join(
+                    f"Part {i}: {', '.join(row)}"
+                    for i, row in enumerate(self.type_plan, 1)
+                )
+            )
         for part in linking.get("parts") or []:
             n = part.get("part_number", "?")
             topics = part.get("topics") or []
@@ -198,6 +219,13 @@ class SessionManager:
         topic: str,
         target_band: float,
         total_parts: int,
+        *,
+        topics: list[str] | None = None,
+        type_plan: list[list[str]] | None = None,
+        topic_t1: str | None = None,
+        topic_t2: str | None = None,
+        task1_kind: str | None = None,
+        task2_kind: str | None = None,
     ) -> SessionState:
         """Create a new generation session."""
         session_id = str(uuid.uuid4())
@@ -207,6 +235,12 @@ class SessionManager:
             topic=topic,
             target_band=target_band,
             total_parts=total_parts,
+            topics=list(topics or []),
+            type_plan=[list(row) for row in (type_plan or [])],
+            topic_t1=topic_t1,
+            topic_t2=topic_t2,
+            task1_kind=task1_kind,
+            task2_kind=task2_kind,
         )
         self._sessions[session_id] = session
         return session
@@ -229,6 +263,8 @@ class SessionManager:
                 "session_id": s.session_id,
                 "module": s.module,
                 "topic": s.topic,
+                "topics": s.topics,
+                "type_plan": s.type_plan,
                 "current_part": s.current_part,
                 "total_parts": s.total_parts,
                 "parts_generated": len(s.parts),

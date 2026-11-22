@@ -1,0 +1,39 @@
+{
+  "id": "writing-01",
+  "title": "Writing Practice 1",
+  "type": "writing",
+  "duration": 60,
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/writing.mp4",
+  "sections": [
+    {
+      "title": "Part 1",
+      "instructions": "You should spend about 20 minutes on this task. Write at least 150 words.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "writing",
+          "title": "The chart below shows the percentage of Bangladeshi students of different ages who attended HEXA’S daily from 2021 to 2023.",
+          "question": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+          "images":[
+ "images/writing-02-01.png"
+          ],
+  
+          "minWords": 150
+        }
+      ]
+    },
+    {
+      "title": "Part 2",
+      "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
+      "questions": [
+        {
+          "id": "q2",
+          "type": "writing",
+          "title": "In the last decade, there has been a great increase in global air travel. What do you think are the reasons for this and do you think it is a good thing?",
+          "question": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "minWords": 250
+        }
+      ]
+    }
+  ]
+}

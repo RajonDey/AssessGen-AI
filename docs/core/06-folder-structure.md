@@ -69,6 +69,16 @@ backend/
 │   │       ├── reading_graph.py  listening_graph.py
 │   │       ├── writing_graph.py  speaking_graph.py
 │   │
+│   ├── content/                       # paper shaping used by the live API
+│   │   ├── paper_spec.py              # topics, type_plan, SPEC-* checks
+│   │   ├── reading_numbering.py       # Academic 1–40 across three passages
+│   │   ├── reading_normalize.py       # align sections[] + answer_key
+│   │   ├── listening_normalize.py     # fix script/question drift before rules + TTS
+│   │   ├── listening_skeleton.py
+│   │   ├── listening_brief.py  writing_brief.py
+│   │   ├── originality.py  validate.py
+│   │   └── cost_ledger.py             # in-process LLM call counts
+│   │
 │   ├── agents/                        # ── L3 AGENTS ───────────────────────
 │   │   ├── base.py                    # Agent[TIn, TOut] contract + tracing
 │   │   ├── planner.py

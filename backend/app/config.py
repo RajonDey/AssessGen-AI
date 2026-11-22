@@ -24,11 +24,18 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     openai_base_url: str = "https://api.openai.com/v1"
     openai_generator_model: str = "gpt-4.1-mini"
+    # Prefer a different (often cheaper) critic than the generator — ADR-0002/0004.
     openai_reviewer_model: str = "gpt-4.1-mini"
 
     max_revision_loops: int = 2
+    # Listening length failures often need more expansion attempts than Reading.
+    listening_max_revision_loops: int = 4
     # 0 = no read timeout (wait as long as Ollama needs). Positive = seconds.
     llm_timeout_seconds: float = 0.0
+    # Optional quarantine corpus for 8-gram originality (publish mode). Never used in prompts.
+    reference_documents_path: str = ""
+    # Apply Listening N1/pause skeleton when exam-clock structure is missing.
+    listening_apply_skeleton: bool = True
 
 
 @lru_cache

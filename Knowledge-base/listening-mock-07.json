@@ -1,0 +1,661 @@
+{
+  "title": "IELTS Listening Test 7",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/listening.mp4",
+  "audioUrl": "listening-mock-07.mp3",
+  "duration": 28,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-5",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> in each gap.",
+          "questions": [
+            {
+              "id": "q1-5",
+              "type": "form-completion",
+              "label": "1-5",
+              "title": "Questions 1 – 5",
+              "formTitle": "Lost/Stolen Passport Details",
+              "sections": [
+                {
+                  "heading": "LOST / STOLEN PASSPORT DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Surname",
+                      "cells": [
+                        "Walsh"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Forename",
+                      "cells": [
+                        "Chloe"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Date of Birth",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "1"
+                        },
+                        "1987"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Place of Birth (City)",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "2"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Passport Number (if known)",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "heading": "CONTACT DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Phone Number",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "4"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Email Address",
+                      "cells": [
+                        "chloe.walsh@email.com"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Address",
+                      "cells": [
+                        "97 East Street, Brighton"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Postcode",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "6-10",
+          "subInstructions": "Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q6-10",
+              "type": "bullet-notes-completion",
+              "sections": [
+                {
+                  "heading": "DETAILS OF WHAT HAPPENED TO THE PASSPORT",
+                  "items": [
+                    {
+                      "type": "bullet",
+                      "content": "Passport was in the pocket of Ms Walsh's (6)",
+                      "hasInput": true,
+                      "inputId": "q6",
+                      "questionNumber": "6"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "Date when passport was lost: Wednesday (7)",
+                      "hasInput": true,
+                      "inputId": "q7",
+                      "questionNumber": "7"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "She knows she had the passport when she was in a (8) with a friend.",
+                      "hasInput": true,
+                      "inputId": "q8",
+                      "questionNumber": "8"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "She then travelled home by (9)",
+                      "hasInput": true,
+                      "inputId": "q9",
+                      "questionNumber": "9"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "When she arrived home, she realised that she didn't have the passport any more.",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "CRIME REFERENCE NUMBER",
+                  "items": [
+                    {
+                      "type": "bullet",
+                      "content": "A (10)",
+                      "hasInput": true,
+                      "inputId": "q10",
+                      "questionNumber": "10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-20",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q11",
+              "type": "multiple-choice",
+              "questionNumber": "11",
+              "question": "What is the advantage of the boats which are being used today?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "They can go fast."
+                },
+                {
+                  "key": "B",
+                  "text": "They are comfortable to sit in."
+                },
+                {
+                  "key": "C",
+                  "text": "They are easy to get in and out of."
+                }
+              ]
+            },
+            {
+              "id": "q12",
+              "type": "multiple-choice",
+              "questionNumber": "12",
+              "question": "If anyone falls out of their boat, they should ...",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "swim to the shore."
+                },
+                {
+                  "key": "B",
+                  "text": "get back into the boat."
+                },
+                {
+                  "key": "C",
+                  "text": "wait in the water for help."
+                }
+              ]
+            },
+            {
+              "id": "q13",
+              "type": "multiple-choice",
+              "questionNumber": "13",
+              "question": "What does the speaker suggest people should do with their phones during their trip?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "leave them in their car"
+                },
+                {
+                  "key": "B",
+                  "text": "use them to take photos"
+                },
+                {
+                  "key": "C",
+                  "text": "keep them in a container"
+                }
+              ]
+            },
+            {
+              "id": "q14",
+              "type": "multiple-choice",
+              "questionNumber": "14",
+              "question": "The speaker recommends coming back to River Avon Adventures another time in order to ...",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "hire other kinds of equipment."
+                },
+                {
+                  "key": "B",
+                  "text": "learn more about the local wildlife."
+                },
+                {
+                  "key": "C",
+                  "text": "experience the river in different seasons."
+                }
+              ]
+            },
+            {
+              "id": "q15",
+              "type": "multiple-choice",
+              "questionNumber": "15",
+              "question": "What does a person need to do in order to save money on their next visit?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "write a review of River Avon Adventures"
+                },
+                {
+                  "key": "B",
+                  "text": "follow River Avon Adventures on social media"
+                },
+                {
+                  "key": "C",
+                  "text": "recommend River Avon Adventures to another person"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "16-20",
+          "subInstructions": "Label the plan. Write the appropriate letter, A – G.",
+          "questions": [
+            {
+              "id": "q16-20",
+              "type": "map-label",
+              "label": "16-20",
+              "title": "Questions 16 – 20",
+              "imageUrl": "images/listening-06.png",
+              "locations": [
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "name": "campsite"
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "name": "fish restaurant"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "name": "picnic site"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "name": "toilets"
+                },
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "name": "Frog Rock"
+                }
+              ],
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-24",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "questionNumber": "21",
+              "question": "What do Paul and Sue agree makes Cotman's paintings easy to identify?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "his signature"
+                },
+                {
+                  "key": "B",
+                  "text": "the subject matter"
+                },
+                {
+                  "key": "C",
+                  "text": "the style of painting"
+                }
+              ]
+            },
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "questionNumber": "22",
+              "question": "Sue compares Cotman to the artist Van Gogh in order to suggest that",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "the other students may not know much about Cotman."
+                },
+                {
+                  "key": "B",
+                  "text": "Cotman influenced some of the world's greatest artists."
+                },
+                {
+                  "key": "C",
+                  "text": "the presentation should focus on similarities between the two painters."
+                }
+              ]
+            },
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "questionNumber": "23",
+              "question": "Paul says that Cotman visited his friends in Brandsby many times in order to",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "find new clients."
+                },
+                {
+                  "key": "B",
+                  "text": "buy a place to live."
+                },
+                {
+                  "key": "C",
+                  "text": "paint pictures for them."
+                }
+              ]
+            },
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "questionNumber": "24",
+              "question": "Why is Paul against Sue's idea of including Cotman's personal life in their presentation?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "It would be irrelevant to the task."
+                },
+                {
+                  "key": "B",
+                  "text": "The other students may find it dull."
+                },
+                {
+                  "key": "C",
+                  "text": "There is too little information about it."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "25-30",
+          "subInstructions": "What do the students want to find out about each of the following paintings?<br><br>Choose six answers and write the correct letter, <b>A — H</b>, next to questions <b>25 — 30</b>.",
+          "questions": [
+            {
+              "id": "q25-30",
+              "type": "drag-drop-completion",
+              "title": "Questions 25 – 30",
+              "sections": [
+                {
+                  "title": "Paintings",
+                  "items": [
+                    {
+                      "questionNumber": "25",
+                      "fieldId": "q25",
+                      "prefix": "Chirk Aqueduct",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "26",
+                      "fieldId": "q26",
+                      "prefix": "In Rokeby Park",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "27",
+                      "fieldId": "q27",
+                      "prefix": "Bedlam Furnace",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "28",
+                      "fieldId": "q28",
+                      "prefix": "Croyland Abbey",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "29",
+                      "fieldId": "q29",
+                      "prefix": "The Kitchen",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "30",
+                      "fieldId": "q30",
+                      "prefix": "Doorway at Rievaulx",
+                      "suffix": ""
+                    }
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "value": "A. which year it was painted"
+                },
+                {
+                  "key": "B",
+                  "value": "B. who the people in the painting are"
+                },
+                {
+                  "key": "C",
+                  "value": "C. whether the painting was completed"
+                },
+                {
+                  "key": "D",
+                  "value": "D. what Cotman thought of the painting"
+                },
+                {
+                  "key": "E",
+                  "value": "E. why Cotman decided to paint this scene"
+                },
+                {
+                  "key": "F",
+                  "value": "F. whether the title of the painting is accurate"
+                },
+                {
+                  "key": "G",
+                  "value": "G. whether Cotman painted other scenes like this"
+                },
+                {
+                  "key": "H",
+                  "value": "H. what happened while Cotman was working on it"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "Greek fire",
+              "sections": [
+                {
+                  "heading": "",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Greek fire = a chemical weapon developed in the 7th century by the Byzantines (who lived around modern-day Istanbul)",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Fighting with Greek fire",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Byzantine armies used Greek fire to burn their enemies' (31)",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Greek fire was able to burn on (32)",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "text",
+                      "content": "One of the few things that could stop Greek fire from burning was (33)",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "text",
+                      "content": "To make Greek fire, the inflammable liquid was put into (34)",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    },
+                    {
+                      "type": "text",
+                      "content": ", which were fired at the enemy.",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Making Greek fire",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "The process of making Greek fire was a (35)",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Likely ingredients of Greek fire:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "resin from (36) trees (which made Greek fire sticky)",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "sulphur",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "(37)",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    },
+                    {
+                      "type": "text",
+                      "content": "A ninth-century Bulgarian army tried to (38)",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Greek fire, but were unsuccessful.",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "How Greek fire was described in contemporary reports",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Byzantine Emperor Leo the Sixth said that using Greek fire caused a lot of (39)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Lord of Joinville described the sudden (40)",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    },
+                    {
+                      "type": "text",
+                      "content": "that accompanied Greek fire.",
+                      "hasInput": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

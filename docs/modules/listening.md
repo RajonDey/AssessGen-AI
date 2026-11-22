@@ -40,7 +40,7 @@ speech understanding in the quality loop, and no part of the deterministic gate 
 | Short answer | `short_answer` | ★★★ |
 | Multiple choice | `mcq_single` / `mcq_multi` | ★★☆ |
 | Matching | `feature_match` | ★★☆ |
-| Plan/map/diagram labelling | `map_label` | ★☆☆ needs an image asset |
+| Plan/map/diagram labelling | `map_labelling` | ★★☆ `visual_brief` + empty `images[]`; vendor draws later |
 
 Section 1 form-completion is the natural first implementation: highly structured, verbatim answers,
 and it exercises the full audio pipeline on the simplest possible content.
@@ -50,7 +50,8 @@ and it exercises the full audio pipeline on the simplest possible content.
 ## Pipeline
 
 ```
-request { section, topic, accent, question_count }
+request { section, topics[4], type_plan[4], accent, question_count }
+    # see docs/modules/paper-spec.md — independent topics; interlocking types
     │
     ▼
 PLANNER            section context, speaker roles, turn count, answer targets
@@ -215,6 +216,10 @@ Assets are immutable and content-addressed. A new script version produces a new 
 never overwritten, for the same reason content versions are not.
 
 ---
+
+## Current helpers
+
+`app.content.listening_normalize` repairs answer keys, evidence, and question groups before rules and TTS. `listening_skeleton` and `listening_brief` shape the script and visual brief. Admin export is Markdown or PDF for the paper, plus a TTS JSON (`speakers` + `script.turns`) for Kokoro. WAV synthesis is `POST /api/v1/listening/synthesize` when the TTS extra is installed. See [Paper spec](paper-spec.md).
 
 ## Definition of done
 

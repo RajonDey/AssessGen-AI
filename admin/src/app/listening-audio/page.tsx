@@ -4,15 +4,27 @@ import { FormEvent, useEffect, useState } from "react";
 
 import { ApiError, getTtsStatus, synthesizeListeningAudio } from "@/lib/api";
 
+function formatDuration(secondsRaw: string): string {
+  const seconds = Number(secondsRaw);
+  if (!Number.isFinite(seconds) || seconds < 0) return `${secondsRaw}s`;
+  const mins = Math.floor(seconds / 60);
+  const rem = Math.round(seconds % 60);
+  return `${mins}m ${rem}s (${secondsRaw}s)`;
+}
+
 export default function ListeningAudioPage() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string>("");
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
-  const [meta, setMeta] = useState<{ duration?: string; turns?: string } | null>(
-    null,
-  );
+  const [meta, setMeta] = useState<{
+    duration?: string;
+    turns?: string;
+    spokenWords?: string;
+    contentWords?: string;
+    pauseSeconds?: string;
+  } | null>(null);
   const [ttsAvailable, setTtsAvailable] = useState<boolean | null>(null);
   const [ttsHint, setTtsHint] = useState<string>("");
 
@@ -50,10 +62,23 @@ export default function ListeningAudioPage() {
     setMeta(null);
 
     try {
-      const { blob, durationSeconds, turns } = await synthesizeListeningAudio(file);
+      const {
+        blob,
+        durationSeconds,
+        turns,
+        spokenWords,
+        contentWords,
+        pauseSeconds,
+      } = await synthesizeListeningAudio(file);
       const url = URL.createObjectURL(blob);
       setAudioUrl(url);
-      setMeta({ duration: durationSeconds, turns });
+      setMeta({
+        duration: durationSeconds,
+        turns,
+        spokenWords,
+        contentWords,
+        pauseSeconds,
+      });
       setStatus("Audio ready — play below or download.");
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Synthesis failed");
@@ -77,11 +102,13 @@ export default function ListeningAudioPage() {
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Listening audio</h1>
         <p className="mt-1 text-sm text-zinc-600">
-          Upload Generate&apos;s <strong>JSON</strong> download (
+          Upload Generate&apos;s <strong>TTS JSON</strong> download (
           <code className="text-xs">speakers</code> +{" "}
-          <code className="text-xs">script.turns</code>) and create a multi-speaker WAV with
-          Kokoro. Markdown papers without JSON turns will be rejected. Unload Ollama first if RAM
-          is tight (<code className="text-xs">ollama stop …</code>).
+          <code className="text-xs">script.turns</code>) — not the paper MD/PDF — and create a
+          multi-speaker WAV with Kokoro. Scripts need ~550+ spoken words, exam pauses
+          (~40s+25s+60s), and both dialogue halves filled — otherwise synthesis is rejected
+          (target ~6–8 min per part). Markdown papers without JSON turns will be rejected.
+          Unload Ollama first if RAM is tight (<code className="text-xs">ollama stop …</code>).
         </p>
       </div>
 
@@ -115,8 +142,10 @@ export default function ListeningAudioPage() {
             onChange={(e) => setFile(e.target.files?.[0] ?? null)}
           />
           <p className="mt-1.5 text-xs text-zinc-500">
-            Use <strong>Download JSON</strong> from Generate. A Markdown file only works if it
-            contains a JSON object with script.turns.
+            Use <strong>Download TTS JSON</strong> from Generate (
+            <code className="text-xs">speakers</code> +{" "}
+            <code className="text-xs">script.turns</code>). Paper MD/PDF and readable script
+            downloads cannot be synthesized.
           </p>
         </label>
 
@@ -137,7 +166,10 @@ export default function ListeningAudioPage() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="text-sm text-zinc-600">
               {meta?.turns ? `${meta.turns} turns` : "Audio"}
-              {meta?.duration ? ` · ${meta.duration}s` : ""}
+              {meta?.duration ? ` · ${formatDuration(meta.duration)}` : ""}
+              {meta?.spokenWords ? ` · ${meta.spokenWords} spoken words` : ""}
+              {meta?.contentWords ? ` · ${meta.contentWords} content` : ""}
+              {meta?.pauseSeconds ? ` · ${meta.pauseSeconds}s pauses` : ""}
             </div>
             <button
               type="button"

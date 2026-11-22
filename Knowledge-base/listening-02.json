@@ -1,0 +1,612 @@
+{
+  "title": "IELTS Listening Test 2",
+  "audioUrl": "listening-02.mp3",
+  "duration": 28,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-7",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> in each gap.",
+          "questions": [
+            {
+              "id": "q1-7",
+              "type": "form-completion",
+              "label": "1-7",
+              "title": "Questions 1 – 7",
+              "formTitle": "Report about a customer problem with a product",
+              "sections": [
+                {
+                  "rows": [
+                    {
+                      "rowLabel": "Summary of customer’s problem",
+                      "cells": [
+                        "one bit of the item he bought was",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "1"
+                        },
+                        "another piece was broken"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "heading": "CUSTOMER DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Name",
+                      "cells": [
+                        "Gordon Cooper"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Address",
+                      "cells": [
+                        "77 Woolbridge Lane,",
+                        "Whitesands"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Postcode",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "heading": "PRODUCT DETAILS",
+                  "rows": [
+                    {
+                      "rowLabel": "Type of item",
+                      "cells": [
+                        "Bookcase"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Name of item",
+                      "cells": [
+                        "Maine",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "3"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Order reference",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "4"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Details of damage",
+                      "cells": [
+                        "the",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "5"
+                        },
+                        "shelf was broken"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "heading": "ARRANGEMENT FOR COLLECTION",
+                  "rows": [
+                    {
+                      "rowLabel": "Day of collection",
+                      "cells": [
+                        "Wednesday"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Time",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "6"
+                        },
+                        "pm"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Contact details for customer",
+                      "cells": [
+                        "Email:",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "7"
+                        },
+                        "@mail.com"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "8-10",
+          "subInstructions": "Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q8-10",
+              "type": "bullet-notes-completion",
+              "title": "Customer feedback",
+              "sections": [
+                {
+                  "heading": "Customer feedback",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Customer feels that the info about products on the website isn’t as (8) as it could be:",
+                      "hasInput": true,
+                      "inputId": "q8",
+                      "questionNumber": "8"
+                    },
+                    {
+                      "type": "text",
+                      "content": "There is very little detail about:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "how large the items are",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "their (9)",
+                      "hasInput": true,
+                      "inputId": "q9",
+                      "questionNumber": "9"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "what materials are used",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "Some photos on the website are so (10) that it’s hard to see the details.",
+                      "hasInput": true,
+                      "inputId": "q10",
+                      "questionNumber": "10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-14",
+          "subInstructions": "Label the plan. Write the appropriate letter, A – D.",
+          "questions": [
+            {
+              "id": "q11-14",
+              "type": "map-label",
+              "label": "11-14",
+              "title": "Questions 11 – 14",
+              "imageUrl": "images/listening-3.png",
+              "locations": [
+                {
+                  "id": "q11",
+                  "label": "11",
+                  "name": "allotment gardens"
+                },
+                {
+                  "id": "q12",
+                  "label": "12",
+                  "name": "toilet"
+                },
+                {
+                  "id": "q13",
+                  "label": "13",
+                  "name": "pond"
+                },
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "name": "tool shed"
+                }
+              ],
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E"
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "15-20",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options.",
+          "questions": [
+            {
+              "id": "q15-16",
+              "type": "multiple-choice-multiple",
+              "label": "<b>15 – 16</b>",
+              "text": "Which TWO things are a current challenge for the conservation group?",
+              "options": [
+                "lack of money",
+                "damage from rain",
+                "getting enough volunteers",
+                "litter that is left at the reserve",
+                "finding the time to complete tasks"
+              ]
+            },
+            {
+              "id": "q17-18",
+              "type": "multiple-choice-multiple",
+              "label": "<b>17 – 18</b>",
+              "text": "Which TWO jobs will be done today?",
+              "options": [
+                "cutting grass",
+                "planting trees",
+                "identifying flowers",
+                "mending equipment",
+                "assembling new furniture"
+              ]
+            },
+            {
+              "id": "q19-20",
+              "type": "multiple-choice-multiple",
+              "label": "<b>19 – 20</b>",
+              "text": "Which TWO benefits does the speaker say that people get from volunteering?",
+              "options": [
+                "a better understanding of nature",
+                "new friendships",
+                "a sense of achievement",
+                "their expenses reimbursed",
+                "the chance to gain new skills"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-24",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "questionNumber": "21",
+              "question": "This week’s seminar will focus on the numbers of",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "women and men entering university."
+                },
+                {
+                  "key": "B",
+                  "text": "girls and boys and in primary education."
+                },
+                {
+                  "key": "C",
+                  "text": "females and males in education in developing countries."
+                }
+              ]
+            },
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "questionNumber": "22",
+              "question": "The students agree that the chapter by Hall",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "contained useful references."
+                },
+                {
+                  "key": "B",
+                  "text": "provided a helpful summary."
+                },
+                {
+                  "key": "C",
+                  "text": "had more detail than they needed."
+                }
+              ]
+            },
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "questionNumber": "23",
+              "question": "What problem did the students have with the reading list?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "They were unable to access the online articles."
+                },
+                {
+                  "key": "B",
+                  "text": "Some of the books they needed were unavailable."
+                },
+                {
+                  "key": "C",
+                  "text": "It was unclear which texts they were supposed to read."
+                }
+              ]
+            },
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "questionNumber": "24",
+              "question": "What does Alice say she has changed her mind about?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "the reasons why so few women receive a higher education"
+                },
+                {
+                  "key": "B",
+                  "text": "the reliability of statistics about gender and education"
+                },
+                {
+                  "key": "C",
+                  "text": "the actual number of men and women getting into higher education"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "25-30",
+          "subInstructions": "Complete the notes below. Write <b>ONE OR TWO WORDS OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q25-30",
+              "type": "bullet-notes-completion",
+              "title": "Gender studies — notes from pre-lecture reading",
+              "sections": [
+                {
+                  "heading": "Key statistics",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "One paper said that (25) % more women than men were getting into university",
+                      "hasInput": true,
+                      "inputId": "q25",
+                      "questionNumber": "25"
+                    },
+                    {
+                      "type": "text",
+                      "content": "There’s a higher chance that men on a course will (26); men also do less well in their degrees",
+                      "hasInput": true,
+                      "inputId": "q26",
+                      "questionNumber": "26"
+                    },
+                    {
+                      "type": "text",
+                      "content": "There are more males than females studying certain subjects, e.g. (27) and some science courses",
+                      "hasInput": true,
+                      "inputId": "q27",
+                      "questionNumber": "27"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Most universities in the country have more women than men",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Possible reasons for the differences",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "There are fewer male than female (28) so there’s a lack of role models for males",
+                      "hasInput": true,
+                      "inputId": "q28",
+                      "questionNumber": "28"
+                    },
+                    {
+                      "type": "text",
+                      "content": "There is no proof that this difference benefits women in a (29) way",
+                      "hasInput": true,
+                      "inputId": "q29",
+                      "questionNumber": "29"
+                    },
+                    {
+                      "type": "text",
+                      "content": "For assessment, schools have moved away from using (30) this change has helped girls",
+                      "hasInput": true,
+                      "inputId": "q30",
+                      "questionNumber": "30"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "The rise and fall of plasma TVs",
+              "sections": [
+                {
+                  "heading": "Introduction",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Plasma TV screens used to be popular in the early 2000’s",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "The screens contain cells filled with gas, which light up; this forms the picture",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "The development of plasma screens",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Plasma screens were first developed at a (31) in the 1960s",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Plasma screens could be used to clearly display information, e.g. in",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "a hotel (32)",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "stock exchanges",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Advantages of plasma TVs",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Plasma technology enabled TVs to be on the (33) in people’s homes",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Compared to older TVs, plasma TVs",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "looked good from different (34)",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "had a very (35) picture",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Plasma TV screens got 75% (36) between 2006 and 2011",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Criticisms of plasma TVs",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Some people argued that because the colours weren’t so intense, plasma TVs",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "were not so good for watching (37)",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "didn’t look their best in (38) during the day",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    }
+                  ]
+                },
+                {
+                  "heading": "The decline of plasma TVs",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Plasma TVs required more (39) than other kinds of TV (e.g. OLED)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Sales (40) in 2010",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Manufacturers stopped making them in 2014",
+                      "hasInput": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

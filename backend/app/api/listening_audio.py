@@ -41,9 +41,12 @@ async def synthesize_listening_audio(
     filename = (file.filename or "listening").rsplit(".", 1)[0]
     safe = "".join(c if c.isalnum() or c in "-_" else "-" for c in filename)[:60] or "listening"
     log.info(
-        "listening.synthesize_ok turns=%s duration=%ss",
+        "listening.synthesize_ok turns=%s duration=%ss spoken=%s content=%s pauses=%s",
         meta.get("turns"),
         meta.get("duration_seconds"),
+        meta.get("spoken_word_count"),
+        meta.get("content_word_count"),
+        meta.get("pause_seconds_total"),
     )
     return Response(
         content=wav_bytes,
@@ -52,6 +55,9 @@ async def synthesize_listening_audio(
             "Content-Disposition": f'attachment; filename="{safe}.wav"',
             "X-Audio-Duration-Seconds": str(meta.get("duration_seconds", "")),
             "X-Audio-Turns": str(meta.get("turns", "")),
+            "X-Audio-Spoken-Words": str(meta.get("spoken_word_count", "")),
+            "X-Audio-Content-Words": str(meta.get("content_word_count", "")),
+            "X-Audio-Pause-Seconds": str(meta.get("pause_seconds_total", "")),
         },
     )
 

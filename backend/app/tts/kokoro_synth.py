@@ -17,7 +17,7 @@ GAP_SECONDS = 0.35
 PAUSE_TAG = re.compile(r"\[PAUSE:(\d+(?:\.\d+)?)\]", re.IGNORECASE)
 
 # Instructor (N1) is never a conversation voice — same id across parts still maps here.
-NARRATOR_LANG_VOICE = ("b", "bf_isabella")
+NARRATOR_LANG_VOICE = ("b", "bm_george")
 CHARACTER_VOICES: list[tuple[str, str]] = [
     ("b", "bf_emma"),
     ("b", "bm_george"),
@@ -498,6 +498,64 @@ def _require_kokoro() -> Any:
 
 def synthesize_wav_bytes(paper: dict[str, Any]) -> tuple[bytes, dict[str, Any]]:
     """Synthesize a WAV from a listening paper. Returns (wav_bytes, meta)."""
+    from app.rules.structure import (
+        LISTENING_MIN_DURATION_SECONDS,
+        listening_script_stats,
+        stamp_listening_length_meta,
+        tts_blocking_findings,
+    )
+
+    slot = paper.get("partNumber")
+    if not isinstance(slot, int):
+        parts = paper.get("parts")
+        if isinstance(parts, list) and parts and isinstance(parts[0], dict):
+            raw = parts[0].get("partNumber")
+            slot = raw if isinstance(raw, int) else None
+    # Multi-part merged papers: scale the floor by linked part count.
+    part_count = 1
+    if isinstance(paper.get("parts_linked"), int) and paper["parts_linked"] > 1:
+        part_count = int(paper["parts_linked"])
+    elif isinstance(paper.get("parts"), list) and len(paper["parts"]) > 1:
+        part_count = len(paper["parts"])
+
+    blocking = tts_blocking_findings(paper, passage_slot=slot if part_count == 1 else None)
+    # For multi-part merges, re-check each part's turns is heavy; rely on per-part
+    # generation gates and the scaled duration floor below. Still block missing turns.
+    if part_count == 1 and blocking:
+        messages = "; ".join(f"[{f.code}] {f.message}" for f in blocking[:6])
+        raise ScriptValidationError(
+            "Script fails Listening length/exam-clock rules — expand content and "
+            f"keep PAUSE turns before synthesizing. {messages}"
+        )
+
+    stamp_listening_length_meta(paper, passage_slot=slot if isinstance(slot, int) else None)
+    stats = listening_script_stats(paper, passage_slot=slot if isinstance(slot, int) else None)
+    min_duration = LISTENING_MIN_DURATION_SECONDS * part_count
+    if part_count == 1:
+        if stats["pause_seconds_total"] < 100:
+            raise ScriptValidationError(
+                f"Exam-clock pauses total only {stats['pause_seconds_total']}s; "
+                "need [PAUSE:40], [PAUSE:25], and [PAUSE:60] (~125s). "
+                "Without them WAV length collapses to ~2–4 minutes of speech."
+            )
+        if stats["content_word_count"] < 400:
+            raise ScriptValidationError(
+                f"Content-speaker words={stats['content_word_count']} (minimum 400). "
+                "Expand S1/S2 or the monologue in both halves — N1 instructor lines do not count."
+            )
+        if stats["spoken_word_count"] < 550:
+            raise ScriptValidationError(
+                f"Spoken words={stats['spoken_word_count']} (minimum 550 excluding pauses)."
+            )
+        if stats["estimated_duration_seconds"] < min_duration:
+            raise ScriptValidationError(
+                f"Estimated audio ~{stats['estimated_duration_seconds']:.0f}s is below the "
+                f"{min_duration:.0f}s floor (~6–8 min per part with exam pauses). "
+                f"spoken_words={stats['spoken_word_count']}, "
+                f"content_words={stats['content_word_count']}, "
+                f"pause_seconds={stats['pause_seconds_total']}."
+            )
+
     turns = validate_tts_script(paper)
     KPipeline = _require_kokoro()
 
@@ -524,7 +582,7 @@ def synthesize_wav_bytes(paper: dict[str, Any]) -> tuple[bytes, dict[str, Any]]:
             len(turn["text"]),
         )
         chunks: list[np.ndarray] = []
-        for _, _, audio in pipe(turn["text"], voice=turn["voice"], speed=1.0):
+        for _, _, audio in pipe(turn["text"], voice=turn["voice"], speed=0.9):
             chunks.append(np.asarray(audio, dtype=np.float32))
         if not chunks:
             continue
@@ -549,10 +607,23 @@ def synthesize_wav_bytes(paper: dict[str, Any]) -> tuple[bytes, dict[str, Any]]:
         ) from exc
 
     sf.write(buf, wav, SAMPLE_RATE, format="WAV")
+    duration = round(float(len(wav) / SAMPLE_RATE), 2)
+    if duration < min_duration * 0.9:
+        raise ScriptValidationError(
+            f"Synthesized audio is only {duration}s; need about {min_duration:.0f}s "
+            f"per exam-clock part (got spoken_words={stats['spoken_word_count']}, "
+            f"content_words={stats['content_word_count']}, "
+            f"pause_seconds={stats['pause_seconds_total']}). "
+            "Expand both dialogue halves and keep [PAUSE:40]/[PAUSE:25]/[PAUSE:60]."
+        )
     meta = {
         "turns": len(turns),
-        "duration_seconds": round(float(len(wav) / SAMPLE_RATE), 2),
+        "duration_seconds": duration,
         "sample_rate": SAMPLE_RATE,
+        "spoken_word_count": stats["spoken_word_count"],
+        "content_word_count": stats["content_word_count"],
+        "pause_seconds_total": stats["pause_seconds_total"],
+        "estimated_duration_seconds": stats["estimated_duration_seconds"],
         "voices": [
             {"speaker": t["speaker"], "voice": t["voice"], "lang": t["lang"]}
             for t in turns

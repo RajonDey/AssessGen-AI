@@ -1,0 +1,488 @@
+{
+  "id": "reading-03",
+  "title": "Reading Practice Test 3",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "The Qattara Depression",
+      "instructions": "Read the text below and answer questions 1 – 13",
+      "passage": [
+        "The Qattara Depression is a geographical feature of the Sahara Desert in north-west Egypt. It is a contained area of remarkably low-lying land - over 130 metres below sea level. The Depression covers more than 19,000 square kilometres, an area twice the size of Lebanon, and its northern edge (which is formed by a sharp drop of up to 280 metres) lies only 60 kilometres from the Mediterranean coast. It is extremely inhospitable to human life; there is only one source of fresh water in the whole area, and temperatures can rise as high as 60 degrees Celsius.",
+        "The first accurate measurements of the Qattara Depression date to 1917, when a British army officer visited the place on behalf of the Survey of Egypt and reported its low altitude. The Survey of Egypt was a systematic operation to map the whole of the country, and had begun in 1892. Because of its extreme aridity, Qattara was one of the later areas to be surveyed. When the resulting measurements were examined in 1918, they were so surprising that it was initially assumed they must be wrong, due perhaps to a technical fault in the equipment. The validity of the data remained doubtful until 1924, when Dr Ball, director of the Survey at the time, organised a second expedition. This confirmed the accuracy of the original report, and a third expedition in 1927 mapped the Qattara Depression completely.",
+        "Over the years, the proximity of the Depression to the sea, together with its size and depth, have led to several proposals to exploit it for the production of hydroelectric power. This idea was originally put forward by Dr Ball in 1933. It was breathtakingly simple: if a tunnel were dug north to the Mediterranean Sea, gravity would make water run through the tunnel and down into the Depression, filling it and thus creating a new artificial salt lake. Then the feed tunnel would be blocked. A certain quantity of lake water would escape as a result of evaporation due to the high desert temperatures in the area. The lost water in the lake could be replenished in a controlled flow from the tunnel, and this falling water would drive turbines to generate electricity. It was calculated that the flow of water needed to balance evaporation could generate as much as 1,900 megawatts of electricity. The evaporation would also render the surrounding country much less arid, and permit permanent human settlement and agriculture. Thus, a controlled flow of water from the Mediterranean to the Depression would provide power to the whole of Egypt as well as more local economic development based on agriculture, electricity and the cultivation of fish in the lake. This would all be very useful in a country with a rapidly-growing population. The Qattara Depression Project, as it became known, seemed to be a triumph of human ingenuity.",
+        "Although attractive at first glance, the idea has a number of drawbacks. Firstly, the initial proposal linked the Depression to the sea. Whilst water would evaporate from the Depression, its salt would not. Over time, the new lake would become increasingly salty until it reached the same level of salinity as the Dead Sea, and all life in its waters would become impossible. One solution to this problem would be to connect the Depression to the River Nile rather than to the Mediterranean, and this was also suggested. But the idea was not taken further, in part because of the quantity of water that the river would lose, and in part for political and diplomatic reasons. The Nile does not belong exclusively to Egypt.",
+        "The Project's potential impact on the general ecology of the southern Mediterranean poses a second problem. The effects on sea currents of the removal of large quantities of water from the Mediterranean is not well understood. Some experts have maintained that coastal erosion would increase as a result of changes in the direction of the most important currents, and of course the coastal areas are precisely those areas of the Mediterranean which are most densely inhabited. A third problem is the cost of construction of the canal - or tunnel, depending on the route chosen - in such difficult terrain. This is generally held to be the most difficult, and most certain, obstacle.",
+        "Nevertheless, the scale of the project and its potential benefits continued to attract attention. During the 1960s, Prof Friedrich Bassler, a German engineer, was responsible for planning connected with the Project. He proposed a solution to the problem of excavation costs that today seems extraordinary. Instead of using people and machines to dig a canal, he proposed using a controlled chain of 213 small nuclear explosions to make the canal by force. Each explosion would have been a hundred times more powerful than the bomb dropped on Hiroshima. The Egyptian government turned down this proposal; the almost certain contamination of water supplies and of the air were very worrying. They were also concerned that the effect of any such nuclear shock on the region’s underlying tectonic plates might have provoked earthquakes elsewhere in the region."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-7",
+          "instruction": "Choose <b>TRUE</b> if the statement agrees with the information given in the text, choose <b>FALSE</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q1",
+              "label": "1",
+              "text": "The Qattara Depression was not surveyed until towards the end of the Survey of Egypt because of its distance from Cairo.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q2",
+              "label": "2",
+              "text": "The first survey's measurements of the Qattara Depression were found to be inaccurate.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q3",
+              "label": "3",
+              "text": "Egypt does not currently have a good range of power supply options.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q4",
+              "label": "4",
+              "text": "As well as electricity generation, Ball's plan for flooding the Qattara Depression would have created other money-making opportunities.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q5",
+              "label": "5",
+              "text": "Evaporation of sea water in the Qattara Depression could lead to a successful salt production industry.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q6",
+              "label": "6",
+              "text": "A canal to connect the Nile to the Qattara Depression was started but later abandoned.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q7",
+              "label": "7",
+              "text": "The Qatar Depression Project might create environmental problems in areas other than the immediate surroundings of the Depression.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 8-10",
+          "instruction": "Label the diagram below using words from the text.<br>Write <b>NO MORE THAN ONE WORD</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q8-10",
+              "type": "diagram-labelling",
+              "heading": "Questions 8 – 10",
+              "instruction": "Label the diagram below using words from the text.<br>Write <b>NO MORE THAN ONE WORD</b> from the text for each answer.",
+              "imageUrl": "images/qattara-depression-diagram.png",
+              "imageAlt": "Diagram of Dr Ball's plan for the Qattara Depression Project",
+              "wordLimit": 1,
+              "questions": [
+                {
+                  "id": "q8",
+                  "questionNumber": "8",
+                  "text": "leading from the Mediterranean Sea to Qattara Depression"
+                },
+                {
+                  "id": "q9",
+                  "questionNumber": "9",
+                  "text": "lake"
+                },
+                {
+                  "id": "q10",
+                  "questionNumber": "10",
+                  "text": "for the generation of hydroelectric power"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-3",
+          "heading": "Questions 11-13",
+          "instruction": "Complete the sentences below. Use <b>NO MORE THAN TWO WORDS</b> from the text for each answer.",
+          "questions": [
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "The biggest challenge to implementing the Qattara Depression Project is that of its .................................... costs.",
+              "type": "text"
+            },
+            {
+              "id": "q12",
+              "label": "12",
+              "text": "Professor Bassler aimed to solve a logistical problem by using .................................... to excavate the feed canal.",
+              "type": "text"
+            },
+            {
+              "id": "q13",
+              "label": "13",
+              "text": "The government of Egypt were worried about the possibility of pollution, as well as of .................................... resulting from the impact of the explosions, and so decided not to permit the plan to go any further.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Motherese",
+      "instructions": "Read the text below and answer questions <b> 14 – 26 </b>",
+      "passage": [
+        "Paragraph A:  In a recent lecture Richard Parncutt, a professor of systematic musicology at the University of Graz, Austria, discussed the idea that music originated from 'motherese' - the playful voices mothers adopt when speaking to infants and toddlers. According to the theory, evolutionary growth in human brain size between one and two million years ago led to earlier births, more fragile infants, and a vital need for stronger bonds between mothers and their newborns. According to Parncutt, 'motherese' arose as a way to strengthen this maternal bond and to help infants survive. 'If babies were born earlier, it is clear they would need better care in order to survive... this would involve the baby communicating its state and needs more clearly to the mother,' he says. Parncutt adds that this makes it very likely that motherese developed as an evolutionary adaptation, and that there is a large body of contemporary empirical evidence supporting the musical characteristics of motherese.",
+        "Paragraph B: Although it might appear amusing - or even nonsensical - at first glance, 'motherese' is actually a complex and refined form of communication. It contains structural musical elements such as rhythm and melody, and codes that babies and mothers understand. It also contains cross-cultural similarities with regard to the physical gestures and movements it incorporates - an important consideration when examining the origin of music. 'The sonic-gestural vocabulary conveys to both mother and infant information about the present physical and emotional condition of each, along with the current nature of interaction between them,' states Parncutt. 'Here, emotions such as surprise and disappointment are learned for the first time in a social and musical context. It is about survival in that it motivates the mother to care for the infant and gives her information about the infant's needs.' For example, mothers can understand when their babies are tired or hungry. Motherese also helps infants to acquire language.",
+        "Paragraph C: Parncutt explains that a fetus begins hearing nearly four months before birth, as it regularly hears its mother's voice, heartbeat, and digestive sounds - all of which provide information about its mother's emotional state. After birth, the baby recognises these sound patterns and its mother's correlating mood. Gary McPherson, head of the University of Melbourne's School of Music, reiterates the importance of this prenatal association, saying that music is the very first form of intelligence to reveal itself - even before birth.",
+        "Paragraph D: However, there are several competing theories about the origins of music. Parncutt developed a grading system to assess these theories, the objective being to measure their validity against a set of criteria which he called 'universal aspects of music'. Some theories suggest music originated as a form of sexual selection, similar to a peacock's tail, used to attract mates. Others propose it evolved to enhance social cohesion and cooperation within larger groups, or that it was a byproduct of other evolutionary adaptations with no specific survival purpose of its own. Parncutt's system graded each theory based on its ability to explain music’s emotional power, its presence in all known cultures, and its apparent lack of a direct survival function compared to language.",
+        "Paragraph E: When evaluated against these criteria, Parncutt argues that the motherese theory provides the most comprehensive explanation. It accounts for the deep emotional connection inherent in music by linking it to the primal bond between mother and child. Furthermore, because caregiving for infants is a human universal, the theory naturally explains why music is found in all cultures around the world. The playful, non-utilitarian nature of motherese also mirrors the aesthetic and seemingly non- functional aspects of music itself, addressing the question of why music exists beyond strict survival needs."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-3",
+          "heading": "Questions 14-18",
+          "instruction": "Reading Passage 2 has six paragraphs, A – E. Choose the correct heading for each paragraph from the list of headings below. Write the correct number, i - ix, in boxes 14-18 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q14-18-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "text": "Paragraph A"
+                },
+                {
+                  "id": "q15",
+                  "label": "15",
+                  "text": "Paragraph B"
+                },
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "text": "Paragraph C"
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "text": "Paragraph D"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "text": "Paragraph E"
+                }
+              ],
+              "options": [
+                {
+                  "key": "i",
+                  "name": "A universal explanation for music's nature"
+                },
+                {
+                  "key": "ii",
+                  "name": "The first sounds a baby hears"
+                },
+                {
+                  "key": "iii",
+                  "name": "A biological change that created a need"
+                },
+                {
+                  "key": "iv",
+                  "name": "Comparing the motherese theory to other ideas"
+                },
+                {
+                  "key": "v",
+                  "name": "A sophisticated form of musical communication"
+                },
+                {
+                  "key": "vi",
+                  "name": "A system for evaluating different theories"
+                },
+                {
+                  "key": "vii",
+                  "name": "The role of fathers in infant development"
+                },
+                {
+                  "key": "viii",
+                  "name": "The initial proposal of a maternal source for music"
+                },
+                {
+                  "key": "ix",
+                  "name": "Music as a tool for social cooperation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-4",
+          "heading": "Questions 19-22",
+          "instruction": "Complete the sentences below. Choose <b> NO MORE THAN TWO WORDS </b> from the passage for each answer., in boxes 19-22 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q19",
+              "label": "19",
+              "text": "The universal nature of motherese in terms of .................................... and movements provides insight into how music may have originated.",
+              "type": "text"
+            },
+            {
+              "id": "q20",
+              "label": "20",
+              "text": "Parncutt suggests that the growth of the human brain resulted in babies being born .................................... .",
+              "type": "text"
+            },
+            {
+              "id": "q21",
+              "label": "21",
+              "text": "Motherese is considered a type of evolutionary .................................... .",
+              "type": "text"
+            },
+            {
+              "id": "q22",
+              "label": "22",
+              "text": "According to Gary McPherson, musical intelligence is present even .................................... .",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 23-26",
+          "instruction": "Complete the summary using the list of words, <b>A – H</b>, below.<br>Write the correct letter, <b>A-H</b>, in boxes 23-26 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q23-26",
+              "type": "drag-and-drop-summary-completion",
+              "title": "Parncutt's Evaluation of Competing Theories",
+              "summary": "Parncutt created a grading system to assess different theories of music's origin based on universal aspects of music. Some competing theories propose that music functioned as a mechanism for ______, or that it was useful for building ______ within communities. Parncutt's own theory, centred on motherese, recently received a high grade because it explains music's ______ connection and its presence across all cultures. It also aligns with music's ______ quality, which resembles the playful interaction between a mother and her infant.",
+              "gaps": [
+                23,
+                24,
+                25,
+                26
+              ],
+              "options": [
+                "A emotional",
+                "B social cohesion",
+                "C sexual selection",
+                "D survival function",
+                "E aesthetic",
+                "F universal",
+                "G prenatal",
+                "H rhythmic"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "The geography of taste buds",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b>",
+      "passage": [
+        "Scientific researchers mapping the geography of the human tongue have finally succeeded in locating and identifying the sensors for sour tastes",
+        "Paragraph A: Scientists have long known that the surface of the tongue is covered with taste buds: onion- shaped bundles of cells that stand guard for the digestive system. Long before our modern world of supermarkets and restaurants, taste buds served as a crucial tool to maintain the daily existence of our ancestors. The bitter flavour of a wild almond told a prehistoric human foraging in African forests that the nut was poisonous, and they should spit it out. A sweet fruit, though, was safe to consume, and full of energy from carbohydrates. The presence of lions and other man-eating predators also added urgency to meal choices. 'If the thing didn't taste good, you might decide it's not worth it to be out in the open and at risk,' says Steve Miller, a taste researcher at the University of Maryland School of Medicine.",
+        "Paragraph B: Much of what we 'taste' in everyday life is actually the work of our nose. The tongue can distinguish only five basic flavour sensations - sweet, sour, bitter, salt and umami, the 'savoury' taste of meat and cheese which indicates protein. Sour taste comes from acidic compounds, and, like bitter taste, it can be a sign to leave decomposing meat or vegetables. Unpleasant tartness in unripe fruits comes from too much citric acid. This is how a tree or shrub keeps hungry diners at bay until its seeds are mature enough to travel - via the diner's digestive system - to a new home.",
+        "Paragraph C: Unlike animals, humans have acquired a taste for tartness. In the case of the Japanese pickle called 'umeboshi', the plums are harvested when still green and sour, before the tree fills them with sugar and turns them into a tantalising snack for birds and animals. Sour cream, yoghurt, lemonade, gorgonzola cheese, the German fermented cabbage 'sauerkraut' and other tart treats are eaten every day by millions of people.",
+        "Paragraph D: Only a decade ago, popular myth held that separate areas of the tongue were responsible for each taste. Referred to as the 'mouth map', the concept probably originated with a German text mistranslated into English at the beginning of the 20th century. As recently as 1996, 'mouth map' diagrams still appeared in university neuroscience textbooks.",
+        "Paragraph E: By the late 1990s, however, scientists had learned enough about molecular biology to turn their attention seriously to taste. They had discovered that thousands of taste buds cover the tongue, each containing 50 to 100 taste cells. Each cell has two poles: one end covered with taste receptors projecting from the tongue's surface, and one end inside the tongue that connects to the brain via nerves. When a person bites into a lemon, acidic molecules from the food bump into acid-sensitive taste receptors, activating a taste cell, which sends a 'sour' message to the brain.",
+        "Paragraph F: The details of this process were long a matter of debate. In line with the 'mouth map' concept, some scientists believed that the taste buds in different areas of the tongue were filled with cells of only one type: the tip with sweet-sensing cells, the back with bitter-sensing cells, and so on. Others were not convinced and further suggested the location of cells was not an issue because each cell could sense all five tastes. However, no one had identified any of the taste receptors, so which cells responded to which tastes were unknown. The recent discovery of the sour-taste receptor is a major step forward. Researchers found that the receptor is a specialized protein channel in the membrane of the taste cell. When acid from a food, such as the citric acid in a lemon, enters the pore of this channel, it triggers a change in the cell's electrical charge, ultimately leading to a signal being sent to the brain."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-6",
+          "heading": "Questions 27-31",
+          "instruction": "Do the following statements agree with the information given in Reading Passage 3? Choose <b>YES</b> if the statement agrees with the information, choose <b>NO</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q27",
+              "label": "27",
+              "text": "Taste buds were more critical for survival in the past than they are today.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q28",
+              "label": "28",
+              "text": "The primary role of a sour taste was to identify foods rich in protein.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q29",
+              "label": "29",
+              "text": "Plants produce sour-tasting acid in unripe fruit to protect their seeds.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q30",
+              "label": "30",
+              "text": "Animals, unlike humans, generally enjoy the taste of sour cream and yoghurt.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q31",
+              "label": "31",
+              "text": "The 'mouth map' theory was based on accurate scientific research.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-7",
+          "heading": "Questions 32-36",
+          "instruction": "Complete the summary below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q32-36-summary",
+              "type": "summary-completion",
+              "wordLimit": 2,
+              "summary": "Taste\n\nThe process of tasting begins when molecules from food interact with __32__ on the tongue. Each taste cell has a specific structure: one end has these receptors, while the other end connects to the __33__. For a sour taste, __34__ molecules from food activate the relevant receptors. This activation causes the taste cell to send a message to the brain. For a long time, there were two main theories about how taste buds worked. One theory supported the 'mouth map' idea, suggesting that each __35__ of the tongue had cells for only one taste. The opposing theory proposed that the __36__ of the cells was unimportant because every single cell could detect all five basic tastes.",
+              "answers": [
+                {
+                  "id": "q32",
+                  "label": "32"
+                },
+                {
+                  "id": "q33",
+                  "label": "33"
+                },
+                {
+                  "id": "q34",
+                  "label": "34"
+                },
+                {
+                  "id": "q35",
+                  "label": "35"
+                },
+                {
+                  "id": "q36",
+                  "label": "36"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 37-40",
+          "instruction": "Reading Passage 3 has six paragraphs, <b> A – F</b>. Which paragraph contains the following information?",
+          "questions": [
+            {
+              "id": "q37-40-paragraph-matching",
+              "type": "table-matching-ah",
+              "instruction": "Reading Passage 3 has six paragraphs, A – F. Which paragraph contains the following information?",
+              "statements": [
+                {
+                  "id": "q37",
+                  "label": "37",
+                  "text": "A list of everyday sour foods consumed by people."
+                },
+                {
+                  "id": "q38",
+                  "label": "38",
+                  "text": "The reason why the 'mouth map' continued to be taught for a long time."
+                },
+                {
+                  "id": "q39",
+                  "label": "39",
+                  "text": "A reference to the constant danger our ancestors faced while eating."
+                },
+                {
+                  "id": "q40",
+                  "label": "40",
+                  "text": "The recent scientific breakthrough that identified the specific mechanism for sensing sourness."
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Paragraph A"
+                },
+                {
+                  "key": "B",
+                  "name": "Paragraph B"
+                },
+                {
+                  "key": "C",
+                  "name": "Paragraph C"
+                },
+                {
+                  "key": "D",
+                  "name": "Paragraph D"
+                },
+                {
+                  "key": "E",
+                  "name": "Paragraph E"
+                },
+                {
+                  "key": "F",
+                  "name": "Paragraph F"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

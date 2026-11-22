@@ -1,0 +1,578 @@
+{
+  "title": "IELTS Listening Test 3",
+  "audioUrl": "listening-03.mp3",
+  "duration": 26,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-6",
+          "subInstructions": "Complete the table. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q1-6",
+              "type": "notes-table",
+              "label": "1-6",
+              "title": "Courses at Henbridge College",
+              "headers": [
+                "Course title",
+                "Course code",
+                "Day",
+                "Time",
+                "Places available? (yes/no)"
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    {
+                      "text": "Making (1) ",
+                      "hasInput": true,
+                      "inputId": "q1",
+                      "questionNumber": "1"
+                    },
+                    {
+                      "text": "(2)",
+                      "hasInput": true,
+                      "inputId": "q2",
+                      "questionNumber": "2"
+                    },
+                    {
+                      "text": "Thursday",
+                      "hasInput": false
+                    },
+                    {
+                      "text": " 6.30 - (3) p.m.",
+                      "hasInput": true,
+                      "inputId": "q3",
+                      "questionNumber": "3"
+                    },
+                    {
+                      "text": "no",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "cells": [
+                    {
+                      "text": "Working with (4) ",
+                      "hasInput": true,
+                      "inputId": "q4",
+                      "questionNumber": "4"
+                    },
+                    {
+                      "text": "WG801",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "(5) ",
+                      "hasInput": true,
+                      "inputId": "q5",
+                      "questionNumber": "5"
+                    },
+                    {
+                      "text": "5.45-7.00 p.m.",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "yes",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "cells": [
+                    {
+                      "text": "Pottery",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "P168",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "Friday",
+                      "hasInput": false
+                    },
+                    {
+                      "text": "(6)  - 5.30 p.m.",
+                      "hasInput": true,
+                      "inputId": "q6",
+                      "questionNumber": "6"
+                    },
+                    {
+                      "text": "yes",
+                      "hasInput": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "7-10",
+          "subInstructions": "Complete the notes. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.",
+          "questions": [
+            {
+              "id": "q7-10",
+              "type": "sentence-completion-notes",
+              "label": "7-10",
+              "title": "Pottery course at Henbridge College",
+              "sections": [
+                {
+                  "heading": "",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Date when course starts: _______",
+                      "hasInput": true,
+                      "inputId": "q7",
+                      "questionNumber": "7"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Location of classes: the _______ Building",
+                      "hasInput": true,
+                      "inputId": "q8",
+                      "questionNumber": "8"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Best car park to use: by the _______, opposite the college",
+                      "hasInput": true,
+                      "inputId": "q9",
+                      "questionNumber": "9"
+                    },
+                    {
+                      "type": "text",
+                      "content": "First project: making a  _______",
+                      "hasInput": true,
+                      "inputId": "q10",
+                      "questionNumber": "10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Questions 11-20",
+      "questionGroups": [
+        {
+          "groupRange": "11-16",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options. Write them in any order in answer boxes 11 - 16.",
+          "questions": [
+            {
+              "id": "q11-12",
+              "type": "multiple-choice-multiple",
+              "label": "<b>11 – 12</b>",
+              "text": "Which TWO of the following can get discounted tickets for Prehistoric Park?",
+              "options": [
+                "carers",
+                "groups",
+                "students",
+                "the disabled",
+                "people aged over"
+              ]
+            },
+            {
+              "id": "q13-14",
+              "type": "multiple-choice-multiple",
+              "label": "<b>13 – 14</b>",
+              "text": "When speaking about the rollercoaster ride, which TWO things does the guide warn about?",
+              "options": [
+                "what to do in an emergency",
+                "how to avoid injury",
+                "possible long wait times for the ride",
+                "the risk of feeling bad afterwards",
+                "height restrictions to go on the ride"
+              ]
+            },
+            {
+              "id": "q15-16",
+              "type": "multiple-choice-multiple",
+              "label": "<b>15 – 16</b>",
+              "text": "According to the guide, which TWO things are staff at the Park really good at?",
+              "options": [
+                "giving directions",
+                "entertaining children",
+                "giving medical assistance",
+                "recommending suitable attractions",
+                "answering questions about dinosaurs"
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "17-20",
+          "subInstructions": "Label the map. Write the appropriate letter, A – H.",
+
+          "questions": [
+            {
+              "id": "q17-20",
+              "type": "map-label",
+              "label": "17-20",
+              "title": "Questions 17 – 20",
+              "imageUrl": "images/listening-03-map-01.png",
+              "locations": [
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "name": "Fossil museum"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "name": "Excavation pit"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "name": "Cafe"
+                },
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "name": "Picnic site"
+                }
+              ],
+              "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "subInstructions": "",
+      "questionGroups": [
+        {
+          "groupRange": "21-25",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "questionNumber": "21",
+              "question": "Danny says that doing an internship would demonstrate to a future employer",
+              "options": [
+                { "key": "A", "text": "his ability to make plans." },
+                {
+                  "key": "B",
+                  "text": "his wide range of experience."
+                },
+                {
+                  "key": "C",
+                  "text": "his critical thinking skills."
+                }
+              ]
+            },
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "questionNumber": "22",
+              "question": "Why does Sara want to do an internship with a large firm?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "It would enable her to make more contacts."
+                },
+                {
+                  "key": "B",
+                  "text": "She would be more likely to get a position abroad."
+                },
+                {
+                  "key": "C",
+                  "text": "There will be more positions available to choose from."
+                }
+              ]
+            },
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "questionNumber": "23",
+              "question": "Sara and Danny agree that the best way to select an internship agency is to?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "study their website very carefully."
+                },
+                {
+                  "key": "B",
+                  "text": "contact people who have used them."
+                },
+                {
+                  "key": "C",
+                  "text": "pick one that focuses on a particular profession."
+                }
+              ]
+            },
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "questionNumber": "24",
+              "question": "Danny mentions his cousin to make the point that",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "contacts can be helpful when arranging an internship."
+                },
+                {
+                  "key": "B",
+                  "text": "internships can be unrelated to a person’s degree course."
+                },
+                {
+                  "key": "C",
+                  "text": "it is possible to arrange an internship with a company directly."
+                }
+              ]
+            },
+            {
+              "id": "q25",
+              "type": "multiple-choice",
+              "questionNumber": "25",
+              "question": "When speaking about remote internships, Danny and Sara disagree about",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "how useful it would be to do one."
+                },
+                {
+                  "key": "B",
+                  "text": "what a person might do after completing one."
+                },
+                {
+                  "key": "C",
+                  "text": "whether one could be done during a degree course."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "26-30",
+          "subInstructions": "What is the unique selling point of each of the following internship agencies?",
+          "questions": [
+            {
+              "id": "q26-30",
+              "type": "drag-drop-completion",
+              "label": "<b>26-30</b>",
+              "title": "Questions 26 – 30",
+              "sections": [
+                {
+                  "title": "Internship agencies",
+                  "items": [
+                    {
+                      "questionNumber": "26",
+                      "fieldId": "q26",
+                      "prefix": "Intern-tastic",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "27",
+                      "fieldId": "q27",
+                      "prefix": "Total Internships",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "28",
+                      "fieldId": "q28",
+                      "prefix": "IMC Group",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "29",
+                      "fieldId": "q29",
+                      "prefix": " Interns International",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "30",
+                      "fieldId": "q30",
+                      "prefix": "Placements.com",
+                      "suffix": ""
+                    }
+                  ]
+                }
+              ],
+              "optionsTitle": "Unique selling point",
+              "options": [
+                {
+                  "key": "A",
+                  "value": "A. Their charges are low."
+                },
+                {
+                  "key": "B",
+                  "value": "B. They have an excellent reputation."
+                },
+                {
+                  "key": "C",
+                  "value": "C. They ensure that all interns are paid."
+                },
+                {
+                  "key": "D",
+                  "value": "D. They make all the arrangements for interns."
+                },
+                {
+                  "key": "E",
+                  "value": "E. They support their interns throughout their placement."
+                },
+                {
+                  "key": "F",
+                  "value": "F. They take great care to find the right role for each applicant."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes below. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "Passive homes on farms",
+              "sections": [
+                {
+                  "heading": "",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "passive buildings = those which are designed to use very little energy",
+                      "hasInput": false
+                    }
+                  ]
+                },
+                {
+                  "heading": "Coombs Farm",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "The clients had always lived in old farmhouses which were cold, (31) and dark.",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    },
+                    {
+                      "type": "text",
+                      "content": "They eventually got permission to build a house without a (32) ",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "text",
+                      "content": "The building’s appearance is traditional, e.g. the roof is made from (33)",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Modern technology was used, e.g. triple-glazing and solar thermal panels.",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "The building is designed to handle (34) on site.",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Ballcross Farmhouse",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Many of the building materials were effectively free and have a low impact, including:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "500 tonnes of (35) which were already on the land",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "the (36) which was used inside the building",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "(37) which was turned into insulation",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Edensor Farm",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "The building features a central (38)",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    },
+                    {
+                      "type": "text",
+                      "content": "The design works so well that the building:",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "only needs one (39)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "bullet",
+                      "content": "Doesn’t use any (40)",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    },
+
+                    {
+                      "type": "bullet",
+                      "content": "has an extremely low carbon footprint",
+                      "hasInput": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

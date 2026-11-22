@@ -1,0 +1,431 @@
+{
+  "type": "listening",
+  "speakers": [
+    {
+      "id": "P1_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "australian",
+      "partNumber": 1
+    },
+    {
+      "id": "P1_S1",
+      "role": "hotel receptionist",
+      "gender": "male",
+      "accent": "british",
+      "partNumber": 1
+    },
+    {
+      "id": "P1_S2",
+      "role": "customer",
+      "gender": "female",
+      "accent": "american",
+      "partNumber": 1
+    },
+    {
+      "id": "P2_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "british",
+      "partNumber": 2
+    },
+    {
+      "id": "P2_S1",
+      "role": "community centre manager",
+      "gender": "male",
+      "accent": "american",
+      "partNumber": 2
+    },
+    {
+      "id": "P3_N1",
+      "role": "narrator",
+      "gender": "male",
+      "accent": "new_zealand",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S1",
+      "role": "student",
+      "gender": "female",
+      "accent": "american",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S2",
+      "role": "student",
+      "gender": "male",
+      "accent": "british",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S3",
+      "role": "student",
+      "gender": "female",
+      "accent": "australian",
+      "partNumber": 3
+    },
+    {
+      "id": "P4_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "british",
+      "partNumber": 4
+    },
+    {
+      "id": "P4_S1",
+      "role": "lecturer",
+      "gender": "male",
+      "accent": "american",
+      "partNumber": 4
+    }
+  ],
+  "script": {
+    "turns": [
+      {
+        "speaker": "P1_N1",
+        "text": "Welcome to this IELTS-style Listening practice test. You will hear each recording once only. There are four parts, and you will have time to look at the questions and to check your answers. Now look at Part 1. You will hear a customer making a hotel booking by telephone. First, you have some time to look at questions 1 to 6.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Now listen carefully and answer questions 1 to 6.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Hello. I am planning a short break in Seaborne next month, and I would like to book a room at the Harbour Lights Hotel. I looked at your website, but I was not certain which rooms were still available. I need accommodation for my husband and me, rather than a room for a larger family group.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Certainly. I can check that for you. Before we discuss the rooms, may I take the booking name? Is it Miss Carter? I can see that name on an enquiry made yesterday, but it has not been confirmed.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "No, that was probably somebody else. My first name is Lorna, and my surname is Keller. That is K, E, L, L, E, R. I made no earlier enquiry, so this will be a new booking.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Thank you, Ms Keller. What date would you like to arrive? We have a food festival on the nineteenth of October, so that Saturday is particularly busy. There is more choice if you arrive the day before.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is exactly what we want to do. We will arrive on Friday, the eighteenth of October, and leave on Monday morning. At first I considered staying for two nights, but we have decided that three nights will give us enough time to visit the coast.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Fine. For three nights from the eighteenth of October, I can offer a standard double room facing the town, or a double room with a harbour view. The town rooms are quieter early in the morning, but the harbour rooms have a small balcony and you can watch the fishing boats.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "The harbour view sounds much nicer. Please book that. There will be just two adults. Our daughter was going to come with us, but she has an examination that weekend, so she will stay at home.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "A harbour-view double for two adults, then. The total cost, including breakfast, is one hundred and eighty pounds. You do not need to pay all of that today. To secure the reservation, we require a deposit of sixty pounds, and the remaining balance is payable when you check out.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is fine. I can pay the sixty pounds by debit card now. Could you also tell me a little about arriving at the hotel? We will be driving from the airport, and we may not reach Seaborne until the evening.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Now listen and answer questions 7 to 10.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Of course. First, regarding your car, please do not leave it in the public spaces along the harbour road. Those spaces are free after six o'clock, but they are often full, and some are reserved for local residents. Hotel guests should use our secure car park, which is at the rear of the building. When you arrive, drive past the main entrance and follow the blue sign beside the bakery.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is helpful. We are collecting a hire car at the airport. If our flight is delayed, we might arrive after the reception desk closes. Is there somebody available until nine o'clock, or do we need to make special arrangements?",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Reception is staffed until ten o'clock, so nine would not be a problem. However, the airport shuttle is different: its final departure from the airport is at six thirty in the evening, not seven. Since you have a hire car, that service is not relevant, but I mention it because some guests assume it runs later.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Yes, we will drive ourselves. What should I bring when we check in? I have the reservation email saved on my phone, although I can print it if that is easier.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "The email is useful, but you do not need a printed copy. We will need to see your passport as photographic identification. A driving licence is accepted only for guests who live in the United Kingdom, so your passport will be the simplest document to bring.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "All right. And on Monday, what time do we have to leave the room? Our return flight is not until late afternoon, so I was hoping we would not need to rush away immediately after breakfast.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Breakfast finishes at ten thirty, but check-out is later than that: it is at twelve noon. You may leave your luggage at reception after checking out, free of charge, and collect it before you drive back to the airport. I will email the confirmation to you this afternoon.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Perfect. Please go ahead with the booking. I will pay the deposit now, and I will look out for the confirmation email. Thank you for explaining everything so clearly.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "That is the end of Part 1. You now have one minute to check your answers to Part 1.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now look at Part 2. You will hear a manager giving a talk about the renovation of a community centre. First, you have some time to look at questions 11 to 16.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now listen carefully and answer questions 11 to 16.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "Good morning, everyone. I am Daniel Price, the manager of Riverside Community Centre. Thank you for coming to this update meeting before the renovation begins next Monday, the eighth of June. The building will remain partly open, but the work is more extensive than simply repainting the walls. We are replacing the old heating system, improving wheelchair access, and creating several rooms that local groups have requested for years. Some people have asked whether the whole centre will close. It will not. The sports hall and the meeting rooms will be unavailable, and the gym will close for a short period while its floor is repaired. However, the café will stay open throughout the project, although it will use a smaller menu and close at four o'clock rather than six.\n\nThe largest share of the budget comes from a council grant. We also received several small donations from local businesses, and the Friends of Riverside group raised money at a concert, but neither of those sources would have been enough on its own. Before finalizing the design, we asked residents to complete an online questionnaire. We considered holding a public meeting first, but the questionnaire allowed people who work evenings or care for children to contribute as well. The most common request was for more flexible space for clubs and classes.\n\nYou may notice some noise during the first two weeks. The drilling for new wiring will be noticeable, but the noisiest stage will be demolition of the wall between the old store room and the activity room. Contractors will carry out that work between ten in the morning and three in the afternoon, rather than early in the day. Our original target was August, but supply delays mean that the centre should be fully completed in September. We would rather give you a realistic date than promise a faster one and disappoint you.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "There is one way that local residents can help. We do not need volunteers to paint walls, because that must be done by qualified contractors. We are asking for help moving books from the present library shelves into storage boxes before the builders arrive. If you can spare two hours on Saturday, please speak to the reception team after this talk. The books will return when the new reading area opens.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Before you hear the rest, you have some time to look at questions 17 to 20.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now listen and answer questions 17 to 20.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "Now I will explain the temporary layout, because the main entrance will look different during the renovation. On your plan, north is at the top. You enter the site from River Road at the south, through the main gate. The café is immediately on your left, and the main hall is directly ahead. The courtyard is beyond the main hall, at the northern end of the site.\n\nFirst, question 17. The reception desk will not be inside the main building during the work. From the main gate, walk straight ahead toward the main hall, then turn right before you reach its doors. You will find the temporary reception desk in a small cabin beside the east path. It is opposite the café, not next to it. Staff there can give you room changes, class information, and access cards.\n\nFor question 18, the temporary library is in the west wing. From reception, go back past the front of the main hall and take the path on the left, between the café and the garden. The first room on that path is the temporary library. Do not confuse it with the café seating area: the library has a separate entrance and a sign saying Quiet Space. It will contain books, newspapers, and two public computers.\n\nQuestion 19 is the pottery studio. This is not in the old art room, which is being converted into an accessible toilet. Instead, continue along the west path past the temporary library. At the north-west corner, beside the courtyard, there is a portable building. That is the pottery studio. Classes will meet there on Tuesdays and Thursdays, and participants should enter from the courtyard side, not through the library.\n\nFinally, for question 20, bicycle racks have been moved. They are no longer beside the main gate, where construction vehicles need space. From the entrance, take the east path past the reception cabin. The racks are at the south-east corner of the site, just before the service gate. Please use those racks rather than attaching bicycles to the fence. Cars should use the public parking lot across River Road, since the centre lot will be reserved for contractors and accessible parking.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "That is the end of Part 2. You now have one minute to check your answers to Part 2.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now look at Part 3. You will hear three students discussing a project for their environmental design course. First, you have some time to look at questions 21 to 26.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now listen carefully and answer questions 21 to 26.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Thanks for coming, Owen and Priya. We need to finalise our proposal before Professor Keane sees it tomorrow. Our broad subject is campus buildings, but I think we should not try to assess every environmental feature. At first, I suggested investigating noise in the library, because several students complain about it. However, the professor said that has already been studied. So our project will examine whether the amount of natural light in study spaces affects how comfortable students feel and how long they choose to remain there.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "That is manageable. We could use the new science block only, since it has large windows. But a comparison would be stronger. I looked at the estate office records, and they list the age, window size and orientation of every teaching building. Those maintenance records are more reliable than asking students to estimate conditions from memory.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Yes, and we should choose buildings with different orientations. The science block faces east, the old arts building faces west, and the learning hub has rooms facing north and south. We should not select locations simply because they are close together. If we compare spaces receiving morning light with spaces receiving afternoon light, the findings will be more useful.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "For the pilot survey, I asked ten volunteers to complete the questions after a study session. The wording was fine, but the timing was a problem. I ran it during the final examination period, when people were unusually stressed and stayed in rooms for reasons unrelated to comfort. So, for the main survey, we should collect responses in weeks five and six, before revision begins.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "What measurements will we take? A light meter would give a numerical reading, but perhaps temperature matters as well. I can borrow an infrared camera from the engineering department, although it would only show surface temperatures. Actually, the simplest useful measure is illuminance from a digital light meter. We can take readings at the desk where each participant is sitting, rather than beside the window.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Professor Keane will probably ask how we define comfort. We cannot leave it as a vague personal opinion. We should give participants the same five-point scale, from very uncomfortable to very comfortable, and explain that they are rating the room conditions, not whether they like the furniture or have finished their assignment.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Good point. Also, we should record the time of day, because bright morning sun can be pleasant in winter but distracting in summer. We are not trying to prove that daylight automatically improves grades. Our claim is much narrower: daylight may influence the amount of time students voluntarily spend in particular study spaces.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now listen and answer questions 27 to 30.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "Let us divide the work clearly, then. I am happy to deal with the numerical information. I have used spreadsheet software in another module, so I will enter the light-meter readings and survey scores, check for missing values, and produce the graphs. I will not conduct the interviews, because I tend to rush people when I am taking notes.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "In that case, I will prepare the interview questions and speak to participants. I worked at the student advice desk last year, so I am comfortable asking follow-up questions without leading people towards a particular answer. I will make sure that each interview is no longer than six minutes. We only need detailed comments from a small group after they complete the survey.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "That leaves the background research and the practical arrangements for me. I can read previous studies, but I think Priya should handle the literature review because she has already found the three most relevant journal articles. Priya, could you summarise what earlier researchers discovered and identify any gaps? I will contact the building managers instead. We need permission to visit rooms, particularly the silent floor in the learning hub.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Yes, I will do the literature review. I will focus on studies of daylight and perceived comfort, rather than papers about energy consumption. There is one useful article by Helena Morris, M O R R I S, which compares student behaviour in naturally lit and artificially lit rooms. I will send both of you a one-page summary by Friday.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "Maya, when you contact the managers, ask whether any blinds will be replaced during our data-collection weeks. If a room is closed for maintenance, we need an alternative location. Perhaps you should also reserve the portable light meters, because the department has only four and another class may need them.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "I will do both. I will request access, confirm room availability, and reserve the equipment. We should meet next Tuesday at two fifteen, not two fifty, in the café beside the design studio. By then, Priya can bring the research summary, Owen can show us a trial spreadsheet, and I can report on permissions.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Agreed. I will also draft an information sheet explaining that participants can stop at any time and that their names will not appear in the report. That is not the same as collecting consent forms, though. Maya, since you are communicating with the managers and organising the visits, could you ask the professor which consent form the department requires?",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Certainly. I will check that with Professor Keane. Once we have permission, we can test the survey in one room on Wednesday afternoon. If the questions take longer than five minutes, we will shorten them before starting the full study.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "That is the end of Part 3. You now have one minute to check your answers to Part 3.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now look at Part 4. You will hear a lecture about sleep research. First, you have some time to look at questions 31 to 36.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now listen carefully and answer questions 31 to 36.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_S1",
+        "text": "Today I will describe a university study examining why adults often feel tired even when they believe they spend enough time in bed. The important point is that sleep research is not simply about counting hours. Researchers also examine regularity, interruptions, and the timing of sleep in relation to an individual's internal body clock. Our project recruited one hundred and twenty office employees between the ages of twenty-five and fifty-five. We did not include shift workers, because changing work schedules would have made the results difficult to interpret. We also excluded people who had recently travelled across several time zones, although a short domestic trip was not considered a reason to exclude them.\n\nEach participant wore an actigraphy device on the wrist. This looks rather like a watch, but it records movement and estimates periods of sleep and wakefulness. Some people assume that the device measures brain activity. It does not; for that, researchers need laboratory equipment. Participants wore the device continuously for fourteen days, including weekends. A week would have been cheaper and easier, but two weeks allowed us to compare workdays with non-workdays more reliably.\n\nThe electronic record was supported by a sleep diary completed every morning. In this diary, participants reported the time they tried to sleep, the time they believed they woke up, and whether they had taken naps. The diary was not intended to replace the wrist device. Instead, it helped us understand unusual patterns in the movement data, such as a participant lying still in bed while reading. We asked people to complete the diary before checking email or speaking to anyone, since later activities could affect their memory of the previous night.\n\nWe also measured light exposure with a small sensor attached to the same wristband. Bright light in the morning was of particular interest because it can move the body clock earlier. Evening light matters too, especially from screens, but our main analysis focused on light received during the first two hours after waking. Participants were advised not to alter their normal routines. In other words, we were observing ordinary behavior, not testing whether a new treatment improved sleep.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Before you hear the rest of the lecture, you have some time to look at questions 37 to 40.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now listen and answer questions 37 to 40.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_S1",
+        "text": "Alongside these measurements, participants answered short questions about food, drinks, exercise, and stress. We were especially careful about caffeine. It is not only coffee that contains caffeine; tea, cola, and some energy drinks can contain substantial amounts. Rather than asking people to stop consuming it, we recorded their final caffeinated drink of the day. The results showed that a late intake was associated with a later sleep onset. This was a statistical association, however, and does not prove that caffeine was the only cause. For example, people who work late may both drink coffee and go to bed late.\n\nBefore collecting data, every participant completed a baseline questionnaire. This included general health questions, but the most useful section asked about their usual chronotype. Chronotype describes whether someone naturally prefers earlier or later sleep and waking times. It is sometimes confused with personality: people describe themselves as either disciplined early birds or lazy night owls. That interpretation is far too simple. Chronotype is influenced partly by biology, and it can also vary with age and daily obligations.\n\nOur clearest finding concerned sleep regularity. Participants whose bedtimes varied widely from one night to the next reported more daytime sleepiness, even when their weekly total sleep time was similar to that of more regular sleepers. We calculated regularity by comparing the midpoint of sleep across the fourteen-day period. The midpoint is halfway between falling asleep and waking. It is not the same as the time people get into bed, because many participants spent twenty or thirty minutes awake before sleeping.\n\nA second finding involved short naps. A nap of less than thirty minutes was not strongly related to poorer night sleep in our sample. Longer naps, particularly those taken late in the afternoon, were linked with difficulty falling asleep at night. Still, we should not conclude that every nap is harmful. A brief nap may improve alertness after a poor night, and the effect depends on when it occurs.\n\nFinally, there is an important limitation. Wrist devices estimate sleep from movement, so they may classify a quiet period of wakefulness as sleep. For this reason, our conclusions should be treated as evidence about broad patterns rather than precise clinical diagnoses. Future work will combine home monitoring with laboratory recordings, where brain activity can be measured directly. That combination should help researchers distinguish people who are genuinely asleep from people who are simply resting without moving.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 4
+      }
+    ]
+  }
+}

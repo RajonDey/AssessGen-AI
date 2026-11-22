@@ -1,0 +1,502 @@
+{
+  "id": "reading-mock-06",
+  "title": "Reading Mock Test 6",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/reading.mp4",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "The English Canal System",
+      "instructions": "Read the text below and answer questions <b> 1 – 13 </b>",
+      "passage": [
+        "The development of an extensive inland network of rivers and canals in England during the 18th century was a direct result of the Industrial Revolution, which required an effective transport system. The widespread use of inland waterways in England may seem surprising, as the country’s rivers are relatively small compared to those in continental Europe, and no part of England lies more than about 150 kilometres from the sea. At first glance, road transport might have appeared to be a more practical option. However, the small scale of English rivers may actually have been advantageous. During the early 18th century, hydraulic engineering was still at an early stage, and the modest size of the required works made it easier for engineers of the time to plan and construct them successfully.",
+        "Another factor that encouraged the growth of inland water transport was the poor condition of roads in the 18th century. They were few in number, badly maintained, and often impassable, particularly in the steep hills and valleys of northern England. As a result, they were incapable of carrying the large quantities of heavy materials demanded by expanding industries. Merchants and factory owners needed a cheaper means of moving both raw materials and finished goods. In England, it was these merchants who financed the construction of the first successful canals, unlike in many parts of Europe, where such projects were typically funded by the aristocracy.",
+        " By the second half of the 18th century, most of England’s canal system had been completed. Civil engineering had advanced considerably, and many of the earlier canals, which had taken long, winding routes, were later made more direct, thereby reducing travel distances. Another major innovation was the introduction of locks, which made it possible to build canals through hilly areas. ",
+        "Locks functioned like steps, raising or lowering boats from one level to another. When a boat was enclosed in the central chamber and both sets of lock gates were closed, no water could enter or escape through them, as they were watertight. However, water could flow in or out through sluice gates positioned below the lock gates. By opening or closing these, the water level inside the lock could be adjusted until it matched the level of the water outside, allowing the boat to continue on its journey.",
+        "Nevertheless, several factors associated with the late 18th-century canal network led to persistent problems. To minimise construction costs, many canals and locks in industrial areas were built to very small dimensions—sometimes only 2.15 metres wide. Consequently, the boats that used them also had to be narrow. By contrast, canals linking to coastal rivers and ports were wider, with larger boats and locks measuring around 4.3 metres across. This lack of standardisation resulted in a fragmented transport network.",
+        "During the 1790s, many newly planned canals were viewed primarily as profit-making ventures by investors who were often speculators with no connection to local industry. In practice, only a few canals yielded good returns, most of them wide canals in northern England that served as vital links between industrial centres and transport routes. Canals built in agricultural regions rarely carried enough cargo to recover their construction costs. By the early 19th century, many canals could no longer compete with the newly emerging railways. To reduce competition, railway companies purchased many of these canals but often neglected their maintenance, leading to their eventual abandonment.",
+        "Today, inland water transport is no longer a major mode of goods transportation in England. In the latter half of the 20th century, restoration and conservation efforts led to growing recognition of canals as sites of historical and environmental significance."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-5",
+          "instruction": "Do the following statements agree with the information given in Reading Passage 1? Write: <b>TRUE</b> if the statement agrees with the information, <b>FALSE</b> if the statement contradicts the information, or <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q1",
+              "label": "1",
+              "text": "Larger rivers would have made the work of 18th-century hydraulic engineers more difficult.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q2",
+              "label": "2",
+              "text": "Merchants refused to pay the high costs associated with road transport.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q3",
+              "label": "3",
+              "text": "18th-century European and English canals were funded differently.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q4",
+              "label": "4",
+              "text": "Canals were narrower in some places than in others.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q5",
+              "label": "5",
+              "text": "Canal locks were already in use during the 18th century.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 6-9",
+          "instruction": "Complete the notes below.<br>Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q6-9",
+              "type": "notes-completion",
+              "wordLimit": 2,
+              "notesContent": [
+                {
+                  "title": "Canal Locks",
+                  "items": [
+                    {
+                      "type": "heading",
+                      "content": "Reasons for locks:"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• Locks made it possible to build canals through (6) ."
+                    },
+                    {
+                      "type": "heading",
+                      "content": "How locks operate:"
+                    },
+                    {
+                      "type": "text",
+                      "content": "• The boat is shut in the (7)  of the lock."
+                    },
+                    {
+                      "type": "text",
+                      "content": "• (8) open or close to raise or lower the water level."
+                    },
+                    {
+                      "type": "text",
+                      "content": "• Water levels must be (9) before the boat can exit."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-3",
+          "heading": "Questions 10-13",
+          "instruction": "Answer the questions below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q10",
+              "label": "10",
+              "text": "Which group of investors believed that any canal would be profitable?",
+              "type": "text",
+              "wordLimit": 2
+            },
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "In which geographical area did the canals make more money?",
+              "type": "text",
+              "wordLimit": 2
+            },
+            {
+              "id": "q12",
+              "label": "12",
+              "text": "What kind of areas were unsuitable for profitable canals?",
+              "type": "text",
+              "wordLimit": 2
+            },
+            {
+              "id": "q13",
+              "label": "13",
+              "text": "Who bought the canals that were not making a profit?",
+              "type": "text",
+              "wordLimit": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Playing with Science",
+      "instructions": "Read the text below and answer questions <b> 14 – 26 </b>",
+      "passage": [
+        "Paragraph A: The connection between science and play is not often discussed, perhaps because scientists take it for granted or because they feel self-conscious about it and prefer to conceal it. In this context, the word play can refer to a variety of activities. It may involve exploring new uses for everyday objects purely out of curiosity; it could include wordplay or the playing of jokes and tricks on other scientists. Although the playful element in science is difficult to define, it is fundamental to the experience of scientific work.",
+        "Paragraph B: One example of this connection is the jigsaw puzzle. Such puzzles present players with small, two-dimensional pieces of different shapes, which must be fitted together to reconstruct a complete picture. Solving a scientific problem resembles completing a jigsaw puzzle. Scientists examine each piece of data for possible connections with others, gradually building a complete argument. Those who are good at puzzles can often predict where a piece will fit even before testing it.",
+        "Paragraph C: But scientists do not only play at solving puzzles or outguessing each other. They also describe their work as \"playing\" with \"toys\". Joseph Lambert, a professor of chemistry at Northwestern University, noted that mixing chemicals and watching reactions was as enjoyable as playing in a sandbox. A classic example is Robert Millikan and Harvey Fletcher using a perfume atomiser to measure the charge of the electron.",
+        "Paragraph D: While society often discourages playfulness, science tends to encourage and nurture it. Scientists have given humorous names to various chemical compounds, such as tristane, windowpane, penguinone, and megaphone. Similar amusement can be found in other scientific disciplines.",
+        "Paragraph E: Hoaxes are another expression of scientific playfulness. One well-known case concerns the \"Plate of Brasses\", which supposedly confirmed England's claim to California and was said to have been left by the explorer Sir Francis Drake in 1579. A brass plate thought to be Drake's was discovered in the 1930s. However, later testing showed that the copper and zinc in the plate were of higher purity than would have been available in the 16th century.",
+        "Paragraph F: Shortly afterwards, staff at the University of California announced that the artefact had been produced as a practical joke by friends of Herbert E. Bolton. Bolton was fascinated by stories of Drake’s supposed plate and had publicly announced that the relic was genuine before the truth emerged. ",
+        "Paragraph G: Sometimes, however, hoaxes can serve a useful purpose. Nathan Lewis, a professor of chemistry, once recalled how he and a graduate student devised a trap to stop a colleague misusing their results by manufacturing a fake NMR spectrum as bait",
+        "Paragraph H: Is the playfulness of science always beneficial? Perhaps play provides relief from serious work, reflects scientists’ youth, or offers genuine cognitive value. After all, “playing” with ideas lies at the heart of scientific discovery."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-3",
+          "heading": "Questions 14-20",
+          "instruction": "Reading Passage 2 has six paragraphs,<b> A – H </b>. Choose the correct heading for each paragraph from the list of headings below. Write the correct number, <b> i - vii </b>, in boxes 14-19 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q14-19-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "text": "Paragraph A"
+                },
+                {
+                  "id": "q15",
+                  "label": "15",
+                  "text": "Paragraph B"
+                },
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "text": "Paragraph C"
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "text": "Paragraph D"
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "text": "Paragraph E"
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "text": "Paragraph F"
+                },
+                {
+                  "id": "q20",
+                  "label": "20",
+                  "text": "Paragraph G"
+                }
+              ],
+              "options": [
+                {
+                  "key": "i",
+                  "name": "A description of how a test showed some evidence to be fake"
+                },
+                {
+                  "key": "ii",
+                  "name": "Reasons why scientists may be unwilling to admit that they play"
+                },
+                {
+                  "key": "iii",
+                  "name": "The result of a trick going wrong"
+                },
+                {
+                  "key": "iv",
+                  "name": "The similarity between a skill used in play and one used in science"
+                },
+                {
+                  "key": "v",
+                  "name": "How a group of scientists stopped a colleague misusing their results"
+                },
+                {
+                  "key": "vi",
+                  "name": "Some examples of the playful nature of scientific language"
+                },
+                {
+                  "key": "vii",
+                  "name": "An example of an everyday object put to a scientific use"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-4",
+          "heading": "Questions 21–22",
+          "instruction": "Choose <b>TWO</b> correct letters, <b>A–E</b>",
+          "questions": [
+            {
+              "id": "q21-22",
+              "label": "21-22",
+              "text": "",
+              "type": "multiple-choice-multiple",
+              "requiredSelections": 2,
+              "question": "Which TWO are given as possible explanations for scientists’ playful behaviour?",
+              "options": [
+                "A. Play may provide relief from their work",
+                "B. Scientists sometimes spend time as teachers",
+                "C. The age of scientists predisposes them to play",
+                "D. Scientists get ideas from children’s questions",
+                "E. Scientists are secretive about their work"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 23–26",
+          "instruction": "Complete the summary below.<br>Choose <b>NO MORE THAN THREE WORDS</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q23-26",
+              "type": "summary-completion",
+              "wordLimit": 3,
+              "summary": "Researchers at Caltech found that a colleague had been misusing their __23__\nAnother story concerns a plate said to have been left in California by a famous __24__\nThe __25__ of the plate later revealed that it was a fake —\na hoax carried out by friends of the director of the __26__.",
+              "answers": [
+                {
+                  "id": "q23",
+                  "label": "23"
+                },
+                {
+                  "id": "q24",
+                  "label": "24"
+                },
+                {
+                  "id": "q25",
+                  "label": "25"
+                },
+                {
+                  "id": "q26",
+                  "label": "26"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "The Antikythera Mechanism",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b>",
+      "passage": [
+        "<b>Motivating Drives </b>",
+        "Paragraph A:  For many years, scientists have been studying how to motivate employees effectively. Early theories tended to focus mainly on financial incentives, such as pay and bonuses. However, more recent research suggests that motivation is far more complex and cannot be explained by money alone. Instead, studies have identified a small number of fundamental human drives that influence how people behave at work.",
+        "Paragraph B: One influential framework proposes that there are four basic drives that shape human motivation in the workplace: the drive to acquire, the drive to bond, the drive to comprehend, and the drive to defend. These drives are believed to be universal and are rooted in human biology. Together, they determine how motivated employees feel and how much effort they are willing to invest in their work.",
+        "<b> The Drive to Acquire </b>",
+        "Paragraph C: The drive to acquire relates to the desire for material and psychological rewards, including salary, bonuses, status, and recognition. Employees are motivated when they believe that rewards are distributed fairly and reflect their contributions. Importantly, not all rewards are financial. Nonfinancial rewards, such as praise, career opportunities, or a sincere letter of appreciation, can sometimes be even more motivating than money, as they strengthen emotional engagement and loyalty to the organisation.",
+        "<b> The Drive to Bond </b>",
+        "Paragraph D: The drive to bond concerns the need to form social relationships and feel a sense of belonging. In the workplace, employees want to feel accepted, valued, and connected to colleagues and to the organisation as a whole. When this drive is satisfied, employees are more likely to develop strong commitment and cooperate with others. Conversely, environments that encourage isolation or unhealthy competition can undermine motivation by weakening social bonds.",
+        "<b> The Drive to Comprehend </b>",
+        "Paragraph E: The drive to comprehend reflects the desire to understand the world and find meaning in one’s activities. Employees are more motivated when their work is intellectually stimulating, challenging, and allows them to learn new skills. Jobs that are repetitive or monotonous, by contrast, tend to reduce motivation and may lead to dissatisfaction or disengagement. Providing opportunities for learning and development is therefore essential for maintaining high levels of effort.",
+        "<b> The Drive to Defend </b>",
+        "Paragraph F: The drive to defend involves the need to protect oneself, one’s achievements, and one’s position. In organisations, this drive is closely linked to perceptions of fairness, transparency, and trust. Employees are more motivated when they feel that decisions are made fairly and that they can express their opinions without fear of negative consequences. When people believe that resources are distributed unjustly or that communication is unclear, this drive is triggered negatively, leading to stress and reduced motivation.",
+        "Paragraph G: Two large-scale studies examined the relationship between these four drives and employee attitudes and behaviour. The findings revealed that the drive to bond was most closely associated with employee commitment, while the drive to comprehend had the strongest influence on how much effort employees put into their work. The drive to acquire was most effectively satisfied through fair and transparent reward systems, whereas the drive to defend depended largely on open communication and organisational justice."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-6",
+          "heading": "Questions 27-31",
+          "instruction": "Choose the correct letter, <b>A, B, C or D</b>.",
+          "questions": [
+            {
+              "id": "q27",
+              "label": "27",
+              "number": "27",
+              "question": "What does the passage suggest about early theories of motivation?",
+              "type": "mcq",
+              "options": [
+                "A. They were based on biological research",
+                "B. They focused mainly on financial incentives",
+                "C. They emphasised social relationships",
+                "D. They were highly effective in practice"
+              ]
+            },
+            {
+              "id": "q28",
+              "label": "28",
+              "number": "28",
+              "question": "What is suggested about the four motivational drives?",
+              "type": "mcq",
+              "options": [
+                "A. They differ from person to person",
+                "B. They apply only in Western cultures",
+                "C. They are limited to certain professions",
+                "D. They are fundamental to human behaviour"
+              ]
+            },
+            {
+              "id": "q29",
+              "label": "29",
+              "number": "29",
+              "question": "According to the passage, how can organisations best improve overall performance?",
+              "type": "mcq",
+              "options": [
+                "A. By increasing salaries regularly",
+                "B. By focusing only on teamwork",
+                "C. By addressing all four motivational drives",
+                "D. By reducing competition among employees"
+              ]
+            },
+            {
+              "id": "q30",
+              "label": "30",
+              "number": "30",
+              "question": "How does the drive to comprehend contribute to better performance?",
+              "type": "mcq",
+              "options": [
+                "A. By encouraging employees to compete",
+                "B. By increasing financial rewards",
+                "C. By making work more meaningful and challenging",
+                "D. By reducing working hours"
+              ]
+            },
+            {
+              "id": "q31",
+              "label": "31",
+              "number": "31",
+              "question": "What is stated about the drive to defend?",
+              "type": "mcq",
+              "options": [
+                "A. It is less important than the other drives",
+                "B. It is satisfied mainly through promotion",
+                "C. It is linked to fairness and transparency",
+                "D. It applies only during organisational change"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-7",
+          "heading": "Questions 32–34",
+          "instruction": "Choose <b>THREE</b> correct letters, <b>A–G</b>",
+          "questions": [
+            {
+              "id": "q32-34",
+              "label": "32-34",
+              "text": "",
+              "type": "multiple-choice-multiple",
+              "requiredSelections": 3,
+              "question": "Which THREE statements are true according to the passage?",
+              "options": [
+                "A. Employees feel more committed when they experience a sense of belonging.",
+                "B. Financial rewards are always more motivating than non-financial ones.",
+                "C. Challenging work can increase employee motivation.",
+                "D. Lack of fairness can reduce motivation.",
+                "E. Employees prefer repetitive tasks to complex ones.",
+                "F. Social relationships are irrelevant to workplace motivation."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 35–40",
+          "instruction": "Write <b>YES, NO, or NOT GIVEN</b>.",
+          "questions": [
+            {
+              "id": "q35",
+              "label": "35",
+              "text": "Increasing pay is the only effective way to motivate employees.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q36",
+              "label": "36",
+              "text": "Non-financial rewards can sometimes motivate employees more than money.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q37",
+              "label": "37",
+              "text": "Employees show the strongest commitment when their drive to bond is satisfied.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q38",
+              "label": "38",
+              "text": "Monotonous work can lead to dissatisfaction among employees.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q39",
+              "label": "39",
+              "text": "The two studies focused exclusively on managers rather than ordinary employees.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q40",
+              "label": "40",
+              "text": "Transparent communication plays a role in satisfying the drive to defend.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

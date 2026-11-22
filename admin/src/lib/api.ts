@@ -120,6 +120,8 @@ export function downloadText(filename: string, text: string) {
   );
 }
 
+export { triggerDownload };
+
 /** Prefer document field; otherwise pretty JSON. */
 export function contentAsDownloadText(content: Record<string, unknown>): {
   text: string;
@@ -161,6 +163,9 @@ export async function synthesizeListeningAudio(file: File): Promise<{
   blob: Blob;
   durationSeconds?: string;
   turns?: string;
+  spokenWords?: string;
+  contentWords?: string;
+  pauseSeconds?: string;
 }> {
   const form = new FormData();
   form.append("file", file);
@@ -195,5 +200,8 @@ export async function synthesizeListeningAudio(file: File): Promise<{
     blob,
     durationSeconds: response.headers.get("X-Audio-Duration-Seconds") || undefined,
     turns: response.headers.get("X-Audio-Turns") || undefined,
+    spokenWords: response.headers.get("X-Audio-Spoken-Words") || undefined,
+    contentWords: response.headers.get("X-Audio-Content-Words") || undefined,
+    pauseSeconds: response.headers.get("X-Audio-Pause-Seconds") || undefined,
   };
 }

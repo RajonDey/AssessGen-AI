@@ -1,0 +1,516 @@
+{
+  "id": "reading-mock-07",
+  "title": "Reading Mock Test 7",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/reading.mp4",
+  "type": "reading",
+  "duration": 60,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Steam across the water",
+      "instructions": "Read the text below and answer questions <b> 1 – 13 </b>",
+      "passage": [
+        "During the 1600s, very early in the development of steam engines, inventive spirits like the Frenchman Denis Papin dreamed of- and experimented with- boats driven by steam, rather than by oars or human effort, but many decades passed before those visions became reality.",
+        "Englishman Jonathan hulls took out patents on a steamboat in 1736, but it was to be driven by a Newcomen engine, which was heavy and therefore inefficient, and would never be a success. In 1763, William henry, an American, put a Watt steam engine in a boat, but it sank. Nearly 20 years later, in the 1780s, a steam-powered paddle- wheeler managed to sail Fifteen minutes against the current on the River Saone in France, but lacked the endurance for longer trips. Developers elsewhere included a boat driven by a steam- powered water- jet and able to do six kilometers per hour. however, all these steamboats were either too slow or too expensive to run. For example, American John Fitch successfully trialled his first steamboat in 1787, but although he tried a number of designs and solved many technical challenges- one of his boats could even travel at 1.3 km- he could never convince sceptics that steamboats would pay.",
+        "The 1790 century came before real success could be claimed. In Scotland in 1802, Lord Dundas launched the steamboat Charlotte Dundas, which was driven by a paddle wheel and had an improved engine designed by William Symington. Barges, some weighing as much as 70 tonnes, were towed by this steamboat 30 kilometres along the Forth and Clyde Canal to Glasgow, Scotland's second city. Soon after, success came to American Robert Fulton, whose contraption called him 'the father of the steamboat'. Inspired by news of the Charlotte Dundas, Fulton ran steamboat trials on the River Seine, an ancient to attract French support for his submarine Nautilus. he later improved a Newcomen engine and built a boat to use it in. In 1807, the Clermont began a scheduled passenger steamboat service between New York and Albany, 250 kilometres up the hudson River, taking 30 hours for the trip. Within two years, steamers were running on the St Lawrence River in Canada and would soon appear on other rivers and lakes, including the Mississippi River, a most famous venue for the paddle-wheelers.",
+        "Back in Scotland, Fulton's ideas inspired henry Bell, who launched his Comet in 1812 on the Clyde between Glasgow and Greenock. Inside a decade, dozens of steamboats were to be seen on the rivers and lochs and canals of Scotland, carrying cargo and occasionally passengers. The age of steamboats had come.",
+        "Once steamboats were carrying passengers and industrial goods along the inland waterways and sheltered coastlines of Europe, North America and elsewhere, the challenge became to send steamboats onto the open ocean, such as across the Atlantic Ocean, between Europe and the US. Trusting under steam power alone would require engines to use less coal so the ship could stay at sea for several weeks. In order to provide a reliable service, it was also necessary to replace paddle wheels as a source of power with something less affected by the rolling of the waves.",
+        "Without waiting for such breakthroughs, crossings under a combination of steam and sail got underway in 1819 with the American ship Savannah. A regular service took another two decades and introduced the famous name of Cunard. Securing the British government contract for the mail serviceacross the Atlantic, Samuel Cunard established a shipping line in 1840, soon carrying passengers as well, and offering guaranteed sailing dates. Cunard's ships were steam-powered, but the era of the all- steam-powered liner, using steam alone, was getting close. When it came to building the ships, the versatile British engineer Isambard Kingdom Brunel set the pace. Brunel, brilliant and daring, had already built the Great Western Railway. he created even bigger ships later, more luxurious and comfortable for passengers. The Great Western, launched in 1838, was 70 metres long and crossed from Bristol to New York in just fifteen days. The speed made it steam- even faster. Brunel's Great Eastern, completed in 1858 was 211 metres long and was as fast as a Brunel's new line to cross the Atlantic. Unfortunately too expensive to run as a passenger ship, it was leased to lay the first submarine telegraph cable from Europe to America. in 1853 Great Britain, nearly 100 metres long and was as fast as steam ship made of iron, and the first to use the underwater screw propeller for powering movement in place of paddle wheels. The idea of the screw had been around since the experiments of the American John Stevens in 1803, but only in 1838 did a large steamer use one, the riverboat Archimedes built by Francis Petit Smith. Later ships had screws for reliability.",
+        "In many modern ships, steam turbines have replaced engines with pistons, with fuel oil instead of coal to fire the boilers. Diesel engines have since taken over. The largest single power would dwarf Brunel's Great Eastern ( launched in 1860) ; the Atlantic can be crossed in only five days. But in whatever form, the ever- evolving descendants of the original visions of Denis Papin and Robert Fulton continue to travel the seas in vast numbers."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-1",
+          "heading": "Questions 1-6",
+          "instruction": "Complete the table below. Write <b>ONE WORD ONLY</b> from the passage for each answer.",
+          "questions": [
+            {
+              "id": "q1-6-table",
+              "type": "table-completion",
+              "number": "1-6",
+              "question": "Complete the table below.",
+              "wordLimit": 1,
+              "table": {
+                "headers": [
+                  "Date",
+                  "Event"
+                ],
+                "rows": [
+                  [
+                    "1600s",
+                    "Early inventors like Papin started to develop boats that relied on steam instead of manpower or wind."
+                  ],
+                  [
+                    "1730s",
+                    "The engine of Jonathan hulls' steamboat was (1) due to its weight."
+                  ],
+                  [
+                    "1780s",
+                    "A French paddle steamer did not have the (2) to keep going for more than a quarter of an hour."
+                  ],
+                  [
+                    "",
+                    "John Fitch overcame a number of (3) problems with his steamboat designs."
+                  ],
+                  [
+                    "Early 1800s",
+                    "The Charlotte Dundas pulled barges to Glasgow."
+                  ],
+                  [
+                    "",
+                    "In France, Fulton used a steamboat to try to raise interest in a (4)."
+                  ],
+                  [
+                    "",
+                    "Passengers in the US began to be carried regularly by a steamboat called the (5)."
+                  ],
+                  [
+                    "1812 onwards",
+                    "In Scotland, steamboats transported some passengers, but mostly (6)."
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "group-2",
+          "heading": "Questions 7-13",
+          "instruction": "Do the following statements agree with the information given in the text? In boxes 7–13 below, write <b>TRUE</b> if the statement agrees with the information, <b>FALSE</b> if the statement contradicts the information, or <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q7",
+              "label": "7",
+              "text": "For steamboats to cross the Atlantic Ocean, engines which used fuel economically were needed.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q8",
+              "label": "8",
+              "text": "Using paddle wheels guaranteed reliability on ocean crossings.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q9",
+              "label": "9",
+              "text": "The Savannah was much faster than a regular paddle steamer.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q10",
+              "label": "10",
+              "text": "Brunel preferred designing railways to steamships.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q11",
+              "label": "11",
+              "text": "The Great Britain had more than one innovative feature.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q12",
+              "label": "12",
+              "text": "The design of the riverboat Archimedes was widely admired.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q13",
+              "label": "13",
+              "text": "Modern ships that cross the Atlantic use the same energy source as the early steamships.",
+              "type": "radio",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "The Fascinating World of Attine Ants",
+      "instructions": "Read the text below and answer questions <b> 14 – 26 </b>",
+      "passage": [
+        "Nicholas Wade examines leaf-cutter ants and their amazing agriculture",
+        "Paragraph A: Leaf-cutting ants and their fungus 'farm' are a marvel of nature and perhaps the best-known example of symbiosis the mutual dependence of two species. Ants cultivate a mushroom-like fungus in 'farms'. Both the ants and their so-called 'agriculture' have been extensively studied over the years, but recent research has uncovered intriguing new findings. Ants invented agriculture 50 million years before people did, and the leaf-cutters, members of the large attine ant family, practise the most sophisticated example of it. They grow their fungus in underground chambers that can reach the size of a football. A single leaf-cutter nest may contain a thousand suchchambers, embedded in an underground metropolis up to 18 feet deep, and support a society of more than a million ants.",
+        "Paragraph B: These ant communities are the dominant plant-eaters of the Neotropics, the region comprising South and Central America, Mexico and the Caribbean. Biologists believe 15 percent of the leaf production of tropical forests disappears down the nests of leaf-cutters ants. In the nest, the leaves are shredded and added to the fungus, which digests the leaves and is in turn eaten by the ants. The attine ants'achievement is remarkable because it allows them to consume, courtesy of their mushrooms' digestive powers, the harvest of tropical forests whose leaves are laden with poisonous chemicals.",
+        "Paragraph C: There are more than 200 known species of the attine ant tribe, divided into 12 groups, or genera. The leaf-cutters use fresh vegetation; the other groups, known as the lower attines because their nests are smaller and their techniques more primitive, feed their gardens with similar leaves that have fallen on the ground and insect waste on the forest floor. Lower attine ants are all a similar size. However, leaf-cutter worker ants come in made-to-fit sizes - large ants to saw off leaves, medium ones to shred them, and miniature workers to seed them with fungus and clean off alien growths.",
+        "Paragraph D: In 1994, biologists from the United States Department of Agriculture analysed the DNA of ant fungi. They found that the leaf-cutters' fungus was descended from a single pure strain, propagated for at least 23 million years. However, the fungi grown by lower attines ants fell into four different groups, as if the ants had domesticated wild fungi at least four times in evolutionary history. What could be driving these two patterns of fungus gardening the pure clone cultivation of the leaf-cutters and the multiple varieties of the lower attines?",
+        "Paragraph E: The answer has been suggested by Cameron Currie of the University of Toronto. The pure strain of fungus grown by the leaf-cutters, it seemed to him, resembled the single crops grown by humans to the exclusion of all others, such as potato growing. These 'monocultures', which lack the genetic diversity to respond to changing environmental threats, are particularly vulnerable to parasites - organisms that live and feed on their host, often causing harm. Currie felt there had to be a parasite in the ant-fungus system. But a century of ant research had provided no evidence for his idea. Textbooks describe how leaf-cutter ants scrupulously weed their gardens of all foreign organisms. \"People kept telling me the ants keep their gardens free of parasites,\" said Currie. Nevertheless, after three years of sifting through ant gardens, Currie discovered several alien organisms, particularly a family of parasitic moulds called 'Escovopsis'.",
+        "Paragraph F: Escovopsis is a deadly disease that can devastate a fungus garden in a couple of days. It blooms like a white cloud which envelops the whole garden. Other ants won't go near it, and the ants associated with the garden just starve to death. Evidently, the ants usually manage to keep Escovopsis and other parasites under control. Nevertheless, with any lapse in control Escovopsis will quickly burst forth. Although new leaf-cutter gardens start off free of Escovopsis, within two years some 60 percent become infected.",
+        "Paragraph G: The discovery of Escovopsis's role brings a new level of understanding to the evolution of the attine ants. In the last decade, evolutionary biologists have been increasingly aware of the role of parasites as driving forces in evolution. With Currie's work, there is now a possible reason for the different varieties of fungus in the lower attine mushroom gardens to stay one step ahead of the relentless Escovopsis.Interestingly, the leaf-cutters had, in general, fewer alien moulds in their gardens than the lower attines, yet more Escovopsis infections. Clearly, the price they pay for cultivating a pure variety of fungus is a higher risk from Escovopsis.",
+        "Paragraph H: So how do attine ants keep this parasite under control? People have known for a hundred years that ants have a whitish growth on their body surface. It was thought to be wax, but after examining it under a microscope, Currie discovered a specialised patch on the ants' bodies that harbours a particular kind of bacterium, one well known to the pharmaceutical industry and the source of half the antibiotics used in medicine. This bacterium is a potent poisoner of Escovopsis, inhibiting its growth and suppressing spore formation. Astoundingly, the leaf-cutter ants are accomplishing feats beyond the power of humans: they are growing a monocultural crop year after year without disaster, and they are using an antibiotic apparently so wisely that, unlike people, they are not provoking antibiotic resistance in the target disease-producing organism."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-3",
+          "heading": "Questions 14-19",
+          "instruction": "The text has eight sections labeled A–H. Which paragraph contains the following information? Choose correct option. You may choose any letter more than once.",
+          "questions": [
+            {
+              "id": "q14-19-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "text": "two things at which leaf-cutter ants have succeeded but humans have failed."
+                },
+                {
+                  "id": "q15",
+                  "label": "15",
+                  "text": "a comparison between the nests of leaf-cutter ants and lower attine ants."
+                },
+                {
+                  "id": "q16",
+                  "label": "16",
+                  "text": "an assessment of the impact leaf-cutter ants have on their environment."
+                },
+                {
+                  "id": "q17",
+                  "label": "17",
+                  "text": "the effect Escovopsis has on ant communities."
+                },
+                {
+                  "id": "q18",
+                  "label": "18",
+                  "text": "the advantage for lower attine ants of growing a range of fungi."
+                },
+                {
+                  "id": "q19",
+                  "label": "19",
+                  "text": "the discovery of the age of the attine-ant fungi."
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Paragraph A"
+                },
+                {
+                  "key": "B",
+                  "name": "Paragraph B"
+                },
+                {
+                  "key": "C",
+                  "name": "Paragraph C"
+                },
+                {
+                  "key": "D",
+                  "name": "Paragraph D"
+                },
+                {
+                  "key": "E",
+                  "name": "Paragraph E"
+                },
+                {
+                  "key": "F",
+                  "name": "Paragraph F"
+                },
+                {
+                  "key": "G",
+                  "name": "Paragraph G"
+                },
+                {
+                  "key": "H",
+                  "name": "Paragraph H"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-4",
+          "heading": "Questions 20-24",
+          "instruction": "Classify the following descriptions as relating to A, B or C. Write the correct letter, A, B or C, in boxes 20-24 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q20-24-table-matching",
+              "type": "table-matching-ah",
+              "statements": [
+                {
+                  "statement-heading": "List of Features",
+                  "id": "q20",
+                  "label": "20",
+                  "text": "the use of dead vegetation to cultivate their fungus"
+                },
+                {
+                  "id": "q21",
+                  "label": "21",
+                  "text": "very small ants that keep the fungus free of foreign organisms"
+                },
+                {
+                  "id": "q22",
+                  "label": "22",
+                  "text": "the ability to safely eat harmful plants"
+                },
+                {
+                  "id": "q23",
+                  "label": "23",
+                  "text": "the cultivation of a single fungus"
+                },
+                {
+                  "id": "q24",
+                  "label": "24",
+                  "text": "a nest with a very large number of rooms for growing fungus"
+                }
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "name": "Leaf-cutting ants"
+                },
+                {
+                  "key": "B",
+                  "name": "Lower attines"
+                },
+                {
+                  "key": "C",
+                  "name": "Both leaf-cutting ants and lower attine ants"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-5",
+          "heading": "Questions 25-26",
+          "instruction": "Choose the correct letter, <b>A, B, C or D</b>.",
+          "questions": [
+            {
+              "id": "q25",
+              "label": "25",
+              "number": "25",
+              "question": "What does the writer say about Cameron Currie's research?",
+              "type": "mcq",
+              "options": [
+                "No previous work had been done in this area.",
+                "Earlier studies did not support his theory.",
+                "Textbooks on this subject lacked specific detail.",
+                "Currie's initial theory had proven to be incorrect."
+              ]
+            },
+            {
+              "id": "q26",
+              "label": "26",
+              "number": "26",
+              "question": "Using a microscope, Currie was the first to discover that the body of attine ants",
+              "type": "mcq",
+              "options": [
+                "has a white covering.",
+                "is covered in wax.",
+                "is poisonous to humans.",
+                "has a substance useful to humans."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "Practical Learning in the Classroom",
+      "instructions": "Read the text below and answer questions <b> 27 – 40 </b>",
+      "passage": [
+        "A teacher describes a case study involving middle school students and traditional earthen architecture",
+        "The way we think about architecture in schools has come a long way. Once, studying architecture in the art class meant learning to appreciate great buildings art- history style, through slide presentations. In recent years, though, the American Institute of Architects has fostered the idea that the process of architectural design, not just the appreciation of architecture, is a beneficial aspect of the art curriculum ( Sadler, 1989).",
+        "The value of architectural design is that it is the concrete training ground for a broadly applicable creative process. Architectural training can help people design structures to meet needs. It can help farmers design crop rotations to meet needs. Furthermore, it provides hands-on experiences that reinforce learning in various other subjects, from math to social studies.",
+        "In the ongoing dialogue about architecture in the middle school art curriculum, many believe students should actually build the structures they design in their courses. Although the technology andexpertise required of modern architecture can prohibit students from actually realizing their designs, traditional architectural materials and methods remain quite accessible to the art classroom. Traditional architectural materials, such as earth, clay and straw, are clean, easy to work with and readily available. Further, when students participate in the construction or preservation of a traditional earthen structure in their local community, they engage in a form of experiential learning and they are motivated to invest in the project. This is evident in a case study of an adobe * conservation project with middle school students in the town of Zuni, New Mexico, in the Southwestern United States.",
+        "Traditional architecture reaches back to preindustrial America, when local resources and cultures produced structures in styles unique to each region. In New Mexico, examples of hand-built earthen structures still abound. The region has seen some decline in traditional architecture as industrialization has brought new building codes and materials ; however, the traditional, non-industrial home, either preserved from earlier generations or newly built, remains in use. Traditional building materials and the land that supplies them are so accessible that handcrafting a house still remains feasible.",
+        "Thus, with no technical expertise and little cost, middle school students can participate in the construction or preservation of a traditional earthen structure. During the project, a student will get to know the materials, understand the chemistry, solve problems, work with classmates, and exercise muscles. The student can apply knowledge of design principles and the creative process while participating in a cooperative effort. But most significantly, this type of project- based activity motivates students to invest intellectually and emotionally in the outcome.",
+        "The town of Zuni, where I taught art, was surrounded by adobe construction, new and old. Behind our main high school building there was a one- room adobe structure which was once used for teaching. Now it served as a place where old furniture could be kept. I sent my class home with the oral history assignment to ask their family, friends and neighbors questions to find out about that building. From their research we compiled a sketchy history; it began as a kindergarten classroom ; it later became an art classroom ; now it was full of broken desks.",
+        "The building's design kept it relatively warm in the winter, even without heating, due to its broad south face, and it stayed cool in the summer due to its spacious, ventilated attic and massive earthen walls. Because of this, my students agreed it was worth preserving and were enthusiastic about helping. Preservationist Shahe Gasper arrived in the fall to help with an assessment of the building's needs. She recommended replacing the stucco ** that encased the original adobe walls with a traditional mud plaster. She showed us where to find local supplies of sand and clay soil for the plaster mix. We began work on the stucco removal in the fall. The next spring the students were ready to replaster. To teach the traditional skills, Gasper and other local specialists joined us. They gave my class three full mornings of intensive workshops on history and preservation as well as mud- plastering technique, and the building got a new coat of traditional mud plaster.",
+        "Small design- and- build projects such as this can be seen through to the finish when working with earth in the art curriculum. A simple landscape feature such as a wall, entryway, or arch can draw students into important aspects of design that involve the structure's interaction with people, the surrounding landscape, and natural elements. The same project may provide an opportunity to focus onthe chemistry of soil or the structural dynamics of construction. Design goals might guide students to involve traditional forms, consider formal aspects, or integrate math skills of measuring and estimating.",
+        "During our traditional architecture unit, the students realized that something old and almost forgotten is valuable and worth preserving. Many others in the community and around the country share this renewal of interest in traditional earthen technologies. It is the connection to a cultural heritage that interests some ; the quality of living within massive, natural walls that attracts others ; or for others, the sustainability of the process and the minimal energy spent in construction. The value of adobe in general is becoming more and more known, but little has been said about its value in the art curriculum until now. This experiment in adobe conservation with middle school students convinced me that traditional architecture deserves a place in the regular curriculum."
+      ],
+      "questionGroups": [
+        {
+          "id": "group-6",
+          "heading": "Questions 27-31",
+          "instruction": "Choose the correct letter, <b>A, B, C or D</b>.",
+          "questions": [
+            {
+              "id": "q27",
+              "label": "27",
+              "number": "27",
+              "question": "What education initiative does the American Institute of Architects currently promote?",
+              "type": "mcq",
+              "options": [
+                "multimedia presentation of information in classrooms",
+                "the study of monumental buildings throughout history",
+                "the practice of designing architectural structures",
+                "processes to add more art classes in schools"
+              ]
+            },
+            {
+              "id": "q28",
+              "label": "28",
+              "number": "28",
+              "question": "In the third paragraph, what problem with teaching architecture on art courses does the writer note?",
+              "type": "mcq",
+              "options": [
+                "Technology-based courses are unavailable.",
+                "Students cannot always construct their designs.",
+                "The curriculum is too traditional.",
+                "Students lack motivation."
+              ]
+            },
+            {
+              "id": "q29",
+              "label": "29",
+              "number": "29",
+              "question": "What is the greatest benefit for students that the writer sees in a traditional architecture project?",
+              "type": "mcq",
+              "options": [
+                "personal connection to the end result",
+                "participation in a cooperative project",
+                "building of problem-solving skills",
+                "conservation of a traditional building"
+              ]
+            },
+            {
+              "id": "q30",
+              "label": "30",
+              "number": "30",
+              "question": "What is the purpose of the eighth paragraph?",
+              "type": "mcq",
+              "options": [
+                "to explain why it is important that projects be small",
+                "to outline the multiple skills involved in one project",
+                "to discuss strategies for connecting content areas",
+                "to propose suggestions for traditional earth projects"
+              ]
+            },
+            {
+              "id": "q31",
+              "label": "31",
+              "number": "31",
+              "question": "What does the writer say about traditional building and the general population?",
+              "type": "mcq",
+              "options": [
+                "Earthen architecture is becoming a profitable business.",
+                "Earthen architecture is less feasible in some areas of the country.",
+                "Interest in earthen architecture varies from region to region.",
+                "People are attracted to earthen architecture for different reasons."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-7",
+          "heading": "Questions 32-36",
+          "instruction": "Complete the summary using the list of words, <b>A – H</b>, below.<br>Write the correct letter, <b>A-H</b>, in boxes 32-36 on your answer sheet.",
+          "questions": [
+            {
+              "id": "q32-36",
+              "type": "drag-and-drop-summary-completion",
+              "title": "The Zuni earthen architecture project",
+              "summary": "The students in Zuni chose to renovate an old building which was being used for ______. They came to an agreement that the building was worthy of rehabilitation based on its functional ______. At the beginning of the project, students were given the task to discover the history of the building through interviews with local residents. Through the course of the project, they learned where to locate ______ for the project. They also worked closely with a number of ______ on each step of the project. During the project, students were also given ______ to build useful skills.",
+              "gaps": [
+                32,
+                33,
+                34,
+                35,
+                36
+              ],
+              "options": [
+                "A experts",
+                "B location",
+                "C design",
+                "D storage",
+                "E students",
+                "F resources",
+                "G training",
+                "H businesses"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-8",
+          "heading": "Questions 37-40",
+          "instruction": "Do the following statements agree with the information given in Reading Passage 3? Choose <b>YES</b> if the statement agrees with the information, choose <b>NO</b> if the statement contradicts the information, or choose <b>NOT GIVEN</b> if there is no information on this.",
+          "questions": [
+            {
+              "id": "q37",
+              "label": "37",
+              "text": "The price of materials is one drawback to using traditional architecture.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q38",
+              "label": "38",
+              "text": "Earthen structures can easily be built in all regions of the U.S.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q39",
+              "label": "39",
+              "text": "Working with a traditional earthen structure can have physical benefits.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            },
+            {
+              "id": "q40",
+              "label": "40",
+              "text": "A traditional architecture curriculum is best suited to middle school level students.",
+              "type": "yes-no-not-given",
+              "options": [
+                "YES",
+                "NO",
+                "NOT GIVEN"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

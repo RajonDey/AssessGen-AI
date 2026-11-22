@@ -1,0 +1,1048 @@
+{
+  "type": "listening",
+  "parts_linked": 4,
+  "speakers": [
+    {
+      "id": "P1_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "australian",
+      "partNumber": 1
+    },
+    {
+      "id": "P1_S1",
+      "role": "hotel receptionist",
+      "gender": "male",
+      "accent": "british",
+      "partNumber": 1
+    },
+    {
+      "id": "P1_S2",
+      "role": "customer",
+      "gender": "female",
+      "accent": "american",
+      "partNumber": 1
+    },
+    {
+      "id": "P2_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "british",
+      "partNumber": 2
+    },
+    {
+      "id": "P2_S1",
+      "role": "community centre manager",
+      "gender": "male",
+      "accent": "american",
+      "partNumber": 2
+    },
+    {
+      "id": "P3_N1",
+      "role": "narrator",
+      "gender": "male",
+      "accent": "new_zealand",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S1",
+      "role": "student",
+      "gender": "female",
+      "accent": "american",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S2",
+      "role": "student",
+      "gender": "male",
+      "accent": "british",
+      "partNumber": 3
+    },
+    {
+      "id": "P3_S3",
+      "role": "student",
+      "gender": "female",
+      "accent": "australian",
+      "partNumber": 3
+    },
+    {
+      "id": "P4_N1",
+      "role": "narrator",
+      "gender": "female",
+      "accent": "british",
+      "partNumber": 4
+    },
+    {
+      "id": "P4_S1",
+      "role": "lecturer",
+      "gender": "male",
+      "accent": "american",
+      "partNumber": 4
+    }
+  ],
+  "script": {
+    "turns": [
+      {
+        "speaker": "P1_N1",
+        "text": "Welcome to this IELTS-style Listening practice test. You will hear each recording once only. There are four parts, and you will have time to look at the questions and to check your answers. Now look at Part 1. You will hear a customer making a hotel booking by telephone. First, you have some time to look at questions 1 to 6.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Now listen carefully and answer questions 1 to 6.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Hello. I am planning a short break in Seaborne next month, and I would like to book a room at the Harbour Lights Hotel. I looked at your website, but I was not certain which rooms were still available. I need accommodation for my husband and me, rather than a room for a larger family group.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Certainly. I can check that for you. Before we discuss the rooms, may I take the booking name? Is it Miss Carter? I can see that name on an enquiry made yesterday, but it has not been confirmed.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "No, that was probably somebody else. My first name is Lorna, and my surname is Keller. That is K, E, L, L, E, R. I made no earlier enquiry, so this will be a new booking.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Thank you, Ms Keller. What date would you like to arrive? We have a food festival on the nineteenth of October, so that Saturday is particularly busy. There is more choice if you arrive the day before.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is exactly what we want to do. We will arrive on Friday, the eighteenth of October, and leave on Monday morning. At first I considered staying for two nights, but we have decided that three nights will give us enough time to visit the coast.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Fine. For three nights from the eighteenth of October, I can offer a standard double room facing the town, or a double room with a harbour view. The town rooms are quieter early in the morning, but the harbour rooms have a small balcony and you can watch the fishing boats.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "The harbour view sounds much nicer. Please book that. There will be just two adults. Our daughter was going to come with us, but she has an examination that weekend, so she will stay at home.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "A harbour-view double for two adults, then. The total cost, including breakfast, is one hundred and eighty pounds. You do not need to pay all of that today. To secure the reservation, we require a deposit of sixty pounds, and the remaining balance is payable when you check out.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is fine. I can pay the sixty pounds by debit card now. Could you also tell me a little about arriving at the hotel? We will be driving from the airport, and we may not reach Seaborne until the evening.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "Now listen and answer questions 7 to 10.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Of course. First, regarding your car, please do not leave it in the public spaces along the harbour road. Those spaces are free after six o'clock, but they are often full, and some are reserved for local residents. Hotel guests should use our secure car park, which is at the rear of the building. When you arrive, drive past the main entrance and follow the blue sign beside the bakery.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "That is helpful. We are collecting a hire car at the airport. If our flight is delayed, we might arrive after the reception desk closes. Is there somebody available until nine o'clock, or do we need to make special arrangements?",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Reception is staffed until ten o'clock, so nine would not be a problem. However, the airport shuttle is different: its final departure from the airport is at six thirty in the evening, not seven. Since you have a hire car, that service is not relevant, but I mention it because some guests assume it runs later.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Yes, we will drive ourselves. What should I bring when we check in? I have the reservation email saved on my phone, although I can print it if that is easier.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "The email is useful, but you do not need a printed copy. We will need to see your passport as photographic identification. A driving licence is accepted only for guests who live in the United Kingdom, so your passport will be the simplest document to bring.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "All right. And on Monday, what time do we have to leave the room? Our return flight is not until late afternoon, so I was hoping we would not need to rush away immediately after breakfast.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S1",
+        "text": "Breakfast finishes at ten thirty, but check-out is later than that: it is at twelve noon. You may leave your luggage at reception after checking out, free of charge, and collect it before you drive back to the airport. I will email the confirmation to you this afternoon.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_S2",
+        "text": "Perfect. Please go ahead with the booking. I will pay the deposit now, and I will look out for the confirmation email. Thank you for explaining everything so clearly.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P1_N1",
+        "text": "That is the end of Part 1. You now have one minute to check your answers to Part 1.",
+        "partNumber": 1
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 1
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now look at Part 2. You will hear a manager giving a talk about the renovation of a community centre. First, you have some time to look at questions 11 to 16.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now listen carefully and answer questions 11 to 16.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "Good morning, everyone. I am Daniel Price, the manager of Riverside Community Centre. Thank you for coming to this update meeting before the renovation begins next Monday, the eighth of June. The building will remain partly open, but the work is more extensive than simply repainting the walls. We are replacing the old heating system, improving wheelchair access, and creating several rooms that local groups have requested for years. Some people have asked whether the whole centre will close. It will not. The sports hall and the meeting rooms will be unavailable, and the gym will close for a short period while its floor is repaired. However, the café will stay open throughout the project, although it will use a smaller menu and close at four o'clock rather than six.\n\nThe largest share of the budget comes from a council grant. We also received several small donations from local businesses, and the Friends of Riverside group raised money at a concert, but neither of those sources would have been enough on its own. Before finalizing the design, we asked residents to complete an online questionnaire. We considered holding a public meeting first, but the questionnaire allowed people who work evenings or care for children to contribute as well. The most common request was for more flexible space for clubs and classes.\n\nYou may notice some noise during the first two weeks. The drilling for new wiring will be noticeable, but the noisiest stage will be demolition of the wall between the old store room and the activity room. Contractors will carry out that work between ten in the morning and three in the afternoon, rather than early in the day. Our original target was August, but supply delays mean that the centre should be fully completed in September. We would rather give you a realistic date than promise a faster one and disappoint you.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "There is one way that local residents can help. We do not need volunteers to paint walls, because that must be done by qualified contractors. We are asking for help moving books from the present library shelves into storage boxes before the builders arrive. If you can spare two hours on Saturday, please speak to the reception team after this talk. The books will return when the new reading area opens.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Before you hear the rest, you have some time to look at questions 17 to 20.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "Now listen and answer questions 17 to 20.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_S1",
+        "text": "Now I will explain the temporary layout, because the main entrance will look different during the renovation. On your plan, north is at the top. You enter the site from River Road at the south, through the main gate. The café is immediately on your left, and the main hall is directly ahead. The courtyard is beyond the main hall, at the northern end of the site.\n\nFirst, question 17. The reception desk will not be inside the main building during the work. From the main gate, walk straight ahead toward the main hall, then turn right before you reach its doors. You will find the temporary reception desk in a small cabin beside the east path. It is opposite the café, not next to it. Staff there can give you room changes, class information, and access cards.\n\nFor question 18, the temporary library is in the west wing. From reception, go back past the front of the main hall and take the path on the left, between the café and the garden. The first room on that path is the temporary library. Do not confuse it with the café seating area: the library has a separate entrance and a sign saying Quiet Space. It will contain books, newspapers, and two public computers.\n\nQuestion 19 is the pottery studio. This is not in the old art room, which is being converted into an accessible toilet. Instead, continue along the west path past the temporary library. At the north-west corner, beside the courtyard, there is a portable building. That is the pottery studio. Classes will meet there on Tuesdays and Thursdays, and participants should enter from the courtyard side, not through the library.\n\nFinally, for question 20, bicycle racks have been moved. They are no longer beside the main gate, where construction vehicles need space. From the entrance, take the east path past the reception cabin. The racks are at the south-east corner of the site, just before the service gate. Please use those racks rather than attaching bicycles to the fence. Cars should use the public parking lot across River Road, since the centre lot will be reserved for contractors and accessible parking.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P2_N1",
+        "text": "That is the end of Part 2. You now have one minute to check your answers to Part 2.",
+        "partNumber": 2
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 2
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now look at Part 3. You will hear three students discussing a project for their environmental design course. First, you have some time to look at questions 21 to 26.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now listen carefully and answer questions 21 to 26.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Thanks for coming, Owen and Priya. We need to finalise our proposal before Professor Keane sees it tomorrow. Our broad subject is campus buildings, but I think we should not try to assess every environmental feature. At first, I suggested investigating noise in the library, because several students complain about it. However, the professor said that has already been studied. So our project will examine whether the amount of natural light in study spaces affects how comfortable students feel and how long they choose to remain there.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "That is manageable. We could use the new science block only, since it has large windows. But a comparison would be stronger. I looked at the estate office records, and they list the age, window size and orientation of every teaching building. Those maintenance records are more reliable than asking students to estimate conditions from memory.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Yes, and we should choose buildings with different orientations. The science block faces east, the old arts building faces west, and the learning hub has rooms facing north and south. We should not select locations simply because they are close together. If we compare spaces receiving morning light with spaces receiving afternoon light, the findings will be more useful.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "For the pilot survey, I asked ten volunteers to complete the questions after a study session. The wording was fine, but the timing was a problem. I ran it during the final examination period, when people were unusually stressed and stayed in rooms for reasons unrelated to comfort. So, for the main survey, we should collect responses in weeks five and six, before revision begins.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "What measurements will we take? A light meter would give a numerical reading, but perhaps temperature matters as well. I can borrow an infrared camera from the engineering department, although it would only show surface temperatures. Actually, the simplest useful measure is illuminance from a digital light meter. We can take readings at the desk where each participant is sitting, rather than beside the window.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Professor Keane will probably ask how we define comfort. We cannot leave it as a vague personal opinion. We should give participants the same five-point scale, from very uncomfortable to very comfortable, and explain that they are rating the room conditions, not whether they like the furniture or have finished their assignment.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Good point. Also, we should record the time of day, because bright morning sun can be pleasant in winter but distracting in summer. We are not trying to prove that daylight automatically improves grades. Our claim is much narrower: daylight may influence the amount of time students voluntarily spend in particular study spaces.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "Now listen and answer questions 27 to 30.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "Let us divide the work clearly, then. I am happy to deal with the numerical information. I have used spreadsheet software in another module, so I will enter the light-meter readings and survey scores, check for missing values, and produce the graphs. I will not conduct the interviews, because I tend to rush people when I am taking notes.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "In that case, I will prepare the interview questions and speak to participants. I worked at the student advice desk last year, so I am comfortable asking follow-up questions without leading people towards a particular answer. I will make sure that each interview is no longer than six minutes. We only need detailed comments from a small group after they complete the survey.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "That leaves the background research and the practical arrangements for me. I can read previous studies, but I think Priya should handle the literature review because she has already found the three most relevant journal articles. Priya, could you summarise what earlier researchers discovered and identify any gaps? I will contact the building managers instead. We need permission to visit rooms, particularly the silent floor in the learning hub.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Yes, I will do the literature review. I will focus on studies of daylight and perceived comfort, rather than papers about energy consumption. There is one useful article by Helena Morris, M O R R I S, which compares student behaviour in naturally lit and artificially lit rooms. I will send both of you a one-page summary by Friday.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S2",
+        "text": "Maya, when you contact the managers, ask whether any blinds will be replaced during our data-collection weeks. If a room is closed for maintenance, we need an alternative location. Perhaps you should also reserve the portable light meters, because the department has only four and another class may need them.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "I will do both. I will request access, confirm room availability, and reserve the equipment. We should meet next Tuesday at two fifteen, not two fifty, in the café beside the design studio. By then, Priya can bring the research summary, Owen can show us a trial spreadsheet, and I can report on permissions.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S3",
+        "text": "Agreed. I will also draft an information sheet explaining that participants can stop at any time and that their names will not appear in the report. That is not the same as collecting consent forms, though. Maya, since you are communicating with the managers and organising the visits, could you ask the professor which consent form the department requires?",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_S1",
+        "text": "Certainly. I will check that with Professor Keane. Once we have permission, we can test the survey in one room on Wednesday afternoon. If the questions take longer than five minutes, we will shorten them before starting the full study.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P3_N1",
+        "text": "That is the end of Part 3. You now have one minute to check your answers to Part 3.",
+        "partNumber": 3
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 3
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now look at Part 4. You will hear a lecture about sleep research. First, you have some time to look at questions 31 to 36.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:40]",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now listen carefully and answer questions 31 to 36.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_S1",
+        "text": "Today I will describe a university study examining why adults often feel tired even when they believe they spend enough time in bed. The important point is that sleep research is not simply about counting hours. Researchers also examine regularity, interruptions, and the timing of sleep in relation to an individual's internal body clock. Our project recruited one hundred and twenty office employees between the ages of twenty-five and fifty-five. We did not include shift workers, because changing work schedules would have made the results difficult to interpret. We also excluded people who had recently travelled across several time zones, although a short domestic trip was not considered a reason to exclude them.\n\nEach participant wore an actigraphy device on the wrist. This looks rather like a watch, but it records movement and estimates periods of sleep and wakefulness. Some people assume that the device measures brain activity. It does not; for that, researchers need laboratory equipment. Participants wore the device continuously for fourteen days, including weekends. A week would have been cheaper and easier, but two weeks allowed us to compare workdays with non-workdays more reliably.\n\nThe electronic record was supported by a sleep diary completed every morning. In this diary, participants reported the time they tried to sleep, the time they believed they woke up, and whether they had taken naps. The diary was not intended to replace the wrist device. Instead, it helped us understand unusual patterns in the movement data, such as a participant lying still in bed while reading. We asked people to complete the diary before checking email or speaking to anyone, since later activities could affect their memory of the previous night.\n\nWe also measured light exposure with a small sensor attached to the same wristband. Bright light in the morning was of particular interest because it can move the body clock earlier. Evening light matters too, especially from screens, but our main analysis focused on light received during the first two hours after waking. Participants were advised not to alter their normal routines. In other words, we were observing ordinary behavior, not testing whether a new treatment improved sleep.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Before you hear the rest of the lecture, you have some time to look at questions 37 to 40.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:25]",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "Now listen and answer questions 37 to 40.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_S1",
+        "text": "Alongside these measurements, participants answered short questions about food, drinks, exercise, and stress. We were especially careful about caffeine. It is not only coffee that contains caffeine; tea, cola, and some energy drinks can contain substantial amounts. Rather than asking people to stop consuming it, we recorded their final caffeinated drink of the day. The results showed that a late intake was associated with a later sleep onset. This was a statistical association, however, and does not prove that caffeine was the only cause. For example, people who work late may both drink coffee and go to bed late.\n\nBefore collecting data, every participant completed a baseline questionnaire. This included general health questions, but the most useful section asked about their usual chronotype. Chronotype describes whether someone naturally prefers earlier or later sleep and waking times. It is sometimes confused with personality: people describe themselves as either disciplined early birds or lazy night owls. That interpretation is far too simple. Chronotype is influenced partly by biology, and it can also vary with age and daily obligations.\n\nOur clearest finding concerned sleep regularity. Participants whose bedtimes varied widely from one night to the next reported more daytime sleepiness, even when their weekly total sleep time was similar to that of more regular sleepers. We calculated regularity by comparing the midpoint of sleep across the fourteen-day period. The midpoint is halfway between falling asleep and waking. It is not the same as the time people get into bed, because many participants spent twenty or thirty minutes awake before sleeping.\n\nA second finding involved short naps. A nap of less than thirty minutes was not strongly related to poorer night sleep in our sample. Longer naps, particularly those taken late in the afternoon, were linked with difficulty falling asleep at night. Still, we should not conclude that every nap is harmful. A brief nap may improve alertness after a poor night, and the effect depends on when it occurs.\n\nFinally, there is an important limitation. Wrist devices estimate sleep from movement, so they may classify a quiet period of wakefulness as sleep. For this reason, our conclusions should be treated as evidence about broad patterns rather than precise clinical diagnoses. Future work will combine home monitoring with laboratory recordings, where brain activity can be measured directly. That combination should help researchers distinguish people who are genuinely asleep from people who are simply resting without moving.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "P4_N1",
+        "text": "That is the end of Part 4. You now have one minute to check your answers to Part 4.",
+        "partNumber": 4
+      },
+      {
+        "speaker": "PAUSE",
+        "text": "[PAUSE:60]",
+        "partNumber": 4
+      }
+    ]
+  },
+  "parts": [
+    {
+      "partNumber": 1,
+      "questionGroups": [
+        {
+          "type": "form_completion",
+          "questions": [
+            {
+              "number": 1,
+              "type": "form_completion",
+              "prompt": "Complete the hotel booking form.",
+              "subInstructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+              "text": "Surname: 1 ______"
+            },
+            {
+              "number": 2,
+              "type": "form_completion",
+              "text": "Arrival date: 2 ______",
+              "prompt": "Arrival date: 2 ______"
+            },
+            {
+              "number": 3,
+              "type": "form_completion",
+              "text": "Length of stay: 3 ______",
+              "prompt": "Length of stay: 3 ______"
+            },
+            {
+              "number": 4,
+              "type": "form_completion",
+              "text": "Room requested: double room with a 4 ______",
+              "prompt": "Room requested: double room with a 4 ______"
+            },
+            {
+              "number": 5,
+              "type": "form_completion",
+              "text": "Number of guests: 5 ______ adults",
+              "prompt": "Number of guests: 5 ______ adults"
+            },
+            {
+              "number": 6,
+              "type": "form_completion",
+              "text": "Deposit required: 6 ______",
+              "prompt": "Deposit required: 6 ______"
+            }
+          ],
+          "subInstructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "groupRange": "1-6"
+        },
+        {
+          "type": "note_completion",
+          "questions": [
+            {
+              "number": 7,
+              "type": "note_completion",
+              "prompt": "Complete the notes about arrival arrangements.",
+              "subInstructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+              "text": "Parking: use the secure 7 ______ at the rear of the hotel."
+            },
+            {
+              "number": 8,
+              "type": "note_completion",
+              "text": "The final airport shuttle leaves at 8 ______ in the evening.",
+              "prompt": "The final airport shuttle leaves at 8 ______ in the evening."
+            },
+            {
+              "number": 9,
+              "type": "note_completion",
+              "text": "Guests should bring a 9 ______ for identification.",
+              "prompt": "Guests should bring a 9 ______ for identification."
+            },
+            {
+              "number": 10,
+              "type": "note_completion",
+              "text": "Check-out time: 10 ______",
+              "prompt": "Check-out time: 10 ______"
+            }
+          ],
+          "subInstructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "groupRange": "7-10"
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "questionGroups": [
+        {
+          "questions": [
+            {
+              "number": 11,
+              "type": "multiple_choice",
+              "question": "Which facility will remain open throughout the renovation?",
+              "options": {
+                "A": "the gym",
+                "B": "the café",
+                "C": "the sports hall"
+              }
+            },
+            {
+              "number": 12,
+              "type": "multiple_choice",
+              "question": "What is the main source of funding for the renovation?",
+              "options": {
+                "A": "a council grant",
+                "B": "local business donations",
+                "C": "a fundraising concert"
+              }
+            },
+            {
+              "number": 13,
+              "type": "multiple_choice",
+              "question": "How did the centre collect residents' opinions about the plans?",
+              "options": {
+                "A": "at a public meeting",
+                "B": "through an online questionnaire",
+                "C": "by telephone interviews"
+              }
+            },
+            {
+              "number": 14,
+              "type": "multiple_choice",
+              "question": "Which stage of the work will cause the greatest amount of noise?",
+              "options": {
+                "A": "demolition",
+                "B": "floor repairs",
+                "C": "new wiring"
+              }
+            },
+            {
+              "number": 15,
+              "type": "multiple_choice",
+              "question": "When is the renovated centre now expected to be fully completed?",
+              "options": {
+                "A": "June",
+                "B": "August",
+                "C": "September"
+              }
+            },
+            {
+              "number": 16,
+              "type": "multiple_choice",
+              "question": "What are volunteers being asked to do?",
+              "options": {
+                "A": "paint walls",
+                "B": "move books",
+                "C": "serve food"
+              }
+            }
+          ],
+          "groupInstructions": "Choose the correct letter, A, B or C.",
+          "type": "multiple_choice",
+          "groupRange": "11-16"
+        },
+        {
+          "questions": [
+            {
+              "number": 17,
+              "type": "map_labelling",
+              "question": "Label the plan. Write the correct answer for blank 17.",
+              "subInstructions": "Write NO MORE THAN THREE WORDS for each answer."
+            },
+            {
+              "number": 18,
+              "type": "map_labelling",
+              "question": "Label the plan. Write the correct answer for blank 18.",
+              "subInstructions": "Write NO MORE THAN THREE WORDS for each answer."
+            },
+            {
+              "number": 19,
+              "type": "map_labelling",
+              "question": "Label the plan. Write the correct answer for blank 19.",
+              "subInstructions": "Write NO MORE THAN THREE WORDS for each answer."
+            },
+            {
+              "number": 20,
+              "type": "map_labelling",
+              "question": "Label the plan. Write the correct answer for blank 20.",
+              "subInstructions": "Write NO MORE THAN THREE WORDS for each answer."
+            }
+          ],
+          "groupInstructions": "Label the plan below.",
+          "type": "map_labelling",
+          "visual": {
+            "kind": "plan",
+            "scenario": "Temporary layout of Riverside Community Centre during renovation work.",
+            "orientation": "North is at the top. River Road and the main gate are at the south.",
+            "layout": [
+              "Main gate at the south centre, leading north to the main hall.",
+              "Café on the west side of the entrance area.",
+              "Main hall in the centre of the site.",
+              "Courtyard directly north of the main hall.",
+              "Garden and west path to the west of the main hall.",
+              "East path and service gate on the east side.",
+              "Blank 17 beside the east path, opposite the café and before the main hall.",
+              "Blank 18 on the west path, between the café and garden.",
+              "Blank 19 at the north-west corner beside the courtyard.",
+              "Blank 20 at the south-east corner, near the service gate."
+            ],
+            "must_show": [
+              "River Road",
+              "main gate",
+              "café",
+              "main hall",
+              "courtyard",
+              "garden",
+              "east path",
+              "west path",
+              "service gate",
+              "blanks numbered 17 to 20"
+            ],
+            "must_not_show": [
+              "The answers for blanks 17 to 20",
+              "Any labels identifying reception, library, pottery studio, or bicycle racks"
+            ]
+          },
+          "visual_brief": {
+            "kind": "plan",
+            "scenario": "A simple overhead site plan used to guide visitors around a community centre during renovation.",
+            "orientation": "North at top; entrance and River Road at south.",
+            "features": "Show fixed landmarks and four clearly positioned numbered blanks matching the spoken route.",
+            "must_show": [
+              "Blank 17",
+              "Blank 18",
+              "Blank 19",
+              "Blank 20"
+            ],
+            "must_not_show": [
+              "Answer words inside or beside any blank"
+            ]
+          },
+          "images": [],
+          "image_status": "pending_vendor",
+          "subInstructions": "Write NO MORE THAN THREE WORDS for each answer.",
+          "groupRange": "17-20"
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "questionGroups": [
+        {
+          "type": "multiple_choice",
+          "questions": [
+            {
+              "number": 21,
+              "type": "multiple_choice",
+              "question": "What is the main focus of the students' project?",
+              "options": {
+                "A": "the effect of noise on library users",
+                "B": "the influence of natural light on study-space comfort",
+                "C": "the relationship between furniture and study results"
+              }
+            },
+            {
+              "number": 22,
+              "type": "multiple_choice",
+              "question": "What source will the students use for information about campus buildings?",
+              "options": {
+                "A": "maintenance records from the estate office",
+                "B": "students' memories of room conditions",
+                "C": "a map produced by the engineering department"
+              }
+            },
+            {
+              "number": 23,
+              "type": "multiple_choice",
+              "question": "What problem did Maya identify with the pilot survey?",
+              "options": {
+                "A": "The questions were unclear.",
+                "B": "Too few volunteers completed it.",
+                "C": "It was conducted during the examination period."
+              }
+            },
+            {
+              "number": 24,
+              "type": "multiple_choice",
+              "question": "Why will the students select buildings with different orientations?",
+              "options": {
+                "A": "to compare morning and afternoon light",
+                "B": "to reduce the distance between locations",
+                "C": "to avoid rooms with large windows"
+              }
+            },
+            {
+              "number": 25,
+              "type": "multiple_choice",
+              "question": "What measurement will the students take at each participant's desk?",
+              "options": {
+                "A": "surface temperature",
+                "B": "illuminance",
+                "C": "noise level"
+              }
+            },
+            {
+              "number": 26,
+              "type": "multiple_choice",
+              "question": "What does Priya say the students must do when asking about comfort?",
+              "options": {
+                "A": "use a consistent rating scale",
+                "B": "ask students about their furniture preferences",
+                "C": "measure how quickly students finish assignments"
+              }
+            }
+          ],
+          "groupRange": "21-26"
+        },
+        {
+          "type": "matching",
+          "instructions": "Questions 27 to 30: Choose the correct letter, A to D.",
+          "subInstructions": "Write the correct letter, A to D, next to questions 27 to 30.",
+          "options": {
+            "A": "Maya",
+            "B": "Owen",
+            "C": "Priya",
+            "D": "Professor Keane"
+          },
+          "questions": [
+            {
+              "number": 27,
+              "type": "matching",
+              "question": "Who will analyse the numerical results?"
+            },
+            {
+              "number": 28,
+              "type": "matching",
+              "question": "Who will conduct the participant interviews?"
+            },
+            {
+              "number": 29,
+              "type": "matching",
+              "question": "Who will review previous research?"
+            },
+            {
+              "number": 30,
+              "type": "matching",
+              "question": "Who will arrange access to the study locations?"
+            }
+          ],
+          "groupRange": "27-30"
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "questionGroups": [
+        {
+          "type": "note_completion",
+          "questions": [
+            {
+              "number": 31,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Participants wore a wrist device called an ________ device."
+            },
+            {
+              "number": 32,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Data were collected for ________ days."
+            },
+            {
+              "number": 33,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Participants completed a daily ________ to explain unusual device readings."
+            },
+            {
+              "number": 34,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "The researchers focused particularly on ________ light after participants woke up."
+            },
+            {
+              "number": 35,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "The study recorded the time of each participant's final ________ drink."
+            },
+            {
+              "number": 36,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "The baseline questionnaire examined each person's usual ________."
+            },
+            {
+              "number": 37,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Sleep regularity was calculated using the ________ of sleep."
+            },
+            {
+              "number": 38,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Naps lasting under ________ minutes were not strongly connected with poorer sleep at night."
+            },
+            {
+              "number": 39,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "Longer naps were most problematic when taken late in the ________."
+            },
+            {
+              "number": 40,
+              "type": "note_completion",
+              "prompt": "Sleep Research Study",
+              "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+              "notes": "A limitation of wrist devices is that they may mistake quiet wakefulness for ________."
+            }
+          ],
+          "subInstructions": "Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.",
+          "groupRange": "31-40"
+        }
+      ]
+    }
+  ],
+  "document": "## Listening Part 1\n\n# Generated practice content\n\n```json\n{\n  \"type\": \"listening\",\n  \"partNumber\": 1,\n  \"context\": \"A customer phones a hotel receptionist to make a booking and discuss arrival arrangements.\",\n  \"speakers\": [\n    {\n      \"id\": \"N1\",\n      \"role\": \"narrator\",\n      \"gender\": \"female\",\n      \"accent\": \"australian\"\n    },\n    {\n      \"id\": \"S1\",\n      \"role\": \"hotel receptionist\",\n      \"gender\": \"male\",\n      \"accent\": \"british\"\n    },\n    {\n      \"id\": \"S2\",\n      \"role\": \"customer\",\n      \"gender\": \"female\",\n      \"accent\": \"american\"\n    }\n  ],\n  \"script\": {\n    \"turns\": [\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Welcome to this IELTS-style Listening practice test. You will hear each recording once only. There are four parts, and you will have time to look at the questions and to check your answers. Now look at Part 1. You will hear a customer making a hotel booking by telephone. First, you have some time to look at questions 1 to 6.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:40]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen carefully and answer questions 1 to 6.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"Hello. I am planning a short break in Seaborne next month, and I would like to book a room at the Harbour Lights Hotel. I looked at your website, but I was not certain which rooms were still available. I need accommodation for my husband and me, rather than a room for a larger family group.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Certainly. I can check that for you. Before we discuss the rooms, may I take the booking name? Is it Miss Carter? I can see that name on an enquiry made yesterday, but it has not been confirmed.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"No, that was probably somebody else. My first name is Lorna, and my surname is Keller. That is K, E, L, L, E, R. I made no earlier enquiry, so this will be a new booking.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Thank you, Ms Keller. What date would you like to arrive? We have a food festival on the nineteenth of October, so that Saturday is particularly busy. There is more choice if you arrive the day before.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"That is exactly what we want to do. We will arrive on Friday, the eighteenth of October, and leave on Monday morning. At first I considered staying for two nights, but we have decided that three nights will give us enough time to visit the coast.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Fine. For three nights from the eighteenth of October, I can offer a standard double room facing the town, or a double room with a harbour view. The town rooms are quieter early in the morning, but the harbour rooms have a small balcony and you can watch the fishing boats.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"The harbour view sounds much nicer. Please book that. There will be just two adults. Our daughter was going to come with us, but she has an examination that weekend, so she will stay at home.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"A harbour-view double for two adults, then. The total cost, including breakfast, is one hundred and eighty pounds. You do not need to pay all of that today. To secure the reservation, we require a deposit of sixty pounds, and the remaining balance is payable when you check out.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"That is fine. I can pay the sixty pounds by debit card now. Could you also tell me a little about arriving at the hotel? We will be driving from the airport, and we may not reach Seaborne until the evening.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:25]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen and answer questions 7 to 10.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Of course. First, regarding your car, please do not leave it in the public spaces along the harbour road. Those spaces are free after six o'clock, but they are often full, and some are reserved for local residents. Hotel guests should use our secure car park, which is at the rear of the building. When you arrive, drive past the main entrance and follow the blue sign beside the bakery.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"That is helpful. We are collecting a hire car at the airport. If our flight is delayed, we might arrive after the reception desk closes. Is there somebody available until nine o'clock, or do we need to make special arrangements?\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Reception is staffed until ten o'clock, so nine would not be a problem. However, the airport shuttle is different: its final departure from the airport is at six thirty in the evening, not seven. Since you have a hire car, that service is not relevant, but I mention it because some guests assume it runs later.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"Yes, we will drive ourselves. What should I bring when we check in? I have the reservation email saved on my phone, although I can print it if that is easier.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"The email is useful, but you do not need a printed copy. We will need to see your passport as photographic identification. A driving licence is accepted only for guests who live in the United Kingdom, so your passport will be the simplest document to bring.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"All right. And on Monday, what time do we have to leave the room? Our return flight is not until late afternoon, so I was hoping we would not need to rush away immediately after breakfast.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Breakfast finishes at ten thirty, but check-out is later than that: it is at twelve noon. You may leave your luggage at reception after checking out, free of charge, and collect it before you drive back to the airport. I will email the confirmation to you this afternoon.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"Perfect. Please go ahead with the booking. I will pay the deposit now, and I will look out for the confirmation email. Thank you for explaining everything so clearly.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"That is the end of Part 1. You now have one minute to check your answers to Part 1.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:60]\"\n      }\n    ]\n  },\n  \"word_count\": 689,\n  \"content_word_count\": 549,\n  \"parts\": [\n    {\n      \"partNumber\": 1,\n      \"questionGroups\": [\n        {\n          \"type\": \"form_completion\",\n          \"questions\": [\n            {\n              \"number\": 1,\n              \"type\": \"form_completion\",\n              \"prompt\": \"Complete the hotel booking form.\",\n              \"subInstructions\": \"Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.\",\n              \"text\": \"Surname: 1 ______\"\n            },\n            {\n              \"number\": 2,\n              \"type\": \"form_completion\",\n              \"text\": \"Arrival date: 2 ______\"\n            },\n            {\n              \"number\": 3,\n              \"type\": \"form_completion\",\n              \"text\": \"Length of stay: 3 ______\"\n            },\n            {\n              \"number\": 4,\n              \"type\": \"form_completion\",\n              \"text\": \"Room requested: double room with a 4 ______\"\n            },\n            {\n              \"number\": 5,\n              \"type\": \"form_completion\",\n              \"text\": \"Number of guests: 5 ______ adults\"\n            },\n            {\n              \"number\": 6,\n              \"type\": \"form_completion\",\n              \"text\": \"Deposit required: 6 ______\"\n            }\n          ]\n        },\n        {\n          \"type\": \"note_completion\",\n          \"questions\": [\n            {\n              \"number\": 7,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Complete the notes about arrival arrangements.\",\n              \"subInstructions\": \"Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.\",\n              \"text\": \"Parking: use the secure 7 ______ at the rear of the hotel.\"\n            },\n            {\n              \"number\": 8,\n              \"type\": \"note_completion\",\n              \"text\": \"The final airport shuttle leaves at 8 ______ in the evening.\"\n            },\n            {\n              \"number\": 9,\n              \"type\": \"note_completion\",\n              \"text\": \"Guests should bring a 9 ______ for identification.\"\n            },\n            {\n              \"number\": 10,\n              \"type\": \"note_completion\",\n              \"text\": \"Check-out time: 10 ______\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"answer_key\": {\n    \"1\": \"Keller\",\n    \"2\": \"eighteenth of October\",\n    \"3\": \"three nights\",\n    \"4\": \"harbour view\",\n    \"5\": \"two\",\n    \"6\": \"sixty pounds\",\n    \"7\": \"car park\",\n    \"8\": \"six thirty\",\n    \"9\": \"passport\",\n    \"10\": \"twelve noon\"\n  },\n  \"answer_evidence\": {\n    \"1\": \"S2: \\\"My surname is Keller. That is K, E, L, L, E, R.\\\"\",\n    \"2\": \"S2: \\\"We will arrive on Friday, the eighteenth of October.\\\"\",\n    \"3\": \"S2: \\\"We have decided that three nights will give us enough time.\\\"\",\n    \"4\": \"S2: \\\"The harbour view sounds much nicer. Please book that.\\\"\",\n    \"5\": \"S2: \\\"There will be just two adults.\\\"\",\n    \"6\": \"S1: \\\"To secure the reservation, we require a deposit of sixty pounds.\\\"\",\n    \"7\": \"S1: \\\"Hotel guests should use our secure car park.\\\"\",\n    \"8\": \"S1: \\\"Its final departure from the airport is at six thirty in the evening.\\\"\",\n    \"9\": \"S1: \\\"We will need to see your passport as photographic identification.\\\"\",\n    \"10\": \"S1: \\\"Check-out is later than that: it is at twelve noon.\\\"\"\n  },\n  \"format\": \"json\"\n}\n```\n\n---\n\n## Listening Part 2\n\n# Generated practice content\n\n```json\n{\n  \"type\": \"listening\",\n  \"partNumber\": 2,\n  \"context\": \"A community centre manager gives visitors an update on renovation work and explains the temporary site layout.\",\n  \"speakers\": [\n    {\n      \"id\": \"N1\",\n      \"role\": \"narrator\",\n      \"gender\": \"female\",\n      \"accent\": \"british\"\n    },\n    {\n      \"id\": \"S1\",\n      \"role\": \"community centre manager\",\n      \"gender\": \"male\",\n      \"accent\": \"american\"\n    }\n  ],\n  \"script\": {\n    \"turns\": [\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now look at Part 2. You will hear a manager giving a talk about the renovation of a community centre. First, you have some time to look at questions 11 to 16.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:40]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen carefully and answer questions 11 to 16.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Good morning, everyone. I am Daniel Price, the manager of Riverside Community Centre. Thank you for coming to this update meeting before the renovation begins next Monday, the eighth of June. The building will remain partly open, but the work is more extensive than simply repainting the walls. We are replacing the old heating system, improving wheelchair access, and creating several rooms that local groups have requested for years. Some people have asked whether the whole centre will close. It will not. The sports hall and the meeting rooms will be unavailable, and the gym will close for a short period while its floor is repaired. However, the café will stay open throughout the project, although it will use a smaller menu and close at four o'clock rather than six.\\n\\nThe largest share of the budget comes from a council grant. We also received several small donations from local businesses, and the Friends of Riverside group raised money at a concert, but neither of those sources would have been enough on its own. Before finalizing the design, we asked residents to complete an online questionnaire. We considered holding a public meeting first, but the questionnaire allowed people who work evenings or care for children to contribute as well. The most common request was for more flexible space for clubs and classes.\\n\\nYou may notice some noise during the first two weeks. The drilling for new wiring will be noticeable, but the noisiest stage will be demolition of the wall between the old store room and the activity room. Contractors will carry out that work between ten in the morning and three in the afternoon, rather than early in the day. Our original target was August, but supply delays mean that the centre should be fully completed in September. We would rather give you a realistic date than promise a faster one and disappoint you.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"There is one way that local residents can help. We do not need volunteers to paint walls, because that must be done by qualified contractors. We are asking for help moving books from the present library shelves into storage boxes before the builders arrive. If you can spare two hours on Saturday, please speak to the reception team after this talk. The books will return when the new reading area opens.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Before you hear the rest, you have some time to look at questions 17 to 20.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:25]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen and answer questions 17 to 20.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Now I will explain the temporary layout, because the main entrance will look different during the renovation. On your plan, north is at the top. You enter the site from River Road at the south, through the main gate. The café is immediately on your left, and the main hall is directly ahead. The courtyard is beyond the main hall, at the northern end of the site.\\n\\nFirst, question 17. The reception desk will not be inside the main building during the work. From the main gate, walk straight ahead toward the main hall, then turn right before you reach its doors. You will find the temporary reception desk in a small cabin beside the east path. It is opposite the café, not next to it. Staff there can give you room changes, class information, and access cards.\\n\\nFor question 18, the temporary library is in the west wing. From reception, go back past the front of the main hall and take the path on the left, between the café and the garden. The first room on that path is the temporary library. Do not confuse it with the café seating area: the library has a separate entrance and a sign saying Quiet Space. It will contain books, newspapers, and two public computers.\\n\\nQuestion 19 is the pottery studio. This is not in the old art room, which is being converted into an accessible toilet. Instead, continue along the west path past the temporary library. At the north-west corner, beside the courtyard, there is a portable building. That is the pottery studio. Classes will meet there on Tuesdays and Thursdays, and participants should enter from the courtyard side, not through the library.\\n\\nFinally, for question 20, bicycle racks have been moved. They are no longer beside the main gate, where construction vehicles need space. From the entrance, take the east path past the reception cabin. The racks are at the south-east corner of the site, just before the service gate. Please use those racks rather than attaching bicycles to the fence. Cars should use the public parking lot across River Road, since the centre lot will be reserved for contractors and accessible parking.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"That is the end of Part 2. You now have one minute to check your answers to Part 2.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:60]\"\n      }\n    ]\n  },\n  \"word_count\": 692,\n  \"content_word_count\": 544,\n  \"parts\": [\n    {\n      \"partNumber\": 2,\n      \"questionGroups\": [\n        {\n          \"questions\": [\n            {\n              \"number\": 11,\n              \"type\": \"mcq_single\",\n              \"question\": \"Which facility will remain open throughout the renovation?\",\n              \"options\": {\n                \"A\": \"the gym\",\n                \"B\": \"the café\",\n                \"C\": \"the sports hall\"\n              }\n            },\n            {\n              \"number\": 12,\n              \"type\": \"mcq_single\",\n              \"question\": \"What is the main source of funding for the renovation?\",\n              \"options\": {\n                \"A\": \"a council grant\",\n                \"B\": \"local business donations\",\n                \"C\": \"a fundraising concert\"\n              }\n            },\n            {\n              \"number\": 13,\n              \"type\": \"mcq_single\",\n              \"question\": \"How did the centre collect residents' opinions about the plans?\",\n              \"options\": {\n                \"A\": \"at a public meeting\",\n                \"B\": \"through an online questionnaire\",\n                \"C\": \"by telephone interviews\"\n              }\n            },\n            {\n              \"number\": 14,\n              \"type\": \"mcq_single\",\n              \"question\": \"Which stage of the work will cause the greatest amount of noise?\",\n              \"options\": {\n                \"A\": \"demolition\",\n                \"B\": \"floor repairs\",\n                \"C\": \"new wiring\"\n              }\n            },\n            {\n              \"number\": 15,\n              \"type\": \"mcq_single\",\n              \"question\": \"When is the renovated centre now expected to be fully completed?\",\n              \"options\": {\n                \"A\": \"June\",\n                \"B\": \"August\",\n                \"C\": \"September\"\n              }\n            },\n            {\n              \"number\": 16,\n              \"type\": \"mcq_single\",\n              \"question\": \"What are volunteers being asked to do?\",\n              \"options\": {\n                \"A\": \"paint walls\",\n                \"B\": \"move books\",\n                \"C\": \"serve food\"\n              }\n            }\n          ],\n          \"groupInstructions\": \"Choose the correct letter, A, B or C.\",\n          \"type\": \"mcq_single\"\n        },\n        {\n          \"questions\": [\n            {\n              \"number\": 17,\n              \"type\": \"map_labelling\",\n              \"question\": \"Label the plan. Write the correct answer for blank 17.\",\n              \"subInstructions\": \"Write NO MORE THAN THREE WORDS for each answer.\"\n            },\n            {\n              \"number\": 18,\n              \"type\": \"map_labelling\",\n              \"question\": \"Label the plan. Write the correct answer for blank 18.\",\n              \"subInstructions\": \"Write NO MORE THAN THREE WORDS for each answer.\"\n            },\n            {\n              \"number\": 19,\n              \"type\": \"map_labelling\",\n              \"question\": \"Label the plan. Write the correct answer for blank 19.\",\n              \"subInstructions\": \"Write NO MORE THAN THREE WORDS for each answer.\"\n            },\n            {\n              \"number\": 20,\n              \"type\": \"map_labelling\",\n              \"question\": \"Label the plan. Write the correct answer for blank 20.\",\n              \"subInstructions\": \"Write NO MORE THAN THREE WORDS for each answer.\"\n            }\n          ],\n          \"groupInstructions\": \"Label the plan below.\",\n          \"type\": \"map_labelling\",\n          \"visual\": {\n            \"kind\": \"plan\",\n            \"scenario\": \"Temporary layout of Riverside Community Centre during renovation work.\",\n            \"orientation\": \"North is at the top. River Road and the main gate are at the south.\",\n            \"layout\": [\n              \"Main gate at the south centre, leading north to the main hall.\",\n              \"Café on the west side of the entrance area.\",\n              \"Main hall in the centre of the site.\",\n              \"Courtyard directly north of the main hall.\",\n              \"Garden and west path to the west of the main hall.\",\n              \"East path and service gate on the east side.\",\n              \"Blank 17 beside the east path, opposite the café and before the main hall.\",\n              \"Blank 18 on the west path, between the café and garden.\",\n              \"Blank 19 at the north-west corner beside the courtyard.\",\n              \"Blank 20 at the south-east corner, near the service gate.\"\n            ],\n            \"must_show\": [\n              \"River Road\",\n              \"main gate\",\n              \"café\",\n              \"main hall\",\n              \"courtyard\",\n              \"garden\",\n              \"east path\",\n              \"west path\",\n              \"service gate\",\n              \"blanks numbered 17 to 20\"\n            ],\n            \"must_not_show\": [\n              \"The answers for blanks 17 to 20\",\n              \"Any labels identifying reception, library, pottery studio, or bicycle racks\"\n            ]\n          },\n          \"visual_brief\": {\n            \"kind\": \"plan\",\n            \"scenario\": \"A simple overhead site plan used to guide visitors around a community centre during renovation.\",\n            \"orientation\": \"North at top; entrance and River Road at south.\",\n            \"features\": \"Show fixed landmarks and four clearly positioned numbered blanks matching the spoken route.\",\n            \"must_show\": [\n              \"Blank 17\",\n              \"Blank 18\",\n              \"Blank 19\",\n              \"Blank 20\"\n            ],\n            \"must_not_show\": [\n              \"Answer words inside or beside any blank\"\n            ]\n          },\n          \"images\": [],\n          \"image_status\": \"pending_vendor\"\n        }\n      ]\n    }\n  ],\n  \"answer_key\": {\n    \"11\": \"B\",\n    \"12\": \"A\",\n    \"13\": \"B\",\n    \"14\": \"A\",\n    \"15\": \"C\",\n    \"16\": \"B\",\n    \"17\": \"reception desk\",\n    \"18\": \"temporary library\",\n    \"19\": \"pottery studio\",\n    \"20\": \"bicycle racks\"\n  },\n  \"answer_evidence\": {\n    \"11\": \"S1: \\\"However, the café will stay open throughout the project.\\\"\",\n    \"12\": \"S1: \\\"The largest share of the budget comes from a council grant.\\\"\",\n    \"13\": \"S1: \\\"We asked residents to complete an online questionnaire.\\\"\",\n    \"14\": \"S1: \\\"The noisiest stage will be demolition of the wall.\\\"\",\n    \"15\": \"S1: \\\"The centre should be fully completed in September.\\\"\",\n    \"16\": \"S1: \\\"We are asking for help moving books from the present library shelves into storage boxes.\\\"\",\n    \"17\": \"S1: \\\"You will find the temporary reception desk in a small cabin beside the east path.\\\"\",\n    \"18\": \"S1: \\\"The first room on that path is the temporary library.\\\"\",\n    \"19\": \"S1: \\\"That is the pottery studio.\\\"\",\n    \"20\": \"S1: \\\"The racks are at the south-east corner of the site, just before the service gate.\\\"\"\n  },\n  \"format\": \"json\"\n}\n```\n\n---\n\n## Listening Part 3\n\n# Generated practice content\n\n```json\n{\n  \"type\": \"listening\",\n  \"partNumber\": 3,\n  \"context\": \"Three university students discuss plans for a group project investigating how campus buildings affect student comfort and study habits.\",\n  \"speakers\": [\n    {\n      \"id\": \"N1\",\n      \"role\": \"narrator\",\n      \"gender\": \"male\",\n      \"accent\": \"new_zealand\"\n    },\n    {\n      \"id\": \"S1\",\n      \"role\": \"student\",\n      \"gender\": \"female\",\n      \"accent\": \"american\"\n    },\n    {\n      \"id\": \"S2\",\n      \"role\": \"student\",\n      \"gender\": \"male\",\n      \"accent\": \"british\"\n    },\n    {\n      \"id\": \"S3\",\n      \"role\": \"student\",\n      \"gender\": \"female\",\n      \"accent\": \"australian\"\n    }\n  ],\n  \"script\": {\n    \"turns\": [\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now look at Part 3. You will hear three students discussing a project for their environmental design course. First, you have some time to look at questions 21 to 26.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:40]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen carefully and answer questions 21 to 26.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Thanks for coming, Owen and Priya. We need to finalise our proposal before Professor Keane sees it tomorrow. Our broad subject is campus buildings, but I think we should not try to assess every environmental feature. At first, I suggested investigating noise in the library, because several students complain about it. However, the professor said that has already been studied. So our project will examine whether the amount of natural light in study spaces affects how comfortable students feel and how long they choose to remain there.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"That is manageable. We could use the new science block only, since it has large windows. But a comparison would be stronger. I looked at the estate office records, and they list the age, window size and orientation of every teaching building. Those maintenance records are more reliable than asking students to estimate conditions from memory.\"\n      },\n      {\n        \"speaker\": \"S3\",\n        \"text\": \"Yes, and we should choose buildings with different orientations. The science block faces east, the old arts building faces west, and the learning hub has rooms facing north and south. We should not select locations simply because they are close together. If we compare spaces receiving morning light with spaces receiving afternoon light, the findings will be more useful.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"For the pilot survey, I asked ten volunteers to complete the questions after a study session. The wording was fine, but the timing was a problem. I ran it during the final examination period, when people were unusually stressed and stayed in rooms for reasons unrelated to comfort. So, for the main survey, we should collect responses in weeks five and six, before revision begins.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"What measurements will we take? A light meter would give a numerical reading, but perhaps temperature matters as well. I can borrow an infrared camera from the engineering department, although it would only show surface temperatures. Actually, the simplest useful measure is illuminance from a digital light meter. We can take readings at the desk where each participant is sitting, rather than beside the window.\"\n      },\n      {\n        \"speaker\": \"S3\",\n        \"text\": \"Professor Keane will probably ask how we define comfort. We cannot leave it as a vague personal opinion. We should give participants the same five-point scale, from very uncomfortable to very comfortable, and explain that they are rating the room conditions, not whether they like the furniture or have finished their assignment.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Good point. Also, we should record the time of day, because bright morning sun can be pleasant in winter but distracting in summer. We are not trying to prove that daylight automatically improves grades. Our claim is much narrower: daylight may influence the amount of time students voluntarily spend in particular study spaces.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Before you hear the rest of the discussion, you have some time to look at questions 27 to 30.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:25]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen and answer questions 27 to 30.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"Let us divide the work clearly, then. I am happy to deal with the numerical information. I have used spreadsheet software in another module, so I will enter the light-meter readings and survey scores, check for missing values, and produce the graphs. I will not conduct the interviews, because I tend to rush people when I am taking notes.\"\n      },\n      {\n        \"speaker\": \"S3\",\n        \"text\": \"In that case, I will prepare the interview questions and speak to participants. I worked at the student advice desk last year, so I am comfortable asking follow-up questions without leading people towards a particular answer. I will make sure that each interview is no longer than six minutes. We only need detailed comments from a small group after they complete the survey.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"That leaves the background research and the practical arrangements for me. I can read previous studies, but I think Priya should handle the literature review because she has already found the three most relevant journal articles. Priya, could you summarise what earlier researchers discovered and identify any gaps? I will contact the building managers instead. We need permission to visit rooms, particularly the silent floor in the learning hub.\"\n      },\n      {\n        \"speaker\": \"S3\",\n        \"text\": \"Yes, I will do the literature review. I will focus on studies of daylight and perceived comfort, rather than papers about energy consumption. There is one useful article by Helena Morris, M O R R I S, which compares student behaviour in naturally lit and artificially lit rooms. I will send both of you a one-page summary by Friday.\"\n      },\n      {\n        \"speaker\": \"S2\",\n        \"text\": \"Maya, when you contact the managers, ask whether any blinds will be replaced during our data-collection weeks. If a room is closed for maintenance, we need an alternative location. Perhaps you should also reserve the portable light meters, because the department has only four and another class may need them.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"I will do both. I will request access, confirm room availability, and reserve the equipment. We should meet next Tuesday at two fifteen, not two fifty, in the café beside the design studio. By then, Priya can bring the research summary, Owen can show us a trial spreadsheet, and I can report on permissions.\"\n      },\n      {\n        \"speaker\": \"S3\",\n        \"text\": \"Agreed. I will also draft an information sheet explaining that participants can stop at any time and that their names will not appear in the report. That is not the same as collecting consent forms, though. Maya, since you are communicating with the managers and organising the visits, could you ask the professor which consent form the department requires?\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Certainly. I will check that with Professor Keane. Once we have permission, we can test the survey in one room on Wednesday afternoon. If the questions take longer than five minutes, we will shorten them before starting the full study.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"That is the end of Part 3. You now have one minute to check your answers to Part 3.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:60]\"\n      }\n    ]\n  },\n  \"word_count\": 676,\n  \"content_word_count\": 560,\n  \"parts\": [\n    {\n      \"partNumber\": 3,\n      \"questionGroups\": [\n        {\n          \"type\": \"mcq_single\",\n          \"questions\": [\n            {\n              \"number\": 21,\n              \"type\": \"mcq_single\",\n              \"question\": \"What is the main focus of the students' project?\",\n              \"options\": {\n                \"A\": \"the effect of noise on library users\",\n                \"B\": \"the influence of natural light on study-space comfort\",\n                \"C\": \"the relationship between furniture and study results\"\n              }\n            },\n            {\n              \"number\": 22,\n              \"type\": \"mcq_single\",\n              \"question\": \"What source will the students use for information about campus buildings?\",\n              \"options\": {\n                \"A\": \"maintenance records from the estate office\",\n                \"B\": \"students' memories of room conditions\",\n                \"C\": \"a map produced by the engineering department\"\n              }\n            },\n            {\n              \"number\": 23,\n              \"type\": \"mcq_single\",\n              \"question\": \"What problem did Maya identify with the pilot survey?\",\n              \"options\": {\n                \"A\": \"The questions were unclear.\",\n                \"B\": \"Too few volunteers completed it.\",\n                \"C\": \"It was conducted during the examination period.\"\n              }\n            },\n            {\n              \"number\": 24,\n              \"type\": \"mcq_single\",\n              \"question\": \"Why will the students select buildings with different orientations?\",\n              \"options\": {\n                \"A\": \"to compare morning and afternoon light\",\n                \"B\": \"to reduce the distance between locations\",\n                \"C\": \"to avoid rooms with large windows\"\n              }\n            },\n            {\n              \"number\": 25,\n              \"type\": \"mcq_single\",\n              \"question\": \"What measurement will the students take at each participant's desk?\",\n              \"options\": {\n                \"A\": \"surface temperature\",\n                \"B\": \"illuminance\",\n                \"C\": \"noise level\"\n              }\n            },\n            {\n              \"number\": 26,\n              \"type\": \"mcq_single\",\n              \"question\": \"What does Priya say the students must do when asking about comfort?\",\n              \"options\": {\n                \"A\": \"use a consistent rating scale\",\n                \"B\": \"ask students about their furniture preferences\",\n                \"C\": \"measure how quickly students finish assignments\"\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"matching\",\n          \"instructions\": \"Questions 27 to 30: Choose the correct letter, A to D.\",\n          \"subInstructions\": \"Write the correct letter, A to D, next to questions 27 to 30.\",\n          \"options\": {\n            \"A\": \"Maya\",\n            \"B\": \"Owen\",\n            \"C\": \"Priya\",\n            \"D\": \"Professor Keane\"\n          },\n          \"questions\": [\n            {\n              \"number\": 27,\n              \"type\": \"matching\",\n              \"question\": \"Who will analyse the numerical results?\"\n            },\n            {\n              \"number\": 28,\n              \"type\": \"matching\",\n              \"question\": \"Who will conduct the participant interviews?\"\n            },\n            {\n              \"number\": 29,\n              \"type\": \"matching\",\n              \"question\": \"Who will review previous research?\"\n            },\n            {\n              \"number\": 30,\n              \"type\": \"matching\",\n              \"question\": \"Who will arrange access to the study locations?\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"answer_key\": {\n    \"21\": \"B\",\n    \"22\": \"A\",\n    \"23\": \"C\",\n    \"24\": \"A\",\n    \"25\": \"B\",\n    \"26\": \"A\",\n    \"27\": \"B\",\n    \"28\": \"C\",\n    \"29\": \"C\",\n    \"30\": \"A\"\n  },\n  \"answer_evidence\": {\n    \"21\": \"S1: \\\"our project will examine whether the amount of natural light in study spaces affects how comfortable students feel\\\"\",\n    \"22\": \"S2: \\\"I looked at the estate office records\\\"\",\n    \"23\": \"S1: \\\"I ran it during the final examination period\\\"\",\n    \"24\": \"S3: \\\"If we compare spaces receiving morning light with spaces receiving afternoon light\\\"\",\n    \"25\": \"S2: \\\"the simplest useful measure is illuminance from a digital light meter\\\"\",\n    \"26\": \"S3: \\\"We should give participants the same five-point scale\\\"\",\n    \"27\": \"S2: \\\"I will enter the light-meter readings and survey scores... and produce the graphs.\\\"\",\n    \"28\": \"S3: \\\"I will prepare the interview questions and speak to participants.\\\"\",\n    \"29\": \"S3: \\\"Yes, I will do the literature review.\\\"\",\n    \"30\": \"S1: \\\"I will contact the building managers instead. We need permission to visit rooms.\\\"\"\n  },\n  \"format\": \"json\"\n}\n```\n\n---\n\n## Listening Part 4\n\n# Generated practice content\n\n```json\n{\n  \"type\": \"listening\",\n  \"partNumber\": 4,\n  \"context\": \"An academic lecture about methods and findings in sleep research.\",\n  \"speakers\": [\n    {\n      \"id\": \"N1\",\n      \"role\": \"narrator\",\n      \"gender\": \"female\",\n      \"accent\": \"british\"\n    },\n    {\n      \"id\": \"S1\",\n      \"role\": \"lecturer\",\n      \"gender\": \"male\",\n      \"accent\": \"american\"\n    }\n  ],\n  \"script\": {\n    \"turns\": [\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now look at Part 4. You will hear a lecture about sleep research. First, you have some time to look at questions 31 to 36.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:40]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen carefully and answer questions 31 to 36.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Today I will describe a university study examining why adults often feel tired even when they believe they spend enough time in bed. The important point is that sleep research is not simply about counting hours. Researchers also examine regularity, interruptions, and the timing of sleep in relation to an individual's internal body clock. Our project recruited one hundred and twenty office employees between the ages of twenty-five and fifty-five. We did not include shift workers, because changing work schedules would have made the results difficult to interpret. We also excluded people who had recently travelled across several time zones, although a short domestic trip was not considered a reason to exclude them.\\n\\nEach participant wore an actigraphy device on the wrist. This looks rather like a watch, but it records movement and estimates periods of sleep and wakefulness. Some people assume that the device measures brain activity. It does not; for that, researchers need laboratory equipment. Participants wore the device continuously for fourteen days, including weekends. A week would have been cheaper and easier, but two weeks allowed us to compare workdays with non-workdays more reliably.\\n\\nThe electronic record was supported by a sleep diary completed every morning. In this diary, participants reported the time they tried to sleep, the time they believed they woke up, and whether they had taken naps. The diary was not intended to replace the wrist device. Instead, it helped us understand unusual patterns in the movement data, such as a participant lying still in bed while reading. We asked people to complete the diary before checking email or speaking to anyone, since later activities could affect their memory of the previous night.\\n\\nWe also measured light exposure with a small sensor attached to the same wristband. Bright light in the morning was of particular interest because it can move the body clock earlier. Evening light matters too, especially from screens, but our main analysis focused on light received during the first two hours after waking. Participants were advised not to alter their normal routines. In other words, we were observing ordinary behavior, not testing whether a new treatment improved sleep.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Before you hear the rest of the lecture, you have some time to look at questions 37 to 40.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:25]\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"Now listen and answer questions 37 to 40.\"\n      },\n      {\n        \"speaker\": \"S1\",\n        \"text\": \"Alongside these measurements, participants answered short questions about food, drinks, exercise, and stress. We were especially careful about caffeine. It is not only coffee that contains caffeine; tea, cola, and some energy drinks can contain substantial amounts. Rather than asking people to stop consuming it, we recorded their final caffeinated drink of the day. The results showed that a late intake was associated with a later sleep onset. This was a statistical association, however, and does not prove that caffeine was the only cause. For example, people who work late may both drink coffee and go to bed late.\\n\\nBefore collecting data, every participant completed a baseline questionnaire. This included general health questions, but the most useful section asked about their usual chronotype. Chronotype describes whether someone naturally prefers earlier or later sleep and waking times. It is sometimes confused with personality: people describe themselves as either disciplined early birds or lazy night owls. That interpretation is far too simple. Chronotype is influenced partly by biology, and it can also vary with age and daily obligations.\\n\\nOur clearest finding concerned sleep regularity. Participants whose bedtimes varied widely from one night to the next reported more daytime sleepiness, even when their weekly total sleep time was similar to that of more regular sleepers. We calculated regularity by comparing the midpoint of sleep across the fourteen-day period. The midpoint is halfway between falling asleep and waking. It is not the same as the time people get into bed, because many participants spent twenty or thirty minutes awake before sleeping.\\n\\nA second finding involved short naps. A nap of less than thirty minutes was not strongly related to poorer night sleep in our sample. Longer naps, particularly those taken late in the afternoon, were linked with difficulty falling asleep at night. Still, we should not conclude that every nap is harmful. A brief nap may improve alertness after a poor night, and the effect depends on when it occurs.\\n\\nFinally, there is an important limitation. Wrist devices estimate sleep from movement, so they may classify a quiet period of wakefulness as sleep. For this reason, our conclusions should be treated as evidence about broad patterns rather than precise clinical diagnoses. Future work will combine home monitoring with laboratory recordings, where brain activity can be measured directly. That combination should help researchers distinguish people who are genuinely asleep from people who are simply resting without moving.\"\n      },\n      {\n        \"speaker\": \"N1\",\n        \"text\": \"That is the end of Part 4. You now have one minute to check your answers to Part 4.\"\n      },\n      {\n        \"speaker\": \"PAUSE\",\n        \"text\": \"[PAUSE:60]\"\n      }\n    ]\n  },\n  \"word_count\": 747,\n  \"content_word_count\": 610,\n  \"parts\": [\n    {\n      \"partNumber\": 4,\n      \"questionGroups\": [\n        {\n          \"type\": \"note_completion\",\n          \"questions\": [\n            {\n              \"number\": 31,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Participants wore a wrist device called an ________ device.\"\n            },\n            {\n              \"number\": 32,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Data were collected for ________ days.\"\n            },\n            {\n              \"number\": 33,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Participants completed a daily ________ to explain unusual device readings.\"\n            },\n            {\n              \"number\": 34,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"The researchers focused particularly on ________ light after participants woke up.\"\n            },\n            {\n              \"number\": 35,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"The study recorded the time of each participant's final ________ drink.\"\n            },\n            {\n              \"number\": 36,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"The baseline questionnaire examined each person's usual ________.\"\n            },\n            {\n              \"number\": 37,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Sleep regularity was calculated using the ________ of sleep.\"\n            },\n            {\n              \"number\": 38,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Naps lasting under ________ minutes were not strongly connected with poorer sleep at night.\"\n            },\n            {\n              \"number\": 39,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"Longer naps were most problematic when taken late in the ________.\"\n            },\n            {\n              \"number\": 40,\n              \"type\": \"note_completion\",\n              \"prompt\": \"Sleep Research Study\",\n              \"subInstructions\": \"Complete the notes below. Write NO MORE THAN TWO WORDS for each answer.\",\n              \"notes\": \"A limitation of wrist devices is that they may mistake quiet wakefulness for ________.\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"answer_key\": {\n    \"31\": \"actigraphy\",\n    \"32\": \"fourteen\",\n    \"33\": \"sleep diary\",\n    \"34\": \"morning\",\n    \"35\": \"caffeinated\",\n    \"36\": \"chronotype\",\n    \"37\": \"midpoint\",\n    \"38\": \"thirty\",\n    \"39\": \"afternoon\",\n    \"40\": \"sleep\"\n  },\n  \"answer_evidence\": {\n    \"31\": \"S1: \\\"Each participant wore an actigraphy device on the wrist.\\\"\",\n    \"32\": \"S1: \\\"Participants wore the device continuously for fourteen days.\\\"\",\n    \"33\": \"S1: \\\"The electronic record was supported by a sleep diary completed every morning.\\\"\",\n    \"34\": \"S1: \\\"Bright light in the morning was of particular interest.\\\"\",\n    \"35\": \"S1: \\\"We recorded their final caffeinated drink of the day.\\\"\",\n    \"36\": \"S1: \\\"The most useful section asked about their usual chronotype.\\\"\",\n    \"37\": \"S1: \\\"We calculated regularity by comparing the midpoint of sleep.\\\"\",\n    \"38\": \"S1: \\\"A nap of less than thirty minutes was not strongly related to poorer night sleep.\\\"\",\n    \"39\": \"S1: \\\"Longer naps, particularly those taken late in the afternoon, were linked with difficulty falling asleep.\\\"\",\n    \"40\": \"S1: \\\"They may classify a quiet period of wakefulness as sleep.\\\"\"\n  },\n  \"format\": \"json\"\n}\n```",
+  "format": "markdown",
+  "answer_key": {
+    "1": "Keller",
+    "2": "eighteenth of October",
+    "3": "three nights",
+    "4": "harbour view",
+    "5": "two",
+    "6": "sixty pounds",
+    "7": "car park",
+    "8": "six thirty",
+    "9": "passport",
+    "10": "twelve noon",
+    "11": "B",
+    "12": "A",
+    "13": "B",
+    "14": "A",
+    "15": "C",
+    "16": "B",
+    "17": "reception desk",
+    "18": "temporary library",
+    "19": "pottery studio",
+    "20": "bicycle racks",
+    "21": "B",
+    "22": "A",
+    "23": "C",
+    "24": "A",
+    "25": "B",
+    "26": "A",
+    "27": "B",
+    "28": "C",
+    "29": "C",
+    "30": "A",
+    "31": "actigraphy",
+    "32": "fourteen",
+    "33": "sleep diary",
+    "34": "morning",
+    "35": "caffeinated",
+    "36": "chronotype",
+    "37": "midpoint",
+    "38": "thirty",
+    "39": "afternoon",
+    "40": "sleep"
+  },
+  "answer_evidence": {
+    "1": "S2: \"My surname is Keller. That is K, E, L, L, E, R.\"",
+    "2": "S2: \"We will arrive on Friday, the eighteenth of October.\"",
+    "3": "S2: \"We have decided that three nights will give us enough time.\"",
+    "4": "S2: \"The harbour view sounds much nicer. Please book that.\"",
+    "5": "S2: \"There will be just two adults.\"",
+    "6": "S1: \"To secure the reservation, we require a deposit of sixty pounds.\"",
+    "7": "S1: \"Hotel guests should use our secure car park.\"",
+    "8": "S1: \"Its final departure from the airport is at six thirty in the evening.\"",
+    "9": "S1: \"We will need to see your passport as photographic identification.\"",
+    "10": "S1: \"Check-out is later than that: it is at twelve noon.\"",
+    "11": "S1: \"However, the café will stay open throughout the project.\"",
+    "12": "S1: \"The largest share of the budget comes from a council grant.\"",
+    "13": "S1: \"We asked residents to complete an online questionnaire.\"",
+    "14": "S1: \"The noisiest stage will be demolition of the wall.\"",
+    "15": "S1: \"The centre should be fully completed in September.\"",
+    "16": "S1: \"We are asking for help moving books from the present library shelves into storage boxes.\"",
+    "17": "S1: \"You will find the temporary reception desk in a small cabin beside the east path.\"",
+    "18": "S1: \"The first room on that path is the temporary library.\"",
+    "19": "S1: \"That is the pottery studio.\"",
+    "20": "S1: \"The racks are at the south-east corner of the site, just before the service gate.\"",
+    "21": "S1: \"our project will examine whether the amount of natural light in study spaces affects how comfortable students feel\"",
+    "22": "S2: \"I looked at the estate office records\"",
+    "23": "S1: \"I ran it during the final examination period\"",
+    "24": "S3: \"If we compare spaces receiving morning light with spaces receiving afternoon light\"",
+    "25": "S2: \"the simplest useful measure is illuminance from a digital light meter\"",
+    "26": "S3: \"We should give participants the same five-point scale\"",
+    "27": "S2: \"I will enter the light-meter readings and survey scores... and produce the graphs.\"",
+    "28": "S3: \"I will prepare the interview questions and speak to participants.\"",
+    "29": "S3: \"Yes, I will do the literature review.\"",
+    "30": "S1: \"I will contact the building managers instead. We need permission to visit rooms.\"",
+    "31": "S1: \"Each participant wore an actigraphy device on the wrist.\"",
+    "32": "S1: \"Participants wore the device continuously for fourteen days.\"",
+    "33": "S1: \"The electronic record was supported by a sleep diary completed every morning.\"",
+    "34": "S1: \"Bright light in the morning was of particular interest.\"",
+    "35": "S1: \"We recorded their final caffeinated drink of the day.\"",
+    "36": "S1: \"The most useful section asked about their usual chronotype.\"",
+    "37": "S1: \"We calculated regularity by comparing the midpoint of sleep.\"",
+    "38": "S1: \"A nap of less than thirty minutes was not strongly related to poorer night sleep.\"",
+    "39": "S1: \"Longer naps, particularly those taken late in the afternoon, were linked with difficulty falling asleep.\"",
+    "40": "S1: \"They may classify a quiet period of wakefulness as sleep.\""
+  },
+  "word_count": 3508,
+  "content_word_count": 3143,
+  "pause_seconds_total": 500,
+  "estimated_duration_seconds": 2003.4,
+  "tts_ready": true,
+  "_meta": {
+    "module": "listening",
+    "topic": "Hotel Booking",
+    "topics": [
+      "Hotel Booking",
+      "community centre renovation",
+      "student project meeting",
+      "lecture on sleep research"
+    ],
+    "type_plan": [
+      [
+        "form_completion",
+        "note_completion"
+      ],
+      [
+        "mcq_single",
+        "map_labelling"
+      ],
+      [
+        "mcq_single",
+        "matching"
+      ],
+      [
+        "note_completion"
+      ]
+    ],
+    "target_band": 7,
+    "part_count": 4,
+    "session_id": "c65f7fa5-8ede-44af-a3ef-bb8c31d65ab2",
+    "parts_linked": 4,
+    "generator_model": "gpt-5.6-terra",
+    "reviewer_model": "gpt-4o-mini",
+    "review": {
+      "passed": true,
+      "findings": [
+        {
+          "severity": "should",
+          "message": "[L-WC] Part 1 spoken word count 862; target max 750 (exclude pause tags; extra exam time should come from pauses)",
+          "code": "L-WC"
+        },
+        {
+          "severity": "should",
+          "message": "[critic] Part 1 spoken word count ~320; target 550–750 plus exam pauses",
+          "code": "L-WC"
+        },
+        {
+          "severity": "info",
+          "message": "Originality corpus not configured (REFERENCE_DOCUMENTS_PATH empty)",
+          "code": "ORIG-SKIP"
+        },
+        {
+          "severity": "should",
+          "message": "[L-WC] Part 2 spoken word count 832; target max 750 (exclude pause tags; extra exam time should come from pauses)",
+          "code": "L-WC"
+        },
+        {
+          "severity": "should",
+          "message": "[L-INS] questionGroup missing subInstructions",
+          "code": "L-INS"
+        },
+        {
+          "severity": "info",
+          "message": "[L-MAP-IMG] Map/plan/diagram group 17-20 images[] empty — pending external vendor (script + visual_brief are enough to generate)",
+          "code": "L-MAP-IMG"
+        },
+        {
+          "severity": "info",
+          "message": "Originality corpus not configured (REFERENCE_DOCUMENTS_PATH empty)",
+          "code": "ORIG-SKIP"
+        },
+        {
+          "severity": "should",
+          "message": "[L-WC] Part 3 spoken word count 975; target max 750 (exclude pause tags; extra exam time should come from pauses)",
+          "code": "L-WC"
+        },
+        {
+          "severity": "should",
+          "message": "[L-INS] questionGroup missing subInstructions",
+          "code": "L-INS"
+        },
+        {
+          "severity": "info",
+          "message": "Originality corpus not configured (REFERENCE_DOCUMENTS_PATH empty)",
+          "code": "ORIG-SKIP"
+        },
+        {
+          "severity": "should",
+          "message": "[L-WC] Part 4 spoken word count 839; target max 800 (exclude pause tags; extra exam time should come from pauses)",
+          "code": "L-WC"
+        },
+        {
+          "severity": "info",
+          "message": "Originality corpus not configured (REFERENCE_DOCUMENTS_PATH empty)",
+          "code": "ORIG-SKIP"
+        }
+      ],
+      "summary": "critic:advisory | rules:1 | The script's spoken word count for Part 1 is below the minimum requirement, affecting its usability for IELTS practice. | originality | rules:3 | The practice content is well-structured and relevant for IELTS listening preparation, accurately reflecting real-world scenarios with appropriate question types and complexity. | originality | rules:2 | The practice listening content for Part 3 presents a relevant and structured discussion among students about their project, effectively simulating an authentic academic environment. | originality | rules:1 | The lecture content on sleep research is comprehensive and well-structured for IELTS listening practice, providing a relevant topic and an appropriate question format. | originality",
+      "source": "combined"
+    },
+    "reasoning": "I will structure this as a four-part IELTS Listening practice paper with 40 questions in total, allocating approximately 10 questions to each part and keeping every part on an independent topic, as required. Part 1 will use the Hotel Booking topic and will be a practical two-speaker booking conversation; it will combine form completion and note completion, with answers drawn directly from stated booking details such as dates, room requirements, guest information, facilities, prices, or conditions. Part 2 will use the community centre renovation topic and will be a one-speaker informational talk; it will combine single-answer multiple choice with map labelling, ensuring that the script gives clear location language, orientation points, and unambiguous references for every map answer. Part 3 will use the student project meeting topic and will be a discussion between students; it will combine single-answer multiple choice and matching, with each matching answer supported by a distinct, explicit statement of a person’s role, view, task, decision, or research finding. Part 4 will use the lecture on sleep research topic and will be an academic monologue; it will use note completion only, with answers appearing in the lecture in the same order as the notes and conforming to IELTS-style word-limit instructions. The question-type sequence will follow the supplied type_plan exactly: form completion plus note completion in Part 1, single-answer MCQ plus map labelling in Part 2, single-answer MCQ plus matching in Part 3, and note completion in Part 4. At target Band 7, language will include some paraphrase, distractors, self-correction where appropriate, and moderately specialised vocabulary, but all answers will remain recoverable from clear wording in the audio script. Before finalising the paper, each answer key item will be checked against the script so that completion answers use acceptable exact wording, MCQ distractors are mentioned only as rejected or incomplete alternatives, map positions are uniquely identifiable, and matching options have one defensible answer each. The writing fields are not used because this is a Listening module; no Writing Task 1 bar chart or Task 2 opinion prompt will be included."
+  }
+}

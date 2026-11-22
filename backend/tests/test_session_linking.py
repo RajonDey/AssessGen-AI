@@ -100,16 +100,38 @@ def test_merge_reading_parts_documents_and_sections() -> None:
     parts = [
         {
             "type": "reading",
-            "document": "Section one body",
+            "document": "Questions 1–1\n\n1. Section one body",
             "format": "markdown",
-            "sections": [{"title": "One", "passage": ["a"], "questionGroups": []}],
+            "sections": [
+                {
+                    "title": "One",
+                    "passage": ["word " * 800],
+                    "questionGroups": [
+                        {
+                            "instruction": "Questions 1–1",
+                            "questions": [{"number": 1, "type": "text", "label": "1"}],
+                        }
+                    ],
+                }
+            ],
             "answer_key": {"1": "TRUE"},
         },
         {
             "type": "reading",
-            "document": "Section two body",
+            "document": "Questions 1–1\n\n1. Section two body",
             "format": "markdown",
-            "sections": [{"title": "Two", "passage": ["b"], "questionGroups": []}],
+            "sections": [
+                {
+                    "title": "Two",
+                    "passage": ["word " * 900],
+                    "questionGroups": [
+                        {
+                            "instruction": "Questions 1–1",
+                            "questions": [{"number": 1, "type": "text", "label": "1"}],
+                        }
+                    ],
+                }
+            ],
             "answer_key": {"1": "FALSE"},
         },
     ]
@@ -119,5 +141,7 @@ def test_merge_reading_parts_documents_and_sections() -> None:
     assert len(merged["sections"]) == 2
     assert "Reading Section 1" in merged["document"]
     assert "Reading Section 2" in merged["document"]
-    assert merged["answer_key"]["S1:1"] == "TRUE"
-    assert merged["answer_key"]["S2:1"] == "FALSE"
+    assert merged["answer_key"]["1"] == "TRUE"
+    assert merged["answer_key"]["14"] == "FALSE"
+    assert merged["sections"][1]["questionGroups"][0]["questions"][0]["number"] == 14
+

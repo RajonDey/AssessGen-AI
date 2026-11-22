@@ -23,7 +23,7 @@ a matter of judgement we currently cannot verify.
 | Passages | 3 |
 | Total questions | 40 |
 | Duration | 60 minutes (no extra transfer time) |
-| Passage length | 700–1000 words each (~2150–2750 total) |
+| Passage length | Passage 1 ~800–900; Passage 2 ~850–950; Passage 3 ~900–1050 (~2150–2750 total) |
 | Difficulty progression | Passage 1 easiest → Passage 3 hardest |
 | Source style | Books, journals, magazines, newspapers — expository/analytical/argumentative |
 | Questions per passage | 13–14 |
@@ -73,7 +73,8 @@ calibration data proves otherwise.
 ## Pipeline
 
 ```
-request { band, topic, passage_count, question_count, types }
+request { band, topics[3], type_plan[3], passage_count, question_count, types }
+    # see docs/modules/paper-spec.md — independent topics; interlocking types
     │
     ▼
 PLANNER ──────────────────────────────────────────────────────
@@ -251,6 +252,10 @@ Initial band mapping is derived from **distribution matching against authentic p
 as an intent and clearly labelled as unvalidated in the UI.
 
 ---
+
+## Current helpers
+
+After generation, `app.content.reading_normalize` aligns `sections[]` with `answer_key`. `app.content.reading_numbering` keeps Academic items continuous: passage 1 is questions 1–13, passage 2 is 14–26, passage 3 is 27–40. Admin downloads (PDF for candidates, Markdown including briefs) are described in [Paper spec](paper-spec.md).
 
 ## Definition of done
 

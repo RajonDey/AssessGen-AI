@@ -12,7 +12,7 @@ A working reference for generating IELTS Reading passages and questions (Academi
 | Total questions            | 40                                                                          |
 | Total time                 | 60 minutes (no extra transfer time)                                         |
 | Total word count           | ~2,150–2,750 words                                                          |
-| Passage 1                  | ~750–850 words, easiest                                                     |
+| Passage 1                  | **~800–900 words** (minimum 800), easiest                                   |
 | Passage 2                  | ~850–950 words, medium                                                      |
 | Passage 3                  | ~900–1,050 words, hardest (abstract/argumentative)                          |
 | Questions per passage      | ~13–14                                                                      |
@@ -48,6 +48,7 @@ A working reference for generating IELTS Reading passages and questions (Academi
 ### 4.1 Multiple Choice
 
 - 3–4 options (A, B, C, [D]); one correct unless explicitly "choose TWO."
+- **Every MCQ must print full option texts** under the stem — never a stem-only item whose answer key is just "B".
 - Distractors must be plausible — either partially true, true but not what's asked, or a common misreading — never nonsensical.
 - Avoid options that are simply "not mentioned" as the sole distractor; base distractors on real content from the passage.
 - Question stem should not telegraph the answer through mismatched grammar/length.
@@ -76,6 +77,7 @@ A working reference for generating IELTS Reading passages and questions (Academi
 - Each heading should capture the **overall gist** of a paragraph, not a minor detail within it.
 - Avoid headings that could plausibly fit two paragraphs — each correct match should be defensible as uniquely best.
 - Do not reuse exact keywords from the paragraph in the heading — this should be tested at the "gist" level, more paraphrased than other question types.
+- **Distractor quality:** invent distractors that sound on-topic (same domain) but misstate focus (e.g. causes vs effects, past vs future, local vs global). Reject any distractor that is equally good for two paragraphs after a second pass.
 - Sometimes one paragraph is given as an example (already matched) to demonstrate the task.
 
 ### 4.5 Matching Information
@@ -88,6 +90,7 @@ A working reference for generating IELTS Reading passages and questions (Academi
 
 - A set of statements matched against a list of options (people, theories, time periods, categories, places) explicitly named in the passage.
 - Options list should be short and clearly enumerable in the text (e.g., named researchers, named places).
+- **Bank size:** provide **more options than statements** (at least +2 spare) unless instructions explicitly allow options to be used more than once *and* the bank is still larger than a 1:1 map.
 - Some options may be used more than once, or not at all — this must be stated in the instructions.
 
 ### 4.7 Matching Sentence Endings
@@ -112,6 +115,7 @@ A working reference for generating IELTS Reading passages and questions (Academi
   - **From a word list/box:** a bank of possible words/phrases is given (often with distractors) — no word-limit instruction needed here since options are fixed.
 - The summary should paraphrase the original passage overall — only the gapped words are lifted from the passage.
 - Gaps should test comprehension of relationships (cause/effect, sequence, comparison), not just isolated vocabulary.
+- **Presentation:** emit **one shared summary/notes block** on the question group (field `summary` or `notes`), with all blanks embedded. Do **not** duplicate the full paragraph once per question number.
 
 ### 4.10 Diagram Label Completion
 
@@ -147,8 +151,10 @@ A working reference for generating IELTS Reading passages and questions (Academi
 - [ ] Question types match passage style (factual → T/F/NG; opinion → Y/N/NG)
 - [ ] Word limits stated wherever required
 - [ ] Extra distractors included for Matching Headings / Sentence Endings
+- [ ] Matching Headings distractors are plausible but uniquely wrong (no dual-fit)
 - [ ] Every answer traceable to a specific part of the passage
 - [ ] No verbatim copying between question stems and passage (except intended keyword anchors)
 - [ ] NOT GIVEN items are genuine absences, not just hard-to-find
 - [ ] Answer key includes accepted variants and exact word-limit compliance
-- [ ] Overall progression: 13–14 questions per passage, 40 total
+- [ ] Continuous numbering across linked parts (1–13 / 14–26 / 27–40; no restart at 1)
+- [ ] Overall progression: 13–14 questions per passage, **exactly 40** total for a full Academic paper

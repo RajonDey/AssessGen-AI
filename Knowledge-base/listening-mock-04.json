@@ -1,0 +1,578 @@
+{
+  "title": "IELTS Listening Test 4",
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/listening.mp4",
+  "audioUrl": "listening-04.mp3",
+  "duration": 26,
+  "parts": [
+    {
+      "partNumber": 1,
+      "title": "Part 1",
+      "instructions": "Listen and answer questions <b>1 - 10<b>.",
+      "questionGroups": [
+        {
+          "groupRange": "1-6",
+          "subInstructions": "Complete the form. Write <b>ONE WORD AND/OR A NUMBER</b> in each gap.",
+          "questions": [
+            {
+              "id": "q1-6",
+              "type": "form-completion",
+              "label": "1-6",
+              "title": "Questions 1 – 6",
+              "formTitle": "WEST LAKE GYM",
+              "sections": [
+                {
+                  "heading": "COURSE REGISTRATION FORM",
+                  "rows": [
+                    {
+                      "rowLabel": "Selected Class:",
+                      "cells": [
+                        "Yoga"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Time:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "1"
+                        },
+                        "-9pm"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Days:",
+                      "cells": [
+                        "Every day except",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "2"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Level",
+                      "cells": [
+                        "Beginner"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Price per class:",
+                      "cells": [
+                        "£",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "3"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Customer name:",
+                      "cells": [
+                        "Tim",
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "4"
+                        }
+                      ]
+                    },
+                    {
+                      "rowLabel": "Customer address:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "5"
+                        },
+                        "Slade Road"
+                      ]
+                    },
+                    {
+                      "rowLabel": "Customer phone number:",
+                      "cells": [
+                        {
+                          "text": "",
+                          "isAnswer": true,
+                          "questionNumber": "6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "7-10",
+          "subInstructions": "Complete the notes. Use <b>ONE WORD</b> for each answer.",
+          "questions": [
+            {
+              "id": "q7",
+              "type": "sentence-completion",
+              "questionNumber": "7",
+              "question": "The gym is located by the _______ centre."
+            },
+            {
+              "id": "q8",
+              "type": "sentence-completion",
+              "questionNumber": "8",
+              "question": "Class members usually prefer not to have any _______ on."
+            },
+            {
+              "id": "q9",
+              "type": "sentence-completion",
+              "questionNumber": "9",
+              "question": "Customers can borrow a _______ for free."
+            },
+            {
+              "id": "q10",
+              "type": "sentence-completion",
+              "questionNumber": "10",
+              "question": "On Saturday, there is a self-defence class with a teacher from _______"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "title": "Part 2",
+      "instructions": "Listen and answer questions <b>11 - 20</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "11-15",
+          "subInstructions": "Label the map. Write the appropriate letter, A – H.",
+          "questions": [
+            {
+              "id": "q11-15",
+              "type": "map-label",
+              "label": "11-15",
+              "title": "Questions 11 – 15",
+              "imageUrl": "images/listening-04-map-01.png",
+              "locations": [
+                {
+                  "id": "q11",
+                  "label": "11",
+                  "name": "Dining Room"
+                },
+                {
+                  "id": "q12",
+                  "label": "12",
+                  "name": "Tennis Courts"
+                },
+                {
+                  "id": "q13",
+                  "label": "13",
+                  "name": "Gunderson Room"
+                },
+                {
+                  "id": "q14",
+                  "label": "14",
+                  "name": "Swanson Room"
+                },
+                {
+                  "id": "q15",
+                  "label": "15",
+                  "name": "Swimming Pool"
+                }
+              ],
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H"
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "16-20",
+          "subInstructions": "Choose the correct letter, <b>A, B or C</b>.",
+          "questions": [
+            {
+              "id": "q16",
+              "type": "multiple-choice",
+              "questionNumber": "16",
+              "question": "Which statement is true of the hotel's history?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "It was built less than 100 years ago."
+                },
+                {
+                  "key": "B",
+                  "text": "The building was originally used for a different purpose."
+                },
+                {
+                  "key": "C",
+                  "text": "It is the oldest hotel in Castleton."
+                }
+              ]
+            },
+            {
+              "id": "q17",
+              "type": "multiple-choice",
+              "questionNumber": "17",
+              "question": "What time does breakfast start at the weekend?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "7:00"
+                },
+                {
+                  "key": "B",
+                  "text": "7:30"
+                },
+                {
+                  "key": "C",
+                  "text": "8:00"
+                }
+              ]
+            },
+            {
+              "id": "q18",
+              "type": "multiple-choice",
+              "questionNumber": "18",
+              "question": "Where is the hotel located?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "on the sea"
+                },
+                {
+                  "key": "B",
+                  "text": "in the town centre"
+                },
+                {
+                  "key": "C",
+                  "text": "near an architecture museum"
+                }
+              ]
+            },
+            {
+              "id": "q19",
+              "type": "multiple-choice",
+              "questionNumber": "19",
+              "question": "The manager recommends visiting the hotel spa because",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "it recently won an award."
+                },
+                {
+                  "key": "B",
+                  "text": "it is free for hotel guests to use."
+                },
+                {
+                  "key": "C",
+                  "text": "it is likely to be less busy than usual."
+                }
+              ]
+            },
+            {
+              "id": "q20",
+              "type": "multiple-choice",
+              "questionNumber": "20",
+              "question": "What does the manager say that hotel staff can help guests with?",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "carrying baggage"
+                },
+                {
+                  "key": "B",
+                  "text": "arranging transport"
+                },
+                {
+                  "key": "C",
+                  "text": "finding things to do"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "title": "Part 3",
+      "instructions": "Listen and answer questions <b>21 - 30</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "21-26",
+          "subInstructions": "Complete the flow-chart. Choose the appropriate letter, A – H.",
+          "questions": [
+            {
+              "id": "q21-26",
+              "type": "drag-drop-completion",
+              "label": "<b>21-26</b>",
+              "title": "Questions 21 – 26",
+              "sections": [
+                {
+                  "title": "Plan for preparing the presentation about globalisation",
+                  "items": [
+                    {
+                      "questionNumber": "21",
+                      "fieldId": "q21",
+                      "prefix": "Select an appropriate",
+                      "suffix": "to present about"
+                    },
+                    {
+                      "questionNumber": "22",
+                      "fieldId": "q22",
+                      "prefix": "While preparing, refer regularly to the",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "23",
+                      "fieldId": "q23",
+                      "prefix": "Include",
+                      "suffix": "to support points"
+                    },
+                    {
+                      "questionNumber": "24",
+                      "fieldId": "q24",
+                      "prefix": "Keep records of all",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "25",
+                      "fieldId": "q25",
+                      "prefix": "Ensure that the audience understands the",
+                      "suffix": ""
+                    },
+                    {
+                      "questionNumber": "26",
+                      "fieldId": "q26",
+                      "prefix": "Practise, bearing in mind the",
+                      "suffix": ""
+                    }
+                  ]
+                }
+              ],
+              "optionsTitle": "",
+              "options": [
+                {
+                  "key": "A",
+                  "value": "A. visuals"
+                },
+                {
+                  "key": "B",
+                  "value": "B. sources"
+                },
+                {
+                  "key": "C",
+                  "value": "C. time limit"
+                },
+                {
+                  "key": "D",
+                  "value": "D. structure"
+                },
+                {
+                  "key": "E",
+                  "value": "E. statistics"
+                },
+                {
+                  "key": "F",
+                  "value": "F. main purpose"
+                },
+                {
+                  "key": "G",
+                  "value": "G. aspect of the topic"
+                },
+                {
+                  "key": "H",
+                  "value": "H. assessment guidelines"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "groupRange": "27-30",
+          "subInstructions": "For each question, choose <b>TWO</b> correct options. Write them in any order in answer boxes 27 - 30.",
+          "questions": [
+            {
+              "id": "q27-28",
+              "type": "multiple-choice-multiple",
+              "label": "<b>27 – 28</b>",
+              "text": "Which TWO skills do the speakers hope to demonstrate improvement in?",
+              "options": [
+                "speaking clearly",
+                "conducting original research",
+                "making the content seem interesting",
+                "dealing with questions from the audience",
+                "demonstrating a good understanding of the topic"
+              ]
+            },
+            {
+              "id": "q29-30",
+              "type": "multiple-choice-multiple",
+              "label": "<b>29 – 30</b>",
+              "text": "Which TWO of the following do the speakers agree would be suitable ways to begin their presentation?",
+              "options": [
+                "telling a joke",
+                "using a picture",
+                "reading a quotation",
+                "showing a video clip",
+                "asking the audience a question"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "title": "Part 4",
+      "instructions": "Listen and answer questions <b>31 - 40</b>.",
+      "questionGroups": [
+        {
+          "groupRange": "31-40",
+          "subInstructions": "Complete the notes. Write <b>ONE WORD ONLY</b> for each answer.",
+          "questions": [
+            {
+              "id": "q31-40",
+              "type": "bullet-notes-completion",
+              "title": "A history of measuring time",
+              "sections": [
+                {
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Measuring the time in a year or a day has always been a priority",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "People in ancient civilisations had sophisticated (31) to record the passing of time",
+                      "hasInput": true,
+                      "inputId": "q31",
+                      "questionNumber": "31"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Some ancient tools for measuring time",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Stonehenge: a 5000-year-old stone circle in England",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "It was possibly built by druids (priests)",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "The stones seem to have been erected for viewing the (32) on the solstice (the longest day of the year).",
+                      "hasInput": true,
+                      "inputId": "q32",
+                      "questionNumber": "32"
+                    },
+                    {
+                      "type": "text",
+                      "content": "In the past, days were divided into 12 periods",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "Shadow clocks have been discovered in (33) which consisted of a large column",
+                      "hasInput": true,
+                      "inputId": "q33",
+                      "questionNumber": "33"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Some were constructed out of (34) and were several metres in height",
+                      "hasInput": true,
+                      "inputId": "q34",
+                      "questionNumber": "34"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Water clocks",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "These were used in various locations and had moving parts",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "However, they were ineffective in (35) conditions",
+                      "hasInput": true,
+                      "inputId": "q35",
+                      "questionNumber": "35"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Engineers in China addressed this problem by using mercury and (36) instead of water",
+                      "hasInput": true,
+                      "inputId": "q36",
+                      "questionNumber": "36"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Mechanical clocks",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "The first known one was constructed in Germany in the 10th century",
+                      "hasInput": false
+                    },
+                    {
+                      "type": "text",
+                      "content": "In the 14th century, a clock with a (37) to mark the hours was constructed; this is still in Salisbury Cathedral, England",
+                      "hasInput": true,
+                      "inputId": "q37",
+                      "questionNumber": "37"
+                    }
+                  ]
+                },
+                {
+                  "heading": "Further developments in clock making",
+                  "items": [
+                    {
+                      "type": "text",
+                      "content": "Clockmakers aimed to produce clocks that were (38) and able to tell the time more precisely, especially to aid sailors with navigation",
+                      "hasInput": true,
+                      "inputId": "q38",
+                      "questionNumber": "38"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Thomas Tompion, an English clockmaker, managed to produce a clock that was small enough to be (39)",
+                      "hasInput": true,
+                      "inputId": "q39",
+                      "questionNumber": "39"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Tompion gave one of these to an English (40)",
+                      "hasInput": true,
+                      "inputId": "q40",
+                      "questionNumber": "40"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "writing-07",
+  "title": "Writing Practice 7",
+  "type": "writing",
+  "duration": 60,
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/writing.mp4",
+  "sections": [
+    {
+      "title": "Part 1",
+      "instructions": "You should spend about 20 minutes on this task. Write at least 150 words.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "writing",
+          "title": "The two line graphs below show Germany’s import figures from China and Russia between 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+          "question": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+          "images": [
+            "images/writing-mock-07-01.png",
+            "images/writing-mock-07-02.png"
+          ],
+          "minWords": 150
+        }
+      ]
+    },
+    {
+      "title": "Part 2",
+      "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
+      "questions": [
+        {
+          "id": "q2",
+          "type": "writing",
+          "title": " Some people think that schools are too competitive and that this has a negative impact on children. Others believe the competitive environment encourages children to achieve. Discuss both these views and give your opinion. ",
+          "question": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "minWords": 250
+        }
+      ]
+    }
+  ]
+}

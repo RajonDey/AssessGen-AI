@@ -7,11 +7,25 @@ export type WritingType =
   | "advantages_disadvantages"
   | "two_part";
 
+export type Task1Kind =
+  | "line_graph"
+  | "bar_chart"
+  | "pie_chart"
+  | "table"
+  | "process"
+  | "map"
+  | "mixed"
+  | "letter_formal"
+  | "letter_semi_formal"
+  | "letter_informal";
+
 export type ReviewFinding = {
   severity: "must" | "should" | "info";
   message: string;
   code?: string | null;
 };
+
+export type QualityMode = "draft" | "standard" | "publish";
 
 export type GenerateResponse = {
   module: ModuleName;
@@ -33,6 +47,21 @@ export type GenerateResponse = {
   plan_steps: string[];
   session_id?: string | null;
   parts_linked?: number;
+  quality_mode?: QualityMode;
+  topics?: string[] | null;
+  type_plan?: string[][] | null;
+  topic_t1?: string | null;
+  topic_t2?: string | null;
+  task1_kind?: string | null;
+  task2_kind?: string | null;
+  cost?: {
+    llm_calls: number;
+    planner_calls: number;
+    generator_calls: number;
+    critic_calls: number;
+    quality_mode: QualityMode;
+    prompt_hash?: string | null;
+  };
 };
 
 export type GenerateRequest = {
@@ -43,10 +72,17 @@ export type GenerateRequest = {
   part_count: number;
   writing_type?: WritingType;
   full_paper?: boolean;
+  quality_mode?: QualityMode;
   session_id?: string | null;
   current_part?: number;
   total_parts?: number;
   previous_content?: Record<string, unknown> | null;
+  topics?: string[];
+  type_plan?: string[][];
+  topic_t1?: string;
+  topic_t2?: string;
+  task1_kind?: Task1Kind;
+  task2_kind?: WritingType;
 };
 
 export type ProgressEvent = {

@@ -74,7 +74,8 @@ Writing module.
 ## Pipeline
 
 ```
-request { task, variant, topic, type, target_band }
+request { task, variant, topic_t1, topic_t2, task1_kind, task2_kind, target_band }
+    # see docs/modules/paper-spec.md — independent Task 1 / Task 2 topics + kinds
     │
     ▼
 TASK GENERATOR
@@ -218,6 +219,10 @@ This is genuinely valuable learner content and it is where a Writing module earn
 prompt alone is nearly worthless, since prompts are freely available everywhere.
 
 ---
+
+## Current helpers
+
+Task topics and kinds (`task1_kind`, `task2_kind`) are resolved in `app.content.paper_spec`. `app.content.writing_brief` builds the visual/image brief kept in the development Markdown export and left out of the candidate PDF. See [Paper spec](paper-spec.md).
 
 ## Definition of done
 

@@ -6,7 +6,7 @@ exports assessment content. IELTS is the first target; the engine is deliberatel
 > **Status:** Phase 1A complete; **Phase 1B (Reading) complete in code**; **Phase 1C in progress.**
 > Application code lives in `backend/`. These documents are the contract we build against.
 
-**New here?** Start with [Installation](installation.md) (requirements, Ollama, env, TTS).
+**New here?** Install from the [repository README](../README.md). The longer guide is [Installation](installation.md) (requirements, Ollama, env, TTS).
 
 ---
 
@@ -67,6 +67,7 @@ Listening / Writing / Speaking (thin verticals) on the same rails.
 - [Listening](modules/listening.md) — dialogue → questions → TTS → audio QA
 - [Writing](modules/writing.md) — Task 1 / Task 2 with band-differentiated model answers
 - [Speaking](modules/speaking.md) — Parts 1–3 with band-differentiated sample responses
+- [Paper spec](modules/paper-spec.md) — per-part topics + interlocking type plans (BC-style)
 
 ### Decisions & execution
 

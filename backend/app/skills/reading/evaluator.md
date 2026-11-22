@@ -16,10 +16,11 @@ For each submission, check in this order:
 
 ### Step A — Structural checks
 
-- Passage word count within range for its slot (P1 ~750–850 / P2 ~850–950 / P3 ~900–1,050)
+- Passage word count within range for its slot (P1 **~800–900** / P2 ~850–950 / P3 ~900–1,050)
 - Paragraphs clearly labeled if required by question types used
-- Total question count matches requirement (~13–14)
-- Every question group has a clear, correctly worded instruction line
+- Total question count matches requirement (~13–14 per passage; **40** across three linked Academic passages)
+- Continuous numbering when linked: Part 1 = 1–13, Part 2 = 14–26, Part 3 = 27–40 (must not restart at 1)
+- Every question group has a clear, correctly worded instruction line with absolute question ranges
 - Word-limit instructions present wherever required
 
 ### Step B — Independent answer verification
@@ -32,9 +33,10 @@ For each submission, check in this order:
 
 - **T/F/NG and Y/N/NG**: correct passage type used (factual vs opinion); NOT GIVEN items are genuine absences
 - **Matching Headings**: extra distractor headings present; no heading fits two paragraphs equally well
-- **Matching Sentence Endings**: extra distractor endings present; no grammar-only shortcut solves it
+- **Matching Features / Sentence Endings**: option bank **larger than** item count (spare distractors)
 - **Completion types**: answer exists in passage in usable grammatical form; word limit respected
-- **Multiple Choice**: distractors plausible, not nonsensical; exactly one correct unless stated otherwise
+- **Summary / notes**: one shared outline/paragraph with embedded gaps — not the full text repeated per blank
+- **Multiple Choice**: **A–C/D option texts present under each stem**; distractors plausible; exactly one correct unless stated otherwise
 
 ### Step D — Fairness & clarity checks
 

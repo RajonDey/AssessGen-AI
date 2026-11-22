@@ -1,0 +1,37 @@
+{
+  "id": "writing-03",
+  "title": "Writing Practice 3",
+  "type": "writing",
+  "duration": 60,
+  "videoUrl": "https://pub-d3d02435a92e4481af8884d6e5c8872a.r2.dev/videos/writing.mp4",
+  "sections": [
+    {
+      "title": "Part 1",
+      "instructions": "You should spend about 20 minutes on this task. Write at least 150 words.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "writing",
+          "title": "The chart below shows the number of male and female students from Sylhet and international regions who studied IELTS at HEXA’S Education between 2010 and 2012.",
+          "question": "Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+          "images": ["images/writing-03-01.png"],
+
+          "minWords": 150
+        }
+      ]
+    },
+    {
+      "title": "Part 2",
+      "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
+      "questions": [
+        {
+          "id": "q2",
+          "type": "writing",
+          "title": "There is a lot of pressure on young people today to succeed academically. As a result, some people believe that non-academic subjects, such as physical education and cookery, should be removed from the school syllabus so that children can concentrate on academic work. To what extent do you agree or disagree?",
+          "question": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "minWords": 250
+        }
+      ]
+    }
+  ]
+}

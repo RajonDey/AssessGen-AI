@@ -2,11 +2,19 @@
 
 import { FormEvent, useMemo, useState } from "react";
 
-import { ApiError, contentAsDownloadText, downloadJson, downloadText, generateContentStream } from "@/lib/api";
+import { ApiError, downloadJson, downloadText, generateContentStream } from "@/lib/api";
+import {
+  contentAsListeningScriptMarkdown,
+  contentAsPaperMarkdown,
+  contentAsTtsJson,
+  exportPdfWithPrintFallback,
+} from "@/lib/paperExports";
 import type {
   GenerateResponse,
   ModuleName,
   ProgressEvent,
+  QualityMode,
+  Task1Kind,
   WritingType,
 } from "@/lib/types";
 
@@ -31,14 +39,14 @@ const MODULES: {
     maxParts: 2,
     partLabel: "Parts",
   },
-    {
-      id: "listening",
-      label: "Listening",
-      hint: "JSON with speakers + script.turns (required for audio); 10 questions per part",
-      maxParts: 4,
-      partLabel: "Parts",
-    },
-  ];
+  {
+    id: "listening",
+    label: "Listening",
+    hint: "JSON with speakers + script.turns (required for audio); 10 questions per part",
+    maxParts: 4,
+    partLabel: "Parts",
+  },
+];
 
 const WRITING_TYPES: { value: WritingType; label: string }[] = [
   { value: "opinion", label: "Opinion" },
@@ -47,6 +55,34 @@ const WRITING_TYPES: { value: WritingType; label: string }[] = [
   { value: "advantages_disadvantages", label: "Advantages / disadvantages" },
   { value: "two_part", label: "Two-part" },
 ];
+
+const TASK1_KINDS: { value: Task1Kind; label: string }[] = [
+  { value: "bar_chart", label: "Bar chart" },
+  { value: "line_graph", label: "Line graph" },
+  { value: "pie_chart", label: "Pie chart" },
+  { value: "table", label: "Table" },
+  { value: "process", label: "Process" },
+  { value: "map", label: "Map" },
+  { value: "mixed", label: "Mixed visuals" },
+  { value: "letter_formal", label: "Letter (formal)" },
+  { value: "letter_semi_formal", label: "Letter (semi-formal)" },
+  { value: "letter_informal", label: "Letter (informal)" },
+];
+
+const DEFAULT_TOPICS: Record<ModuleName, string[]> = {
+  reading: [
+    "urban green spaces",
+    "history of photography",
+    "marine biodiversity",
+  ],
+  listening: [
+    "hostel booking enquiry",
+    "community centre renovation",
+    "student project meeting",
+    "lecture on sleep research",
+  ],
+  writing: ["household energy use 2000–2020", "remote work and cities"],
+};
 
 const STAGE_LABEL: Record<ProgressEvent["stage"], string> = {
   planning: "Planning",
@@ -61,10 +97,12 @@ const STAGE_LABEL: Record<ProgressEvent["stage"], string> = {
 
 export default function GeneratePage() {
   const [module, setModule] = useState<ModuleName>("reading");
-  const [topic, setTopic] = useState("urban green spaces");
+  const [topics, setTopics] = useState<string[]>([...DEFAULT_TOPICS.reading]);
   const [band, setBand] = useState(6.5);
   const [partCount, setPartCount] = useState(1);
   const [writingType, setWritingType] = useState<WritingType>("opinion");
+  const [task1Kind, setTask1Kind] = useState<Task1Kind>("bar_chart");
+  const [qualityMode, setQualityMode] = useState<QualityMode>("standard");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<GenerateResponse | null>(null);
@@ -72,16 +110,38 @@ export default function GeneratePage() {
   const [steps, setSteps] = useState<string[]>([]);
   const [stage, setStage] = useState<ProgressEvent["stage"] | null>(null);
   const [statusLine, setStatusLine] = useState("");
+  const [toast, setToast] = useState<string | null>(null);
+  const [downloadTab, setDownloadTab] = useState<"pdf" | "md">("pdf");
 
   const moduleMeta = useMemo(
     () => MODULES.find((m) => m.id === module) ?? MODULES[0],
     [module],
   );
 
+  const primaryTopic = topics[0]?.trim() || "practice topic";
+
+  function resizeTopics(nextModule: ModuleName, nextParts: number) {
+    const defaults = DEFAULT_TOPICS[nextModule];
+    setTopics((prev) => {
+      const next = Array.from({ length: nextParts }, (_, i) => {
+        if (prev[i]?.trim()) return prev[i];
+        return defaults[i] ?? defaults[0] ?? "practice topic";
+      });
+      return next;
+    });
+  }
+
   function selectModule(id: ModuleName) {
     setModule(id);
     const meta = MODULES.find((m) => m.id === id)!;
-    setPartCount((n) => Math.min(n, meta.maxParts));
+    const nextParts = Math.min(partCount, meta.maxParts);
+    setPartCount(nextParts);
+    resizeTopics(id, nextParts);
+  }
+
+  function onPartCount(n: number) {
+    setPartCount(n);
+    resizeTopics(module, n);
   }
 
   async function onSubmit(event: FormEvent) {
@@ -94,16 +154,36 @@ export default function GeneratePage() {
     setStage("planning");
     setStatusLine("Starting…");
 
+    const partTopics = topics.slice(0, partCount).map((t) => t.trim());
+    if (partTopics.some((t) => t.length < 2)) {
+      setError("Each part needs its own topic (at least 2 characters).");
+      setLoading(false);
+      setStage("error");
+      return;
+    }
+
     try {
       const data = await generateContentStream(
         {
           module,
-          topic,
+          topic: partTopics[0],
+          topics: partTopics,
           target_band: band,
-          question_count: module === "reading" ? partCount * 13 : partCount * 10,
+          question_count:
+            module === "reading"
+              ? partCount === 3
+                ? 40
+                : partCount * 13
+              : partCount * 10,
           part_count: partCount,
           writing_type: writingType,
+          task2_kind: writingType,
+          task1_kind: task1Kind,
+          topic_t1: module === "writing" ? partTopics[0] : undefined,
+          topic_t2:
+            module === "writing" && partCount >= 2 ? partTopics[1] : undefined,
           full_paper: partCount === moduleMeta.maxParts,
+          quality_mode: qualityMode,
         },
         (event) => {
           setStage(event.stage);
@@ -127,14 +207,36 @@ export default function GeneratePage() {
     }
   }
 
-  function onDownloadJson() {
+  function fileBase(): string {
+    const safe = primaryTopic.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 40);
+    return `assessgen-${module}-${safe || "paper"}`;
+  }
+
+  /** External export: questions + answers only (no illustrator briefs). */
+  function paperMarkdownForPdf(): string {
+    if (!result) return "";
+    return contentAsPaperMarkdown(module, result.content as Record<string, unknown>, {
+      includeVisualBriefs: false,
+    });
+  }
+
+  /** Dev export: full paper including visual/image briefs. */
+  function paperMarkdownForDev(): string {
+    if (!result) return "";
+    return contentAsPaperMarkdown(module, result.content as Record<string, unknown>, {
+      includeVisualBriefs: true,
+    });
+  }
+
+  function onDownloadFailedDraft() {
     if (!result) return;
-    const safe = topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 40);
-    downloadJson(`assessgen-${module}-${safe || "paper"}.json`, {
+    downloadJson(`${fileBase()}-FAILED-DRAFT.json`, {
       ...result.content,
       _meta: {
         module: result.module,
         topic: result.topic,
+        topics: result.topics,
+        type_plan: result.type_plan,
         target_band: result.target_band,
         part_count: result.part_count,
         session_id: result.session_id,
@@ -143,34 +245,145 @@ export default function GeneratePage() {
         reviewer_model: result.reviewer_model,
         review: result.review,
         reasoning: result.reasoning,
+        download_warning: "Failed review — not TTS-ready",
       },
     });
   }
 
-  function onDownloadDoc() {
-    if (!result) return;
-    const safe = topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 40);
-    const { text, ext } = contentAsDownloadText(
-      result.content as Record<string, unknown>,
-    );
-    downloadText(`assessgen-${module}-${safe || "paper"}.${ext}`, text);
+  function showToast(message: string) {
+    setToast(message);
+    window.setTimeout(() => setToast((cur) => (cur === message ? null : cur)), 6000);
   }
 
-  const displayDoc =
+  function onDownloadPaperMd() {
+    if (!result) return;
+    downloadText(`${fileBase()}-paper.md`, paperMarkdownForDev());
+  }
+
+  function onDownloadPaperPdf() {
+    if (!result) return;
+    try {
+      const tip = exportPdfWithPrintFallback(
+        `${fileBase()}-paper.pdf`,
+        `${fileBase()}-paper`,
+        paperMarkdownForPdf(),
+      );
+      showToast(tip);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "PDF export failed");
+    }
+  }
+
+  function onDownloadTtsJson() {
+    if (!result || module !== "listening") return;
+    if (jsonDownloadBlocked) return;
+    const tts = contentAsTtsJson(result.content as Record<string, unknown>);
+    downloadJson(`${fileBase()}-tts.json`, tts);
+  }
+
+  function onDownloadScriptMd() {
+    if (!result || module !== "listening") return;
+    downloadText(
+      `${fileBase()}-script.md`,
+      contentAsListeningScriptMarkdown(result.content as Record<string, unknown>),
+    );
+  }
+
+  function onDownloadScriptPdf() {
+    if (!result || module !== "listening") return;
+    try {
+      const tip = exportPdfWithPrintFallback(
+        `${fileBase()}-script.pdf`,
+        `${fileBase()}-script`,
+        contentAsListeningScriptMarkdown(
+          result.content as Record<string, unknown>,
+        ),
+      );
+      showToast(tip);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "PDF export failed");
+    }
+  }
+
+  const displayDoc = useMemo(() => {
+    if (!result) return null;
+    const content = result.content as Record<string, unknown>;
+    // Preview matches MD/dev export (includes visual briefs when present)
+    const paper = contentAsPaperMarkdown(module, content, {
+      includeVisualBriefs: true,
+    });
+    if (paper.trim().length > 40) return paper;
+    if (typeof content.document === "string" && content.document.trim()) {
+      return String(content.document);
+    }
+    return null;
+  }, [result, module]);
+  const mustFindings = useMemo(
+    () => (result?.review.findings ?? []).filter((f) => f.severity === "must"),
+    [result],
+  );
+  // Kokoro: script/clock/length only (content.tts_ready). Answer-key musts do not block.
+  const jsonDownloadBlocked =
+    module === "listening" &&
+    !!result &&
+    ((result.content as { tts_ready?: unknown }).tts_ready === false ||
+      ((result.content as { tts_ready?: unknown }).tts_ready !== true &&
+        mustFindings.some((f) => {
+          const code = f.code || "";
+          return (
+            code.startsWith("L-WC") ||
+            code.startsWith("L-PAUSE") ||
+            code.startsWith("L-INTRO") ||
+            code.startsWith("L-SCR") ||
+            code.startsWith("L-TURN") ||
+            code.startsWith("L-LISTEN") ||
+            code === "L-SP-CNT"
+          );
+        })));
+  const paperMustFindings = mustFindings.filter((f) => {
+    const code = f.code || "";
+    return !(
+      code.startsWith("L-WC") ||
+      code.startsWith("L-PAUSE") ||
+      code.startsWith("L-INTRO") ||
+      code.startsWith("L-SCR") ||
+      code.startsWith("L-TURN") ||
+      code.startsWith("L-LISTEN") ||
+      code === "L-SP-CNT"
+    );
+  });
+  const contentWords =
+    result && typeof (result.content as { content_word_count?: unknown }).content_word_count === "number"
+      ? Number((result.content as { content_word_count: number }).content_word_count)
+      : null;
+  const spokenWords =
+    result && typeof (result.content as { word_count?: unknown }).word_count === "number"
+      ? Number((result.content as { word_count: number }).word_count)
+      : null;
+  const estimatedDuration =
     result &&
-    typeof (result.content as { document?: unknown }).document === "string"
-      ? String((result.content as { document: string }).document)
+    typeof (result.content as { estimated_duration_seconds?: unknown }).estimated_duration_seconds ===
+      "number"
+      ? Number((result.content as { estimated_duration_seconds: number }).estimated_duration_seconds)
       : null;
 
   return (
     <div className="space-y-8">
+      {toast && (
+        <div
+          role="status"
+          className="fixed bottom-6 left-1/2 z-50 max-w-lg -translate-x-1/2 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm text-zinc-100 shadow-lg"
+        >
+          {toast}
+        </div>
+      )}
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Generate practice paper</h1>
         <p className="mt-1 max-w-2xl text-sm text-zinc-600">
-          Choose a module and how many parts to create. Reading and Listening multi-part
-          runs generate each part in order so later parts track earlier ones. Listening
-          outputs a TTS-ready script (speakers + turns) plus questions — audio synthesis
-          comes later. The model plans with visible reasoning, then generates and reviews.
+          Choose a module and how many parts to create. Give each Listening/Reading part
+          (and Writing Task 1 / Task 2) its own independent topic. Question types interlock
+          across the paper via a BC-style type plan (defaults applied server-side). Listening
+          outputs a TTS-ready script (speakers + turns) plus questions.
         </p>
       </div>
 
@@ -199,16 +412,43 @@ export default function GeneratePage() {
             ))}
           </div>
 
-          <label className="block text-sm">
-            <span className="font-medium text-zinc-700">Topic</span>
-            <input
-              className="mt-1.5 w-full rounded-xl border border-zinc-300 px-3 py-2.5 outline-none focus:border-zinc-900"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              placeholder="e.g. climate, banking, education"
-              required
-            />
-          </label>
+          <div className="space-y-3">
+            <p className="text-sm font-medium text-zinc-700">
+              {module === "writing" ? "Task topics (independent)" : "Topics per part (independent)"}
+            </p>
+            {Array.from({ length: partCount }, (_, i) => (
+              <label key={i} className="block text-sm">
+                <span className="text-zinc-600">
+                  {module === "writing"
+                    ? i === 0
+                      ? "Task 1 topic"
+                      : "Task 2 topic"
+                    : `Part ${i + 1} topic`}
+                </span>
+                <input
+                  className="mt-1.5 w-full rounded-xl border border-zinc-300 px-3 py-2.5 outline-none focus:border-zinc-900"
+                  value={topics[i] ?? ""}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setTopics((prev) => {
+                      const next = [...prev];
+                      next[i] = value;
+                      return next;
+                    });
+                  }}
+                  placeholder={
+                    module === "listening"
+                      ? "e.g. library membership enquiry"
+                      : "e.g. climate, banking, education"
+                  }
+                  required
+                />
+              </label>
+            ))}
+            <p className="text-xs text-zinc-500">
+              British Council papers use unrelated topics across parts — not one shared theme.
+            </p>
+          </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm">
@@ -234,7 +474,7 @@ export default function GeneratePage() {
                     <button
                       key={n}
                       type="button"
-                      onClick={() => setPartCount(n)}
+                      onClick={() => onPartCount(n)}
                       className={`min-w-10 rounded-lg border px-3 py-2 text-sm font-medium ${
                         partCount === n
                           ? "border-zinc-900 bg-zinc-900 text-white"
@@ -249,14 +489,14 @@ export default function GeneratePage() {
               <p className="mt-1.5 text-xs text-zinc-500">
                 {module === "reading" &&
                   (partCount === 1
-                    ? "1 passage section (~13 questions)"
+                    ? "1 passage section (Questions 1–13)"
                     : partCount === 3
-                      ? "Full Academic Reading — sections generated one-by-one; each tracks the previous"
-                      : `${partCount} passage sections — later sections track earlier ones`)}
+                      ? "Full Academic Reading (40 Qs: 1–13 / 14–26 / 27–40) — sections generated sequentially"
+                      : `${partCount} passage sections — continuous numbering; later sections track question types`)}
                 {module === "writing" &&
                   (partCount === 1
-                    ? "Task 1 only (visual description)"
-                    : "Task 1 + Task 2 (full Writing)")}
+                    ? "Task 1 only — question + visual brief for external image vendor"
+                    : "Task 1 + Task 2 — separate topics and kinds")}
                 {module === "listening" &&
                   (partCount === 4
                     ? "Full Listening (4×10) — each part uses exam-clock pauses (~6–8 min audio)"
@@ -267,21 +507,69 @@ export default function GeneratePage() {
             </div>
           </div>
 
-          {module === "writing" && partCount >= 2 && (
-            <label className="block text-sm">
-              <span className="font-medium text-zinc-700">Task 2 type</span>
-              <select
-                className="mt-1.5 w-full rounded-xl border border-zinc-300 px-3 py-2.5"
-                value={writingType}
-                onChange={(e) => setWritingType(e.target.value as WritingType)}
-              >
-                {WRITING_TYPES.map((t) => (
-                  <option key={t.value} value={t.value}>
-                    {t.label}
-                  </option>
-                ))}
-              </select>
-            </label>
+          <div>
+            <p className="text-sm font-medium text-zinc-700">Quality mode</p>
+            <div className="mt-1.5 flex flex-wrap gap-2">
+              {(
+                [
+                  ["draft", "Draft (rules only)"],
+                  ["standard", "Standard (+critic)"],
+                  ["publish", "Publish (+originality)"],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setQualityMode(id)}
+                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium ${
+                    qualityMode === id
+                      ? "border-zinc-900 bg-zinc-900 text-white"
+                      : "border-zinc-300 bg-white text-zinc-700"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <p className="mt-1.5 text-xs text-zinc-500">
+              Draft skips the LLM critic. Standard runs critic only after rules pass.
+              Publish adds an 8-gram originality check when a reference corpus path is configured.
+            </p>
+          </div>
+
+          {module === "writing" && (
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block text-sm">
+                <span className="font-medium text-zinc-700">Task 1 kind</span>
+                <select
+                  className="mt-1.5 w-full rounded-xl border border-zinc-300 px-3 py-2.5"
+                  value={task1Kind}
+                  onChange={(e) => setTask1Kind(e.target.value as Task1Kind)}
+                >
+                  {TASK1_KINDS.map((t) => (
+                    <option key={t.value} value={t.value}>
+                      {t.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {partCount >= 2 && (
+                <label className="block text-sm">
+                  <span className="font-medium text-zinc-700">Task 2 kind</span>
+                  <select
+                    className="mt-1.5 w-full rounded-xl border border-zinc-300 px-3 py-2.5"
+                    value={writingType}
+                    onChange={(e) => setWritingType(e.target.value as WritingType)}
+                  >
+                    {WRITING_TYPES.map((t) => (
+                      <option key={t.value} value={t.value}>
+                        {t.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+            </div>
           )}
 
           <button
@@ -356,31 +644,160 @@ export default function GeneratePage() {
                       ? ` · ${result.parts_linked} linked`
                       : ""}{" "}
                     · {result.generator_model}
+                    {result.quality_mode ? ` · ${result.quality_mode}` : ""}
+                    {result.cost
+                      ? ` · ${result.cost.llm_calls} LLM calls (plan ${result.cost.planner_calls}/gen ${result.cost.generator_calls}/critic ${result.cost.critic_calls})`
+                      : ""}
                   </span>
                 </div>
                 {module === "listening" && (
                   <p className="text-xs text-zinc-500">
-                    For Kokoro audio, use Download JSON (must include speakers and
-                    script.turns). Markdown-only papers cannot be synthesized.
+                    PDF = external paper (Q+A only). MD = full paper for development
+                    (includes image briefs). TTS JSON = Kokoro script only.
                   </p>
                 )}
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    type="button"
-                    onClick={onDownloadJson}
-                    className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-                  >
-                    Download JSON
-                  </button>
-                  <button
-                    type="button"
-                    onClick={onDownloadDoc}
-                    className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-                  >
-                    Download MD/TXT
-                  </button>
+                {module !== "listening" && (
+                  <p className="text-xs text-zinc-500">
+                    PDF = external export (Q+A only). MD = development (includes visual
+                    briefs when present).
+                  </p>
+                )}
+                <div className="space-y-3">
+                  <div className="flex gap-1 rounded-xl border border-zinc-200 bg-zinc-50 p-1">
+                    {(
+                      [
+                        ["pdf", "PDF"],
+                        ["md", "MD"],
+                      ] as const
+                    ).map(([id, label]) => (
+                      <button
+                        key={id}
+                        type="button"
+                        onClick={() => setDownloadTab(id)}
+                        className={`flex-1 rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                          downloadTab === id
+                            ? "bg-zinc-900 text-white"
+                            : "text-zinc-600 hover:bg-zinc-100"
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+
+                  {downloadTab === "pdf" && (
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={onDownloadPaperPdf}
+                        className="rounded-xl border border-zinc-900 bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                      >
+                        Download paper (PDF)
+                      </button>
+                      {module === "listening" && (
+                        <button
+                          type="button"
+                          onClick={onDownloadScriptPdf}
+                          className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                        >
+                          Download script (PDF)
+                        </button>
+                      )}
+                    </div>
+                  )}
+
+                  {downloadTab === "md" && (
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={onDownloadPaperMd}
+                        className="rounded-xl border border-zinc-900 bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                      >
+                        Download paper (MD)
+                      </button>
+                      {module === "listening" && (
+                        <>
+                          <button
+                            type="button"
+                            onClick={onDownloadScriptMd}
+                            className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                          >
+                            Download script (MD)
+                          </button>
+                          <button
+                            type="button"
+                            onClick={onDownloadTtsJson}
+                            disabled={jsonDownloadBlocked}
+                            title={
+                              jsonDownloadBlocked
+                                ? "Fix must findings / re-generate before downloading TTS JSON"
+                                : "speakers[] + script.turns[] for Listening Audio"
+                            }
+                            className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-40"
+                          >
+                            Download TTS JSON
+                          </button>
+                          {jsonDownloadBlocked && (
+                            <button
+                              type="button"
+                              onClick={onDownloadFailedDraft}
+                              className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-medium text-amber-950 hover:bg-amber-100"
+                            >
+                              Download failed draft
+                            </button>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  )}
+
+                  <p className="text-xs text-zinc-500">
+                    {downloadTab === "pdf" &&
+                      "External export: questions + answer key only (no visual briefs)."}
+                    {downloadTab === "md" &&
+                      (module === "listening"
+                        ? "Dev paper MD includes visual briefs. TTS JSON is the only script payload for Kokoro."
+                        : "Dev paper MD includes questions, answers, and visual/image briefs.")}
+                  </p>
                 </div>
               </div>
+              {jsonDownloadBlocked && (                <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+                  <p className="font-medium">Not TTS-ready — Download TTS JSON is blocked.</p>
+                  <p className="mt-1 text-amber-900">
+                    Script / exam-clock / length rules failed
+                    {spokenWords != null ? ` (spoken words: ${spokenWords}` : ""}
+                    {contentWords != null ? `, content: ${contentWords}` : ""}
+                    {estimatedDuration != null
+                      ? `, est. ${Math.round(estimatedDuration / 60)} min)`
+                      : spokenWords != null
+                        ? ")"
+                        : ""}
+                    . Answer keys do not block Kokoro — fix the spoken script first. Paper MD/PDF
+                    downloads remain available.
+                  </p>
+                </div>
+              )}
+
+              {module === "listening" && !jsonDownloadBlocked && paperMustFindings.length > 0 && (
+                <div className="rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-950">
+                  <p className="font-medium">TTS OK — paper quality still needs attention</p>
+                  <p className="mt-1">
+                    You can download TTS JSON for Kokoro. Fix answer keys / questions before
+                    publishing the practice paper.
+                  </p>
+                </div>
+              )}
+
+              {module === "listening" && !jsonDownloadBlocked && (
+                <p className="text-xs text-zinc-600">
+                  TTS-ready
+                  {spokenWords != null ? ` · ${spokenWords} spoken` : ""}
+                  {contentWords != null ? ` · ${contentWords} content` : ""}
+                  {estimatedDuration != null
+                    ? ` · ~${Math.round(estimatedDuration / 60)} min estimated`
+                    : ""}
+                </p>
+              )}
 
               {result.review.summary && (
                 <p className="text-sm text-zinc-700">{result.review.summary}</p>
